@@ -1,0 +1,8770 @@
+{
+"schema_version": 1,
+"n_papers_with_artifacts": 523,
+"papers": [
+{
+"s2_id": "dcb25e0ebfe080947075252c7f75bf92296afe04",
+"title": "Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation",
+"year": 2026,
+"doi": "10.1145/3760250.3762219",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.16756859"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/tilus"
+},
+{
+"kind": "github",
+"url": "github.com/yaoyaoding/tilus-artifacts"
+}
+]
+},
+{
+"s2_id": "c3445112702b7d5b94336e0c0dd4aa5e4ee69e18",
+"title": "Modular GPU Programming with Typed Perspectives",
+"year": 2026,
+"doi": "10.1145/3808290",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/triton-lang/triton"
+}
+]
+},
+{
+"s2_id": "c95821b5bcf4c17ca24ab1312f8cd5a2f0c06081",
+"title": "FlashFuser: Expanding the Scale of Kernel Fusion for Compute-Intensive Operators via Inter-Core Connection",
+"year": 2026,
+"doi": "10.1109/HPCA68181.2026.11408495",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/tensorrt"
+}
+]
+},
+{
+"s2_id": "9fe9c846e4885550097118ca77d5a5df2c28e96f",
+"title": "Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs",
+"year": 2026,
+"doi": "10.1109/CGO68049.2026.11395194",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hexcute/hexcute"
+},
+{
+"kind": "github",
+"url": "github.com/hexcute/hexcute-bench"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cccl"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "bf613617441bb40645e789ddb75b8027827f42a1",
+"title": "Pushing Tensor Accelerators beyond MatMul in a User-Schedulable Language",
+"year": 2026,
+"doi": "10.1109/CGO68049.2026.11395214",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.17810573"
+},
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/yihozhang/cgo2026-hardboiled-artifact"
+}
+]
+},
+{
+"s2_id": "4e68cc2d6cb0c60883307de05ac248f89cd51b6d",
+"title": "Efficient training of large language models on distributed infrastructures: a survey",
+"year": 2026,
+"doi": "10.1007/s44336-026-00038-z",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/facebookresearch/metaseq"
+},
+{
+"kind": "github",
+"url": "github.com/huggingface/trl"
+},
+{
+"kind": "github",
+"url": "github.com/openxla/xla"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/pytorch"
+}
+]
+},
+{
+"s2_id": "80e94a24cbfcca4fd14f28b831d49fc3483d0256",
+"title": "Axe: A Simple Unified Layout Abstraction for Machine Learning Compilers",
+"year": 2026,
+"doi": "10.48550/arXiv.2601.19092",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/jax-ml/jax"
+}
+]
+},
+{
+"s2_id": "044c9dcc0f58dddd36567ad32b26066a52a08893",
+"title": "Accelerating Sparse Transformer Inference on GPU",
+"year": 2026,
+"doi": "10.1145/3774934.3786434",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/fastertransformer"
+},
+{
+"kind": "github",
+"url": "github.com/paddlepaddle/paddle"
+}
+]
+},
+{
+"s2_id": "cc58a8743fb2ba048a7858e0d0c12214005430f1",
+"title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations",
+"year": 2026,
+"doi": "10.48550/arXiv.2601.19367",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/modern-compilers-lab/chehab"
+}
+]
+},
+{
+"s2_id": "5054083d227c1f7e66edb14a5ef94901abb275b2",
+"title": "Bonsai: Compiling Queries to Pruned Tree Traversals",
+"year": 2026,
+"doi": "10.1145/3808256",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/rootjalex/bonsai"
+}
+]
+},
+{
+"s2_id": "7e33430926579d63cf31c42b3ca116d10eb8181a",
+"title": "Neptune: Advanced ML Operator Fusion for Locality and Parallelism on GPUs",
+"year": 2026,
+"doi": "10.1145/3808298",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/dao-ailab/flash-attention"
+},
+{
+"kind": "github",
+"url": "github.com/lucidrains/performer-pytorch"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/uiuc-arc/neptune"
+}
+]
+},
+{
+"s2_id": "dec1bd969f8fedb72b87ae225ebaeaeba419a118",
+"title": "Geo: A Query Rewrite Framework for Graph Pattern Mining",
+"year": 2026,
+"doi": "10.1145/3798239",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.18503157"
+},
+{
+"kind": "github",
+"url": "github.com/philzook58/awesome-egraphs"
+}
+]
+},
+{
+"s2_id": "35189542f250aa17915b1b6ea03e3a335409ae0d",
+"title": "ScanWeaver: Compiler-Driven Parallelization of Affine Recurrences via Associative Scan Lowering",
+"year": 2026,
+"doi": "10.48550/arXiv.2606.00601",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/qiyingwu/scanweaver"
+}
+]
+},
+{
+"s2_id": "1e5916054f1d32faccbe447cf0ecd6ac9c0bce76",
+"title": "Nautilus: An Auto-Scheduling Tensor Compiler for Efficient Tiled GPU Kernels",
+"year": 2026,
+"doi": "10.48550/arXiv.2604.14825",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/dao-ailab/flas"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/fastertransformer"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/tensorrt"
+}
+]
+},
+{
+"s2_id": "027d2b1d6a09a0df9c400fe935e93ef0918b9a38",
+"title": "Kuiper: Correct and Efficient GPU Programming with Dependent Types and Separation Logic",
+"year": 2026,
+"doi": "10.1145/3808280",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/fstarlang/kuiper"
+},
+{
+"kind": "github",
+"url": "github.com/ggml-org/llama.cpp"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "dd37295cd7dbfc9988578f442e2ccda25bb843da",
+"title": "ARGUS: Agentic GPU Optimization Guided by Data-Flow Invariants",
+"year": 2026,
+"doi": "10.48550/arXiv.2604.18616",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/rocm/rocm"
+},
+{
+"kind": "github",
+"url": "github.com/triton-lang/triton"
+}
+]
+},
+{
+"s2_id": "281c9a64b6e19004727b46d8f23e73d17f999288",
+"title": "Automatic Data Enumeration for Fast Collections",
+"year": 2026,
+"doi": "10.1109/CGO68049.2026.11395196",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.17633687"
+},
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.17872601"
+},
+{
+"kind": "github",
+"url": "github.com/arcana-lab/memoir"
+}
+]
+},
+{
+"s2_id": "176e8f7f1e1b434a46c0ba5f54f77df026317cd6",
+"title": "Nova: An End-to-End MLIR Compiler for Deep Learning",
+"year": 2026,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/openxla/xla"
+}
+]
+},
+{
+"s2_id": "b4393791c3d3fe0ba818006981e7b965fcb2036b",
+"title": "GPU Kernel Optimization Beyond Full Builds: An LLM Framework with Minimal Executable Programs",
+"year": 2026,
+"doi": "10.48550/arXiv.2512.22147",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/sgrauerg/polybenchgpu"
+}
+]
+},
+{
+"s2_id": "8dd83afa49137127536ac3b0d409ff3a87639393",
+"title": "Triton for MTIA: Bridging the Programming Model Gaps for Custom AI Accelerators",
+"year": 2026,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/flagopen/flaggems"
+},
+{
+"kind": "github",
+"url": "github.com/microsoft/triton-shared"
+},
+{
+"kind": "github",
+"url": "github.com/riscvarchive/riscv-v-spec"
+},
+{
+"kind": "github",
+"url": "github.com/triton-lang/triton"
+}
+]
+},
+{
+"s2_id": "2ee08314c22ce5d9ae3af2a61203986c9a658c99",
+"title": "FusionRCG: Orchestrating Recursive Computation Graphs across GPU Memory Hierarchies",
+"year": 2026,
+"doi": "10.48550/arXiv.2605.10312",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/valeevgroup/libintx"
+}
+]
+},
+{
+"s2_id": "e7bec11b08d9bae05fe43f62f772d262af99a802",
+"title": "Onyx: A 12-nm Programmable Accelerator for Dense and Sparse Applications",
+"year": 2026,
+"doi": "10.1109/JSSC.2025.3604724",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mit-han-lab/mcunet"
+}
+]
+},
+{
+"s2_id": "d103992f1fb89ef57b107972a8a34c7b68da8ad1",
+"title": "Fearless Concurrency on the GPU",
+"year": 2026,
+"doi": "10.48550/arXiv.2606.15991",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/embarkstudios/rust"
+},
+{
+"kind": "github",
+"url": "github.com/ericlbuehler/mistral.rs"
+},
+{
+"kind": "github",
+"url": "github.com/huggingface/candle"
+},
+{
+"kind": "github",
+"url": "github.com/huggingface/grout"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cuda"
+},
+{
+"kind": "github",
+"url": "github.com/nvlabs/cuda-oxide"
+},
+{
+"kind": "github",
+"url": "github.com/tracel-ai/burn"
+},
+{
+"kind": "github",
+"url": "github.com/tracel-ai/cubecl"
+}
+]
+},
+{
+"s2_id": "fec1555081b283683b1ed59fb9a353515045fbf9",
+"title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums",
+"year": 2026,
+"doi": "10.1145/3779212.3790176",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cuequivariance"
+}
+]
+},
+{
+"s2_id": "c92764a380b7cabeb879c3953d124bc93625abda",
+"title": "Axon: A Synthesizing Superoptimizer for Tensor Programs",
+"year": 2026,
+"doi": "10.48550/arXiv.2606.26344",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/aws-neuron/nki-samples"
+},
+{
+"kind": "github",
+"url": "github.com/mirage-project/mirage"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/helion"
+},
+{
+"kind": "github",
+"url": "github.com/uwplse/tensat"
+},
+{
+"kind": "github",
+"url": "github.com/z3prover/z3"
+}
+]
+},
+{
+"s2_id": "153d2d5475e85638b14f52ad24eb7dbce9246b3d",
+"title": "UniEP: Unified Expert-Parallel MoE MegaKernel for LLM Training",
+"year": 2026,
+"doi": "10.48550/arXiv.2604.19241",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bytedance-seed/triton-distributed"
+},
+{
+"kind": "github",
+"url": "github.com/deepseek-ai/deepgemm"
+},
+{
+"kind": "github",
+"url": "github.com/deepseek-ai/eplb"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutile-python"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/transformerengine"
+},
+{
+"kind": "github",
+"url": "github.com/tile-ai/tilelang"
+}
+]
+},
+{
+"s2_id": "f3907291c97b14544c9acbcc933ee447f3f34b9b",
+"title": "KernelFoundry: Hardware-aware evolutionary GPU kernel optimization",
+"year": 2026,
+"doi": "10.48550/arXiv.2603.12440",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "57bef8512315aafcf12c5a0cb07fc009bab63020",
+"title": "Backwards Data-Flow Analysis using Prophecy Variables in the BuildIt System",
+"year": 2026,
+"doi": "10.48550/arXiv.2601.02653",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/pcre2project/pcre2"
+}
+]
+},
+{
+"s2_id": "da3b996e8b427ef3a8fca1b39e0845d950bf8e57",
+"title": "IRONSmith: A Visual Dataflow Design Environment for AMD Ryzen AI NPUs",
+"year": 2026,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/advent-lab/ironsmith"
+}
+]
+},
+{
+"s2_id": "56d06dc65b9af94703448d21b9acdc814d81f650",
+"title": "Enabling RISC-V Vector Code Generation in MLIR through Custom xDSL Lowerings",
+"year": 2026,
+"doi": "10.48550/arXiv.2603.17800",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/martineh/gemm_blis_family"
+}
+]
+},
+{
+"s2_id": "687332d8654d0e09ba63dedbf21bd6ae79f2e064",
+"title": "Correct but Slow: An Empirical Study of the GPU Kernel Evaluation Gap in Modern Domain-Specific Languages",
+"year": 2026,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/triton-lang/triton"
+}
+]
+},
+{
+"s2_id": "11bb0e1db250a49febd68f124d31bb693e1e0c8c",
+"title": "Improving Efficiency of GPU Kernel Optimization Agents using a Domain-Specific Language and Speed-of-Light Guidance",
+"year": 2026,
+"doi": "10.48550/arXiv.2603.29010",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvlabs/solar"
+}
+]
+},
+{
+"s2_id": "98bacafe249a64f6c2d06e4e0694bae3dc7f4fa5",
+"title": "Linear Layouts: Robust Code Generation of Efficient Tensor Computation Using F_2",
+"year": 2026,
+"doi": "10.1145/3760250.3762221",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/triton-lang/triton"
+}
+]
+},
+{
+"s2_id": "e5e206392c1b94c7656cb6512b6dadc03971f236",
+"title": "Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs",
+"year": 2026,
+"doi": "10.48550/arXiv.2604.23466",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/tensorrt-llm"
+},
+{
+"kind": "github",
+"url": "github.com/uwm-se/cutile"
+}
+]
+},
+{
+"s2_id": "f900cbbe0d71efc52a828c66e3a286635cbdad27",
+"title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+"year": 2026,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/infini-ai-lab/flashrt"
+},
+{
+"kind": "github",
+"url": "github.com/krea-ai/realtime-video"
+},
+{
+"kind": "github",
+"url": "github.com/openai/codex"
+}
+]
+},
+{
+"s2_id": "4f9851679b37ca8029c2ad2e4594f2474cbda92c",
+"title": "Reading AI Model Compilation in MLIR Through the Lens of Formal Theories",
+"year": 2026,
+"doi": "10.48550/arXiv.2606.25244",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/iree-org/aster"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/lighthouse"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cuda-tile"
+}
+]
+},
+{
+"s2_id": "bd54e9ddada52dab5bde02cda4b63c25c6cf8357",
+"title": "The Next Frontier for AI-Generated Kernels: Correctness",
+"year": 2026,
+"doi": "10.1145/3819802.3820580",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/fstarlang/kuiper"
+}
+]
+},
+{
+"s2_id": "d5ed39387bda324b0067e2cd3ac1f9a3c530db84",
+"title": "Matrix-Free 3D SIMP Topology Optimization with Fused Gather-GEMM-Scatter Kernels",
+"year": 2026,
+"doi": "10.48550/arXiv.2604.18020",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nbbllxx0/fused-gather-gemm-scatter-kernels"
+}
+]
+},
+{
+"s2_id": "4f226dbc5d9461de72685dc7f7beac14b6450e06",
+"title": "\u03bbA: A Typed Lambda Calculus for LLM Agent Composition",
+"year": 2026,
+"doi": "10.48550/arXiv.2604.11767",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/kenny67nju/lambdagent.1"
+}
+]
+},
+{
+"s2_id": "8aacda9ce122d134fa93756495cffd6b74ad6305",
+"title": "Yaksha-Prashna: Understanding eBPF Bytecode Network Function Behavior",
+"year": 2026,
+"doi": "10.48550/arXiv.2602.11232",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cilium/cilium"
+},
+{
+"kind": "github",
+"url": "github.com/dushyantbehl/xdp-mptm"
+},
+{
+"kind": "github",
+"url": "github.com/facebookincubator/katran"
+},
+{
+"kind": "github",
+"url": "github.com/panda-net/panda"
+},
+{
+"kind": "github",
+"url": "github.com/torvalds/linux"
+},
+{
+"kind": "github",
+"url": "github.com/xdp-project/xdp-tools"
+}
+]
+},
+{
+"s2_id": "4b42dbb2833d295579d3b1babd331d20c4884f07",
+"title": "Fast Autoscheduling for Sparse ML Frameworks",
+"year": 2026,
+"doi": "10.1109/CGO68049.2026.11394842",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bobbyyyan/scorch"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "08fdacf07b1cd98994718ab0853fb0d0c010eebd",
+"title": "Tensor Algebra Processing Primitives (TAPP): Towards a Standard for Tensor Operations",
+"year": 2026,
+"doi": "10.48550/arXiv.2601.07827",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/valeevgroup/btas"
+}
+]
+},
+{
+"s2_id": "95e16d9aee7cba9f2cfd4003dc4cf58c64955c36",
+"title": "From Bits to Chips: An LLM-based Hardware-Aware Quantization Agent for Streamlined Deployment of LLMs",
+"year": 2026,
+"doi": "10.48550/arXiv.2601.03484",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ggerganov/llama.cpp"
+}
+]
+},
+{
+"s2_id": "787e6403ced0aa920fbace3646efcbecbc8c3e14",
+"title": "High-Resolution Photo Enhancement in Real-Time: A Laplacian Pyramid Network",
+"year": 2026,
+"doi": "10.1109/TPAMI.2025.3622041",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/fengzhang427/llf-lut"
+}
+]
+},
+{
+"s2_id": "fbaf90ba2c3976a413769c99a684334d6b39c297",
+"title": "PolyBlocks: A Compiler Infrastructure for AI Chips and Programming Frameworks",
+"year": 2026,
+"doi": "10.48550/arXiv.2603.06731",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google-deepmind/jmp"
+},
+{
+"kind": "github",
+"url": "github.com/iree-org/iree"
+},
+{
+"kind": "github",
+"url": "github.com/jax-ml/jax"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/torch-mlir"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/helion"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/xla"
+}
+]
+},
+{
+"s2_id": "319ae4b73d1443887fc875c36fd3a03382fb7c8a",
+"title": "Prism: Symbolic Superoptimization of Tensor Programs",
+"year": 2026,
+"doi": "10.48550/arXiv.2604.15272",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/huggingface/transformers"
+}
+]
+},
+{
+"s2_id": "8e3d9655a63c440d067be79fcc59d44ceb6c82ea",
+"title": "A Reinforcement Learning Environment for Automatic Code Optimization in the MLIR Compiler",
+"year": 2026,
+"doi": "10.1109/CGO68049.2026.11394838",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/iree-org/iree"
+},
+{
+"kind": "github",
+"url": "github.com/modern-compilers-lab/mlir-rl"
+}
+]
+},
+{
+"s2_id": "9c615553d77760919bf2f2f031de228639afd014",
+"title": "TCL: Enabling Fast and Efficient Cross-Hardware Tensor Program Optimization via Continual Learning",
+"year": 2026,
+"doi": "10.48550/arXiv.2604.12891",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/booker0415/large-scale-tensor-program-dataset-on-rtx-3080-ti-and-intel-i7-12"
+}
+]
+},
+{
+"s2_id": "cd7c0a763ab9be4db2491319eb11a43f86b670e4",
+"title": "Learning to Optimize by Differentiable Programming",
+"year": 2026,
+"doi": "10.48550/arXiv.2601.16510",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/convexsoft/diffprog"
+},
+{
+"kind": "github",
+"url": "github.com/google/or-tools"
+}
+]
+},
+{
+"s2_id": "14ac03260a290a8b6effa303b50f4d0fa1ae0034",
+"title": "Iskra: A System for Inverse Geometry Processing",
+"year": 2026,
+"doi": "10.1145/3811371",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.3338174"
+},
+{
+"kind": "github",
+"url": "github.com/alecjacobson/gptoolbox"
+},
+{
+"kind": "github",
+"url": "github.com/alecjacobson/indexed_sum"
+},
+{
+"kind": "github",
+"url": "github.com/alecjacobson/pytorch-sparse-solve"
+},
+{
+"kind": "github",
+"url": "github.com/anadodik/iskra"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/warp"
+}
+]
+},
+{
+"s2_id": "79af14ccbbdd8f386bce8ee5c6ef467171cbd45d",
+"title": "SAIL: Sound Abstract Interpreters with LLMs",
+"year": 2026,
+"doi": "10.1145/3808308",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/uiuc-focal-lab/sail"
+}
+]
+},
+{
+"s2_id": "a37f1bf9fd839dfb0b7ec00a6d35fd30ff1d1d98",
+"title": "KernelBrain: Coarse-to-Fine, Budget-Aware Search for Agentic GPU Kernel Optimization",
+"year": 2026,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/algorithmicsuperintelligence/openevolve"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/tensorrt-llm"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch-labs/kernelagent"
+},
+{
+"kind": "github",
+"url": "github.com/sgl-project/sglang"
+}
+]
+},
+{
+"s2_id": "2b5b506f8c032d59319b6c7a43b7e0d402dee2bd",
+"title": "ComFuse: Fusing Complex Memory-Intensive Subgraphs with Compute-Intensive Kernels For Modern GPU Architectures",
+"year": 2026,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/triton-lang/triton"
+}
+]
+},
+{
+"s2_id": "5876b63c49631ddb8f769d27a5346875e4669f43",
+"title": "InferQ: A Database-Oriented Benchmark for Quantum Circuits Simulation",
+"year": 2026,
+"doi": "10.1145/383",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/infinidata-lab/inferq"
+},
+{
+"kind": "github",
+"url": "github.com/microsoft/mlos"
+},
+{
+"kind": "github",
+"url": "github.com/ti2-group/sql-einsum"
+},
+{
+"kind": "github",
+"url": "github.com/tiledb-inc/tiledb-mariadb"
+}
+]
+},
+{
+"s2_id": "b772e88a8f2bedffea6fd9e7b411fb622b66a69f",
+"title": "Validated Code Translation for Projects with External Libraries",
+"year": 2026,
+"doi": "10.48550/arXiv.2602.18534",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/filosottile/age"
+},
+{
+"kind": "github",
+"url": "github.com/gotranspile/cxgo"
+},
+{
+"kind": "github",
+"url": "github.com/immunant/c2rust"
+},
+{
+"kind": "github",
+"url": "github.com/jameysharp/corrode"
+},
+{
+"kind": "github",
+"url": "github.com/mono/sharpen"
+},
+{
+"kind": "github",
+"url": "github.com/peterhellberg/duration"
+},
+{
+"kind": "github",
+"url": "github.com/xdg-go/pbkdf2"
+}
+]
+},
+{
+"s2_id": "4ecca3953d572b3a39565b7583450fc092a4597c",
+"title": "Exo 2: Growing a Scheduling Language",
+"year": 2025,
+"doi": "10.1145/3669940.3707218",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/exo-lang/exo"
+},
+{
+"kind": "github",
+"url": "github.com/exo-lang/exo2-artifact"
+},
+{
+"kind": "github",
+"url": "github.com/exo-lang/exoblas"
+}
+]
+},
+{
+"s2_id": "e1fc3b16c10464ad8de1604bde1fdbac3cc69439",
+"title": "Iterating Pointers: Enabling Static Analysis for Loop-based Pointers",
+"year": 2025,
+"doi": "10.1145/3701993",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/2022/top-programming-languages"
+},
+{
+"kind": "github",
+"url": "github.com/openssl/openssl"
+},
+{
+"kind": "github",
+"url": "github.com/powturbo/turbobench"
+},
+{
+"kind": "github",
+"url": "github.com/search/repositories"
+},
+{
+"kind": "github",
+"url": "github.com/torvalds/linux"
+}
+]
+},
+{
+"s2_id": "0271bdae4adba9822a106e56dbec2e0dd6fb5e2c",
+"title": "Task-Based Tensor Computations on Modern GPUs",
+"year": 2025,
+"doi": "10.1145/3729262",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "2dd487f4f7e2cf7bf58faa15ddbbf63f2d97cb15",
+"title": "MISAAL: Synthesis-Based Automatic Generation of Efficient and Retargetable Semantics-Driven Optimizations",
+"year": 2025,
+"doi": "10.1145/3729301",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/akothen/hydride"
+},
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/uwplse/rake"
+}
+]
+},
+{
+"s2_id": "2c915b797509a6fefb60996905d87a94d35bbfc2",
+"title": "Autocomp: A Powerful and Portable Code Optimizer for Tensor Accelerators",
+"year": 2025,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/aws-neuron/nki-samples"
+},
+{
+"kind": "github",
+"url": "github.com/exo-lang/exo"
+},
+{
+"kind": "github",
+"url": "github.com/scalingintelligence/kernelben"
+},
+{
+"kind": "github",
+"url": "github.com/ucb-bar/acceler"
+},
+{
+"kind": "github",
+"url": "github.com/ucb-bar/autocomp"
+},
+{
+"kind": "github",
+"url": "github.com/ucb-bar/gemmini-rocc-tests"
+}
+]
+},
+{
+"s2_id": "fc8f99a070d80400349317c2571e32bc89229be2",
+"title": "LOOPer: A Learned Automatic Code Optimizer For Polyhedral Compilers",
+"year": 2025,
+"doi": "10.1109/PACT65351.2025.00028",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.16810084"
+}
+]
+},
+{
+"s2_id": "e8ca999be9862e4c61de361c5274447c162ed046",
+"title": "StreamTensor: Make Tensors Stream in Dataflow Accelerators for LLMs",
+"year": 2025,
+"doi": "10.1145/3725843.3762817",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/llvm/torch-mlir"
+}
+]
+},
+{
+"s2_id": "40e8037ea711c90f43aa24ea089719fc35df578b",
+"title": "Relax: Composable Abstractions for End-to-End Dynamic Machine Learning",
+"year": 2025,
+"doi": "10.1145/3676641.3716249",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ggerganov/ggml"
+},
+{
+"kind": "github",
+"url": "github.com/ggerganov/llama.cpp"
+},
+{
+"kind": "github",
+"url": "github.com/ggerganov/whisper"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+}
+]
+},
+{
+"s2_id": "aa8992f744bfafc288204600a214674b5bb0c89f",
+"title": "Data-Efficient Performance Modeling via Pre-training",
+"year": 2025,
+"doi": "10.1145/3708493.3712683",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/tiramisu-compiler/cost_model_pretrain"
+}
+]
+},
+{
+"s2_id": "c35d71582d36bc6e853f1dea44aa09aa9a9be6a0",
+"title": "PerfDojo: Automated ML Library Generation for Heterogeneous Architectures",
+"year": 2025,
+"doi": "10.1145/3712285.3759900",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/tvm"
+}
+]
+},
+{
+"s2_id": "cc8c7a302d2f0f70dd050801a3e60c9287492038",
+"title": "Pearl: Automatic Code Optimization Using Deep Reinforcement Learning",
+"year": 2025,
+"doi": "10.1145/3721145.3725766",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/modern-compilers-lab/gnn_rl_pretrain"
+}
+]
+},
+{
+"s2_id": "ea5768d746378940d4c062c523f7f3356625177e",
+"title": "Fast On-device LLM Inference with NPUs",
+"year": 2025,
+"doi": "10.1145/3669940.3707239",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.14392760"
+},
+{
+"kind": "github",
+"url": "github.com/ggerganov/llama.cpp"
+},
+{
+"kind": "github",
+"url": "github.com/llamatouch/llamatouch"
+},
+{
+"kind": "github",
+"url": "github.com/mlc-ai/mlc-llm"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/fastertransformer"
+},
+{
+"kind": "github",
+"url": "github.com/ubiquitouslearning/mllm"
+}
+]
+},
+{
+"s2_id": "e74b043ffd2ebf4cb946bd41574647d3689b098e",
+"title": "Quantum Data Management in the NISQ Era",
+"year": 2025,
+"doi": "10.14778/3725688.3725701",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/infinidata-lab/quantum"
+}
+]
+},
+{
+"s2_id": "86845b95e619a274c1613c61ff3de475d972de1b",
+"title": "DLAS: A Conceptual Model for Across-Stack Deep Learning Acceleration",
+"year": 2025,
+"doi": "10.1145/3688609",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+},
+{
+"kind": "github",
+"url": "github.com/openxla/iree"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/vision"
+}
+]
+},
+{
+"s2_id": "23be5f6da58a143c6d4632166ac1fe188f3f3561",
+"title": "Pruner: A Draft-then-Verify Exploration Mechanism to Accelerate Tensor Program Tuning",
+"year": 2025,
+"doi": "10.1145/3676641.3716269",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/qiaolian9/pruner"
+}
+]
+},
+{
+"s2_id": "4fe8321cbb05d165b525e2d9537b29bac1308132",
+"title": "Verifying Properties of Index Arrays in a Purely-Functional Data-Parallel Language",
+"year": 2025,
+"doi": "10.48550/arXiv.2506.23058",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/diku-dk/futhark-benchmarks"
+}
+]
+},
+{
+"s2_id": "f2a4eac4250062bf037e2d77698dca8664fe8c26",
+"title": "First-Class Verification Dialects for MLIR",
+"year": 2025,
+"doi": "10.1145/3729309",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/llvm/llvm-project"
+},
+{
+"kind": "github",
+"url": "github.com/swiftlang/swift"
+}
+]
+},
+{
+"s2_id": "25360591188dba8c6ca5f5c4d2a69d675c3b1864",
+"title": "TensorRight: Automated Verification of Tensor Graph Rewrites",
+"year": 2025,
+"doi": "10.1145/3704865",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.14159871"
+},
+{
+"kind": "github",
+"url": "github.com/adapt-uiuc/tensorright"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/openxla/xla"
+}
+]
+},
+{
+"s2_id": "0382a148473b9c008061d8757b8580f3e5f9a3a1",
+"title": "Syno: Structured Synthesis for Neural Operators",
+"year": 2025,
+"doi": "10.1145/3676642.3736118",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pytorch/pytorch"
+},
+{
+"kind": "github",
+"url": "github.com/tsinghua-ideal/syno"
+}
+]
+},
+{
+"s2_id": "e775e2d041275b284362e2f2704cb4795da1b4dd",
+"title": "SmoothE: Differentiable E-Graph Extraction",
+"year": 2025,
+"doi": "10.1145/3669940.3707262",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/rusty1s/pytorch_"
+},
+{
+"kind": "zenodo",
+"url": "zenodo.org/records/14052997"
+}
+]
+},
+{
+"s2_id": "1e9633768f6c8448347d3d6adcf06b5b59c9ccec",
+"title": "nncase: An End-to-End Compiler for Efficient LLM Deployment on Heterogeneous Storage Architectures",
+"year": 2025,
+"doi": "10.48550/arXiv.2512.21571",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/or-tools"
+},
+{
+"kind": "github",
+"url": "github.com/kendryte/nncase"
+}
+]
+},
+{
+"s2_id": "a9c2e887295e973c14201674d19e840274b2d20f",
+"title": "HPCTransCompile: An AI Compiler Generated Dataset for High-Performance CUDA Transpilation and LLM Preliminary Exploration",
+"year": 2025,
+"doi": "10.48550/arXiv.2506.10401",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/features/copilot"
+},
+{
+"kind": "github",
+"url": "github.com/pjlab-chip/hpctranscompile"
+},
+{
+"kind": "github",
+"url": "github.com/rocm/hip"
+},
+{
+"kind": "github",
+"url": "github.com/rocm/hipify"
+}
+]
+},
+{
+"s2_id": "1ba5bab9b7645f968ab704413f5052feca088997",
+"title": "Dato: A Task-Based Programming Model for Dataflow Accelerators",
+"year": 2025,
+"doi": "10.48550/arXiv.2509.06794",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cornell-zhang/allo"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/mlir-aie"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/vitis-ai"
+}
+]
+},
+{
+"s2_id": "0c82e92f8a47aa70e4d64a85d936a4a36be56dd6",
+"title": "A Multi-level Compiler Backend for Accelerated Micro-kernels Targeting RISC-V ISA Extensions",
+"year": 2025,
+"doi": "10.1145/3696443.3708952",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.14052014"
+},
+{
+"kind": "github",
+"url": "github.com/j-mr-t/monaco"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/torch-mlir"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+},
+{
+"kind": "github",
+"url": "github.com/pulp-platform/llvm"
+},
+{
+"kind": "github",
+"url": "github.com/riscv/riscv"
+}
+]
+},
+{
+"s2_id": "19b5e0b1e5c95770b0e3537734f8d96d6037cfd5",
+"title": "Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler",
+"year": 2025,
+"doi": "10.48550/arXiv.2504.19442",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bytedance-seed/triton-distributed"
+},
+{
+"kind": "github",
+"url": "github.com/cambricon/triton-linalg"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/rocm/rccl"
+},
+{
+"kind": "github",
+"url": "github.com/tile-ai/tilelang"
+}
+]
+},
+{
+"s2_id": "6f374359a7e41e5a70d25d56c88487df8cd293f4",
+"title": "ATiM: Autotuning Tensor Programs for Processing-in-DRAM",
+"year": 2025,
+"doi": "10.1145/3695053.3731096",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.15379924"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+},
+{
+"kind": "github",
+"url": "github.com/snu-codelab/atim"
+},
+{
+"kind": "github",
+"url": "github.com/upmem/llvm-project"
+}
+]
+},
+{
+"s2_id": "862afc4e901eb96658d014de951e6e1616fd249d",
+"title": "PEAK: A Performance Engineering AI-Assistant for GPU Kernels Powered by Natural Language Transformations",
+"year": 2025,
+"doi": "10.48550/arXiv.2512.19018",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/features/copilot"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "088ae610b44a94e8976118cb290cb9b48cf388dc",
+"title": "TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives",
+"year": 2025,
+"doi": "10.48550/arXiv.2503.20313",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bytedance-seed/triton-distributed"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/transformerengine"
+}
+]
+},
+{
+"s2_id": "a12b6c79da5c251bd674dc3901e6c4f37d5559b4",
+"title": "Galley: Modern Query Optimization for Sparse Tensor Programs",
+"year": 2025,
+"doi": "10.1145/3725301",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/finchtensor/finch.jl"
+},
+{
+"kind": "github",
+"url": "github.com/kylebd99/galley.jl"
+}
+]
+},
+{
+"s2_id": "418857dee87aed6fdc4e1bff5ee76170baa7a41f",
+"title": "MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
+"year": 2025,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mirage-project/mirage"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "2b4e93106e2611d458a3a5e7fbd7a39aacd4748b",
+"title": "CG-Kit: Code Generation Toolkit for Performant and Maintainable Variants of Source Code Applied to Flash-X Hydrodynamics Simulations",
+"year": 2025,
+"doi": "10.48550/arXiv.2401.03378",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/gridtools/gridtools"
+}
+]
+},
+{
+"s2_id": "03e318104d7d78ccf10773f49ee772b37c6fb9c2",
+"title": "Guided Tensor Lifting",
+"year": 2025,
+"doi": "10.1145/3729330",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/leloykun/llama2.cpp"
+}
+]
+},
+{
+"s2_id": "b12775806f607aa2415680630037f4ede509bc95",
+"title": "PartIR: Composing SPMD Partitioning Strategies for Machine Learning",
+"year": 2025,
+"doi": "10.1145/3669940.3707284",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/openxla/shardy"
+},
+{
+"kind": "github",
+"url": "github.com/openxla/xla"
+}
+]
+},
+{
+"s2_id": "9647a92d5ab280831cad43f61cf4cc9d4905682f",
+"title": "Astra: A Multi-Agent System for GPU Kernel Performance Optimization",
+"year": 2025,
+"doi": "10.48550/arXiv.2509.07506",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/anjiang-wei/astra"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/openai/openai-agents-python"
+},
+{
+"kind": "github",
+"url": "github.com/scalingintelligence/kernelbench"
+}
+]
+},
+{
+"s2_id": "31f9e1c15db6dda3b76d55064c5cd70645156b91",
+"title": "Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference",
+"year": 2025,
+"doi": "10.1145/3731569.3764808",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mlc-ai/mlc-llm"
+}
+]
+},
+{
+"s2_id": "891784839461f54fb9e56da7cbcda0606fb0bf46",
+"title": "GAMA: High-Performance GEMM Acceleration on AMD Versal ML-Optimized AI Engines",
+"year": 2025,
+"doi": "10.1109/FPL68686.2025.00051",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/advent-lab/gama"
+}
+]
+},
+{
+"s2_id": "d24b6764cdae25b181d9ea39819d43938f92c3a5",
+"title": "Scaling Instruction-Selection Verification against Authoritative ISA Semantics",
+"year": 2025,
+"doi": "10.1145/3764383",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bytecodealliance/rfcs"
+},
+{
+"kind": "github",
+"url": "github.com/bytecodealliance/wasmtime"
+},
+{
+"kind": "github",
+"url": "github.com/pypy/pypy"
+},
+{
+"kind": "github",
+"url": "github.com/rems-project/sail"
+},
+{
+"kind": "github",
+"url": "github.com/riscv/sail-riscv"
+},
+{
+"kind": "github",
+"url": "github.com/uq-pac/aslp"
+},
+{
+"kind": "github",
+"url": "github.com/webassembly/meetings"
+}
+]
+},
+{
+"s2_id": "91cc09651bbcc232da5a6549812c4ae833c98e18",
+"title": "Finch: Sparse and Structured Tensor Programming with Control Flow",
+"year": 2025,
+"doi": "10.1145/3720473",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/finch-tensor/finchbenchmarks"
+},
+{
+"kind": "github",
+"url": "github.com/julialang/juliaup"
+}
+]
+},
+{
+"s2_id": "322b3d01a10bc4d649d4f415415328b9612ca6ce",
+"title": "Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs",
+"year": 2025,
+"doi": "10.1145/3731569.3764840",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/lsds/tempo"
+},
+{
+"kind": "github",
+"url": "github.com/meta-llama/llama3"
+},
+{
+"kind": "github",
+"url": "github.com/vllm-project/vllm"
+}
+]
+},
+{
+"s2_id": "bded7c999cc172d7bd7ecd3e97f0288371256b60",
+"title": "Rethinking Latency-Aware DNN Design With GPU Tail Effect Analysis",
+"year": 2025,
+"doi": "10.1109/TCAD.2024.3404413",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/lmbxmu/hrankplus"
+},
+{
+"kind": "github",
+"url": "github.com/vainf/torch-pruning"
+}
+]
+},
+{
+"s2_id": "b46a80006a3198befb141832d75734eda9e08d3b",
+"title": "The Continuous Tensor Abstraction: Where Indices Are Real",
+"year": 2025,
+"doi": "10.1145/3763146",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.16852354"
+},
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.3509134"
+},
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.5597138"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/jlblancoc/nanoflann"
+},
+{
+"kind": "github",
+"url": "github.com/lh3/biofast"
+}
+]
+},
+{
+"s2_id": "7be8750e3b3d1d004b9dd91a11e0c508495969a2",
+"title": "Mirage: A Multi-Level Superoptimizer for Tensor Programs",
+"year": 2025,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "8474b38ef2e6c6f10fc2176c61223142b1e5f7ef",
+"title": "Automated MPI-X Code Generation for Scalable Finite-Difference Solvers",
+"year": 2025,
+"doi": "10.1109/IPDPS64566.2025.00067",
+"artifacts": [
+{
+"kind": "bitbucket",
+"url": "bitbucket.org/berkeleylab/cs-roofline-toolkit"
+},
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.12728258"
+}
+]
+},
+{
+"s2_id": "5641bde98f029f319b233192cc8e492a261caed9",
+"title": "Layout-Agnostic MPI Abstraction for Distributed Computing in Modern C++",
+"year": 2025,
+"doi": "10.1007/978-3-032-07194-1_3",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/jiriklepl/noarr-mpi"
+},
+{
+"kind": "github",
+"url": "github.com/rabauke/mpl"
+}
+]
+},
+{
+"s2_id": "469521f97710e515dc6edf0fd86f6c1e4c061c81",
+"title": "Designing across domains with declarative thinking: Insights from the 96-Eyes ptychographic imager project",
+"year": 2025,
+"doi": "10.48550/arXiv.2508.18512",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/intellabs/t2sp"
+}
+]
+},
+{
+"s2_id": "2ca86251054cd63bc2c73b4e5d6c65bb5bdb67f6",
+"title": "PyGraph: Robust Compiler Support for CUDA Graphs in PyTorch",
+"year": 2025,
+"doi": "10.48550/arXiv.2503.19779",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pytorch/pytorch"
+}
+]
+},
+{
+"s2_id": "e9ef6a006e01d6219fb3528d02ec59308ccf7bd2",
+"title": "PyFRep: Shape Modeling with Differentiable Function Representation",
+"year": 2025,
+"doi": "10.48550/arXiv.2504.14216",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/fayolle/pyfrep"
+},
+{
+"kind": "github",
+"url": "github.com/libfive/libfive"
+}
+]
+},
+{
+"s2_id": "ab59353321694a1410f1bf3f449cbac839b8e030",
+"title": "ytopt: Autotuning Scientific Applications for Energy Efficiency at Large Scales",
+"year": 2025,
+"doi": "10.1002/cpe.8322",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/anl-cesar/xsbench"
+},
+{
+"kind": "github",
+"url": "github.com/libensemble/libensemble"
+},
+{
+"kind": "github",
+"url": "github.com/llnl/amg"
+},
+{
+"kind": "github",
+"url": "github.com/meinersbur/mctree"
+},
+{
+"kind": "github",
+"url": "github.com/openmc-dev/openmc"
+},
+{
+"kind": "github",
+"url": "github.com/ray-project/ray"
+},
+{
+"kind": "github",
+"url": "github.com/sollve/llvm-project"
+},
+{
+"kind": "github",
+"url": "github.com/ytopt-team/ytopt"
+}
+]
+},
+{
+"s2_id": "73beece7cae691debd1a4227a3ae293b1b690e9b",
+"title": "Counting Without Running: Evaluating LLMs' Reasoning About Code Complexity",
+"year": 2025,
+"doi": "10.48550/arXiv.2512.04355",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/scientific-computing-lab/gpuflopbench"
+}
+]
+},
+{
+"s2_id": "21dce185ca8f4b783e59cc6b6c404b6c047ce31c",
+"title": "LayerDAG: A Layerwise Autoregressive Diffusion Model for Directed Acyclic Graph Generation",
+"year": 2025,
+"doi": "10.48550/arXiv.2411.02322",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/graph-com/layerdag"
+}
+]
+},
+{
+"s2_id": "f98b7d9ba8d4bd85d322220ba14a941f9d42a935",
+"title": "Programming by Navigation",
+"year": 2025,
+"doi": "10.1145/3729264",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/justinlubin/honeybee"
+}
+]
+},
+{
+"s2_id": "96fb9770ec4ca9b8e163d400d263915fe5064844",
+"title": "HaliVer: Deductive Verification and Scheduling Languages Join Forces",
+"year": 2024,
+"doi": "10.48550/arXiv.2401.10778",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/sakehl/haliverexperiments"
+}
+]
+},
+{
+"s2_id": "ffb89ff63920761225346754fb3f3f82e60f118d",
+"title": "Strided Difference Bound Matrices",
+"year": 2024,
+"doi": "10.48550/arXiv.2405.11244",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/openxla/xla"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/tensorflow"
+}
+]
+},
+{
+"s2_id": "dbb89e29f18cbf011cc31d748503a3070cf1d544",
+"title": "Allo: A Programming Model for Composable Accelerator Design",
+"year": 2024,
+"doi": "10.1145/3656401",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.10806938"
+},
+{
+"kind": "github",
+"url": "github.com/cornell-zhang/allo"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/circt"
+},
+{
+"kind": "github",
+"url": "github.com/pybind/pybind11"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/merlin-compiler"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/vitis-ai"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/vitis_libraries"
+}
+]
+},
+{
+"s2_id": "d4138e05540615469b80c78d07312fd0182dbc53",
+"title": "Hydride: A Retargetable and Extensible Synthesis-based Compiler for Modern Hardware Architectures",
+"year": 2024,
+"doi": "10.1145/3620665.3640385",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "21a535013ed2f7168c4b81c9a6addfbbc9244e5f",
+"title": "An Optimizing Framework on MLIR for Efficient FPGA-based Accelerator Generation",
+"year": 2024,
+"doi": "10.1109/HPCA57654.2024.00017",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/sjtu-zhao-lab/pom"
+}
+]
+},
+{
+"s2_id": "f2bd5c3b60fd2a36ad310e3a6a47d64c7aed51bf",
+"title": "Auto-Generating Diverse Heterogeneous Designs",
+"year": 2024,
+"doi": "10.1109/IPDPSW63119.2024.00035",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/xilinx/merlin-compiler"
+}
+]
+},
+{
+"s2_id": "5ae29ece720a2a062442c0c21d2e29d523414600",
+"title": "Canalis: A Throughput-Optimized Framework for Real-Time Stream Processing of Wireless Communication",
+"year": 2024,
+"doi": "10.1145/3695880",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/arm-software/cmsis-dsp"
+},
+{
+"kind": "github",
+"url": "github.com/arm-software/optimized-routines"
+},
+{
+"kind": "github",
+"url": "github.com/clmathlibraries/clblas"
+},
+{
+"kind": "github",
+"url": "github.com/clmathlibraries/clfft"
+},
+{
+"kind": "github",
+"url": "github.com/google/xnnpack"
+}
+]
+},
+{
+"s2_id": "0ba7fcf3f80c19dff519d861496ec9a9a61e16d1",
+"title": "LLM-Aided Compilation for Tensor Accelerators",
+"year": 2024,
+"doi": "10.1109/LAD62341.2024.10691720",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/matthiasjreisinger/polybenchc-4.2.1"
+}
+]
+},
+{
+"s2_id": "d8cdacc32f0b0e7a31c65de443d8f0dbe8e0cc96",
+"title": "Optimizing Dynamic-Shape Neural Networks on Accelerators via On-the-Fly Micro-Kernel Polymerization",
+"year": 2024,
+"doi": "10.1145/3620665.3640390",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "42a057051f37c7dface4ffc7dd51735f1a6f8a14",
+"title": "Generating C: Heterogeneous metaprogramming system description",
+"year": 2024,
+"doi": "10.1016/j.scico.2023.103015",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/xianyi/openblas"
+}
+]
+},
+{
+"s2_id": "c97beec7424e4b9b3f67b0550da235d8f288e5d6",
+"title": "Dias: Dynamic Rewriting of Pandas Code",
+"year": 2024,
+"doi": "10.1145/3639313",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pandas-dev/pandas"
+}
+]
+},
+{
+"s2_id": "990fea3c5158e2885c159fb95202dc11c871d41a",
+"title": "Application-level Validation of Accelerator Designs Using a Formal Software/Hardware Interface",
+"year": 2024,
+"doi": "10.1145/3639051",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pytorch/examples"
+}
+]
+},
+{
+"s2_id": "3bfda090ce59c0556308c9f377946efb8615309c",
+"title": "Optimal Kernel Orchestration for Tensor Programs with Korch",
+"year": 2024,
+"doi": "10.1145/3620666.3651383",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.10839367"
+},
+{
+"kind": "github",
+"url": "github.com/humuyan/asplos24-korch-ae"
+},
+{
+"kind": "github",
+"url": "github.com/humuyan/korch"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/models"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+}
+]
+},
+{
+"s2_id": "a0e0405a362aa13b355cdec5c74a472772f899d7",
+"title": "CoolerSpace: A Language for Physically Correct and Computationally Efficient Color Programming",
+"year": 2024,
+"doi": "10.1145/3689741",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.13621721"
+},
+{
+"kind": "github",
+"url": "github.com/horizon-research/coolerspace"
+},
+{
+"kind": "github",
+"url": "github.com/horizon-research/coolerspacebenchmarker"
+},
+{
+"kind": "github",
+"url": "github.com/horizon-research/eggwrap"
+},
+{
+"kind": "github",
+"url": "github.com/horizon-research/onneggs"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+},
+{
+"kind": "github",
+"url": "github.com/python-pillow/pillow"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/vision"
+}
+]
+},
+{
+"s2_id": "54ff94dda3b37829344af13ee9a9d66c75f25d52",
+"title": "Scheduling Languages: A Past, Present, and Future Taxonomy",
+"year": 2024,
+"doi": "10.48550/arXiv.2410.19927",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/acelster/ml-autotuning"
+}
+]
+},
+{
+"s2_id": "c085b33901a11847c26cdb5b5b40f3c0352ebbc7",
+"title": "Guided Equality Saturation",
+"year": 2024,
+"doi": "10.1145/3632900",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bastacyclop/egg-sketches"
+},
+{
+"kind": "github",
+"url": "github.com/leanprover-community/mathlib4"
+},
+{
+"kind": "github",
+"url": "github.com/opencompl/egg-tactic-code"
+},
+{
+"kind": "github",
+"url": "github.com/rise-lang/shine"
+}
+]
+},
+{
+"s2_id": "318965feea1adca8dd6b81c5c2db696b5168de94",
+"title": "ACC Saturator: Automatic Kernel Optimization for Directive-Based GPU Code",
+"year": 2024,
+"doi": "10.1109/SCW63240.2024.00247",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/khaki3/acc-saturator"
+}
+]
+},
+{
+"s2_id": "02a4be57475ace69f67e999b8a0c8023b256ee62",
+"title": "Retargeting and Respecializing GPU Workloads for Performance Portability",
+"year": 2024,
+"doi": "10.1109/CGO57630.2024.10444828",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.10465934"
+},
+{
+"kind": "github",
+"url": "github.com/ivanradanov/rodinia"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/polygeist"
+}
+]
+},
+{
+"s2_id": "634a59e87bdb158879738384c0832f1441dc1679",
+"title": "(De/Re)-Composition of Data-Parallel Computations via Multi-Dimensional Homomorphisms",
+"year": 2024,
+"doi": "10.1145/3665643",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/tvm"
+},
+{
+"kind": "github",
+"url": "github.com/facebookresearch/tensorcomprehensions"
+},
+{
+"kind": "github",
+"url": "github.com/rocm/hip"
+}
+]
+},
+{
+"s2_id": "d74cd2f8ff08fa95e4561792644e08014adb4561",
+"title": "A shared compilation stack for distributed-memory parallelism in stencil DSLs",
+"year": 2024,
+"doi": "10.1145/3620666.3651344",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/stfc/psyclonebench"
+},
+{
+"kind": "github",
+"url": "github.com/xdslproject/xdsl"
+}
+]
+},
+{
+"s2_id": "e77af9f8aa34516f189daf7c0b2e2d719984afa7",
+"title": "Compiling Recurrences over Dense and Sparse Arrays",
+"year": 2024,
+"doi": "10.1145/3649820",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.10774458"
+}
+]
+},
+{
+"s2_id": "1a2955b4bc88132fc676ad831c221d726248b8c1",
+"title": "Adaptive Auto-Tuning Framework for Global Exploration of Stencil Optimization on GPUs",
+"year": 2024,
+"doi": "10.1109/TPDS.2023.3325630",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/sunqingxiao/gstuner"
+}
+]
+},
+{
+"s2_id": "95ddab6fcd670090e341b1616e3cab3ecf682f43",
+"title": "Tackling the Matrix Multiplication Micro-Kernel Generation with Exo",
+"year": 2024,
+"doi": "10.1109/CGO57630.2024.10444883",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/adcastel/cgo"
+},
+{
+"kind": "github",
+"url": "github.com/adcastel/cgo_"
+},
+{
+"kind": "github",
+"url": "github.com/adcastel/exo"
+}
+]
+},
+{
+"s2_id": "99a9609622151d6474052249470174e0f740bde1",
+"title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
+"year": 2024,
+"doi": "10.48550/arXiv.2410.20399",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/dao-ailab/flash-attention"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "a509670659e8b054e2b7d1b6f8a0bc722398fa62",
+"title": "PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation",
+"year": 2024,
+"doi": "10.1145/3620665.3640366",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cu"
+},
+{
+"kind": "github",
+"url": "github.com/pallets/jinja"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/benchmark"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/pytorch"
+}
+]
+},
+{
+"s2_id": "722555a424c3a50c2eafc1b5b58e958720d766ee",
+"title": "Compilation of Shape Operators on Sparse Arrays",
+"year": 2024,
+"doi": "10.1145/3689752",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.13381305"
+},
+{
+"kind": "github",
+"url": "github.com/wjakob/nanobind"
+}
+]
+},
+{
+"s2_id": "f7626520c495706280780f6dddf8929a79c77723",
+"title": "Interactive Source-to-Source Optimizations Validated using Static Resource Analysis",
+"year": 2024,
+"doi": "10.1145/3652588.3663320",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/charguer/optitrust"
+}
+]
+},
+{
+"s2_id": "8d53493eb42229f0c92a18a93d3a1237cd8fc15d",
+"title": "MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators",
+"year": 2024,
+"doi": "10.1109/SC41406.2024.00040",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hazyresearch/flash-attention"
+},
+{
+"kind": "github",
+"url": "github.com/huggingface/transformers"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "e79caf067571cea2893add24a554c816a8cc1c10",
+"title": "Neural Architecture Search as Program Transformation Exploration",
+"year": 2024,
+"doi": "10.1145/3624775",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pytorch/examples"
+}
+]
+},
+{
+"s2_id": "6f6803a7dcba693c2627da1707209ae148ade50e",
+"title": "Latent Idiom Recognition for a Minimalist Functional Array Language Using Equality Saturation",
+"year": 2024,
+"doi": "10.1109/CGO57630.2024.10444879",
+"artifacts": [
+{
+"kind": "bitbucket",
+"url": "bitbucket.org/cdubach/shir"
+},
+{
+"kind": "github",
+"url": "github.com/rise-lang/shine"
+}
+]
+},
+{
+"s2_id": "a174cd5dd7b615298db6016286488cacff2035be",
+"title": "Stream-K++: Adaptive GPU GEMM Kernel Scheduling and Selection using Bloom Filters",
+"year": 2024,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hajimes/mmh3"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/rocm/composable_kernel"
+},
+{
+"kind": "github",
+"url": "github.com/rocm/rocblas"
+}
+]
+},
+{
+"s2_id": "4ca3cd211e63300f9ef50f5f814035021a9de0b1",
+"title": "YFlows: Systematic Dataflow Exploration and Code Generation for Efficient Neural Network Inference using SIMD Architectures on CPUs",
+"year": 2024,
+"doi": "10.1145/3640537.3641566",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/larq/larq"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "beec5e96c8f7ee25e29f98f8dcd09e49b6fbae33",
+"title": "Explore as a Storm, Exploit as a Raindrop: On the Benefit of Fine-Tuning Kernel Schedulers with Coordinate Descent",
+"year": 2024,
+"doi": "10.48550/arXiv.2406.20037",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/tvm"
+},
+{
+"kind": "github",
+"url": "github.com/lac-dcc/bennu"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/models"
+}
+]
+},
+{
+"s2_id": "0c8dfb6e969a953b01356a0a9c1902fa12b3b95d",
+"title": "Scorch: A Library for Sparse Deep Learning",
+"year": 2024,
+"doi": "10.48550/arXiv.2405.16883",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "df26fddc55da4a5b9dbe31f59a522a332c91cbdc",
+"title": "Harnessing Deep Learning and HPC Kernels via High-Level Loop and Tensor Abstractions on CPU Architectures",
+"year": 2024,
+"doi": "10.1109/IPDPS57955.2024.00089",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/arm-software/computelibrary"
+},
+{
+"kind": "github",
+"url": "github.com/huggingface/transformers"
+},
+{
+"kind": "github",
+"url": "github.com/intel/intel-extension-for"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+},
+{
+"kind": "github",
+"url": "github.com/openxla/iree"
+}
+]
+},
+{
+"s2_id": "8414f37e5cb6cbc7abad956bac64c9caf7b62794",
+"title": "Felix: Optimizing Tensor Programs with Gradient Descent",
+"year": 2024,
+"doi": "10.1145/3620666.3651348",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/uiuc-arc/felix"
+}
+]
+},
+{
+"s2_id": "01819c27b13197eba3e31a3dda7c0e4fc0f37ad1",
+"title": "Cyclebite: Extracting Task Graphs From Unstructured Compute-Programs",
+"year": 2024,
+"doi": "10.1109/TC.2023.3327504",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/rookfighter/nvision"
+}
+]
+},
+{
+"s2_id": "7014ce1012f5f4da0c7a15db6a6e75f9d96da92b",
+"title": "CrossRT: A cross platform programming technology for hardware-accelerated ray tracing in CG and CV applications",
+"year": 2024,
+"doi": "10.48550/arXiv.2409.12617",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/floooh/sokol"
+},
+{
+"kind": "github",
+"url": "github.com/g-truc/glm"
+},
+{
+"kind": "github",
+"url": "github.com/google/clspv"
+},
+{
+"kind": "github",
+"url": "github.com/nvidiagameworks/falcor"
+},
+{
+"kind": "github",
+"url": "github.com/pantor/inja"
+},
+{
+"kind": "github",
+"url": "github.com/rocm/hip"
+},
+{
+"kind": "github",
+"url": "github.com/seanbaxter/shaders"
+}
+]
+},
+{
+"s2_id": "bd8ee79c28ef2eb55185c6912484847696c0773b",
+"title": "SoD2: Statically Optimizing Dynamic Deep Neural Network Execution",
+"year": 2024,
+"doi": "10.1145/3617232.3624869",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/microsoft/codebert"
+}
+]
+},
+{
+"s2_id": "e833a3f83ba12fb3665633d181b799ce9dff7136",
+"title": "Scaling Deep Learning Computation over the Inter-Core Connected Intelligence Processor with T10",
+"year": 2024,
+"doi": "10.1145/3694715.3695955",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "14442b43097ebcd3f7d5d90f3d66e4ea414f8c7c",
+"title": "NetBlocks: Staging Layouts for High-Performance Custom Host Network Stacks",
+"year": 2024,
+"doi": "10.1145/3656396",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/adamdunkels/uip"
+},
+{
+"kind": "github",
+"url": "github.com/buildit-lang/net"
+},
+{
+"kind": "github",
+"url": "github.com/freertos/freertos-plus-tcp"
+},
+{
+"kind": "github",
+"url": "github.com/kaitai-io/kaitai_struct_compiler"
+},
+{
+"kind": "zenodo",
+"url": "zenodo.org/records/11099781"
+}
+]
+},
+{
+"s2_id": "5fe4ebf1248786bc5e853a13dcfc7418af4cca2d",
+"title": "ML2Tuner: Efficient Code Tuning via Multi-Level Machine Learning Models",
+"year": 2024,
+"doi": "10.48550/arXiv.2411.10764",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/tvm-vta"
+},
+{
+"kind": "github",
+"url": "github.com/etri/nest-compiler"
+},
+{
+"kind": "gitlab",
+"url": "gitlab.com/ones-ai/vta_lib"
+}
+]
+},
+{
+"s2_id": "e444a741ae656773a26f70139155ceaf58246a1e",
+"title": "Lightweight, Modular Verification for WebAssembly-to-Native Instruction Selection",
+"year": 2024,
+"doi": "10.1145/3617232.3624862",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.10433722"
+},
+{
+"kind": "github",
+"url": "github.com/avanhatt/asplos24-ae-crocus"
+},
+{
+"kind": "github",
+"url": "github.com/bjorn3/rustc_codegen_cranelift"
+},
+{
+"kind": "github",
+"url": "github.com/bytecodealliance/wasmtime"
+}
+]
+},
+{
+"s2_id": "5d8d16b2518286351136e01da84bdb773726246c",
+"title": "GeoT: Tensor Centric Library for Graph Neural Network via Efficient Segment Reduction on GPU",
+"year": 2024,
+"doi": "10.48550/arXiv.2404.03019",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/rusty1s/pytorch"
+}
+]
+},
+{
+"s2_id": "565c0a34d07d7a07fd84cc2050ff39745901dec2",
+"title": "ConvStencil: Transform Stencil Computation to Matrix Multiplication on Tensor Cores",
+"year": 2024,
+"doi": "10.1145/3627535.3638476",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/microsoft/convstencil"
+}
+]
+},
+{
+"s2_id": "b6658249de60e16c6030f6475dadc2c233871769",
+"title": "Developing performance portable plasma edge simulations: A survey",
+"year": 2024,
+"doi": "10.1016/j.cpc.2024.109123",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/archer2-hpc/usage-data"
+},
+{
+"kind": "github",
+"url": "github.com/stfc/regentparticledsl"
+}
+]
+},
+{
+"s2_id": "6c148b4273eeab70ca4499400d5fcf34d813b957",
+"title": "Slapo: A Schedule Language for Progressive Optimization of Large Deep Learning Model Training",
+"year": 2024,
+"doi": "10.1145/3620665.3640399",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/awslabs/slapo"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/apex"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/pippy"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/tutorials"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/vision"
+}
+]
+},
+{
+"s2_id": "c44c124bc7ff3841e0cf5736bcdae620033f6c84",
+"title": "SlidingConv: Domain-Specific Description of Sliding Discrete Cosine Transform Convolution for Halide",
+"year": 2024,
+"doi": "10.1109/ACCESS.2023.3345660",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/andmax/gpufilter"
+},
+{
+"kind": "github",
+"url": "github.com/bollu/polymage"
+},
+{
+"kind": "github",
+"url": "github.com/bondhugula/pluto"
+},
+{
+"kind": "github",
+"url": "github.com/hipacc/hipacc-fpga"
+},
+{
+"kind": "github",
+"url": "github.com/hipaccvx/hipaccvx"
+},
+{
+"kind": "github",
+"url": "github.com/jameshegarty/rigel"
+},
+{
+"kind": "github",
+"url": "github.com/jingpu/halide-hls"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/forma"
+},
+{
+"kind": "github",
+"url": "github.com/robstewart57/ripl"
+},
+{
+"kind": "github",
+"url": "github.com/ucla-vast/heterohalide"
+},
+{
+"kind": "github",
+"url": "github.com/ucla-vast/soda"
+}
+]
+},
+{
+"s2_id": "095321ec64d7b1e9fb54815463d74279d62bc043",
+"title": "Fast Kronecker Matrix-Matrix Multiplication on GPUs",
+"year": 2024,
+"doi": "10.1145/3627535.3638489",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/abhijangda/fastkron"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/nccl"
+}
+]
+},
+{
+"s2_id": "e6d09796ed4281875ee35cf1e8cf6f9842adfccf",
+"title": "GTCO: Graph and Tensor Co-Design for Transformer-Based Image Recognition on Tensor Cores",
+"year": 2024,
+"doi": "10.1109/TCAD.2023.3317169",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/fudan-zvg/setr"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "46d082480191d18d33a1c4ca2ce815ea5bd754c6",
+"title": "Optimizing Deep Learning Inference via Global Analysis and Tensor Expressions",
+"year": 2024,
+"doi": "10.1145/3617232.3624858",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/iree-org/iree"
+},
+{
+"kind": "github",
+"url": "github.com/microsoft/antares"
+},
+{
+"kind": "github",
+"url": "github.com/souffle-ae/souffle"
+}
+]
+},
+{
+"s2_id": "a2a75cc8d49d6bda9686a8656a8067ca408e79cc",
+"title": "TapeFlow: Streaming Gradient Tapes in Automatic Differentiation",
+"year": 2024,
+"doi": "10.1109/CGO57630.2024.10444805",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/sfu-arch/tapeflow"
+}
+]
+},
+{
+"s2_id": "07a281615d0db35e936d356f023d35ae3636b4a4",
+"title": "Aperture-Aware Lens Design",
+"year": 2024,
+"doi": "10.1145/3641519.3657398",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "c2835d88f2f5b4ffcaa2055cb137a3f79b22bff1",
+"title": "FTuner: A Fast Dynamic Shape Tensors Program Auto-Tuner for Deep Learning Compilers",
+"year": 2024,
+"doi": "10.48550/arXiv.2407.21418",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/tvm"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/nestedtensor"
+},
+{
+"kind": "github",
+"url": "github.com/tencent/blazerml-tvm"
+}
+]
+},
+{
+"s2_id": "1c2d3dbc5a828890007b0ad9c4bef8e4318d4c9a",
+"title": "CDMPP: A Device-Model Agnostic Framework for Latency Prediction of Tensor Programs",
+"year": 2024,
+"doi": "10.1145/3627703.3629572",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/joapolarbear/cdmpp"
+},
+{
+"kind": "github",
+"url": "github.com/joapolarbear/dpro"
+},
+{
+"kind": "github",
+"url": "github.com/joapolarbear/tvm"
+}
+]
+},
+{
+"s2_id": "7380b6cf234fa320e4faf93f26954e87978e78d9",
+"title": "SpEQ: Translation of Sparse Codes using Equivalences",
+"year": 2024,
+"doi": "10.1145/3656445",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ginsbach/clang"
+},
+{
+"kind": "github",
+"url": "github.com/ginsbach/llvm"
+},
+{
+"kind": "github",
+"url": "github.com/jaopaulolc/kernelfarer"
+},
+{
+"kind": "github",
+"url": "github.com/metalift/metalift"
+}
+]
+},
+{
+"s2_id": "8c3405187ad529bfd8738d83185fcd220d849fbf",
+"title": "Tenspiler: A Verified Lifting-Based Compiler for Tensor Operations",
+"year": 2024,
+"doi": "10.48550/arXiv.2404.18249",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/mathfu"
+},
+{
+"kind": "github",
+"url": "github.com/leloykun/llama2.cpp"
+},
+{
+"kind": "github",
+"url": "github.com/tenspiler/tenspiler"
+}
+]
+},
+{
+"s2_id": "3783f1e46012925efbf1107d3476eea6b4631045",
+"title": "Equivalence by Canonicalization for Synthesis-Backed Refactoring",
+"year": 2024,
+"doi": "10.1145/3656453",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.3509134"
+},
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.7313584"
+},
+{
+"kind": "github",
+"url": "github.com/justinlubin/cobbler"
+}
+]
+},
+{
+"s2_id": "1392669000c69eb96f6cb0868d46dcd1ee5d8cb2",
+"title": "HiPy: Extracting High-Level Semantics from Python Code for Data Processing",
+"year": 2024,
+"doi": "10.1145/3689737",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.13323059"
+},
+{
+"kind": "github",
+"url": "github.com/nuitka/nuitka"
+},
+{
+"kind": "github",
+"url": "github.com/pyston/pyston"
+},
+{
+"kind": "github",
+"url": "github.com/python/pyperformance"
+}
+]
+},
+{
+"s2_id": "b6bea98ca29267acbebca6cdf64eb07a5671e000",
+"title": "ADELT: Transpilation Between Deep Learning Frameworks",
+"year": 2024,
+"doi": "10.48550/arXiv.2303.03593",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/facebookresearch/fairseq"
+},
+{
+"kind": "github",
+"url": "github.com/gonglinyuan/adelt"
+}
+]
+},
+{
+"s2_id": "02c12d1ea9b018b2506c1de675db2c214e3e1c89",
+"title": "ImaGen: A General Framework for Generating Memory- and Power-Efficient Image Processing Accelerators",
+"year": 2023,
+"doi": "10.1145/3579371.3589076",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/horizon-research/imagen"
+}
+]
+},
+{
+"s2_id": "62a5f7805f3a4cc01f0be3bce1c0fbe498e9c12a",
+"title": "SIRIUS: Harvesting Whole-Program Optimization Opportunities for DNNs",
+"year": 2023,
+"doi": null,
+"artifacts": [
+{
+"kind": "zenodo",
+"url": "zenodo.org/record/7885573"
+}
+]
+},
+{
+"s2_id": "4228542c98e09cd87fe820ac714e97c169f9110d",
+"title": "MaxEVA: Maximizing the Efficiency of Matrix Multiplication on Versal AI Engine",
+"year": 2023,
+"doi": "10.1109/ICFPT59805.2023.00016",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/enyac-group/maxeva"
+}
+]
+},
+{
+"s2_id": "9a0f543c3b3a8b1c0c9c44f8194c00b6de002b21",
+"title": "BaCO: A Fast and Portable Bayesian Compiler Optimization Framework",
+"year": 2023,
+"doi": "10.1145/3623278.3624770",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/baco-authors/baco"
+},
+{
+"kind": "github",
+"url": "github.com/baco-authors/baco-artifact"
+},
+{
+"kind": "github",
+"url": "github.com/sheffieldml/gpyopt"
+}
+]
+},
+{
+"s2_id": "cb4eae289f24787ce533f791ef1ab4d15723f9be",
+"title": "Communication-Avoiding Optimizations for Large-Scale Unstructured-Mesh Applications with OP2",
+"year": 2023,
+"doi": "10.1145/3605573.3605604",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/op-dsl/op2-common"
+}
+]
+},
+{
+"s2_id": "ea9bdd6de80ea298f0a4ec9aaa7be44dc3ebc2ef",
+"title": "Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs",
+"year": 2023,
+"doi": "10.1145/3575693.3575702",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.7429879"
+},
+{
+"kind": "github",
+"url": "github.com/hidet-org/hidet"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+},
+{
+"kind": "github",
+"url": "github.com/yaoyaoding/hidet-artifacts"
+}
+]
+},
+{
+"s2_id": "be781e114032f0fd3d7531fef202bb6066dfe545",
+"title": "Odyssey: An Interactive Workbench for Expert-Driven Floating-Point Expression Rewriting",
+"year": 2023,
+"doi": "10.1145/3586183.3606819",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/herbie-fp/herbie"
+},
+{
+"kind": "github",
+"url": "github.com/nasa/precisa"
+}
+]
+},
+{
+"s2_id": "7ff9758bfafbe1ecd39fd5724c91e18a13272f64",
+"title": "mlirSynth: Automatic, Retargetable Program Raising in Multi-Level IR Using Program Synthesis",
+"year": 2023,
+"doi": "10.1109/PACT58117.2023.00012",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/opencompl/mlir-fuzz"
+}
+]
+},
+{
+"s2_id": "8416bf1f4fa49ade8191b713793f7157e0bfab50",
+"title": "Codon: A Compiler for High-Performance Pythonic Applications and DSLs",
+"year": 2023,
+"doi": "10.1145/3578360.3580275",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/duboviy/pybenchmark"
+},
+{
+"kind": "github",
+"url": "github.com/thorfdbg/libjpeg"
+}
+]
+},
+{
+"s2_id": "90a8e554098d43218f4705640cf2f8253bc03102",
+"title": "Mapspace Optimization for Tensor Computations with Bayesian Learning",
+"year": 2023,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/gptune/gptune"
+}
+]
+},
+{
+"s2_id": "02b1cb06609550c57c7d2410c40ab3cf83fae3e7",
+"title": "MOD2IR: High-Performance Code Generation for a Biophysically Detailed Neuronal Simulation DSL",
+"year": 2023,
+"doi": "10.1145/3578360.3580268",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/arbor-sim/arbor"
+}
+]
+},
+{
+"s2_id": "e2b29090b001c1d29069199619e3e7351589105a",
+"title": "C2TACO: Lifting Tensor Code to TACO",
+"year": 2023,
+"doi": "10.1145/3624007.3624053",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/mathfu"
+}
+]
+},
+{
+"s2_id": "bd76d2c07ec0d20baccdda7e527d933cc5442254",
+"title": "Implementing scalable matrix-vector products for the exact diagonalization methods in quantum many-body physics",
+"year": 2023,
+"doi": "10.1145/3624062.3624597",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/wztzjhn/quantum_"
+}
+]
+},
+{
+"s2_id": "6d5c5e0df5dc4bd0bcd524d2a22d65d672bd0b74",
+"title": "TensorIR: An Abstraction for Automatic Tensorized Program Optimization",
+"year": 2023,
+"doi": "10.1145/3575693.3576933",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/iree-org/iree"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "ef73232c915cf5c3ee7d394790b1ee74d1c30700",
+"title": "LightRidge: An End-to-end Agile Design Framework for Diffractive Optical Neural Networks",
+"year": 2023,
+"doi": "10.1145/3623278.3624757",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/lightridge/lightridge"
+},
+{
+"kind": "github",
+"url": "github.com/opticspy/lightpipes"
+}
+]
+},
+{
+"s2_id": "52f6470de8e089370d49004a544889f28f04c62e",
+"title": "TLP: A Deep Learning-Based Cost Model for Tensor Program Tuning",
+"year": 2023,
+"doi": "10.1145/3575693.3575737",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/zhaiyi000/tlp"
+}
+]
+},
+{
+"s2_id": "3b8a4ba8b9d6e4291790c86f0c076749b50b75da",
+"title": "\u2207-Prox: Differentiable Proximal Algorithm Modeling for Large-Scale Optimization",
+"year": 2023,
+"doi": "10.1145/3592144",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/princeton-computational-imaging/delta-prox"
+}
+]
+},
+{
+"s2_id": "d293299a18e1daa706ce603abce02b9df8f0ca7a",
+"title": "Nerfstudio: A Modular Framework for Neural Radiance Field Development",
+"year": 2023,
+"doi": "10.1145/3588432.3591516",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google-research/multinerf"
+},
+{
+"kind": "github",
+"url": "github.com/kakaobrain/nerf-factory"
+},
+{
+"kind": "github",
+"url": "github.com/nvlabs/tiny-cuda-nn"
+},
+{
+"kind": "github",
+"url": "github.com/tencentarc/arcnerf"
+},
+{
+"kind": "github",
+"url": "github.com/yenchenlin/nerf-pytorch"
+}
+]
+},
+{
+"s2_id": "c142bfce3b6849ee9d6aa0d5637ab28b170fd507",
+"title": "SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning",
+"year": 2023,
+"doi": "10.1145/3582016.3582047",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.7643745"
+}
+]
+},
+{
+"s2_id": "e30994a86d2aacc7a2eee5e9a2b9eced5a8b446c",
+"title": "Equality Saturation Theory Exploration \u00e0 la Carte",
+"year": 2023,
+"doi": "10.1145/3622834",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/herbie-fp/herbie"
+},
+{
+"kind": "github",
+"url": "github.com/uwplse/ruler"
+}
+]
+},
+{
+"s2_id": "17abaa5579ee2e5471b294889f21561d19cd7d90",
+"title": "Mosaic: An Interoperable Compiler for Tensor Algebra",
+"year": 2023,
+"doi": "10.1145/3591236",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.7814275"
+}
+]
+},
+{
+"s2_id": "49a7197f27ba0dfe53ae9da5d9e277ddab1a9aed",
+"title": "Automatic multi-dimensional pipelining for high-level synthesis of dataflow accelerators",
+"year": 2023,
+"doi": "10.48550/arXiv.2309.03203",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/llvm/circt"
+}
+]
+},
+{
+"s2_id": "29feeee61f9dbfc3b1e9b78d390c8c40ecb60c44",
+"title": "A Symbolic Emulator for Shuffle Synthesis on the NVIDIA PTX Code",
+"year": 2023,
+"doi": "10.1145/3578360.3580253",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/khaki3/ptxas-wrapper"
+}
+]
+},
+{
+"s2_id": "ce9fa773c84566194cd06d1011018add5ceb2709",
+"title": "High-Performance GPU-to-CPU Transpilation and Optimization via High-Level Parallel Constructs",
+"year": 2023,
+"doi": "10.1145/3572848.3577475",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.6324344"
+},
+{
+"kind": "github",
+"url": "github.com/fujitsu/dnnl"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+},
+{
+"kind": "github",
+"url": "github.com/undertherain/benchmarker"
+}
+]
+},
+{
+"s2_id": "2d96f79f33af42a75a9e6d8b6eb0dfc675b914e3",
+"title": "Casper: Accelerating Stencil Computations Using Near-Cache Processing",
+"year": 2023,
+"doi": "10.1109/ACCESS.2023.3252002",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cmu-safari/prim-benchmarks"
+}
+]
+},
+{
+"s2_id": "c8d253911646a83767b99352ace12c4f9b75ff76",
+"title": "Revisiting Temporal Blocking Stencil Optimizations",
+"year": 2023,
+"doi": "10.1145/3577193.3593716",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/khaki3/an5d"
+}
+]
+},
+{
+"s2_id": "7bb7d401d3238b97109cde91de39812c3e5fa689",
+"title": "VectorVisor: A Binary Translation Scheme for Throughput-Oriented GPU Acceleration",
+"year": 2023,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/rustwasm/wasm"
+},
+{
+"kind": "github",
+"url": "github.com/samginzburg/vectorvisor"
+},
+{
+"kind": "github",
+"url": "github.com/tinygo-org/tinygo"
+}
+]
+},
+{
+"s2_id": "98108af4cbf55982523318afb25a318ba462be99",
+"title": "A Portable Framework for Accelerating Stencil Computations on Modern Node Architectures",
+"year": 2023,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/khaki3/an5d-artifact"
+}
+]
+},
+{
+"s2_id": "067d7fe9cb647d0397c2fb53897791c8c1500e37",
+"title": "Automatic Creation of High-bandwidth Memory Architectures from Domain-specific Languages: The Case of Computational Fluid Dynamics",
+"year": 2023,
+"doi": "10.1145/3563553",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/andidr/teckyl"
+},
+{
+"kind": "github",
+"url": "github.com/chrpilat/mnemosyne"
+},
+{
+"kind": "github",
+"url": "github.com/eliben/pycparser"
+},
+{
+"kind": "github",
+"url": "github.com/google/iree"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/torch-mlir"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/mlir-hlo"
+},
+{
+"kind": "github",
+"url": "github.com/ucb-bar/berkeley-softfloat-3"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/merlin-compiler"
+}
+]
+},
+{
+"s2_id": "c999a3ef8397ed157f6e3f5d1e41ac45ea1149ec",
+"title": "TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis",
+"year": 2023,
+"doi": "10.1145/3613424.3623792",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pku-liang/tileflow"
+}
+]
+},
+{
+"s2_id": "ba4f620fb1ad8d69acec154fc1c7b845bc06ac2d",
+"title": "Modular Hardware Design with Timeline Types",
+"year": 2023,
+"doi": "10.1145/3591234",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.7709916"
+},
+{
+"kind": "github",
+"url": "github.com/janestreet/hardcaml"
+},
+{
+"kind": "github",
+"url": "github.com/juliankemmerer/pipelinec"
+},
+{
+"kind": "github",
+"url": "github.com/suhasr1991/5-stage-pipelined-ieee-single-precision-floating-point-adder-design"
+}
+]
+},
+{
+"s2_id": "51c085badf6ef12573d5b80ba614d84aa809dcfd",
+"title": "Decompiling x86 Deep Neural Network Executables",
+"year": 2023,
+"doi": "10.48550/arXiv.2210.01075",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/harry24k/adversarial"
+},
+{
+"kind": "github",
+"url": "github.com/intel/pti-gpu"
+},
+{
+"kind": "github",
+"url": "github.com/microsoft/onnxruntime"
+}
+]
+},
+{
+"s2_id": "0ae304a9c1f0ca7fd7a92dcbd3bd34b66f4888ff",
+"title": "SIMD Dataflow Co-optimization for Efficient Neural Networks Inferences on CPUs",
+"year": 2023,
+"doi": "10.48550/arXiv.2310.00574",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/larq/larq"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "2f33344e0d810f419307875bcc646bdcc757fcbd",
+"title": "TorchProbe: Fuzzing Dynamic Deep Learning Compilers",
+"year": 2023,
+"doi": "10.48550/arXiv.2310.20078",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+},
+{
+"kind": "github",
+"url": "github.com/openai/triton"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/pytorch"
+}
+]
+},
+{
+"s2_id": "63461694d4573980240ca37d401c154ca650cb05",
+"title": "A Survey on Design Methodologies for Accelerating Deep Learning on Heterogeneous Architectures",
+"year": 2023,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bytedance/byteir"
+},
+{
+"kind": "github",
+"url": "github.com/fastmachinelearning/hls4ml"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cuda-tile"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/fastertransformer"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/tensorrt-llm"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+}
+]
+},
+{
+"s2_id": "6a887ec13927871671ab1bed344edc467cdfce38",
+"title": "Polymorphic Types with Polynomial Sizes",
+"year": 2023,
+"doi": "10.1145/3589246.3595372",
+"artifacts": [
+{
+"kind": "gitlab",
+"url": "gitlab.inria.fr/bpauget/array-2023"
+},
+{
+"kind": "gitlab",
+"url": "gitlab.inria.fr/synchrone/heptagon"
+}
+]
+},
+{
+"s2_id": "2455cd8dc31ab08163100b87702b1e5b8a9982aa",
+"title": "TorchSparse++: Efficient Training and Inference Framework for Sparse Convolution on GPUs",
+"year": 2023,
+"doi": "10.1145/3613424.3614303",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mit-han-lab/torchsparse"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/traveller59/spconv"
+}
+]
+},
+{
+"s2_id": "0136cb8abb987ed63948404e1ce682965823e2a3",
+"title": "Looplets: A Language for Structured Coiteration",
+"year": 2023,
+"doi": "10.1145/3579990.3580020",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.7499790"
+},
+{
+"kind": "github",
+"url": "github.com/willow-ahrens/finch.jl"
+}
+]
+},
+{
+"s2_id": "f6c15f15b98afeb8a23e321e098b7fd9f3bce85a",
+"title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
+"year": 2023,
+"doi": "10.1145/3613424.3623791",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ctuning/cm"
+},
+{
+"kind": "github",
+"url": "github.com/fibertree-project/fibertree"
+},
+{
+"kind": "github",
+"url": "github.com/fpsg-uiuc/micro23-teaal-artifact"
+},
+{
+"kind": "github",
+"url": "github.com/fpsg-uiuc/teaal"
+}
+]
+},
+{
+"s2_id": "eef3b5edb30c6b68ccc1d69dea83946d282899e6",
+"title": "Chimera: An Analytical Optimizing Framework for Effective Compute-intensive Operators Fusion",
+"year": 2023,
+"doi": "10.1109/HPCA56546.2023.10071018",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "3ae1b5b2b11568ace711ede57563d32187e6461a",
+"title": "Building Code Transpilers for Domain-Specific Languages Using Program Synthesis (Experience Paper)",
+"year": 2023,
+"doi": "10.4230/LIPIcs.ECOOP.2023.38",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/metalift/metalift"
+},
+{
+"kind": "github",
+"url": "github.com/packet-transactions/domino-examples"
+},
+{
+"kind": "github",
+"url": "github.com/z3prover/z3"
+}
+]
+},
+{
+"s2_id": "2d8de1a3a6c1107ff848a8416ee7667af928fa6b",
+"title": "D2X: An eXtensible conteXtual Debugger for Modern DSLs",
+"year": 2023,
+"doi": "10.1145/3579990.3580014",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.7459640"
+}
+]
+},
+{
+"s2_id": "4c2289fee8badf7ba942c5d58807270e7933dcfc",
+"title": "Stream-K: Work-Centric Parallel Decomposition for Dense Matrix-Matrix Multiplication on the GPU",
+"year": 2023,
+"doi": "10.1145/3572848.3577479",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "5550ae3b1831b50ba561d5f6c3c541069377684a",
+"title": "TorchSparse++: Efficient Point Cloud Engine",
+"year": 2023,
+"doi": "10.1109/CVPRW59228.2023.00025",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mit-han-lab/bevfusion"
+},
+{
+"kind": "github",
+"url": "github.com/mit-han-lab/torchsparse"
+},
+{
+"kind": "github",
+"url": "github.com/open-mmlab/mmdetection3d"
+}
+]
+},
+{
+"s2_id": "ff524f068ee0a10be65a508248517077e721f8d1",
+"title": "LoopTune: Optimizing Tensor Computations with Reinforcement Learning",
+"year": 2023,
+"doi": "10.48550/arXiv.2309.01825",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/xnnpack"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "6ffd19930ab0170f8cfdbf926e8f3c11f85e289a",
+"title": "Decoupled Model Schedule for Deep Learning Training",
+"year": 2023,
+"doi": "10.48550/arXiv.2302.08005",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/awslabs/slapo"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/apex"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/pippy"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/tutorials"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/vision"
+}
+]
+},
+{
+"s2_id": "108432242b63db2b5ea6f2c32ae77cc03a166bf6",
+"title": "Compilation as a Defense: Enhancing DL Model Attack Robustness via Tensor Optimization",
+"year": 2023,
+"doi": "10.48550/arXiv.2309.16577",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/stefantrawicki/tdef"
+}
+]
+},
+{
+"s2_id": "89d6ba89d461134267265982fe6128c57a5c603f",
+"title": "DOPpler: Parallel Measurement Infrastructure for Auto-Tuning Deep Learning Tensor Programs",
+"year": 2023,
+"doi": "10.1109/TPDS.2023.3279233",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/dborowiec10/conductor"
+}
+]
+},
+{
+"s2_id": "251da8a78e1d048a16bf847ed23a62c731c2cc3b",
+"title": "The Case for Performance Interfaces for Hardware Accelerators",
+"year": 2023,
+"doi": "10.1145/3593856.3595904",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/progranism/open"
+},
+{
+"kind": "github",
+"url": "github.com/yosyshq/sby"
+}
+]
+},
+{
+"s2_id": "8bf5d3643a9d2b637d6f57ac5512e9ca54a51dbf",
+"title": "TurboMGNN: Improving Concurrent GNN Training Tasks on GPU With Fine-Grained Kernel Fusion",
+"year": 2023,
+"doi": "10.1109/TPDS.2023.3267943",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/alibaba/euler"
+}
+]
+},
+{
+"s2_id": "7ae61bf6f0f48e5a544b87429e321150e167e8f0",
+"title": "Software-Defined Imaging: A Survey",
+"year": 2023,
+"doi": "10.1109/JPROC.2023.3266736",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cruxopen/openisp"
+},
+{
+"kind": "github",
+"url": "github.com/cucapra/approx-vision"
+},
+{
+"kind": "github",
+"url": "github.com/hollance/neural-engine"
+},
+{
+"kind": "github",
+"url": "github.com/iset/iset3d"
+},
+{
+"kind": "github",
+"url": "github.com/iset/isetcam"
+},
+{
+"kind": "github",
+"url": "github.com/mbuckler/reversiblepipeline"
+},
+{
+"kind": "github",
+"url": "github.com/oiqbal95/fpga_adaptive_tracking"
+},
+{
+"kind": "github",
+"url": "github.com/yzxing87/invertible-isp"
+}
+]
+},
+{
+"s2_id": "9f721e41c2380a494bb4c8a78139638ef5310a38",
+"title": "RAF: Holistic Compilation for Deep Learning Model Training",
+"year": 2023,
+"doi": "10.48550/arXiv.2303.04759",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/awslabs/raf"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "74009c57ded629bf5cae2021805fbdd0f693f331",
+"title": "Data Models for Dataset Drift Controls in Machine Learning With Optical Images",
+"year": 2023,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/aiaudit-org/raw2logit"
+},
+{
+"kind": "github",
+"url": "github.com/dronedeploy/dd-ml-segmentation-benchmark"
+},
+{
+"kind": "github",
+"url": "github.com/fschill/pyraw"
+},
+{
+"kind": "zenodo",
+"url": "zenodo.org/record/5235536"
+},
+{
+"kind": "zenodo",
+"url": "zenodo.org/record/5235536as"
+}
+]
+},
+{
+"s2_id": "0d9ff8227539b4091ed1a676ac32096255eb3975",
+"title": "SLANG.D: Fast, Modular and Differentiable Shader Programming",
+"year": 2023,
+"doi": "10.1145/3618353",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apple/swift"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/nvlabs/nvdiffmodeling"
+},
+{
+"kind": "github",
+"url": "github.com/nvlabs/nvdiffrec"
+}
+]
+},
+{
+"s2_id": "2714c11c0809d638e1e501831913671914407e5d",
+"title": "MemPool: A Scalable Manycore Architecture With a Low-Latency Shared L1 Memory",
+"year": 2023,
+"doi": "10.1109/TC.2023.3307796",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/karlrupp/microprocessor-trend-data"
+},
+{
+"kind": "github",
+"url": "github.com/pulp-platform/mempool"
+}
+]
+},
+{
+"s2_id": "83d49771717a1a4567716e0a38ad27cf9c14d9ad",
+"title": "Visibility Algorithms for Dynamic Dependence Analysis and Distributed Coherence",
+"year": 2023,
+"doi": "10.1145/3572848.3577515",
+"artifacts": [
+{
+"kind": "zenodo",
+"url": "zenodo.org/record/7332228"
+}
+]
+},
+{
+"s2_id": "7906159afac47695c5d87bc38baf8c75d3512c24",
+"title": "The Sparse Abstract Machine",
+"year": 2023,
+"doi": "10.1145/3582016.3582051",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.7591742"
+},
+{
+"kind": "github",
+"url": "github.com/weiya711/sam"
+},
+{
+"kind": "github",
+"url": "github.com/weiya711/sam-artifact"
+}
+]
+},
+{
+"s2_id": "342fd56481179cd355abf1427847d23b56c578b0",
+"title": "Indexed Streams: A Formal Intermediate Representation for Fused Contraction Programs",
+"year": 2023,
+"doi": "10.1145/3591268",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.7809339"
+},
+{
+"kind": "github",
+"url": "github.com/kovach/etch"
+}
+]
+},
+{
+"s2_id": "2f4007c7559b6eee846578f60d1ec2a9392bdfa8",
+"title": "Democratizing Domain-Specific Computing",
+"year": 2023,
+"doi": "10.1145/3524108",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/xilinx/merlin-compiler"
+}
+]
+},
+{
+"s2_id": "b632301f92c1b16859092282b9f8e8c0996f12cd",
+"title": "Moses: Exploiting Cross-Device Transferable Features for on-Device Tensor Program Optimization",
+"year": 2023,
+"doi": "10.1145/3572864.3580330",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/kyrie-zhao/moses"
+}
+]
+},
+{
+"s2_id": "3a29a9e6168cf1620fe76b3702e473de6f6fec67",
+"title": "Saturn: An Optimized Data System for Multi-Large-Model Deep Learning Workloads",
+"year": 2023,
+"doi": "10.14778/3636218.3636227",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/kingoflolz/mesh-transformer-jax"
+},
+{
+"kind": "github",
+"url": "github.com/knagrecha/saturn"
+}
+]
+},
+{
+"s2_id": "c485924b4dac6bf46a45732dbe5569c058cb8546",
+"title": "TpuGraphs: A Performance Prediction Dataset on Large Tensor Computational Graphs",
+"year": 2023,
+"doi": "10.48550/arXiv.2308.13490",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google-research-datasets/tpu_graphs"
+},
+{
+"kind": "github",
+"url": "github.com/google/brax"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/models"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/tensor2tensor"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/tensorflow"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/tpu"
+}
+]
+},
+{
+"s2_id": "b48070458e3a5eac4f1b6cdf134215314c7f6faa",
+"title": "Code Transpilation for Hardware Accelerators",
+"year": 2023,
+"doi": "10.48550/arXiv.2308.06410",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/metalift/metalift"
+}
+]
+},
+{
+"s2_id": "aa3646c8cb44ad94dda88ea0bb757113b4e7a919",
+"title": "ReparamCAD: Zero-shot CAD Re-Parameterization for Interactive Manipulation",
+"year": 2023,
+"doi": "10.1145/3610548.3618219",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/milmillin/reparamcad"
+}
+]
+},
+{
+"s2_id": "65ce7c4a0a49558452c5b524d4970a9d019ffddd",
+"title": "Correct Compilation of Semiring Contractions",
+"year": 2022,
+"doi": "10.48550/arXiv.2207.13291",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/kovach/etch"
+}
+]
+},
+{
+"s2_id": "e5decee4dbf82f468c652d8454666f9fd4c24ca4",
+"title": "Lifting C semantics for dataflow optimization",
+"year": 2022,
+"doi": "10.1145/3524059.3532389",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/spcl/c2dace"
+}
+]
+},
+{
+"s2_id": "c3aaf6a9fe86feed0f1e7ed972a6a4439b334066",
+"title": "Bind the gap: compiling real software to hardware FFT accelerators",
+"year": 2022,
+"doi": "10.1145/3519939.3523439",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/fourieracceleratorcompiler/nxpenvironment"
+}
+]
+},
+{
+"s2_id": "62c4172e829ae2964fc794dbe030f9a2da701b97",
+"title": "Joint Program and Layout Transformations to Enable Convolutional Operators on Specialized Hardware Based on Constraint Programming",
+"year": 2022,
+"doi": "10.1145/3487922",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/baidu-research/deepbench"
+},
+{
+"kind": "github",
+"url": "github.com/gecode/gecode"
+},
+{
+"kind": "github",
+"url": "github.com/maratyszcza/nnpack"
+}
+]
+},
+{
+"s2_id": "1ca8c2b8f6f58979459c7ed6b7cb81c426d7caf8",
+"title": "NOELLE Offers Empowering LLVM Extensions",
+"year": 2022,
+"doi": "10.1109/CGO53902.2022.9741276",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/scampanoni/noelle"
+}
+]
+},
+{
+"s2_id": "96c1d31c7e000d6ef16d87a1c2ac2d85001ad873",
+"title": "ParaGraph: An application-simulator interface and toolkit for hardware-software co-design",
+"year": 2022,
+"doi": "10.1145/3545008.3545069",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/tensorflow/tensorflow"
+}
+]
+},
+{
+"s2_id": "07165e4c919d095ae04a82d543146b2e423a5b9c",
+"title": "DISTAL: the distributed tensor algebra compiler",
+"year": 2022,
+"doi": "10.1145/3519939.3523437",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cyclops-community/ctf"
+},
+{
+"kind": "github",
+"url": "github.com/eth-cscs/cosma"
+},
+{
+"kind": "github",
+"url": "github.com/xianyi/openblas"
+},
+{
+"kind": "gitlab",
+"url": "gitlab.com/stanfordlegion/legion"
+}
+]
+},
+{
+"s2_id": "592d8b30525a5ed14d56cb2e72a791f28a0981aa",
+"title": "The CoRa Tensor Compiler: Compilation for Ragged Tensors with Minimal Padding",
+"year": 2022,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pytorch/pytorch"
+}
+]
+},
+{
+"s2_id": "851feb4bc316518ff9d9cc05bdef17eb857fa8e5",
+"title": "Transfer-Tuning: Reusing Auto-Schedules for Efficient Tensor Program Code Generation",
+"year": 2022,
+"doi": "10.1145/3559009.3569682",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/giclab/transfer-tuning"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "d5177925836efe74c26c7118bef4c0669f3715dc",
+"title": "Demystifying Map Space Exploration for NPUs",
+"year": 2022,
+"doi": "10.1109/IISWC55918.2022.00031",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/maestro-project/gamma-timeloop"
+}
+]
+},
+{
+"s2_id": "ae84ec03b226d97b91b70807a4c5deb257b540fa",
+"title": "Q-gym: An Equality Saturation Framework for DNN Inference Exploiting Weight Repetition",
+"year": 2022,
+"doi": "10.1145/3559009.3569673",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/homenc/helib"
+}
+]
+},
+{
+"s2_id": "8a02e3747123a605174beac0d622dff386d2a8db",
+"title": "Coverage-guided tensor compiler fuzzing with joint IR-pass mutation",
+"year": 2022,
+"doi": "10.1145/3527317",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.6371291"
+},
+{
+"kind": "github",
+"url": "github.com/ise-uiuc/tzer"
+},
+{
+"kind": "github",
+"url": "github.com/plaidml/plaidml"
+}
+]
+},
+{
+"s2_id": "938ff51b43f95921c6071bf7f85ccb358da23951",
+"title": "End-to-end Optimization of Machine Learning Prediction Queries",
+"year": 2022,
+"doi": "10.1145/3514221.3526141",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/microsoft/onnxruntime"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnxmltools"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/mlir"
+}
+]
+},
+{
+"s2_id": "30d51a26086a6632d2ed0edd882054b46e8519a9",
+"title": "Automating reinforcement learning architecture design for code optimization",
+"year": 2022,
+"doi": "10.1145/3497776.3517769",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/huantwang/supersonic"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/llvm-test-suite"
+}
+]
+},
+{
+"s2_id": "02bab64297990a11f3b4b2a87bac951cb30d26c2",
+"title": "End-to-end translation validation for the halide language",
+"year": 2022,
+"doi": "10.1145/3527328",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.4501022"
+},
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "a88e4bf2a8d3be9cc6f7998e97078c69b336a54e",
+"title": "Collage: Seamless Integration of Deep Learning Backends with Automatic Placement",
+"year": 2022,
+"doi": "10.1145/3559009.3569651",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cmu-catalyst/collage"
+}
+]
+},
+{
+"s2_id": "73783654dec55037fd030bdab025712b3c26bcb7",
+"title": "Declarative Specification for Unstructured Mesh Editing Algorithms",
+"year": 2022,
+"doi": "10.1145/3550454.3555513",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/wildmeshing/wildmeshing-toolkit"
+}
+]
+},
+{
+"s2_id": "6d96a56047bc3ca1b9c36d59f53573b211726f56",
+"title": "Formal Semantics for the Halide Language",
+"year": 2022,
+"doi": "10.48550/arXiv.2210.15740",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/tiramisu-compiler/tiramisu"
+}
+]
+},
+{
+"s2_id": "c1a84477a52929123a03c3b1c22b582c6ad268f1",
+"title": "HARL: Hierarchical Adaptive Reinforcement Learning Based Auto Scheduler for Neural Networks",
+"year": 2022,
+"doi": "10.1145/3545008.3545020",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/tvm"
+},
+{
+"kind": "github",
+"url": "github.com/nikhilbarhate99/ppo-pytorch"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "c3607d87792ed6bb08c3ac4442b0e3a05bf2e15b",
+"title": "Caviar: an e-graph based TRS for automatic code optimization",
+"year": 2022,
+"doi": "10.1145/3497776.3517781",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/caviar-trs/caviar"
+}
+]
+},
+{
+"s2_id": "76750faa3bdbca4b8dd5e7ee3b965c1965c8bc8a",
+"title": "LuisaRender",
+"year": 2022,
+"doi": "10.1145/3550454.3555463",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mitsuba-renderer/enoki"
+},
+{
+"kind": "github",
+"url": "github.com/mmp/pbrt-v4"
+},
+{
+"kind": "github",
+"url": "github.com/nvidiagameworks/falcor"
+},
+{
+"kind": "github",
+"url": "github.com/pearcoding/ignis"
+}
+]
+},
+{
+"s2_id": "d0acd6475d2460fb8247909d6dd11fb97045d096",
+"title": "Memory Optimizations in an Array Language",
+"year": 2022,
+"doi": "10.1109/SC41404.2022.00036",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.6452039"
+}
+]
+},
+{
+"s2_id": "91b29761840442005da39bc258e2298b528f31aa",
+"title": "Breaking the computation and communication abstraction barrier in distributed machine learning workloads",
+"year": 2022,
+"doi": "10.1145/3503222.3507778",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/microsoft/deepspeed"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/apex"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/parasailteam/coconet"
+}
+]
+},
+{
+"s2_id": "996b1aa2c29aaec721bc5ea33b8da50fb713e8de",
+"title": "Specialized Accelerators and Compiler Flows: Replacing Accelerator APIs with a Formal Software/Hardware Interface",
+"year": 2022,
+"doi": "10.48550/arXiv.2203.00218",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pytorch/examples"
+}
+]
+},
+{
+"s2_id": "9e3ec5e5175e8da9a8fe546a71ff63d07c9b26a2",
+"title": "Reducing FPGA Memory Footprint of Stencil Codes through Automatic Extraction of Memory Patterns",
+"year": 2022,
+"doi": "10.1109/FPL57034.2022.00033",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/wimvanderbauwhede/refactorf4acc"
+}
+]
+},
+{
+"s2_id": "93f0df3050c2048c08f26765dc387af70f60a362",
+"title": "AMOS: enabling automatic mapping for tensor computations on spatial accelerators with hardware abstraction",
+"year": 2022,
+"doi": "10.1145/3470496.3527440",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "063a58e0a5deffa5ab603f65b52d3112afdad5e0",
+"title": "CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research",
+"year": 2022,
+"doi": "10.1109/CGO53902.2022.9741258",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/facebookresearch/loop"
+},
+{
+"kind": "github",
+"url": "github.com/facebookresearch/nevergrad"
+}
+]
+},
+{
+"s2_id": "18bd983094d5f8f9a7bba922ad74fd120e17dd35",
+"title": "The Mozart reuse exposed dataflow processor for AI and beyond: industrial product",
+"year": 2022,
+"doi": "10.1145/3470496.3533040",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "fe9ba9dc1748bac42c9865b034d44dbfa3db5555",
+"title": "Expression Acceleration: Seamless Parallelization of Typed High-Level Languages",
+"year": 2022,
+"doi": "10.48550/arXiv.2211.00621",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/diku-dk/futhark-benchmarks"
+},
+{
+"kind": "github",
+"url": "github.com/miking-lang/miking"
+}
+]
+},
+{
+"s2_id": "27e200d3e46a54d2ba16d9173ba6f711eac18adc",
+"title": "HeteroFlow: An Accelerator Programming Model with Decoupled Data Placement for Software-Defined FPGAs",
+"year": 2022,
+"doi": "10.1145/3490422.3502369",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/heheda365/ultra_net"
+}
+]
+},
+{
+"s2_id": "1d98362ecd2011b1a85f6011feefefddd2fc1d85",
+"title": "LoopStack: a Lightweight Tensor Algebra Compiler Stack",
+"year": 2022,
+"doi": "10.48550/arXiv.2205.00618",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/xnnpack"
+}
+]
+},
+{
+"s2_id": "39b128292b5cdcf39e2c375a5346033d37243644",
+"title": "Compiler-Driven Simulation of Reconfigurable Hardware Accelerators",
+"year": 2022,
+"doi": "10.1109/HPCA53966.2022.00052",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cucapra/eventqueue"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/vitis-tutorials"
+}
+]
+},
+{
+"s2_id": "9233a4d46adc39b54dc45223f9302bb6b45fa50a",
+"title": "HDagg: Hybrid Aggregation of Loop-carried Dependence Iterations in Sparse Matrix Computations",
+"year": 2022,
+"doi": "10.1109/ipdps53621.2022.00121",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/behroozzare/hdagg-benchmark"
+},
+{
+"kind": "github",
+"url": "github.com/sympiler/aggregation"
+}
+]
+},
+{
+"s2_id": "3aac89fe0acb362547ba55bd2df25edf82acbc7b",
+"title": "Vector instruction selection for digital signal processors using program synthesis",
+"year": 2022,
+"doi": "10.1145/3503222.3507714",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/uwplse/rake"
+}
+]
+},
+{
+"s2_id": "48fd8a608024000c1f1fc6184bbcd45520328874",
+"title": "Invited: Accelerator Design with Decoupled Hardware Customizations: Benefits and Challenges",
+"year": 2022,
+"doi": "10.1145/3489517.3530681",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/heheda365/ultra_net"
+}
+]
+},
+{
+"s2_id": "f930fe86da74a48556b6c8b6af23a1a595747a3f",
+"title": "GraphOpt: Constrained-Optimization-Based Parallelization of Irregular Graphs",
+"year": 2022,
+"doi": "10.1109/TPDS.2022.3151194",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nimish15shah/graphopt"
+}
+]
+},
+{
+"s2_id": "af8a9970736d4fde427861d8ec367c3c8f634cdd",
+"title": "Functional collection programming with semi-ring dictionaries",
+"year": 2022,
+"doi": "10.1145/3527333",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/adalabucsd/morpheuspy"
+},
+{
+"kind": "github",
+"url": "github.com/greg7mdp/parallel-hashmap"
+},
+{
+"kind": "github",
+"url": "github.com/hail-is/hail"
+},
+{
+"kind": "github",
+"url": "github.com/timokersten/db-engine-paradigms"
+}
+]
+},
+{
+"s2_id": "65e65fed51f621c2f315ab0fbe597a7ba34a7aaa",
+"title": "Alpinist: An Annotation-Aware GPU Program Optimizer",
+"year": 2022,
+"doi": "10.1007/978-3-030-99527-0_18",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/omersakar/alpinist-examples"
+},
+{
+"kind": "github",
+"url": "github.com/utwente-fmt/vercors"
+}
+]
+},
+{
+"s2_id": "656c7ced1692bbb288225b87884200e00333775b",
+"title": "AlphaSparse: Generating High Performance SpMV Codes Directly from Sparse Matrices",
+"year": 2022,
+"doi": "10.1109/SC41404.2022.00071",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/dumerrill/merge-spmv"
+},
+{
+"kind": "github",
+"url": "github.com/tensor-compiler/tacowe"
+},
+{
+"kind": "github",
+"url": "github.com/weifengliu-ssslab/benchmark"
+}
+]
+},
+{
+"s2_id": "87c5b281fa43e6f27191b20a8dd694eda1126336",
+"title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+"year": 2022,
+"doi": "10.52202/068431-1189",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hazyresearch/flash-attention"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/apex"
+}
+]
+},
+{
+"s2_id": "13eed8c35582619bb857e0a78a58ee9d25f6ad6e",
+"title": "Romou: rapidly generate high-performance tensor kernels for mobile GPUs",
+"year": 2022,
+"doi": "10.1145/3495243.3517020",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/khronosgroup/opencl-sdk"
+},
+{
+"kind": "github",
+"url": "github.com/krrishnarraj/clpeak"
+},
+{
+"kind": "github",
+"url": "github.com/microsoft/archprobe"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/xiaomi/mace"
+}
+]
+},
+{
+"s2_id": "34d861c3786c85f848da57e9679b26eaa14ed881",
+"title": "FPGA HLS Today: Successes, Challenges, and Opportunities",
+"year": 2022,
+"doi": "10.1145/3530775",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ucla-vast/minimap2-acceleration"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/finn-hlslib"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/hls"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/merlin-compiler"
+},
+{
+"kind": "github",
+"url": "github.com/xilinx/xrt"
+}
+]
+},
+{
+"s2_id": "bd1d4ea51fb260236396f4a92f0edc381ba77aed",
+"title": "A Memory-Bounded Best-First Beam Search and Its Application to Scheduling Halide Programs",
+"year": 2022,
+"doi": "10.1609/socs.v15i1.21754",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "274fe67a031b8f319859b5514d5f47e301725fa3",
+"title": "CoCoPIE XGen: A Full-Stack AI-Oriented Optimizing Framework",
+"year": 2022,
+"doi": "10.48550/arXiv.2206.10620",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/alibaba/mnn"
+}
+]
+},
+{
+"s2_id": "56768340a01c3419ba845cdbd15241d694a18149",
+"title": "GMI-DRL: Empowering Multi-GPU Deep Reinforcement Learning with GPU Spatial Multiplexing",
+"year": 2022,
+"doi": "10.48550/arXiv.2206.08482",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/facebookincubator/gloo"
+}
+]
+},
+{
+"s2_id": "4666e94b48e1513ea61b40f84915a2e01ac06d2a",
+"title": "Gradient-free Multi-domain Optimization for Autonomous Systems",
+"year": 2022,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/facebookresearch/nevergrad"
+},
+{
+"kind": "github",
+"url": "github.com/hzheng40/tunercar"
+}
+]
+},
+{
+"s2_id": "50ac3b6bb980016189c142f67e35406a2b623b08",
+"title": "P3 problem and Magnolia language: Specializing array computations for emerging architectures",
+"year": 2022,
+"doi": "10.3389/fcomp.2022.931312",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/magnolia-lang/magnolia-lang"
+}
+]
+},
+{
+"s2_id": "3bcce8f6d8edc9eb1a837a7f51206179e6578bbb",
+"title": "DR.JIT",
+"year": 2022,
+"doi": "10.1145/3528223.3530099",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.836832"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/mitsuba-renderer/enoki"
+},
+{
+"kind": "github",
+"url": "github.com/mitsuba-renderer/mitsuba3"
+},
+{
+"kind": "github",
+"url": "github.com/mmp/pbrt-v4"
+}
+]
+},
+{
+"s2_id": "2f6f3164d5aa508aa3019c7f62038c10de451a78",
+"title": "A \ud835\udeff : Autodiff for Discontinuous Programs \u2013 Applied to Shaders",
+"year": 2022,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/yyuting/adelta"
+}
+]
+},
+{
+"s2_id": "fe56c854e337f4eed7f2d8dfb06426cf79507ef5",
+"title": "A \ud835\udeff : Autodiff for Discontinuous Programs \u2013 Applied to Shaders",
+"year": 2022,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/yyuting/adelta"
+}
+]
+},
+{
+"s2_id": "0e2fa6bfa46f49dcab516c438d59664813a09360",
+"title": "A \ud835\udeff : Autodiff for Discontinuous Programs \u2013 Applied to Shaders",
+"year": 2022,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/yyuting/adelta"
+}
+]
+},
+{
+"s2_id": "5bea389410a58247b642f003a6f65db109a34ab7",
+"title": "Distribution Theoretic Semantics for Non-Smooth Differentiable Programming",
+"year": 2022,
+"doi": "10.48550/arXiv.2207.05946",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/esa/torchquad"
+},
+{
+"kind": "github",
+"url": "github.com/psg-mit/marshall"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/pytorch"
+}
+]
+},
+{
+"s2_id": "b310c520a7c1357587a671bc4f424d23b3534b31",
+"title": "A general construction for abstract interpretation of higher-order automatic differentiation",
+"year": 2022,
+"doi": "10.1145/3563324",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/uiuc-arc/abstractad"
+}
+]
+},
+{
+"s2_id": "772afa2d06f85eb2ca8db82f7b373cbbf3f3efac",
+"title": "HW-Aware Initialization of DNN Auto-Tuning to Improve Exploration Time and Robustness",
+"year": 2022,
+"doi": "10.48550/arXiv.2205.15568",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/baidu-research/deepbench"
+}
+]
+},
+{
+"s2_id": "026ab4ed573b3439ba89bbb193478e9ff396ef24",
+"title": "Balsa: Learning a Query Optimizer Without Expert Demonstrations",
+"year": 2022,
+"doi": "10.1145/3514221.3517885",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/balsa-project/balsa"
+},
+{
+"kind": "github",
+"url": "github.com/learnedsystems/baoforpostgresql"
+},
+{
+"kind": "github",
+"url": "github.com/ossc-db/pg_hint_plan"
+},
+{
+"kind": "github",
+"url": "github.com/postgres/postgres"
+}
+]
+},
+{
+"s2_id": "83190a55a737703f1953300816ce276aa9aefc36",
+"title": "Neural architecture search using property guided synthesis",
+"year": 2022,
+"doi": "10.1145/3563329",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google-research/google-research"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "a7435722d8ab595da5a9c70ac9160f57d0dcd75a",
+"title": "Enabling Transformers to Understand Low-Level Programs",
+"year": 2022,
+"doi": "10.1109/HPEC55821.2022.9926313",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/facebookresearch/codegen"
+},
+{
+"kind": "github",
+"url": "github.com/facebookresearch/transcoder"
+},
+{
+"kind": "github",
+"url": "github.com/features/copilot"
+},
+{
+"kind": "github",
+"url": "github.com/glample/fastbpe"
+},
+{
+"kind": "github",
+"url": "github.com/pybind/pybind11"
+},
+{
+"kind": "github",
+"url": "github.com/wsmoses/llvm-tokenizer"
+}
+]
+},
+{
+"s2_id": "a7f40dd51c626005d34a252b73856a6c927682a7",
+"title": "Trimmer: Cost-Efficient Deep Learning Auto-tuning for Cloud Datacenters",
+"year": 2022,
+"doi": "10.1109/CLOUD55607.2022.00061",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/tvm"
+}
+]
+},
+{
+"s2_id": "210d8331272eec9b052e68270b9fdcd1267f8d5f",
+"title": "Bolt: Bridging the Gap between Auto-tuners and Hardware-native Performance",
+"year": 2022,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "3b0cf543a730e674d4213d344ebc857fada76ead",
+"title": "Understanding High-Level Properties of Low-Level Programs Through Transformers",
+"year": 2022,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/facebookresearch/codegen"
+},
+{
+"kind": "github",
+"url": "github.com/facebookresearch/transcoder"
+},
+{
+"kind": "github",
+"url": "github.com/features/copilot"
+},
+{
+"kind": "github",
+"url": "github.com/glample/fastbpe"
+},
+{
+"kind": "github",
+"url": "github.com/juliacomputingoss/llvm-cbe"
+},
+{
+"kind": "github",
+"url": "github.com/pybind/pybind11"
+}
+]
+},
+{
+"s2_id": "5e4da28090d9b062ae64e2031d7f9d2f4bee365d",
+"title": "Flashlight: Enabling Innovation in Tools for Machine Learning",
+"year": 2022,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/arrayfire/arrayfire"
+},
+{
+"kind": "github",
+"url": "github.com/eclipse/deeplearning4j"
+},
+{
+"kind": "github",
+"url": "github.com/facebookincubator/gloo"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/nccl"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "765ae4aee20af83b39c35cf81626bb85948552f1",
+"title": "An Evaluation of Edge TPU Accelerators for Convolutional Neural Networks",
+"year": 2022,
+"doi": "10.1109/IISWC55918.2022.00017",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/deepmind/sonnet"
+},
+{
+"kind": "github",
+"url": "github.com/google-research/google-research"
+}
+]
+},
+{
+"s2_id": "797d9ff8179df9594970ce56f278dfefc30be8c9",
+"title": "GRANITE: A Graph Neural Network Model for Basic Block Throughput Estimation",
+"year": 2022,
+"doi": "10.1109/IISWC55918.2022.00012",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/deepmind/graph_nets"
+},
+{
+"kind": "github",
+"url": "github.com/google/exegesis"
+},
+{
+"kind": "github",
+"url": "github.com/google/gematria"
+}
+]
+},
+{
+"s2_id": "7e2e949095b676874fc759a35daf4aeee067c904",
+"title": "Synthesizing CRDTs from Sequential Data Types with Verified Lifting",
+"year": 2022,
+"doi": "10.48550/arXiv.2205.12425",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hydro-project/katara"
+}
+]
+},
+{
+"s2_id": "8a9c690f447443a400f61efb5711d1581e222c62",
+"title": "Katara: synthesizing CRDTs with verified lifting",
+"year": 2022,
+"doi": "10.1145/3563336",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hydro-project/katara"
+}
+]
+},
+{
+"s2_id": "f6c59975608cebb33f50c86cc8cd0622178455ee",
+"title": "Getting to the point: index sets and parallelism-preserving autodiff for pointful array programming",
+"year": 2021,
+"doi": "10.1145/3473593",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "48b9be04df10466942bb4071b5348c387591ff0c",
+"title": "An Auto-Programming Approach to Vulkan",
+"year": 2021,
+"doi": "10.20948/graphicon-2021-3027-150-165",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/clspv"
+},
+{
+"kind": "github",
+"url": "github.com/microsoft/directml"
+},
+{
+"kind": "github",
+"url": "github.com/pantor/inja"
+},
+{
+"kind": "github",
+"url": "github.com/seanbaxter/shaders"
+},
+{
+"kind": "github",
+"url": "github.com/teamwisp/wisprenderer"
+}
+]
+},
+{
+"s2_id": "7695b134c6250ea44a2f4279d3e64df44d1a11da",
+"title": "Automatic Code Generation and Optimization of Large-scale Stencil Computation on Many-core Processors",
+"year": 2021,
+"doi": "10.1145/3472456.3473517",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/buaa-hipo/msc-stencil-compiler"
+}
+]
+},
+{
+"s2_id": "31406228e15e0d6990e73eb07fc39dfffcee4352",
+"title": "Reverse-Mode Automatic Differentiation and Optimization of GPU Kernels via Enzyme",
+"year": 2021,
+"doi": "10.1145/3458817.3476165",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/clima/climatemachine.jl"
+},
+{
+"kind": "github",
+"url": "github.com/lcw/heptapus.jl"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/llvm-project"
+},
+{
+"kind": "github",
+"url": "github.com/wsmoses/enzyme"
+},
+{
+"kind": "github",
+"url": "github.com/wsmoses/enzyme-gpu-tests"
+}
+]
+},
+{
+"s2_id": "6dcb5dff29dd8a743f49158c2341d9b583df6da8",
+"title": "End-to-end Model Inference and Training on Gemmini",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+}
+]
+},
+{
+"s2_id": "5005af94ab8cde1a8aad4f37afb0c7de43f5e4c2",
+"title": "Fast Stencil Computations using Fast Fourier Transforms",
+"year": 2021,
+"doi": "10.1145/3409964.3461803",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/tealab/fftstencils"
+}
+]
+},
+{
+"s2_id": "e6c4121a6f2e7fd696f659dff9df433e956cc923",
+"title": "Verified code generation for the polyhedral model",
+"year": 2021,
+"doi": "10.1145/3434321",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ekdohibs/polygen"
+}
+]
+},
+{
+"s2_id": "a6cc3f1aad0743393826e955b3247dcd61fd9719",
+"title": "Reveal training performance mystery between TensorFlow and PyTorch in the single GPU environment",
+"year": 2021,
+"doi": "10.1007/s11432-020-3182-1",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google-research/bert"
+},
+{
+"kind": "github",
+"url": "github.com/huggingface/transformers"
+},
+{
+"kind": "github",
+"url": "github.com/lambdal/bert"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/deeplearningexamples"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/examples"
+},
+{
+"kind": "github",
+"url": "github.com/rayhane-mamah/tacotron-2"
+},
+{
+"kind": "github",
+"url": "github.com/seannaren/deepspeech.pytorch"
+},
+{
+"kind": "github",
+"url": "github.com/tensor\ufb02ow/benchmarks"
+},
+{
+"kind": "github",
+"url": "github.com/tensor\ufb02ow/models"
+},
+{
+"kind": "github",
+"url": "github.com/tensor\ufb02ow/tensor\ufb02ow"
+}
+]
+},
+{
+"s2_id": "55b91d4be522c2726ec2852febbec5537081672f",
+"title": "Rewrite rule inference using equality saturation",
+"year": 2021,
+"doi": "10.1145/3485496",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/tvm"
+},
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/uwplse/herbie"
+},
+{
+"kind": "github",
+"url": "github.com/z3prover/z3"
+}
+]
+},
+{
+"s2_id": "e64aa5b9f905454a697f10dda149b4de605e8b98",
+"title": "Pure tensor program rewriting via access patterns (representation pearl)",
+"year": 2021,
+"doi": "10.1145/3460945.3464953",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/gussmith23/glenside"
+}
+]
+},
+{
+"s2_id": "d4ad820b48b90f2d0c0b895054992919fa2f7013",
+"title": "Sketch-Guided Equality Saturation: Scaling Equality Saturation to Complex Optimizations of Functional Programs",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bastacyclop/egg-rise"
+},
+{
+"kind": "github",
+"url": "github.com/rise-lang/shine"
+}
+]
+},
+{
+"s2_id": "a559717fc77c041ab28e3f51ceba0ddae82547ab",
+"title": "A compiler infrastructure for accelerator generators",
+"year": 2021,
+"doi": "10.1145/3445814.3446712",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cucapra/calyx-evaluation"
+},
+{
+"kind": "zenodo",
+"url": "zenodo.org/record/4432747"
+}
+]
+},
+{
+"s2_id": "8a4af4ef0d8beb356ffa009ab96437f833a3dba3",
+"title": "Transformations of High-Level Synthesis Codes for High-Performance Computing",
+"year": 2021,
+"doi": "10.1109/TPDS.2020.3039409",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/spcl/gemm"
+},
+{
+"kind": "github",
+"url": "github.com/spcl/nbody"
+},
+{
+"kind": "github",
+"url": "github.com/spcl/stencil"
+}
+]
+},
+{
+"s2_id": "ad7de99fca25e512e08e68ed65da3bbeae96b10b",
+"title": "Domain-Specific Multi-Level IR Rewriting for GPU",
+"year": 2021,
+"doi": "10.1145/3469030",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/climate-machine/clima"
+},
+{
+"kind": "github",
+"url": "github.com/gridtools/gridtools"
+},
+{
+"kind": "github",
+"url": "github.com/gridtools/gt4py"
+},
+{
+"kind": "github",
+"url": "github.com/llnl/raja"
+},
+{
+"kind": "github",
+"url": "github.com/spcl/open-earth-benchmarks"
+},
+{
+"kind": "github",
+"url": "github.com/spcl/open-earth-compiler"
+}
+]
+},
+{
+"s2_id": "63e3c99d29c2cb029e46d9dfa03c4ec12aefa3a5",
+"title": "Transparent Compiler and Runtime Specializations for Accelerating Managed Languages on FPGAs",
+"year": 2021,
+"doi": "10.22152/programming-journal.org/2021/5/8",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/beehive-lab/tornadovm"
+}
+]
+},
+{
+"s2_id": "3aef285d724db47d1218c09a0cb7c25573828c4b",
+"title": "CoSA: Scheduling by Constrained Optimization for Spatial Accelerators",
+"year": 2021,
+"doi": "10.1109/ISCA52012.2021.00050",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/baidu-research/deepbench"
+}
+]
+},
+{
+"s2_id": "a2626da887fc0e504378cbaca2960f03723a1f22",
+"title": "MPU: Towards Bandwidth-abundant SIMT Processor via Near-bank Computing",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvlabs/cub"
+}
+]
+},
+{
+"s2_id": "b7409969d94ba1e7c96f0abeb6f5bc1bb4319bb2",
+"title": "Neural architecture search as program transformation exploration",
+"year": 2021,
+"doi": "10.1145/3445814.3446753",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pytorch/examples"
+}
+]
+},
+{
+"s2_id": "31faeea72dd922debc174943415b372a88c2a3a0",
+"title": "Guided Optimization for Image Processing Pipelines",
+"year": 2021,
+"doi": "10.1109/VL/HCC51201.2021.9576341",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/harisiqbal88/plotneuralnet"
+},
+{
+"kind": "github",
+"url": "github.com/waleedka/hiddenlayer"
+}
+]
+},
+{
+"s2_id": "d3bb9e1c3fec528ed9a98fe427ba14b72214ec52",
+"title": "Programming and Synthesis for Software-defined FPGA Acceleration: Status and Future Prospects",
+"year": 2021,
+"doi": "10.1145/3469660",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/synthesijer/synthesijer"
+}
+]
+},
+{
+"s2_id": "d6ca36b25bcb8c094b584504f734b1bf869d5c1f",
+"title": "UNIT: Unifying Tensorized Instruction Compilation",
+"year": 2021,
+"doi": "10.1109/CGO51591.2021.9370330",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.4420522"
+}
+]
+},
+{
+"s2_id": "dac955cbb88d2fa3a8180d3442a52011071d4b94",
+"title": "Array languages make neural networks fast",
+"year": 2021,
+"doi": "10.1145/3460944.3464312",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/gu-clasp/typedflow"
+},
+{
+"kind": "github",
+"url": "github.com/laurentmazare/ocaml-torch"
+},
+{
+"kind": "github",
+"url": "github.com/laurentmazare/tensorflow-ocaml"
+},
+{
+"kind": "github",
+"url": "github.com/maratyszcza/nnpack"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/pytorch"
+},
+{
+"kind": "github",
+"url": "github.com/sacbase/cnn"
+}
+]
+},
+{
+"s2_id": "1d2c8d3d022ef82e2015e96b2d0a7726c9f2ecd2",
+"title": "Customized Monte Carlo Tree Search for LLVM/Polly's Composable Loop Optimization Transformations",
+"year": 2021,
+"doi": "10.1109/PMBS54543.2021.00015",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ecp-copa/comd"
+},
+{
+"kind": "github",
+"url": "github.com/geodynamics/sw4lite"
+},
+{
+"kind": "github",
+"url": "github.com/mantevo/miniamr"
+},
+{
+"kind": "github",
+"url": "github.com/parrt/dtreeviz"
+},
+{
+"kind": "github",
+"url": "github.com/sollve/llvm-project"
+}
+]
+},
+{
+"s2_id": "ae4181492498ad1894d02280f6af2a248de454b3",
+"title": "A performance portability framework for Python",
+"year": 2021,
+"doi": "10.1145/3447818.3460376",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ecp-copa/examinimd"
+},
+{
+"kind": "github",
+"url": "github.com/kokkos/kokkos-tools"
+},
+{
+"kind": "github",
+"url": "github.com/kokkos/kokkos-tutorials"
+},
+{
+"kind": "github",
+"url": "github.com/kokkos/pykokkos"
+},
+{
+"kind": "github",
+"url": "github.com/parres/kernels"
+},
+{
+"kind": "github",
+"url": "github.com/python/mypy"
+}
+]
+},
+{
+"s2_id": "92478f301edefc1ad5028039e0514fb5bb2c0e1e",
+"title": "New Directions in Cloud Programming",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hydro-project/cidr2021"
+},
+{
+"kind": "github",
+"url": "github.com/rails/rails"
+},
+{
+"kind": "github",
+"url": "github.com/timelydataflow/timely-dataflow"
+}
+]
+},
+{
+"s2_id": "ae1cb33dbf633b8f0a9202b856e17fb1836fa0c1",
+"title": "Easy and efficient agent-based simulations with the OpenABL language and compiler",
+"year": 2021,
+"doi": "10.1016/j.future.2020.10.014",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/flamegpu/flamegpu"
+},
+{
+"kind": "github",
+"url": "github.com/isislab-unisa/dmason"
+},
+{
+"kind": "github",
+"url": "github.com/openabl/790"
+},
+{
+"kind": "github",
+"url": "github.com/openabl/openabl"
+}
+]
+},
+{
+"s2_id": "af5958f026701156099245f41694acee0e599d20",
+"title": "TenSet: A Large-scale Program Performance Dataset for Learned Tensor Compilers",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/tlc-pack/tenset"
+}
+]
+},
+{
+"s2_id": "caf132ee484e6922dc673f7f90a24950ab86059d",
+"title": "Dataset Sensitive Autotuning of Multi-versioned Code Based on Monotonic Properties - Autotuning in Futhark",
+"year": 2021,
+"doi": "10.1007/978-3-030-83978-9_1",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/diku-dk/futhark-benchmarks"
+},
+{
+"kind": "github",
+"url": "github.com/diku-dk/futhark-kdd19"
+},
+{
+"kind": "github",
+"url": "github.com/hiperfit/\ufb01npar"
+}
+]
+},
+{
+"s2_id": "3836ccb33191799e748e8e96f85a813eaf650ff8",
+"title": "Data Movement Is All You Need: A Case Study on Optimizing Transformers",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "771fd14113bce4262b7025bab9ab2eed65f7fbdd",
+"title": "Automated SmartNIC Offloading Insights for Network Functions",
+"year": 2021,
+"doi": "10.1145/3477132.3483583",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/824728350/clara"
+}
+]
+},
+{
+"s2_id": "45a26649b772ee820c98e7846d35e023d476fa06",
+"title": "SoftNeuro: Fast Deep Inference using Multi-platform Optimization",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/paddlepaddle/paddle"
+}
+]
+},
+{
+"s2_id": "39500b0be259dac9595e98057df4efb7095d4dbd",
+"title": "PolyGym: Polyhedral Optimizations as an Environment for Reinforcement Learning",
+"year": 2021,
+"doi": "10.1109/PACT52795.2021.00009",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/inducer/islpy"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/llvm-project"
+},
+{
+"kind": "github",
+"url": "github.com/stganser/chernikova"
+},
+{
+"kind": "github",
+"url": "github.com/tud-ccc/polygym"
+}
+]
+},
+{
+"s2_id": "ae464dc54a594de682fddd59479736b1e65bbf52",
+"title": "TENET: A Framework for Modeling Tensor Dataflow Based on Relation-centric Notation",
+"year": 2021,
+"doi": "10.1109/ISCA52012.2021.00062",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/maestro-project/maestro"
+},
+{
+"kind": "github",
+"url": "github.com/pku-liang/tenet"
+}
+]
+},
+{
+"s2_id": "da1dc97fc37e6f5db7aef7b9199c7bc588ce68c5",
+"title": "A Reinforcement Learning Environment for Polyhedral Optimizations",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/inducer/islpy"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/llvm-project"
+},
+{
+"kind": "github",
+"url": "github.com/stganser/chernikova"
+}
+]
+},
+{
+"s2_id": "d2ac7026cfe3cdaebcc6e1a8fbe046036005fc0f",
+"title": "Using Python for Model Inference in Deep Learning",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/benchmark"
+}
+]
+},
+{
+"s2_id": "24e82e90f4b7dc31e94ba546411733c9f57404e5",
+"title": "Reflection of terms in attribute grammars: Design and applications",
+"year": 2021,
+"doi": "10.1016/J.COLA.2021.101033",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/inkytonik/kiama"
+},
+{
+"kind": "github",
+"url": "github.com/melt-umn/ablec"
+},
+{
+"kind": "github",
+"url": "github.com/melt-umn/ablec-unification"
+},
+{
+"kind": "github",
+"url": "github.com/melt-umn/lambda-calculus"
+},
+{
+"kind": "github",
+"url": "github.com/melt-umn/meta-ocaml-lite"
+},
+{
+"kind": "github",
+"url": "github.com/melt-umn/oberon0"
+},
+{
+"kind": "github",
+"url": "github.com/melt-umn/silver"
+},
+{
+"kind": "github",
+"url": "github.com/melt-umn/silver-ablec"
+}
+]
+},
+{
+"s2_id": "369c493bb9b0f37c55bce284ac25fc4b18f9885c",
+"title": "Report of the Workshop on Program Synthesis for Scientific Computing",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "gitlab",
+"url": "gitlab.io/mnemosyne/docs"
+}
+]
+},
+{
+"s2_id": "86b3e0c9cbdc74b4d0a34345d9f779b6cc38562f",
+"title": "Nimble: Efficiently Compiling Dynamic Neural Networks for Model Inference",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "f0ff96cd085d71289a1de119d39e5ff26e2d7e45",
+"title": "Learning Multi-Scale Photo Exposure Correction",
+"year": 2021,
+"doi": "10.1109/CVPR46437.2021.00904",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mahmoudna\ufb01\ufb01/exposure"
+}
+]
+},
+{
+"s2_id": "f5db5693e67b0437fde23ef537322fe9fc17ff45",
+"title": "The Deep Learning Compiler: A Comprehensive Survey",
+"year": 2021,
+"doi": "10.1109/TPDS.2020.3030548",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/buaa-hipo/dlcompiler-comparison"
+},
+{
+"kind": "github",
+"url": "github.com/fastai/fastai"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/tensorrt"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/models"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+},
+{
+"kind": "github",
+"url": "github.com/paddlepaddle/paddle"
+}
+]
+},
+{
+"s2_id": "9c464a93472efaa77d0757da67d6cfa7d29e5989",
+"title": "Inferring Drop-in Binary Parsers from Program Executions",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hardikvasa/google-images-download"
+},
+{
+"kind": "github",
+"url": "github.com/nothings/stb"
+},
+{
+"kind": "github",
+"url": "github.com/openwrt/mt76"
+}
+]
+},
+{
+"s2_id": "e473ec16223dbd7f4c126a0fb248ef5a80f4d306",
+"title": "Towards a Domain-Extensible Compiler: Optimizing an Image Processing Pipeline on Mobile CPUs",
+"year": 2021,
+"doi": "10.1109/CGO51591.2021.9370337",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/rise-lang/2021-cgo-artifact"
+}
+]
+},
+{
+"s2_id": "42993769852b5795de4ebb40d627bbf31d6ef706",
+"title": "PolyDL",
+"year": 2021,
+"doi": "10.1145/3433103",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/incubator-tvm"
+},
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+}
+]
+},
+{
+"s2_id": "85de3a3af39ed39dc73bc41e021f21edd5e45792",
+"title": "Cinnamon: A Domain-Specific Language for Binary Profiling and Monitoring",
+"year": 2021,
+"doi": "10.1109/CGO51591.2021.9370313",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/comparchcam/cinnamon"
+}
+]
+},
+{
+"s2_id": "860c254f7aea5f2d04db5de51c888e5962596546",
+"title": "Copy-and-patch compilation: a fast compilation algorithm for high-level languages and bytecode",
+"year": 2021,
+"doi": "10.1145/3485513",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/asmjit/asmjit"
+},
+{
+"kind": "github",
+"url": "github.com/bytecodealliance/cranelift"
+},
+{
+"kind": "github",
+"url": "github.com/bytecodealliance/wasmtime"
+},
+{
+"kind": "github",
+"url": "github.com/cmu-db/peloton-design"
+},
+{
+"kind": "github",
+"url": "github.com/sillycross/pochivm"
+},
+{
+"kind": "github",
+"url": "github.com/sillycross/wasmnow"
+},
+{
+"kind": "github",
+"url": "github.com/wapm-packages/clang"
+},
+{
+"kind": "github",
+"url": "github.com/wasmerio/wasmer"
+},
+{
+"kind": "github",
+"url": "github.com/webassembly/w"
+}
+]
+},
+{
+"s2_id": "11185ab16325ecedab3f445af36ee9da3558cd3e",
+"title": "Integrating a functional pattern-based IR into MLIR",
+"year": 2021,
+"doi": "10.1145/3446804.3446844",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/tensorflow/mlir-hlo"
+}
+]
+},
+{
+"s2_id": "bdc736c4051a2eda0549396e05adc85793030bdc",
+"title": "I\u2665LA",
+"year": 2021,
+"doi": "10.1145/3478513.3480506",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/alecjacobson/geometry-processing"
+}
+]
+},
+{
+"s2_id": "7e87494443919e63bda159e906f5ca91bb3d61a0",
+"title": "QuanTaichi: A Compiler for Quantized Simulations",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/taichi-dev/quantaichi"
+}
+]
+},
+{
+"s2_id": "a7dda4a4c457ea2fa8b8c0cbdbe86514cc607512",
+"title": "IOS: Inter-Operator Scheduler for CNN Acceleration",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mit-han-lab/inter-operator-scheduler"
+}
+]
+},
+{
+"s2_id": "e1e18f27e4aec1648f440a526f56b66dba2e1f5c",
+"title": "PET: Optimizing Tensor Programs with Partially Equivalent Transformations and Automated Corrections",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/thu-pacman/pet"
+}
+]
+},
+{
+"s2_id": "d5d75546d79d6ded143bfb3c32425779297b5644",
+"title": "NeoFlow: A Flexible Framework for Enabling Efficient Compilation for High Performance DNN Training",
+"year": 2021,
+"doi": "10.1109/TPDS.2021.3138862",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/oneapi-src/onednn"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/tvm"
+}
+]
+},
+{
+"s2_id": "be138e24e29f7497e89e73676be8bf10862c2827",
+"title": "Using Differentiable Programming for Flexible Statistical Modeling",
+"year": 2021,
+"doi": "10.1080/00031305.2021.2002189",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "6abcb4ec469633f140d4f0be886e62f752479241",
+"title": "Systematically differentiating parametric discontinuities",
+"year": 2021,
+"doi": "10.1145/3476576.3476671",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/chezjrk/teg_applications"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/mitsuba-renderer/enoki"
+}
+]
+},
+{
+"s2_id": "846864fb6136b5a62123bf95c92608319bb2a592",
+"title": "Deep Neural Network Hardware Deployment Optimization via Advanced Active Learning",
+"year": 2021,
+"doi": "10.23919/DATE51398.2021.9474100",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/incubator-tvm"
+}
+]
+},
+{
+"s2_id": "c8ac711465a26f60e892dbb6b1167cb342f5b661",
+"title": "A parameter refinement method for Ptychography based on Deep Learning concepts",
+"year": 2021,
+"doi": "10.3390/condmat6040036",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.5560908"
+}
+]
+},
+{
+"s2_id": "9aa8f00815ff2b48460c2865a91e4ae12150bcc3",
+"title": "Learning to Superoptimize Real-world Programs",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bchurchill/pldi19-equivalence-checker"
+},
+{
+"kind": "github",
+"url": "github.com/google/sentencepiece"
+},
+{
+"kind": "github",
+"url": "github.com/stanfordpl/stoke"
+}
+]
+},
+{
+"s2_id": "25d599b3fb27f5119ea7e5d44ef2aa7c3e3b5bfc",
+"title": "MLGO: a Machine Learning Guided Compiler Optimizations Framework",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/ml-compiler-opt"
+}
+]
+},
+{
+"s2_id": "37a8e303d1ca9a7cbfee39f6e0563bf8da610b7b",
+"title": "ETO: Accelerating Optimization of DNN Operators by High-Performance Tensor Program Reuse",
+"year": 2021,
+"doi": "10.14778/3489496.3489500",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/tvm"
+},
+{
+"kind": "github",
+"url": "github.com/experiment-code/eto"
+},
+{
+"kind": "github",
+"url": "github.com/hanxuh-hub/1d-inception-resnet"
+}
+]
+},
+{
+"s2_id": "b0f1223e75b763b4a3579c6a546f10694792b7b0",
+"title": "Habitat: A Runtime-Based Computational Performance Predictor for Deep Neural Network Training",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/jax"
+}
+]
+},
+{
+"s2_id": "021bbcefc993c389bad6c1daefd8ff92d0fc2441",
+"title": "Contrastive Code Representation Learning",
+"year": 2021,
+"doi": "10.18653/v1/2021.emnlp-main.482",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/parasj/contracode"
+}
+]
+},
+{
+"s2_id": "fc27f18b50a95b6c07ccb517cd5c385582d9a4cf",
+"title": "HASCO: Towards Agile HArdware and Software CO-design for Tensor Computation",
+"year": 2021,
+"doi": "10.1109/ISCA52012.2021.00086",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+},
+{
+"kind": "github",
+"url": "github.com/pku-liang/hasco"
+}
+]
+},
+{
+"s2_id": "6255f67e4aba95075b5e30269a03fa4372c6e699",
+"title": "nn-Meter: towards accurate latency prediction of deep-learning model inference on diverse edge devices",
+"year": 2021,
+"doi": "10.1145/3458864.3467882",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/microsoft/nn-meter"
+},
+{
+"kind": "github",
+"url": "github.com/microsoft/nni"
+},
+{
+"kind": "github",
+"url": "github.com/thomasccp/eagle"
+}
+]
+},
+{
+"s2_id": "6cc4eb92ebcea6bd23bc4af93a70e3931520c1f7",
+"title": "One down, 699 to go: or, synthesising compositional desugarings",
+"year": 2021,
+"doi": "10.1145/3485499",
+"artifacts": [
+{
+"kind": "gitlab",
+"url": "gitlab.haskell.org/ghc/doc"
+}
+]
+},
+{
+"s2_id": "1d18e15d4313ce2a18d24b3666ed6b3d472a5b5b",
+"title": "PROGRAMSYNTHESIS FOR SCIENTIFIC COMPUTING",
+"year": 2021,
+"doi": null,
+"artifacts": [
+{
+"kind": "gitlab",
+"url": "gitlab.io/mnemosyne/docs"
+}
+]
+},
+{
+"s2_id": "a9997d7eb2296fe65abca995794627bc6170ffc7",
+"title": "Achieving high-performance the functional way: a functional pearl on expressing high-performance optimizations as rewrite strategies",
+"year": 2020,
+"doi": "10.1145/3408974",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "6fadbd2acb0934a1e2a17d106d59ae8a3ed23f89",
+"title": "Model-Based Warp Overlapped Tiling for Image Processing Programs on GPUs",
+"year": 2020,
+"doi": "10.1145/3410463.3414649",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "8cfed15f222db9af89cd867a2fe99a83a59cb9b6",
+"title": "Optimizing ordered graph algorithms with GraphIt",
+"year": 2020,
+"doi": "10.1145/3368826.3377909",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/graphit-dsl/graphit"
+}
+]
+},
+{
+"s2_id": "06eab9e2a32fe77edf952b1a8922d41c7e0777f0",
+"title": "ExaStencils: Advanced Multigrid Solver Generation",
+"year": 2020,
+"doi": "10.1007/978-3-030-47956-5_14",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/jonas-schmitt/evostencils"
+},
+{
+"kind": "github",
+"url": "github.com/trisycl/trisycl"
+}
+]
+},
+{
+"s2_id": "e33e9f0eb2b4033e6097c0096902f163de80cb2e",
+"title": "QuickETC2",
+"year": 2020,
+"doi": "10.1145/3414685.3417787",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/arm-software/astc-encoder"
+},
+{
+"kind": "github",
+"url": "github.com/ericsson/etcpack"
+},
+{
+"kind": "github",
+"url": "github.com/mitsuba-renderer/enoki"
+}
+]
+},
+{
+"s2_id": "d7073ad2badf1da51b407f8fc225996fa8dc85fc",
+"title": "Agora: Real-time massive MIMO baseband processing in software",
+"year": 2020,
+"doi": "10.1145/3386367.3431296",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/jianding17/agora"
+}
+]
+},
+{
+"s2_id": "97caece7334ddc26425f9b74e2d6c546f7b71d31",
+"title": "Evolution of Programming Approaches for High-Performance Heterogeneous Systems",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/llnl/raja"
+},
+{
+"kind": "gitlab",
+"url": "gitlab.engr.illinois.edu/llvm/hpvm-release"
+}
+]
+},
+{
+"s2_id": "2aaf23bb47c1319a34a50eebbf5b1c52212573b4",
+"title": "From constraint programming to heterogeneous parallelism",
+"year": 2020,
+"doi": "10.7488/ERA/309",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/clmathlibraries/clblas"
+},
+{
+"kind": "github",
+"url": "github.com/clmathlibraries/clsparse"
+}
+]
+},
+{
+"s2_id": "e9bdced25f9c1eb69011eb75b5dc2a49c79c1053",
+"title": "Optimizing the Memory Hierarchy by Compositing Automatic Transformations on Computations and Data",
+"year": 2020,
+"doi": "10.1109/MICRO50266.2020.00044",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bondhugula/polymage"
+}
+]
+},
+{
+"s2_id": "cceebe411b0a0805982046bd1bdebec2ea6d4996",
+"title": "Accelerating Nested Data Parallelism: Preserving Regularity",
+"year": 2020,
+"doi": "10.1007/978-3-030-57675-2_27",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/acceleratehs/accelerate-examples"
+},
+{
+"kind": "github",
+"url": "github.com/sakehl/accelerate"
+}
+]
+},
+{
+"s2_id": "72fd9b66e177a5d8e7515048c96a3b40a28ae25c",
+"title": "Systolic Computing on GPUs for Productive Performance",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/intel/cm"
+}
+]
+},
+{
+"s2_id": "db4a175cac37041f9c927ea6e208b5331a5db46d",
+"title": "A Language for Describing Optimization Strategies",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "a59c5abc6d230ef7201acff345f013b2a9049ea1",
+"title": "Fireiron: A Scheduling Language for High-Performance Linear Algebra on GPUs",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cuda-samples"
+}
+]
+},
+{
+"s2_id": "c5304b0a651a34e0b679be111a2c50892148e47f",
+"title": "Optimizing Streaming Parallelism on Heterogeneous Many-Core Architectures",
+"year": 2020,
+"doi": "10.1109/TPDS.2020.2978045",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/wisdom-moon/autostreamer"
+}
+]
+},
+{
+"s2_id": "efd28ebc3ce366ac078f5428eec68b4dd6b619e0",
+"title": "Architecture and Performance of Devito, a System for Automated Stencil Computation",
+"year": 2020,
+"doi": "10.1145/3374916",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.836688"
+},
+{
+"kind": "github",
+"url": "github.com/inducer/cgen"
+},
+{
+"kind": "github",
+"url": "github.com/opesci/devito-performance"
+}
+]
+},
+{
+"s2_id": "4a9628f8cf32c525e635576c48ab1d99e1438648",
+"title": "Compiling first-order functions to session-typed parallel code",
+"year": 2020,
+"doi": "10.1145/3377555.3377889",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/session-arr/session-arr"
+}
+]
+},
+{
+"s2_id": "603c3e34f82fa3f83169d70c13ae49c4b2303937",
+"title": "Scalable pointer analysis of data structures using semantic models",
+"year": 2020,
+"doi": "10.1145/3377555.3377885",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apache/dubbo"
+},
+{
+"kind": "github",
+"url": "github.com/elastic/elasticsearch"
+},
+{
+"kind": "github",
+"url": "github.com/idris/raytracer"
+},
+{
+"kind": "github",
+"url": "github.com/oracle/graal"
+}
+]
+},
+{
+"s2_id": "8b4064c4ff2a5764600619af759f0e1ef94a688b",
+"title": "Predictable accelerator design with time-sensitive affine types",
+"year": 2020,
+"doi": "10.1145/3385412.3385974",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/janestreet/hardcaml"
+}
+]
+},
+{
+"s2_id": "98b4b9fea18c73933c7f43cd6941f116c2033154",
+"title": "Compilation-assisted performance acceleration for data analytics",
+"year": 2020,
+"doi": "10.14288/1.0394560",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/aldanial/cloc"
+},
+{
+"kind": "github",
+"url": "github.com/craiig/keychain-tools"
+},
+{
+"kind": "github",
+"url": "github.com/craiig/spark-keychain"
+},
+{
+"kind": "github",
+"url": "github.com/databricks/spark-sql-perf"
+}
+]
+},
+{
+"s2_id": "065b316adc4589eb43cebca91faae2bbcea3d011",
+"title": "The Next 700 Accelerated Layers",
+"year": 2020,
+"doi": "10.1145/3355606",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nicolasvasilache/tensorcomprehensions"
+}
+]
+},
+{
+"s2_id": "725a7cc6f95e56c8339e0378de7835617ec2bbf0",
+"title": "Parallel Programming Models for Heterogeneous Many-Cores : A Survey",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/intel/compute-runtime"
+},
+{
+"kind": "github",
+"url": "github.com/khronosgroup/opencl-cts"
+},
+{
+"kind": "github",
+"url": "github.com/radeonopencompute/rocr-runtime"
+}
+]
+},
+{
+"s2_id": "d84e056bc71e98424912a43f04471600f12804aa",
+"title": "FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System",
+"year": 2020,
+"doi": "10.1145/3373376.3378508",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/intel/mkl"
+},
+{
+"kind": "github",
+"url": "github.com/torch/cunn"
+}
+]
+},
+{
+"s2_id": "4cf8be8646c179e87e83966f553707f584936a0b",
+"title": "Parallel programming models for heterogeneous many-cores: a comprehensive survey",
+"year": 2020,
+"doi": "10.1007/s42514-020-00039-4",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.1244532"
+},
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.571466"
+},
+{
+"kind": "github",
+"url": "github.com/radeonopencompute/hcc"
+}
+]
+},
+{
+"s2_id": "321a0633d2322c79d1fece88c8f1a04507dbd6fe",
+"title": "AnyHLS: High-Level Synthesis With Partial Evaluation",
+"year": 2020,
+"doi": "10.1109/TCAD.2020.3012172",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/anydsl/anyhls"
+}
+]
+},
+{
+"s2_id": "0ab017f6f5f4453bac1a9c4b463871a7d80a2646",
+"title": "Towards High Performance, Portability, and Productivity: Lightweight Augmented Neural Networks for Performance Prediction",
+"year": 2020,
+"doi": "10.1109/HiPC50609.2020.00016",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/naifeng/augmented-neural-network"
+},
+{
+"kind": "github",
+"url": "github.com/naifeng/variant-selection"
+}
+]
+},
+{
+"s2_id": "36cac85a46a028447c0cc68f69708f523fef92e2",
+"title": "Productivity, performance, and portability for computational fluid dynamics applications",
+"year": 2020,
+"doi": "10.1016/j.compfluid.2020.104425",
+"artifacts": [
+{
+"kind": "zenodo_doi",
+"url": "doi.org/10.5281/zenodo.2573213"
+},
+{
+"kind": "github",
+"url": "github.com/intel/code-base-investigator1095"
+}
+]
+},
+{
+"s2_id": "6cb97c336b61e6d9ad04aef88fe773fb030db500",
+"title": "Automatic Kernel Generation for Volta Tensor Cores",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "4060a385ce490af742cc4420d776e37c9a02df9e",
+"title": "Generating Systolic Array Accelerators With Reusable Blocks",
+"year": 2020,
+"doi": "10.1109/MM.2020.2997611",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hngenc/systolic-array"
+}
+]
+},
+{
+"s2_id": "36ccf42c8e2963436daa6e02340cd20b533a04b7",
+"title": "A Python-based optimization framework for high-performance genomics",
+"year": 2020,
+"doi": "10.1101/2020.10.29.361402",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/0xtcg/haptreex"
+}
+]
+},
+{
+"s2_id": "41a69f93efa278068952a40c7f4aae5fea075d66",
+"title": "Modeling black-box components with probabilistic synthesis",
+"year": 2020,
+"doi": "10.1145/3425898.3426952",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/mathfu"
+}
+]
+},
+{
+"s2_id": "190b630fcd80771fefd0a48f9646a3496d6d3caa",
+"title": "ProTuner: Tuning Programs with Monte Carlo Tree Search",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/anonymous/halide"
+},
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+},
+{
+"kind": "github",
+"url": "github.com/llvm/llvm-project"
+}
+]
+},
+{
+"s2_id": "e4e56c2f1ba15698ed792153105063fd647074e2",
+"title": "COMET: A Domain-Specific Compilation of High-Performance Computational Chemistry",
+"year": 2020,
+"doi": "10.1007/978-3-030-95953-1_7",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/tensornetwork"
+}
+]
+},
+{
+"s2_id": "c114716f21c57a69f28558793db93eeaa8780f35",
+"title": "Strategic tree rewriting in attribute grammars",
+"year": 2020,
+"doi": "10.1145/3426425.3426943",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/inkytonik/kiama"
+}
+]
+},
+{
+"s2_id": "fa0e858136dd3becce0a005430f9d6a9a5d06fb7",
+"title": "Accelerating High-Order Stencils on GPUs",
+"year": 2020,
+"doi": "10.1002/cpe.6467",
+"artifacts": [
+{
+"kind": "bitbucket",
+"url": "bitbucket.org/berkeleylab/cs"
+},
+{
+"kind": "github",
+"url": "github.com/rsrice/cs-roo\ufb02ine-toolkit-fork"
+}
+]
+},
+{
+"s2_id": "248031105cc00737877ded134852d0edeb43b73c",
+"title": "FeatGraph: A Flexible and Efficient Backend for Graph Neural Network Systems",
+"year": 2020,
+"doi": "10.1109/SC41405.2020.00075",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/dglai/featgraph"
+}
+]
+},
+{
+"s2_id": "5889b156cdd7b1f0ac4e0d2f9ef100edd7166cb2",
+"title": "Optimizing Block-Sparse Matrix Multiplications on CUDA with TVM",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ceruleangu/block-sparse"
+}
+]
+},
+{
+"s2_id": "eb3c7152207052e59b43e75f473735dd038af3cc",
+"title": "Creating an Agile Hardware Design Flow",
+"year": 2020,
+"doi": "10.1109/DAC18072.2020.9218553",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/leonardt/fault"
+},
+{
+"kind": "github",
+"url": "github.com/phanrahan/magma"
+}
+]
+},
+{
+"s2_id": "2208f481f34a72d1ab025545df6965e6fa25943f",
+"title": "Learning to Correct Overexposed and Underexposed Photos",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mahmoudna\ufb01\ufb01/exposure"
+}
+]
+},
+{
+"s2_id": "9ea5d67ce98c52690c34b1de51be92f182cc872a",
+"title": "MIOpen: An Open Source Library For Deep Learning Primitives",
+"year": 2020,
+"doi": "10.51130/graphicon-2020-2-2-2",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/rocm-developer-tools/hip"
+},
+{
+"kind": "github",
+"url": "github.com/tensor\ufb02ow/mlir"
+}
+]
+},
+{
+"s2_id": "666aaf80f647faf52d5058ff951e2d4b9a8844f5",
+"title": "DiffTaichi: Differentiable Programming for Physical Simulation",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apple/swift"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/mitsuba-renderer/enoki"
+}
+]
+},
+{
+"s2_id": "9ef22b72ee28c1cb04e07108bf3cc899ab6f5332",
+"title": "Accelerating Legacy String Kernels via Bounded Automata Learning",
+"year": 2020,
+"doi": "10.1145/3373376.3378503",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/kevinaangstadt/automata-synth"
+}
+]
+},
+{
+"s2_id": "991673b5db4df43847bf68a7011175d4761d0047",
+"title": "Improving Programming Support for Hardware Accelerators Through Automata Processing Abstractions",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/kevinaangstadt/automata-synth"
+},
+{
+"kind": "github",
+"url": "github.com/kevinaangstadt/mncart"
+},
+{
+"kind": "github",
+"url": "github.com/kevinaangstadt/vasim"
+}
+]
+},
+{
+"s2_id": "e2b6ec35bd2f195387def5906797643ebbd91516",
+"title": "Bacat\u00e1: Notebooks for DSLs, Almost for Free",
+"year": 2020,
+"doi": "10.22152/programming-journal.org/2020/4/11",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cwi-swat/bacata"
+},
+{
+"kind": "github",
+"url": "github.com/cwi-swat/hack"
+},
+{
+"kind": "github",
+"url": "github.com/cwi-swat/salix"
+},
+{
+"kind": "github",
+"url": "github.com/hpi-swa/ipolyglot"
+},
+{
+"kind": "github",
+"url": "github.com/jupyter/jupyter"
+}
+]
+},
+{
+"s2_id": "b007da645cc2189fa551ff7fbaa3ff9bdd3c9ef5",
+"title": "Deep Guided Learning for Fast Multi-Exposure Image Fusion",
+"year": 2020,
+"doi": "10.1109/TIP.2019.2952716",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/makedede/mefnet"
+}
+]
+},
+{
+"s2_id": "82120293d715c3119801361e83e4d2969161f81e",
+"title": "Fast geometric learning with symbolic matrices",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/facebookresearch/pytorch3d"
+},
+{
+"kind": "github",
+"url": "github.com/pybind/pybind11"
+}
+]
+},
+{
+"s2_id": "a773bd14c87434a5d026b77a260f59b69a4b9486",
+"title": "Instead of Rewriting Foreign Code for Machine Learning, Automatically Synthesize Fast Gradients",
+"year": 2020,
+"doi": "10.5555/3495724.3496770",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/apple/swift"
+},
+{
+"kind": "github",
+"url": "github.com/google/jax"
+},
+{
+"kind": "github",
+"url": "github.com/wsmoses/enzyme"
+}
+]
+},
+{
+"s2_id": "c05791dcf73a9f026eaa710f52616799c6b60118",
+"title": "Automated Traffic Engineering in SDWAN: Beyond Reinforcement Learning",
+"year": 2020,
+"doi": "10.1109/INFOCOMWKSHPS50562.2020.9162994",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cornell-netlab/yates"
+}
+]
+},
+{
+"s2_id": "42830ed2ceec7be6d279b202dd28dd2fb503beb3",
+"title": "DBMS Fitting: Why should we learn what we already know?",
+"year": 2020,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/datamanagementlab/cidr-cost-model"
+},
+{
+"kind": "github",
+"url": "github.com/hips/autograd"
+},
+{
+"kind": "github",
+"url": "github.com/hips/autogradr"
+}
+]
+},
+{
+"s2_id": "151d7ee43018c185f9340a729f8de819c8f0dea5",
+"title": "Autotuning PolyBench Benchmarks with LLVM Clang/Polly Loop Optimization Pragmas Using Bayesian Optimization",
+"year": 2020,
+"doi": "10.1002/cpe.6683",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pbalapra/scikit-optimize"
+},
+{
+"kind": "github",
+"url": "github.com/sollve/llvm-project"
+},
+{
+"kind": "github",
+"url": "github.com/ytopt-team/autotune"
+}
+]
+},
+{
+"s2_id": "6b14eb51cffca12f54c1ec927b243d84162ed35d",
+"title": "Autotuning Search Space for Loop Transformations",
+"year": 2020,
+"doi": "10.1109/llvmhpchipar51896.2020.00007",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/kavon/atjit"
+}
+]
+},
+{
+"s2_id": "bacf607d7734958f700077b65fbb3e9bdeeb66e8",
+"title": "Learning to Accelerate Decomposition for Multi-Directional 3D Printing",
+"year": 2020,
+"doi": "10.1109/LRA.2020.3011369",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/chenming-wu/pymdp"
+},
+{
+"kind": "github",
+"url": "github.com/dmlc/xgboost"
+}
+]
+},
+{
+"s2_id": "40bcc85d4448d9428599fc7312a4f9a89547c6f6",
+"title": "Schedule Synthesis for Halide Pipelines through Reuse Analysis",
+"year": 2019,
+"doi": "10.1145/3310248",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "9404dc5c41f96a16bf9ca16f6088682d23eb4b30",
+"title": "Optimizing data-intensive computations in existing libraries with split annotations",
+"year": 2019,
+"doi": "10.1145/3341301.3359652",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/acoomans/instagram-filters"
+},
+{
+"kind": "github",
+"url": "github.com/jvns/pandas"
+},
+{
+"kind": "github",
+"url": "github.com/mrocklin/shallowwater"
+},
+{
+"kind": "github",
+"url": "github.com/weld-project/split-annotations"
+}
+]
+},
+{
+"s2_id": "527b94bc020e3896f4d8ce9f4fdd1eed40854eed",
+"title": "Model-Based Warp-Level Tiling for Image Processing Programs on GPUs",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "9af773bdfb02d3c417f8313f38f0f10082c435df",
+"title": "Rodent",
+"year": 2019,
+"doi": "10.1145/3306346.3322955",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/anydsl/rodent"
+}
+]
+},
+{
+"s2_id": "249e57c2b9d9d8eae584a1988d036c0f08d13315",
+"title": "Mitsuba 2",
+"year": 2019,
+"doi": "10.1145/3355089.3356498",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/arrayfire/arrayfire"
+},
+{
+"kind": "github",
+"url": "github.com/mitsuba-renderer/enoki"
+},
+{
+"kind": "github",
+"url": "github.com/pybind/pybind11"
+}
+]
+},
+{
+"s2_id": "650ffe556925a9c97d7a819a8ab10b9aae31dbdd",
+"title": "A Unified Optimization Approach for CNN Model Inference on Integrated GPUs",
+"year": 2019,
+"doi": "10.1145/3337821.3337839",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/dmlc/tvm"
+}
+]
+},
+{
+"s2_id": "751b47358775539b03dca1dc84132d15d89391bd",
+"title": "Seq: A High-Performance Language for Bioinformatics",
+"year": 2019,
+"doi": "10.1145/3360551",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/amplab/snap"
+}
+]
+},
+{
+"s2_id": "7565a2d1843f5625f7a35d4991b7e504b1d69e39",
+"title": "Automatic Differentiation for Adjoint Stencil Loops",
+"year": 2019,
+"doi": "10.1145/3337821.3337906",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/jhueckelheim/perforad"
+}
+]
+},
+{
+"s2_id": "f2b840c3c14b9f05106589c1be0a2dd4a494c0ba",
+"title": "Learning to Perform Local Rewriting for Combinatorial Optimization",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/facebookresearch/neural-rewriter"
+},
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "481411d8986f899e25e7eaaac55800310229a991",
+"title": "Differentiable Visual Computing",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/lmb-freiburg/\ufb02ownet2"
+},
+{
+"kind": "github",
+"url": "github.com/mgharbi/hdrnet"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/\ufb02ownet2-pytorch"
+},
+{
+"kind": "github",
+"url": "github.com/opencv/opencv"
+}
+]
+},
+{
+"s2_id": "15b24cb347e1db115240027204fe7c93fff8103b",
+"title": "Finding and Exploiting Parallelism with Data-Structure-Aware Static and Dynamic Analysis",
+"year": 2019,
+"doi": "10.1184/R1/7798289.V1",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/diegojromerolopez/djbdd"
+},
+{
+"kind": "github",
+"url": "github.com/hausen/circuit-simulator"
+},
+{
+"kind": "github",
+"url": "github.com/idris/raytracer"
+},
+{
+"kind": "github",
+"url": "github.com/opencollab/jlatexmath"
+}
+]
+},
+{
+"s2_id": "4b538a245f643110ab9983c183106f131442b421",
+"title": "Incremental flattening for nested data parallelism",
+"year": 2019,
+"doi": "10.1145/3293883.3295707",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/diku-dk/futhark-ppopp19"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/nvidia-docker"
+}
+]
+},
+{
+"s2_id": "a85bf91720f08b6c1c9f343e390864cb36e92851",
+"title": "Stripe: Tensor Compilation via the Nested Polyhedral Model",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+}
+]
+},
+{
+"s2_id": "496ab2c36409b80f306d2f6d2195552faf4010e3",
+"title": "Stateful Dataflow Multigraphs: A Data-Centric Model for Performance Portability on Heterogeneous Architectures",
+"year": 2019,
+"doi": "10.1145/3295500.3356173",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/spcl/dace"
+}
+]
+},
+{
+"s2_id": "661d142c23cb2a3207d5f1ba2ac7ff61f2d4fb2f",
+"title": "Triton: an intermediate language and compiler for tiled neural network computations",
+"year": 2019,
+"doi": "10.1145/3315508.3329973",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pytorch/pytorch"
+}
+]
+},
+{
+"s2_id": "547079ea3a60b23d39e0a8958922e1a368eeecbd",
+"title": "Precise reasoning with structured time, structured heaps, and collective operations",
+"year": 2019,
+"doi": "10.1145/3360583",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/tiarkrompf/sigma"
+}
+]
+},
+{
+"s2_id": "20cedf71878cadc6d07f4bc77f050fec52e2083e",
+"title": "TapirXLA: Embedding Fork-Join Parallelism into the XLA Compiler in TensorFlow Using Tapir",
+"year": 2019,
+"doi": "10.1109/HPEC.2019.8916312",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/tensorflow/models"
+}
+]
+},
+{
+"s2_id": "cf426623acc01f4a47f650cdc72d072c0c4ed951",
+"title": "Using the loop chain abstraction to schedule across loops in existing code",
+"year": 2019,
+"doi": "10.1504/IJHPCN.2019.10018087",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/compopt4apps/variationsonatheme"
+}
+]
+},
+{
+"s2_id": "97ec1629243a06edffc7718192a777480ea71128",
+"title": "ClangJIT: Enhancing C++ with Just-in-Time Compilation",
+"year": 2019,
+"doi": "10.1109/P3HPC49587.2019.00013",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hfinkel/llvm-project-cxxjit"
+}
+]
+},
+{
+"s2_id": "89dd8106fcbde3f66110a11fcc923d9823440086",
+"title": "Snippet from the Black Scholes options pricing benchmark implemented using Intel MKL",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/acoomans/instagram-filters"
+},
+{
+"kind": "github",
+"url": "github.com/jvns/pandas"
+},
+{
+"kind": "github",
+"url": "github.com/mrocklin/shallowwater"
+},
+{
+"kind": "github",
+"url": "github.com/weld-project/split-annotations"
+}
+]
+},
+{
+"s2_id": "a5ab86415af3467f06da864c6ceef0ca81b364ce",
+"title": "Improving performance and security of indirect memory references on speculative execution machines",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nervanasystems/maxas"
+}
+]
+},
+{
+"s2_id": "a35fe84c36cdf692153988cab460f7c5665928ad",
+"title": "Type-Directed Program Synthesis and Constraint Generation for Library Portability",
+"year": 2019,
+"doi": "10.1109/PACT.2019.00013",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/clmathlibraries/clblas"
+}
+]
+},
+{
+"s2_id": "aa6c7aa308e722bb511e606dfa4ee2dbd470a125",
+"title": "Instruction-Level Abstraction (ILA)",
+"year": 2019,
+"doi": "10.1145/3282444",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/princetonuniversity/ila-modeling-verification"
+}
+]
+},
+{
+"s2_id": "26cf961bcd9b69455e3f30af58621aaa6311c934",
+"title": "Optimization of Halide Image Processing Schedules with Reinforcement Learning",
+"year": 2019,
+"doi": "10.5753/wscad.2019.8655",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/mpecenin/wscad-2019"
+}
+]
+},
+{
+"s2_id": "7b36407564f3eecfe3f10a4ab62f84e2d556798c",
+"title": "Arc: an IR for batch and stream programming",
+"year": 2019,
+"doi": "10.1145/3315507.3330199",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cda-group/arc"
+}
+]
+},
+{
+"s2_id": "3c1f1d6ea784fa40fb1f4231349464d7b96a77fc",
+"title": "NGEMM: Optimizing GEMM for Deep Learning via Compiler-based Techniques",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/microsoft/onnxruntime"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/mlir"
+}
+]
+},
+{
+"s2_id": "17c7d659923e616e36f4865f1457dcd80d415791",
+"title": "Proposition d'un mod\u00e8le pour l'optimisation automatique de boucles dans le compilateur Tiramisu : cas d'optimisation de d\u00e9roulage",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/tiramisu-compiler/tiramisu"
+},
+{
+"kind": "github",
+"url": "github.com/willkoehrsen/feature-selector"
+}
+]
+},
+{
+"s2_id": "1a204f05243376867de7dc4172084d12a9679128",
+"title": "Performance Prediction of Explicit ODE Methods on Multi-Core Cluster Systems",
+"year": 2019,
+"doi": "10.1145/3297663.3310306",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/rrze-hpc/kerncraft"
+}
+]
+},
+{
+"s2_id": "6b7c7150921f1b95da1d70cc35a8f70e32509f9e",
+"title": "Absinthe: Learning an Analytical Performance Model to Fuse and Tile Stencil Codes in One Shot",
+"year": 2019,
+"doi": "10.1109/PACT.2019.00036",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/spcl/absinthe"
+}
+]
+},
+{
+"s2_id": "6a4f434845ff10355404e30805f5937b1ecb0847",
+"title": "Schedule synthesis for halide pipelines through reuse analysis",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "f7d9f9f5e492600301e5b40286820d7f4c1e702b",
+"title": "Methods for Accelerating Machine Learning in High Performance Computing",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cutlass"
+}
+]
+},
+{
+"s2_id": "4a03044de0831e3d411d1604ba7a0dc5c19ef7bf",
+"title": "Optimisation of a modern numerical library: a bottom-up approach",
+"year": 2019,
+"doi": "10.17863/CAM.60619",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/juliacomputing/mkl.jl"
+},
+{
+"kind": "github",
+"url": "github.com/jzstark/ninox"
+},
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+},
+{
+"kind": "github",
+"url": "github.com/owlbarn/eigen"
+},
+{
+"kind": "github",
+"url": "github.com/pytorch/xla"
+}
+]
+},
+{
+"s2_id": "4bd4b988568c6530aa4618a8d943a351e9da74ad",
+"title": "Generating efficient FFT GPU code with Lift",
+"year": 2019,
+"doi": "10.1145/3331553.3342613",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/clmathlibraries/clfft"
+}
+]
+},
+{
+"s2_id": "a34e4f2d00c222fb72c7a76b22c8338d560f2dbe",
+"title": "From Laptop to Lambda: Outsourcing Everyday Jobs to Thousands of Transient Functional Containers",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/googletest"
+},
+{
+"kind": "github",
+"url": "github.com/scanner-research/scanner"
+}
+]
+},
+{
+"s2_id": "58fd3c545426dc7eeb05965b089ac211a689be52",
+"title": "Auto-Vectorizing TensorFlow Graphs: Jacobians, Auto-Batching And Beyond",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/tensorflow/models"
+}
+]
+},
+{
+"s2_id": "9d60ea2461172d30487743fa6ef8788db4b53759",
+"title": "Optimizing CNN Model Inference on CPUs",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/dmlc/tvm"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/tensorflow"
+}
+]
+},
+{
+"s2_id": "3a137631912013db561e27e3f86b37a3246b680c",
+"title": "Rapid software prototyping for heterogeneous and distributed platforms",
+"year": 2019,
+"doi": "10.1016/J.ADVENGSOFT.2019.02.002",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/arrayfire/arrayfire"
+}
+]
+},
+{
+"s2_id": "c40fe838e5c29a4f95654f214d044bd35cbc2045",
+"title": "Generating Portable High-Performance Code via Multi-Dimensional Homomorphisms",
+"year": 2019,
+"doi": "10.1109/PACT.2019.00035",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hpac/tccg"
+}
+]
+},
+{
+"s2_id": "63c880433fc3219926bb11e99a6fac311d4a0ade",
+"title": "Automatic performance optimisation of parallel programs for GPUs via rewrite rules",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/clmathlibraries/clblas"
+},
+{
+"kind": "github",
+"url": "github.com/cnugteren/clblast"
+},
+{
+"kind": "github",
+"url": "github.com/cnugteren/cltune"
+},
+{
+"kind": "github",
+"url": "github.com/hsa-libraries/bolt"
+}
+]
+},
+{
+"s2_id": "91b6612262aa4a1513b644fd2129f7b3181207f6",
+"title": "A Versatile Software Systolic Execution Model for GPU Memory-Bound Kernels",
+"year": 2019,
+"doi": "10.1145/3295500.3356162",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/arrayfire/arrayfire"
+}
+]
+},
+{
+"s2_id": "fe24761c9104ec614d0d4172d8c337f9f9ba4a72",
+"title": "ASV: Accelerated Stereo Vision System",
+"year": 2019,
+"doi": "10.1145/3352460.3358253",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/horizon-research/ism-algorithm"
+}
+]
+},
+{
+"s2_id": "1795a62eb1bfd952c73acb18ca81f174b0042cae",
+"title": "Deferred neural rendering",
+"year": 2019,
+"doi": "10.1145/3306346.3323035",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/microsoft/uvatlas"
+}
+]
+},
+{
+"s2_id": "188d77f566cbe0092e193a1665361204c3e1aa0f",
+"title": "Joint Adversarial Training: Incorporating both Spatial and Pixel Attacks",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/author/joint_adverse"
+}
+]
+},
+{
+"s2_id": "683e0cf68992fdf7d5c95c1e84178f63a82f7fdb",
+"title": "A Zero-Positive Learning Approach for Diagnosing Software Performance Regressions",
+"year": 2019,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/fchollet/keras"
+}
+]
+},
+{
+"s2_id": "c1c8d15520d84ed6d9a701e18627ded4d8f1eb2a",
+"title": "Differentiable programming for image processing and deep learning in halide",
+"year": 2018,
+"doi": "10.1145/3197517.3201383",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/lmb-freiburg/flownet2"
+},
+{
+"kind": "github",
+"url": "github.com/mgharbi/hdrnet"
+},
+{
+"kind": "github",
+"url": "github.com/nvidia/flownet2-pytorch"
+},
+{
+"kind": "github",
+"url": "github.com/opencv/opencv"
+}
+]
+},
+{
+"s2_id": "f66ae0e1ca1cef2480285a15603d7c64500cd2f8",
+"title": "Scanner",
+"year": 2018,
+"doi": "10.1145/3197517.3201394",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/yahoo/caffeonspark"
+}
+]
+},
+{
+"s2_id": "4299257bd7a855aba6cb51680bae723563f380e4",
+"title": "Automatically Distributing Eulerian and Hybrid Fluid Simulations in the Cloud",
+"year": 2018,
+"doi": "10.1145/3173551",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/leveldb"
+}
+]
+},
+{
+"s2_id": "a0eb138bca6329ec4eabefd045e3890f76e3542b",
+"title": "Delivering Performance-Portable Stencil Computations on CPUs and GPUs Using Bricks",
+"year": 2018,
+"doi": "10.1109/P3HPC.2018.00009",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/paboyle/grid"
+}
+]
+},
+{
+"s2_id": "52717ddf5b47a140820820ad82c29f4f2ee51199",
+"title": "Cimple: instruction and memory level parallelism: a DSL for uncovering ILP and MLP",
+"year": 2018,
+"doi": "10.1145/3243176.3243185",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nervanasystems/maxas"
+}
+]
+},
+{
+"s2_id": "267b76a97e431f1e39e855a3483a75c6a6f3659b",
+"title": "Polyhedral expression propagation",
+"year": 2018,
+"doi": "10.1145/3178372.3179529",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/halide"
+}
+]
+},
+{
+"s2_id": "3ef598d5919d02979d75065088cb2ceefb6b61a2",
+"title": "High performance stencil code generation with Lift",
+"year": 2018,
+"doi": "10.1145/3168824",
+"artifacts": [
+{
+"kind": "gitlab",
+"url": "gitlab.com/larisa.stoltzfus/liftstencil-cgo2018-artifact"
+}
+]
+},
+{
+"s2_id": "0261195ae7e1545caefb0ea7afb92bd66bfbb790",
+"title": "Glow: Graph Lowering Compiler Techniques for Neural Networks",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pytorch/glow"
+}
+]
+},
+{
+"s2_id": "26dcb23d98167136cd680ee3ba6ed8ce50cf825e",
+"title": "Automatic Matching of Legacy Code to Heterogeneous APIs: An Idiomatic Approach",
+"year": 2018,
+"doi": "10.1145/3173162.3173182",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/clmathlibraries/clblas"
+}
+]
+},
+{
+"s2_id": "c60e3ea97ad81b0a8454d3e762821c4cdfd21781",
+"title": "Splitability Annotations: Optimizing Black-Box Function Composition in Existing Libraries",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/acoomans/instagram-filters"
+},
+{
+"kind": "github",
+"url": "github.com/jvns/pandas"
+},
+{
+"kind": "github",
+"url": "github.com/mrocklin/shallowwater"
+},
+{
+"kind": "github",
+"url": "github.com/weld-project/split-annotations"
+}
+]
+},
+{
+"s2_id": "7ec26134629db00ae54fd7f046e33be9a1c641c6",
+"title": "Compilation and Code Optimization for Data Analytics",
+"year": 2018,
+"doi": "10.5075/epfl-thesis-8762",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/awf/coconut"
+},
+{
+"kind": "github",
+"url": "github.com/ep\ufb02data/dblab"
+},
+{
+"kind": "github",
+"url": "github.com/ep\ufb02data/sc-public"
+}
+]
+},
+{
+"s2_id": "64d2af5337d388995148234df8e98aade35b933b",
+"title": "Programming Abstractions and Synthesis-Aided Compilation for Emerging Computing Platforms",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/souper"
+},
+{
+"kind": "github",
+"url": "github.com/mangpo/greenthumb"
+}
+]
+},
+{
+"s2_id": "eafc9bb8e10230620342b4000f2c6efe112c8e0f",
+"title": "User-Directed Loop-Transformations in Clang",
+"year": 2018,
+"doi": "10.1109/LLVM-HPC.2018.8639402",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/kavon/atjit"
+}
+]
+},
+{
+"s2_id": "2c80281ce1489a55048d5f0c5d975a49274a4e67",
+"title": "Synthesizing Power and Area Efficient Image Processing Pipelines on FPGAs using Customized Bit-widths",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bondhugula/polymage-benchmarks"
+}
+]
+},
+{
+"s2_id": "9f6fb0a87212e2a7bd45935b11337c7b447fb1e2",
+"title": "Synthesizing Power and Area Efficient Image Processing Pipelines on FPGAs using Customized Bit-widths",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/bondhugula/polymage-benchmarks"
+}
+]
+},
+{
+"s2_id": "ff3a38355125d633bbb2211929ad61ff5ce999b7",
+"title": "Ikra-Cpp: A C++/CUDA DSL for Object-Oriented Programming with Structure-of-Arrays Layout",
+"year": 2018,
+"doi": "10.1145/3178433.3178439",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/prg-titech/ikra-cpp"
+}
+]
+},
+{
+"s2_id": "15c74d69cca870f2fbbb716da7303556c178c64c",
+"title": "CoSA: Integrated Verification for Agile Hardware Design",
+"year": 2018,
+"doi": "10.23919/FMCAD.2018.8603014",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/phanrahan/magma"
+}
+]
+},
+{
+"s2_id": "3fe84b5564868336625f0edaec69b9eeee6b8f55",
+"title": "1 Instruction-Level Abstraction ( ILA ) : A Uniform Specification for System-on-Chip ( SoC ) Verification",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/princetonuniversity/ila-modeling-verification"
+}
+]
+},
+{
+"s2_id": "1c37745626b02b83d2906e543ffe076a20b473a1",
+"title": "Effective Performance Portability",
+"year": 2018,
+"doi": "10.1109/P3HPC.2018.00006",
+"artifacts": [
+{
+"kind": "gitlab",
+"url": "gitlab.com/truchas/pcsri2018"
+}
+]
+},
+{
+"s2_id": "7bb8bfe1c80b6739a6a5dd3db0b8f9f93fbb6e98",
+"title": "Automating Generation of Low Precision Deep Learning Operators",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/maratyszcza/nnpack"
+}
+]
+},
+{
+"s2_id": "6edc7103dd907a8a84ceb8a4bd775da3cccd9e98",
+"title": "PRETZEL: Opening the Black Box of Machine Learning Prediction Serving Systems",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/dotnet/coreclr"
+}
+]
+},
+{
+"s2_id": "970b3ec9458609c13bf8f1ddfef1ab2fdcc2a2b9",
+"title": "Optimising finite-difference methods for PDEs through parameterised time-tiling in Devito",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/cvpr2015"
+}
+]
+},
+{
+"s2_id": "8f89061e799de7fac47bdbb532fcab9bc6e24d28",
+"title": "Relay: a new IR for machine learning frameworks",
+"year": 2018,
+"doi": "10.1145/3211346.3211348",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ekmett/ad"
+},
+{
+"kind": "github",
+"url": "github.com/thoughtworksinc/deepdarkfantasy"
+}
+]
+},
+{
+"s2_id": "e1f041594fa37d407c80b28a13680a9ddc081c49",
+"title": "Euphrates: Algorithm-SoC Co-Design for Low-Power Mobile Continuous Vision",
+"year": 2018,
+"doi": "10.1109/ISCA.2018.00052",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/arm-software/scale-sim"
+},
+{
+"kind": "github",
+"url": "github.com/tukl-msd/drampower"
+}
+]
+},
+{
+"s2_id": "716b8a99dd90ae046388bb2fda81602505b51b62",
+"title": "Tensor Comprehensions: Framework-Agnostic High-Performance Machine Learning Abstractions",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/fchollet/keras"
+},
+{
+"kind": "github",
+"url": "github.com/jcjohnson/pytorch-examples"
+},
+{
+"kind": "github",
+"url": "github.com/nervanasystems/maxas"
+}
+]
+},
+{
+"s2_id": "401fc9e00535a70d125e7ec607601bbd83ebc20e",
+"title": "And Now for Something Completely Different: Running Lisp on GPUs",
+"year": 2018,
+"doi": "10.1109/CLUSTER.2018.00060",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/michelp/hillisp"
+},
+{
+"kind": "github",
+"url": "github.com/takagi/cl-cuda"
+}
+]
+},
+{
+"s2_id": "4f4c9a04ca9777d5da90024791e275e26a7386f5",
+"title": "Automating the Development of High-Performance Multigrid Solvers",
+"year": 2018,
+"doi": "10.1109/JPROC.2018.2854229",
+"artifacts": [
+{
+"kind": "bitbucket",
+"url": "bitbucket.org/hpgmg/hpgmg"
+}
+]
+},
+{
+"s2_id": "e5f3bc2248fb21871ec51c8f0f71faa74f6fcafc",
+"title": "Scene Conversion for Physically-Based Renderers",
+"year": 2018,
+"doi": "10.1109/SIBGRAPI.2018.00036",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/lahagemann/pbr"
+}
+]
+},
+{
+"s2_id": "274a1fb36c9881a95b4b34771196adc57d86a26c",
+"title": "OpenABL: A Domain-Specific Language for Parallel and Distributed Agent-Based Simulations",
+"year": 2018,
+"doi": "10.1007/978-3-319-96983-1_36",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/flamegpu/tutorial"
+}
+]
+},
+{
+"s2_id": "c9f825514bf19b997f8607112ea41da6a9719475",
+"title": "Dynamic Automatic Differentiation of GPU Broadcast Kernels",
+"year": 2018,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/jrevels/mixedmodebroadcastad.jl"
+}
+]
+},
+{
+"s2_id": "261178d4e8eaaf8c74d4a0fb263e9b4f94b09fe3",
+"title": "Parallel associative reductions in Halide",
+"year": 2017,
+"doi": "10.1109/CGO.2017.7863747",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/halide/rfactor_benchmarks"
+}
+]
+},
+{
+"s2_id": "aa3553beb4bfa0793a4bed05704e35412342800e",
+"title": "LIFT: A functional data-parallel IR for high-performance GPU code generation",
+"year": 2017,
+"doi": "10.1109/CGO.2017.7863730",
+"artifacts": [
+{
+"kind": "gitlab",
+"url": "gitlab.com/michel-steuwer/cgo_2017_artifact"
+}
+]
+},
+{
+"s2_id": "2ab043cc4bc34346faac11dcef17b4ca815cf10f",
+"title": "Static stages for heterogeneous programming",
+"year": 2017,
+"doi": "10.1145/3133895",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cbaggers/varjo"
+},
+{
+"kind": "github",
+"url": "github.com/kovasb/gamma"
+}
+]
+},
+{
+"s2_id": "cb58763d0516d7e949312347997a3f96e8ca4e0d",
+"title": "Parallelizing Julia with a Non-Invasive DSL",
+"year": 2017,
+"doi": "10.4230/LIPIcs.ECOOP.2017.4",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/intellabs/parallelaccelerator.jl"
+},
+{
+"kind": "github",
+"url": "github.com/julialang/julialang.github.com"
+},
+{
+"kind": "github",
+"url": "github.com/lindahua/devectorize.jl"
+}
+]
+},
+{
+"s2_id": "00e1fbce60a222592600e62553b79f21683ce415",
+"title": "Snowflake: A Lightweight Portable Stencil DSL",
+"year": 2017,
+"doi": "10.1109/IPDPSW.2017.89",
+"artifacts": [
+{
+"kind": "bitbucket",
+"url": "bitbucket.org/hpgmg/hpgmg"
+},
+{
+"kind": "bitbucket",
+"url": "bitbucket.org/nsakharnykh/hpgmg-cuda"
+}
+]
+},
+{
+"s2_id": "e9bf383dd76f2df2ed84ea07949b63852557f174",
+"title": "Programming Heterogeneous Systems from an Image Processing DSL",
+"year": 2017,
+"doi": "10.1145/3107953",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/hipacc/hipacc-vivado"
+},
+{
+"kind": "github",
+"url": "github.com/jingpu/halide-hls"
+}
+]
+},
+{
+"s2_id": "0a6afe62735bf0ec3097c25694b038e39b432538",
+"title": "RaTrace: simple and efficient abstractions for BVH ray traversal algorithms",
+"year": 2017,
+"doi": "10.1145/3136040.3136044",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/anydsl/traversal"
+}
+]
+},
+{
+"s2_id": "b4ef9f4718bcf8e64ec836d385320d452743f67a",
+"title": "Program Analysis and Compilation Techniques for Speeding up Transactional Database Workloads",
+"year": 2017,
+"doi": "10.5075/epfl-thesis-8023",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/cavalia/cavalia"
+}
+]
+},
+{
+"s2_id": "0400fc88e2249c93cc59e1a5cbc61901664c8ec6",
+"title": "High-Performance Code Generation though Fusion and Vectorization",
+"year": 2017,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/intel/hfav"
+}
+]
+},
+{
+"s2_id": "1bda7ee49c18b5c35d3e4f3c613646735281a607",
+"title": "Staging for generic programming in space and time",
+"year": 2017,
+"doi": "10.1145/3136040.3136060",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/georgofenbeck/spacetime"
+}
+]
+},
+{
+"s2_id": "9776edc7f51bf8ee2ef317280416b6efa3f694b5",
+"title": "Lawrence Berkeley National Laboratory Recent Work Title Compiler-based code generation and autotuning for geometric multigrid on GPU-accelerated supercomputers Permalink",
+"year": 2017,
+"doi": null,
+"artifacts": [
+{
+"kind": "bitbucket",
+"url": "bitbucket.org/nsakharnykh/hpgmg-cuda"
+}
+]
+},
+{
+"s2_id": "c089e851e4cae2db0ae461c9de111dafc166a01d",
+"title": "Verifying spatial properties of array computations",
+"year": 2017,
+"doi": "10.1145/3133899",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/camfort/camfort"
+},
+{
+"kind": "github",
+"url": "github.com/geodynamics/specfem3d"
+},
+{
+"kind": "github",
+"url": "github.com/opencollab/arpack-ng"
+}
+]
+},
+{
+"s2_id": "61a20b95d256becc52c5a7b83989dbab6778e33c",
+"title": "Destination-passing style for efficient memory management",
+"year": 2017,
+"doi": "10.1145/3122948.3122949",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/awf/coconut"
+}
+]
+},
+{
+"s2_id": "942bb63e78d9edfe3b8d0a4bf9a3511c736a6930",
+"title": "Implementing Efficient, Portable Computations for Machine Learning",
+"year": 2017,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/fchollet/keras"
+},
+{
+"kind": "github",
+"url": "github.com/hushell/cuhog"
+},
+{
+"kind": "github",
+"url": "github.com/nervanasystems/neon"
+},
+{
+"kind": "github",
+"url": "github.com/soumith/convnet"
+}
+]
+},
+{
+"s2_id": "0c39c0dc296a902e4a5eb85182209f7b9e6053b0",
+"title": "Cavs: A Vertex-centric Programming Interface for Dynamic Neural Networks",
+"year": 2017,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/01org/mkl-dnn"
+},
+{
+"kind": "github",
+"url": "github.com/tensorflow/models"
+}
+]
+},
+{
+"s2_id": "da9c0db8ace6209f84182df2b3a98d33c4865f30",
+"title": "Towards Practical Verification of Machine Learning: The Case of Computer Vision Systems",
+"year": 2017,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/udacity/self-driving-car"
+}
+]
+},
+{
+"s2_id": "c44adaaa00360d30ee44de2646d540b32a055633",
+"title": "Report of the HPC Correctness Summit, Jan 25-26, 2017, Washington, DC",
+"year": 2017,
+"doi": "10.2172/1470989",
+"artifacts": [
+{
+"kind": "figshare",
+"url": "figshare.com/articles"
+},
+{
+"kind": "github",
+"url": "github.com/google/googletest"
+},
+{
+"kind": "github",
+"url": "github.com/uhub/awesome"
+}
+]
+},
+{
+"s2_id": "25d09e67275ee37d75592bddf1125b68b2403a86",
+"title": "LMS-Verify: abstraction without regret for verified systems programming",
+"year": 2017,
+"doi": "10.1145/3009837.3009867",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nodejs/http"
+}
+]
+},
+{
+"s2_id": "886b7dcdc41055d2196c2d44db9490a87b1da55b",
+"title": "Distributed Halide",
+"year": 2016,
+"doi": "10.1145/2851141.2851157",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/andikleen/pmu-tools"
+}
+]
+},
+{
+"s2_id": "475ef70786e9f195c598763281eb9a3cf056b07b",
+"title": "Declarative Tuning for Locality in Parallel Programs",
+"year": 2016,
+"doi": "10.1109/ICPP.2016.58",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/habanero-rice/cnc-ocr"
+}
+]
+},
+{
+"s2_id": "6e48c0314d8372c7d7758da81ef9772c82f43bee",
+"title": "A Dynamic to Static DSL Compiler for Image Processing Applications",
+"year": 2016,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/pycqa/redbaron"
+}
+]
+},
+{
+"s2_id": "d4048f1ac3cb4c4a7779310fa088652c2def77c4",
+"title": "Declarative coordination of graph-based parallel programs",
+"year": 2016,
+"doi": "10.1145/2851141.2851153",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/flavioc/meld"
+}
+]
+},
+{
+"s2_id": "5ea43b2f0b1a30c70ad8b2643d8365d94f495a95",
+"title": "Polly-ACC Transparent compilation to heterogeneous hardware",
+"year": 2016,
+"doi": "10.1145/2925426.2926286",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/boostorg/compute"
+}
+]
+},
+{
+"s2_id": "7e6b5e24486764a6369eee125ebcf7f697f25dd6",
+"title": "Matrix multiplication beyond auto-tuning: Rewrite-based GPU code generation",
+"year": 2016,
+"doi": "10.1145/2968455.2968521",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/clmathlibraries/clblas"
+},
+{
+"kind": "github",
+"url": "github.com/cnugteren/clblast"
+},
+{
+"kind": "github",
+"url": "github.com/cnugteren/cltune"
+}
+]
+},
+{
+"s2_id": "77f26c31dabd1ae81d0bfee64b5d17f75c9ce045",
+"title": "An Image Processing Language: External and Shallow/Deep Embeddings",
+"year": 2016,
+"doi": "10.1145/2889420.2892270",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/craigsapp/midi\ufb01le"
+}
+]
+},
+{
+"s2_id": "db58757f329b76c2046ea5c46ebe68fdb10afab0",
+"title": "Diderot: a Domain-Specific Language for Portable Parallel Scientific Visualization and Image Analysis",
+"year": 2016,
+"doi": "10.1109/TVCG.2015.2467449",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/diderot-language/examples"
+}
+]
+},
+{
+"s2_id": "e61e896ee96c8d6ae13c34c9d66e8ee879489f75",
+"title": "PENCIL: A Platform-Neutral Compute Intermediate Language for Accelerator Programming",
+"year": 2015,
+"doi": "10.1109/PACT.2015.17",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/meinersbur/pencil-driver"
+}
+]
+},
+{
+"s2_id": "d3e376817e59b961c59357fe68479ec598e308cd",
+"title": "Legion: programming distributed heterogeneous architectures with logical regions",
+"year": 2014,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/ramanan/gampi"
+}
+]
+},
+{
+"s2_id": "6f8b11defe55d0fd0f3beaeeadcb19f0c5d127b0",
+"title": "The OPS Domain Specific Abstraction for Multi-block Structured Grid Computations",
+"year": 2014,
+"doi": "10.1109/WOLFHPC.2014.7",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/gihanmudalige/ops"
+}
+]
+},
+{
+"s2_id": "487253eedf134147cf85b67d0dad2bbc79d30e32",
+"title": "An Array-Oriented Language with Static Rank Polymorphism",
+"year": 2014,
+"doi": "10.1007/978-3-642-54833-8_3",
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/jrslepak/remora"
+}
+]
+},
+{
+"s2_id": "9618ebf3cf735e5945229bad3c69750cd5a665ff",
+"title": "Efficient Incremental Computation for Halide",
+"year": null,
+"doi": null,
+"artifacts": [
+{
+"kind": "gitlab",
+"url": "gitlab.gnome.org/gnome/mutter"
+}
+]
+},
+{
+"s2_id": "6b732efd130c305bf7e5bd14efa17de64bb4df3b",
+"title": "Parallelizing Neural Network Models E ! ectively on GPU by Implementing Reductions Atomically",
+"year": null,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/nvidia/cub"
+}
+]
+},
+{
+"s2_id": "f7e446ea09c6a1f0460411f4304e87664f64f788",
+"title": "Edinburgh Research Explorer A shared compilation stack for distributed-memory parallelism in stencil DSLs",
+"year": null,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/xdslproject/xdsl"
+}
+]
+},
+{
+"s2_id": "9644ae9230034159ca7f2192bec26f7c9b83af3f",
+"title": "Edinburgh Research Explorer CoSense: Compiler Optimizations using Sensor Technical Specifications",
+"year": null,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/systems-nuts/cosense"
+}
+]
+},
+{
+"s2_id": "ac66b1c93cbe8be26a6d9fb093e8110421ff7236",
+"title": ": Automatic, Retargetable Program Raising in Multi-Level IR using Program Synthesis",
+"year": null,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/opencompl/mlir-fuzz"
+}
+]
+},
+{
+"s2_id": "11296e9b85c887f7e9c5b37ff29d7379fe53e8ef",
+"title": "Edinburgh Research Explorer C2TACO: Lifting Tensor Code to TACO",
+"year": null,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/mathfu"
+}
+]
+},
+{
+"s2_id": "cdc5288189d4dc824484dbf60f02af3428bd7853",
+"title": "A code superoptimizer through neural Monte-Carlo tree search",
+"year": null,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/herumi/xbyak"
+}
+]
+},
+{
+"s2_id": "52dcb932a00a8db72abbb162ab2c000f6c219b41",
+"title": "Cross-Feature Transfer Learning for Ef\ufb01cient Tensor Program Generation",
+"year": null,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/onnx/onnx"
+},
+{
+"kind": "github",
+"url": "github.com/xintin/transferlearn_hetfeat_"
+},
+{
+"kind": "github",
+"url": "github.com/xintin/transferlearn_hetfeat_tenproggen"
+}
+]
+},
+{
+"s2_id": "2084c6e7a06d71b3fb2e73f14c2336ecc566a5ed",
+"title": "LLM-Based Code Translation Needs Formal Compositional Reasoning",
+"year": null,
+"doi": null,
+"artifacts": [
+{
+"kind": "github",
+"url": "github.com/google/longfellow-zk"
+},
+{
+"kind": "github",
+"url": "github.com/google/zopfli"
+}
+]
+}
+]
+}
