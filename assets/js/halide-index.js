@@ -60,8 +60,11 @@
   };
   var ARTIFACT_LABELS = { has: 'Published an artifact', none: 'No artifact found' };
   var PAPERS_LABELS = { yes: 'Is a paper artifact', no: 'No paper attached' };
-  var CONTRIB_LABELS = { yes: 'Committed to halide/Halide' };
+  var CONTRIB_LABELS = { commits: 'Committed to halide/Halide' };
   var BAND_LABELS = { '1': '1 paper', '2-4': '2–4 papers', '5-9': '5–9 papers', '10+': '10 or more' };
+  /* Committing sorts above the paper bands however few people did it: it is a different
+     kind of contribution, not the smallest one. */
+  var CONTRIB_ORDER = ['commits', '10+', '5-9', '2-4', '1'];
 
   var IMPORTANCE_NOTE = [
     '0 — everything, rated or not',
@@ -134,15 +137,15 @@
             'authorship.json and the contributors output, which are not in the repository yet — ' +
             'their facets appear as soon as those files are there.',
       sorts: [
+        { key: 'score', label: 'Total contributions', title: 'Commits and papers on one axis: commits divided by the largest commit count, plus papers divided by the largest paper count. Someone strong on either side scores near 1, someone strong on both scores near 2' },
         { key: 'papers_n', label: 'Papers in the index', title: 'How many indexed works the person authored' },
         { key: 'commits', label: 'Commits to Halide', title: 'Commits to halide/Halide, with the git identities merged. People who never committed sort last' },
         { key: 'title', label: 'Name (A–Z)', title: 'Alphabetical' },
         { key: 'first', label: 'First appearance', title: 'Earliest indexed paper first' }
       ],
       facets: [
-        { facet: 'contributor', label: 'Halide contributor', optional: true, hint: 'Whether the person has commits in halide/Halide. The commit log is resolved from 359 raw name-and-email identities into people first, so a share is a fraction of the whole tree rather than of one identity. A contributor is joined to an author only on an exact name match; anyone unmatched appears as their own entry.' },
+        { facet: 'contributions', label: 'Contributions', defaultAll: true, hint: 'What the person contributed: how many indexed works they authored, and whether they have commits in halide/Halide. Every value starts selected, so unlighting one removes that group — unlighting "1 paper" is the quickest way to the recurring names. The commit log is resolved from 359 raw name-and-email identities into people first, so a share is a fraction of the whole tree rather than of one identity; a contributor is joined to an author only on an exact name match, and anyone unmatched appears as their own entry.' },
         { facet: 'anchor_author', label: 'Anchor author', hint: 'People who wrote one of the anchor works themselves: the authors of the Halide papers, matched on name because the anchor records carry names rather than author ids.' },
-        { facet: 'papers_band', label: 'Papers in the index', hint: 'How many indexed works the person authored. Most people appear exactly once, so this is the quickest way to the recurring names.' },
         { facet: 'anchors', label: 'Cites anchor', hint: 'Which anchor works this person\u2019s papers cite, pooled across all of them.' },
         { facet: 'affiliations', label: 'Affiliation', searchable: true, optional: true, hint: 'The organization recorded for this person. Taken from the paper\u2019s own affiliation string rather than from an institution matcher, because the matcher\u2019s labels were wrong about one record in eight.' }
       ]
@@ -169,6 +172,10 @@
   var ANCHOR_LABEL = {}; // anchor id -> "PLDI 2013"
   var ANCHOR_TITLE = {};
   var UNIVERSE = {};     // view key -> facet -> every value, so a facet keeps its rows
+  /* Denominators for total contributions, measured from the data rather than fixed:
+     commits and papers are on wildly different scales, and both maxima move as the index
+     grows. Dividing each by its own maximum puts them on the same 0-1 axis. */
+  var MAX = { commits: 1, papers: 1 };
   var COUNTS = {};
 
   var state = {
@@ -216,8 +223,7 @@
     if (facet === 'role') return ROLE_LABELS[v] || prettify(v);
     if (facet === 'artifact') return ARTIFACT_LABELS[v] || prettify(v);
     if (facet === 'has_paper') return PAPERS_LABELS[v] || prettify(v);
-    if (facet === 'contributor') return CONTRIB_LABELS[v] || prettify(v);
-    if (facet === 'papers_band') return BAND_LABELS[v] || v;
+    if (facet === 'contributions') return CONTRIB_LABELS[v] || BAND_LABELS[v] || v;
     return String(v);
   }
 
@@ -235,13 +241,17 @@
         return [rec.artifacts && rec.artifacts.length ? 'has' : 'none'];
       case 'has_paper':
         return [rec.papers && rec.papers.length ? 'yes' : 'no'];
-      case 'papers_band':
+      /* Both halves of what a person contributed. Someone can carry a paper band and a
+         commit record, and a contributor with no indexed paper carries only the latter --
+         which is why zero papers yields no band rather than falling into "1 paper". */
+      case 'contributions':
+        var out = [];
+        if (rec.contributions && rec.contributions.length) out.push('commits');
         var n = rec.n_papers || 0;
-        return [n >= 10 ? '10+' : n >= 5 ? '5-9' : n >= 2 ? '2-4' : '1'];
+        if (n) out.push(n >= 10 ? '10+' : n >= 5 ? '5-9' : n >= 2 ? '2-4' : '1');
+        return out;
       case 'anchor_author':
         return rec.anchor_papers || [];
-      case 'contributor':
-        return rec.contributions && rec.contributions.length ? ['yes'] : [];
       case 'role':
         return rec.role ? [rec.role] : [];
       default:
@@ -407,6 +417,10 @@
       });
       truncated = !q && values.length > 200;
       if (truncated) values = values.slice(0, 200);
+    } else if (facet === 'contributions') {
+      values.sort(function (a, b) {
+        return CONTRIB_ORDER.indexOf(a) - CONTRIB_ORDER.indexOf(b);
+      });
     } else {
       values.sort(function (a, b) {
         var d = (counts[b] || 0) - (counts[a] || 0);
@@ -445,6 +459,17 @@
     });
     wrap.appendChild(list);
     mount.appendChild(wrap);
+  }
+
+  function applyFacetDefaults() {
+    VIEWS.forEach(function (v) {
+      v.facets.forEach(function (spec) {
+        if (!spec.defaultAll) return;
+        var values = (UNIVERSE[v.key] || {})[spec.facet] || [];
+        state.sel[spec.facet] = {};
+        values.forEach(function (val) { state.sel[spec.facet][val] = true; });
+      });
+    });
   }
 
   function rebuildFacets() {
@@ -558,6 +583,7 @@
     }
     if (rec.kind === 'person') {
       bits.push(rec.n_papers + (rec.n_papers === 1 ? ' paper' : ' papers'));
+      if (sortKey() === 'score') bits.push('total contributions ' + personScore(rec).toFixed(2));
       (rec.contributions || []).forEach(function (c) {
         bits.push(c.commits + ' commits to ' + c.repo +
           (c.share != null ? ' (' + c.share + '%)' : ''));
@@ -675,6 +701,14 @@
   }
 
   /* ---------- Sorting ---------- */
+  /* Commits and papers measure different things and neither subsumes the other, so total
+     contributions adds them rather than picking one: each is a fraction of the largest
+     value that kind reaches in this index. It is a display ordering, not a judgement of
+     importance -- that is what curation will assign. */
+  function personScore(rec) {
+    return (rec.contrib_commits || 0) / MAX.commits + (rec.n_papers || 0) / MAX.papers;
+  }
+
   function sortKey() { return state.sort[state.view] || view().sorts[0].key; }
 
   function sortRecords(arr) {
@@ -693,6 +727,7 @@
       papers: function (a, b) { return ((b.papers || []).length) - ((a.papers || []).length); },
       papers_n: function (a, b) { return (b.n_papers || 0) - (a.n_papers || 0); },
       commits: function (a, b) { return (b.contrib_commits || 0) - (a.contrib_commits || 0); },
+      score: function (a, b) { return personScore(b) - personScore(a); },
       first: function (a, b) { return (a.first_year || 9999) - (b.first_year || 9999); },
       cited_by_pool: function (a, b) { return (b.cited_by_pool || 0) - (a.cited_by_pool || 0); },
       title: function () { return 0; }
@@ -794,6 +829,15 @@
     }
   }
 
+  function computeMaxima() {
+    MAX = { commits: 1, papers: 1 };
+    activeData().forEach(function (rec) {
+      if (rec.kind !== 'person') return;
+      if ((rec.contrib_commits || 0) > MAX.commits) MAX.commits = rec.contrib_commits;
+      if ((rec.n_papers || 0) > MAX.papers) MAX.papers = rec.n_papers;
+    });
+  }
+
   function computeUniverse() {
     UNIVERSE = {};
     var all = activeData();
@@ -838,6 +882,7 @@
     state.focus = null;
     state.showAll = false;
     state.minImportance = 0;
+    applyFacetDefaults();
     els.text.value = '';
     if (els.importance) els.importance.value = 0;
     buildFacetGrid();
@@ -853,6 +898,8 @@
         BUNDLES = (raw && raw.entries) || [];
         indexNodes(BUNDLES);
         computeUniverse();
+        computeMaxima();
+        applyFacetDefaults();
       })
       .catch(function (e) {
         els.errors.textContent = 'Could not load the vendored bundles: ' + e.message;
@@ -941,6 +988,8 @@
         COUNTS = (payload && payload.counts) || {};
         indexNodes(DATA);
         computeUniverse();
+        computeMaxima();
+        applyFacetDefaults();
         if (curatedPresent()) {
           $('curated-controls').className = '';
           $('min-importance-label').textContent = IMPORTANCE_NOTE[0];

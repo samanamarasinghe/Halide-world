@@ -339,7 +339,10 @@ def build_people(papers, anchors, authorship, contributors):
     out = []
     for person in people.values():
         years = person.pop('years')
-        person['n_papers'] = len(person['papers'])
+        # Anchor works count as papers in the index, because they are: without this an
+        # author whose only indexed work is an anchor lands in no band at all and drops out
+        # of a facet whose values are all selected.
+        person['n_papers'] = len(person['papers']) + len(person.get('anchor_papers') or [])
         if years:
             person['first_year'], person['last_year'] = min(years), max(years)
         out.append(person)

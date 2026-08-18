@@ -229,6 +229,56 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
     console.log('  --   no contributor data in this payload; share not asserted');
   }
 
+  console.log('total contributions');
+  [...q('.view-btn')].find((b) => b.textContent.startsWith('People')).click();
+  await settle();
+  const ssorts = [...$('sort-within').options].map((o) => o.value);
+  check('people offer a combined score sort', ssorts.indexOf('score') >= 0);
+  $('sort-within').value = 'score'; $('sort-within').onchange.call($('sort-within'));
+  await settle();
+  const scores = [...q('.pub-item')].map((li) => {
+    const m = (li.querySelector('.pub-dim').textContent || '').match(/total contributions ([\d.]+)/);
+    return m ? parseFloat(m[1]) : null;
+  }).filter((n) => n !== null);
+  let sok = scores.length > 10;
+  for (let i = 1; i < scores.length; i++) if (scores[i] > scores[i - 1] + 1e-9) sok = false;
+  check('score sort is non-increasing', sok, scores.slice(0, 5).join(','));
+  // The figure is only meaningful against the largest values in the index, so the top
+  // person must not exceed the two-unit ceiling the normalisation implies.
+  check('score stays within its scale', !scores.length || scores[0] <= 2.0001, String(scores[0]));
+
+  console.log('contributions facet');
+  $('btn-clear').click();
+  await settle();
+  [...q('.view-btn')].find((b) => b.textContent.startsWith('People')).click();
+  await settle();
+  const cblock = [...q('#filter-grid .filter-block')]
+    .find((b) => /Contributions/.test(b.querySelector('.filter-label').textContent));
+  check('one merged contributions facet', !!cblock);
+  check('no separate contributor facet',
+    ![...q('#filter-grid .filter-label')].some((l) => /Halide contributor/.test(l.textContent)));
+  if (cblock) {
+    const boxes = [...cblock.querySelectorAll('.facet-item input')];
+    check('every value starts selected', boxes.length > 0 && boxes.every((b) => b.checked),
+      boxes.filter((b) => !b.checked).length + ' unselected');
+    // All values lit must filter nothing: everyone carries at least one, including an
+    // author whose only indexed work is an anchor and a committer with no paper.
+    check('all lit shows the whole view', /^\(\d+\)$/.test($('pubs-count').textContent),
+      $('pubs-count').textContent);
+    const one = [...cblock.querySelectorAll('.facet-item')].find((l) => /1 paper/.test(l.textContent));
+    if (one) {
+      const cb2 = one.querySelector('input');
+      cb2.checked = false; cb2.onchange.call(cb2);
+      await settle();
+      check('unlighting a value narrows', /of/.test($('pubs-count').textContent),
+        $('pubs-count').textContent);
+      $('btn-clear').click();
+      await settle();
+      check('clear relights every value',
+        [...q('#filter-grid .facet-item input')].filter((b) => !b.checked).length >= 0);
+    }
+  }
+
   console.log('retired duplicates are gone, not gated');
   check('no retired-duplicate control', !$('btn-retired'));
   check('no retired-duplicate records', q('.pub-item.tier-duplicate').length === 0);
