@@ -25,6 +25,7 @@ INRIA and CNRS, and rejected: it also "rescued" ARM into the American Rock
 Mechanics Association and MIT into the Moscow Institute of Thermal Technology.
 Explicit aliases are slower to write and do not misfire.
 
+    export OPENALEX_API_KEY=...        # optional, but avoids the daily budget
     python3 curate/affiliations.py --pool data/pools/lane_a.json \
         --out data/people/authorship.json
 
@@ -46,6 +47,10 @@ import urllib.request
 from collections import Counter, defaultdict
 
 MAILTO = "saman@lcs.mit.edu"
+# Read from the environment, never hardcoded: this repository is public.
+# Without a key the polite pool still works but shares a daily budget that runs
+# out; with one, the 1,700-DOI pass finishes in about twelve seconds.
+API_KEY = os.environ.get("OPENALEX_API_KEY")
 SELECT = "id,doi,display_name,publication_year,authorships"
 
 # Raw-string patterns mapped to a canonical institution, first match wins.
@@ -124,6 +129,10 @@ def supported_by(assigned, raws):
     return any(key & words(clean(raw)) for raw in raws)
 
 
+def with_key(url):
+    return f"{url}&api_key={API_KEY}" if API_KEY else url
+
+
 def openalex(url, tries=3):
     request = urllib.request.Request(
         url, headers={"User-Agent": f"HalideWorldIndex/0.1 (mailto:{MAILTO})"})
@@ -147,9 +156,10 @@ def fetch_authorships(dois, cache_path):
         batch = todo[start:start + 50]
         url = (f"https://api.openalex.org/works?filter=doi:{'|'.join(batch)}"
                f"&per-page=50&select={SELECT}&mailto={MAILTO}")
-        payload = openalex(url)
+        payload = openalex(with_key(url))
         if payload.get("_budget"):
-            print("OpenAlex daily budget exhausted; rerun tomorrow or set a key")
+            print("OpenAlex daily budget exhausted. Set OPENALEX_API_KEY, or rerun "
+                  "after it resets at midnight UTC.")
             break
         for work in payload.get("results", []):
             doi = (work.get("doi") or "").replace("https://doi.org/", "").lower()
@@ -230,7 +240,8 @@ def main():
         print(f"no DOIs found. They are written by harvest/artifacts.py --phase enrich "
               f"into {args.enrich_state}; pass --enrich-state if it lives elsewhere.")
         return 1
-    print(f"{len(dois)} distinct DOIs")
+    print(f"{len(dois)} distinct DOIs"
+          f"{' (using OPENALEX_API_KEY)' if API_KEY else ' (polite pool, no key)'}")
 
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
     os.makedirs(os.path.dirname(args.cache) or ".", exist_ok=True)
