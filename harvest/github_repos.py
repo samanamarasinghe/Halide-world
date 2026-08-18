@@ -2,9 +2,9 @@
 """Enumerate every GitHub repository that shows a Halide code signature.
 
 GitHub's code search API caps any single query at 1000 results and serves 100
-per page, while `#include "Halide.h"` alone matches ~9,500 files. The workaround
-is to shard each signature by file size into ranges that individually stay under
-the cap, then page through each shard. Sharding is adaptive: a range that still
+per page, while a bare `"Halide.h"` matches ~9,500 files. The workaround is to
+shard each signature by file size into ranges that individually stay under the
+cap, then page through each shard. Sharding is adaptive: a range that still
 reports 1000+ results is split in half and retried.
 
 Requires a token, because code search is not available unauthenticated:
@@ -14,23 +14,31 @@ Requires a token, because code search is not available unauthenticated:
 
 Authenticated code search allows 10 requests/minute, so a full run takes on the
 order of 20 minutes. It is resumable -- re-running skips completed shards. Pass
---only <signature name> to redo a single signature; its shard markers are
-discarded so it re-runs while everything else is left alone.
+--only <signature name> to redo a single signature: its shard markers are
+dropped and everything it recorded previously is purged, so a corrected query
+replaces its old results instead of adding to them.
 
-A note on quoting, learned the hard way. GitHub's code search does not accept
-backslash-escaped quotes inside a quoted phrase: `"#include \"Halide.h\""`
-returns zero results for every shard, silently, which looks exactly like a
-signature nobody uses. Nested bare quotes work: `"#include "Halide.h""` returns
-2,432 hits in the 1-2KB shard alone. Any new signature containing a quote
-character should be spot-checked against the API before a full run.
+A note on quoting, learned the hard way twice. A signature may contain at most
+ONE pair of quotes, with no interior quotes. Backslash-escaped inner quotes
+(`"#include \"Halide.h\""`) return zero for every shard. So do nested bare
+quotes (`"#include "Halide.h""`), because the third quote opens a fresh phrase
+that swallows the trailing qualifiers -- the query ends up searching for the
+literal text `NOT is:fork size:0..500`. Regex literals (`/#include "Halide\.h"/`)
+are not supported by this REST endpoint either. The working form is a single
+quoted phrase: `"Halide.h"` returns 2,888 hits in the 1-2KB shard alone. This is
+why the include signature searches for the bare header name rather than the full
+include line, and why it is weighted `source` rather than treated as proof of
+use. A broken query is indistinguishable from an unused signature -- both report
+zero -- so spot-check every new signature against the API before a full run.
 
 Two things the results will contain that curation has to handle. Vendored
 bundles match the source signatures without using Halide -- OpenCV ships a
-Halide backend, so every project that vendors OpenCV sources appears. And prose
-about Halide matches too: any repo whose documentation quotes a signature string
-will show up, including our own notes. Classification should key on the matched
-PATH, not the repo name: `find_package(Halide` at `CMakeLists.txt` is a
-consumer, the same line at `.../opencv/cmake/OpenCVDetectHalide.cmake` is not.
+Halide backend, so every project that vendors OpenCV sources appears, and that
+is roughly 70% of the raw pool. And prose about Halide matches too: any repo
+whose documentation quotes a signature string will show up, including our own
+notes. Classification should key on the matched PATH, not the repo name:
+`find_package(Halide` at `CMakeLists.txt` is a consumer, the same line at
+`.../opencv/cmake/OpenCVDetectHalide.cmake` is not.
 """
 
 import argparse
@@ -49,13 +57,13 @@ RESULT_CAP = 1000
 RATE_SLEEP = 6.5  # 10 requests/minute, with headroom
 
 # Ordered strongest to weakest. `weight` records how much a match means: a
-# CMake consumer line is far better evidence of *using* Halide than an include,
-# because vendored copies of Halide itself carry the includes too.
+# CMake consumer line is far better evidence of *using* Halide than a header
+# reference, because vendored copies of Halide itself carry the headers too.
 SIGNATURES = [
     {"name": "cmake_find_package", "query": '"find_package(Halide"', "weight": "consumer"},
     {"name": "cmake_add_library", "query": '"add_halide_library("', "weight": "consumer"},
     {"name": "generator_macro", "query": '"HALIDE_REGISTER_GENERATOR"', "weight": "generator"},
-    {"name": "include_header", "query": '"#include "Halide.h""', "weight": "source"},
+    {"name": "include_header", "query": '"Halide.h"', "weight": "source"},
     {"name": "cpp_func", "query": '"Halide::Func"', "weight": "source"},
     {"name": "cpp_buffer", "query": '"Halide::Buffer"', "weight": "source"},
     {"name": "runtime_header", "query": '"HalideBuffer.h"', "weight": "runtime"},
@@ -140,11 +148,21 @@ def harvest(token, out_path, only=None):
     hits = state.get("hits", {})
     done = set(state.get("done", []))
 
+    if only:
+        # Drop this signature's shard markers AND purge whatever it recorded
+        # last time. Without the purge, a corrected query only ADDS to the wrong
+        # results it was meant to replace.
+        done = {k for k in done if not k.startswith(f"{only}:")}
+        for repo, record in list(hits.items()):
+            record["signatures"].pop(only, None)
+            record["paths"] = [p for p in record["paths"] if not p.startswith(f"{only}:")]
+            if not record["signatures"]:
+                del hits[repo]
+        print(f"purged prior {only} results; {len(hits)} repos remain from other signatures")
+
     for signature in SIGNATURES:
         if only and signature["name"] != only:
             continue
-        if only:  # re-running one signature: discard its stale shard markers
-            done = {k for k in done if not k.startswith(f"{only}:")}
         print(f"\n{signature['name']}  ({signature['weight']})")
         queue = list(INITIAL_RANGES)
         while queue:
