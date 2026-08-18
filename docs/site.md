@@ -24,28 +24,30 @@ the directory instead:
 ## What the page shows
 
 Four node views over one filter engine. A view names the node kinds it shows and the
-facets that mean something for them; everything else — search, sort, tier gates, the
-200-value cap, the result cap — is shared.
+facets that mean something for them; everything else — search, sort, the 200-value cap,
+the result cap — is shared.
 
 | View | Nodes | Facets |
 |---|---|---|
 | Papers | works citing an anchor | cites anchor, year, venue, citation intent, artifact, field, role\* |
 | Repositories | repositories with Halide in them | verdict, evidence, signature, where it sits, paper artifact, cleanup status\*, language\*, role\* |
-| People | authors of indexed papers and halide/Halide committers | Halide contributor\*, anchor author, papers in the index, cites anchor, affiliation\* |
+| People | authors of indexed papers and halide/Halide committers | contributions, anchor author, cites anchor, affiliation\* |
 | Anchors | the Halide works themselves | none — sixteen records |
 
 \* Hidden until the data carries the field. `role` and `importance` arrive with curation;
-`affiliation` arrives with `data/pools/authorship.json`; the contributor facet and the
-commits sort arrive with `data/people/halide_contributors.json`; cleanup status, language, stars and
-descriptions arrive with `data/pools/lane_b_curatable.json`, which the build merges onto
-`lane_b_classified.json` where it has an opinion — the classified pool stays the base
-because it is the only file covering bundles and prose-only repositories. Nothing needs a front-end change
-when they land: the facet appears because a record has the field.
+`affiliation` arrives with `data/pools/authorship.json`; the contributor half of the
+Contributions facet and the commits sort arrive with `data/people/halide_contributors.json`;
+cleanup status, language, stars and descriptions arrive with
+`data/pools/lane_b_curatable.json`, which the build merges onto `lane_b_classified.json`
+where it has an opinion — the classified pool stays the base because it is the only file
+covering bundles and prose-only repositories. Nothing needs a front-end change when they
+land: the facet appears because a record has the field.
 
 ## Edges
 
 The index is a graph, so every card carries the edges leading out of it and following one
-navigates to the node at the far end.
+navigates to the node at the far end. The `Show connectivity` button opens them all at
+once; each card also has its own toggle.
 
 - paper → the repositories it published as artifacts, and the repositories it merely names
 - repository → the papers it is the artifact of
@@ -54,26 +56,47 @@ navigates to the node at the far end.
 - author names on a paper card → that person's node
 - anchor → its citing works, as a filter rather than a stored reverse edge
 
-A repository that is not itself in the index — a vendored bundle before the bundles are
-loaded — renders as a plain outbound GitHub link rather than an in-page edge.
+## Two person facets worth explaining
 
-## Three classes of record are gated rather than faceted
+**Contributions** merges what someone authored with what they committed: the paper bands
+plus `Committed to halide/Halide`, which sorts first because committing is a different kind
+of contribution rather than the smallest one. Every value starts selected, so unlighting one
+removes that group. Anchor works count towards a person's band — without that, an author
+whose only indexed work is an anchor carries no value at all and vanishes from a facet whose
+values are all lit.
 
-They answer "should this be in the corpus at all", which is a different question from
-"which of these do I want", and mixing them into the facets would make the facet counts
-disagree with the header.
+**Total contributions** is the default sort: commits divided by the largest commit count in
+the index, plus papers divided by the largest paper count. Both denominators are measured at
+load rather than fixed, because both move as the index grows. It is a display ordering, not
+a judgement of importance — that is what curation will assign.
 
-- **Vendored bundles**, 2,828 repositories whose only Halide arrived inside a third-party
-  dependency. Off by default and shipped in `data/site/halide-bundles.json`, fetched only
-  when the button is pressed.
+A contributor is joined to an author node only on an exact display-name or alias match, and
+anyone unmatched appears as their own entry. A wrong merge in a person index silently
+reassigns authorship, which is worse than showing one person as two rows. Note that Semantic
+Scholar abbreviates given names, so `A. Adams` and `Andrew Adams` will not join under this
+rule.
+
+## What the page leaves out
+
+Two classes of record never reach it, both excluded by the build rather than hidden behind a
+control, and both still counted in the build report so the arithmetic stays checkable.
+
 - **Retired duplicates**, the 93 records the duplicate classification retired in favour of
-  another. Off by default; each card names the survivor and why.
-- **Dropped repositories**, the ones the cleanup pass judged redistributed copies or
-  unmodified re-uploads. Kept with their reason rather than deleted, off by default.
-- **DOI-only records**, the 161 works Semantic Scholar's 1,000-result cap hid. Shown by
-  default, since the citation is real. Where `data/pools/doi_enriched_state.json` has a
-  record they carry a real title, venue, year, authors and citation count and keep the tier
-  only as provenance; without it they render as bare identifiers.
+  another. Their survivor carries the work, and a page offering both would offer the same
+  paper twice.
+- **Dropped repositories**, the 102 the cleanup pass judged to carry only someone else's
+  Halide-touching source — a redistributed copy, or an unmodified re-upload of Halide. They
+  are kept in `data/pools/lane_b_curatable.json` with the reason recorded, which is where a
+  wrong drop is audited; `lane_b_curatable_summary.json` lists every one.
+
+The 2,828 vendored bundles — repositories whose only Halide arrived inside a third-party
+dependency — are NOT among them. They carry `third_party_bundle` as their verdict and are
+filtered through the Verdict facet like any other repository.
+
+**DOI-only records**, the 161 works Semantic Scholar's 1,000-result cap hid, are shown by
+default: the citation is real. Where `data/pools/doi_enriched_state.json` has a record they
+carry a real title, venue, year, authors and citation count and keep the tier only as
+provenance; without it they render as bare identifiers.
 
 ## Two rules the page keeps
 
