@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "note": "Anchor set for the Halide-world index. Rule: Halide papers with at least one of Saman Amarasinghe, Jonathan Ragan-Kelley, Andrew Adams, Fredo Durand or Shoaib Kamil as an author, applied as 'title or venue carries the word Halide'. Every DOI alias must be listed: several anchors are indexed under both a proceedings DOI and a journal-issue DOI, and citation services split their citing lists across them. Harvesting only one alias of the PLDI 2013 paper returns 555 citing works; harvesting both returns 966.",
+  "anchors": [
+    {
+      "id": "siggraph2012-decoupling",
+      "title": "Decoupling Algorithms from Schedules for Easy Optimization of Image Processing Pipelines",
+      "year": 2012,
+      "venue": "SIGGRAPH",
+      "url": "https://doi.org/10.1145/2185520.2185528",
+      "dois": ["10.1145/2185520.2185528", "10.1145/3596711.3596751"],
+      "doi_notes": "second DOI is the 2023 Seminal Graphics Papers reprint",
+      "authors": ["Jonathan Ragan-Kelley", "Andrew Adams", "Sylvain Paris", "Marc Levoy", "Saman Amarasinghe", "Fredo Durand"]
+    },
+    {
+      "id": "pldi2013-halide",
+      "title": "Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines",
+      "year": 2013,
+      "venue": "PLDI",
+      "url": "https://doi.org/10.1145/2491956.2462176",
+      "dois": ["10.1145/2491956.2462176", "10.1145/2499370.2462176"],
+      "doi_notes": "proceedings DOI and SIGPLAN Notices DOI; both carry distinct citing lists",
+      "authors": ["Jonathan Ragan-Kelley", "Connelly Barnes", "Andrew Adams", "Sylvain Paris", "Fredo Durand", "Saman Amarasinghe"]
+    },
+    {
+      "id": "thesis2014-ragankelley",
+      "title": "Decoupling Algorithms from the Organization of Computation for High Performance Image Processing",
+      "year": 2014,
+      "venue": "MIT PhD dissertation",
+      "url": "https://hdl.handle.net/1721.1/89996",
+      "dois": [],
+      "doi_notes": "no DOI; MIT DSpace handle only, so DOI-keyed citation services cannot see it",
+      "authors": ["Jonathan Ragan-Kelley"]
+    },
+    {
+      "id": "siggraph2015-intro",
+      "title": "An Introduction to Halide",
+      "year": 2015,
+      "venue": "SIGGRAPH Courses",
+      "url": "https://doi.org/10.1145/2776880.2792710",
+      "dois": ["10.1145/2776880.2792710"],
+      "authors": ["Jonathan Ragan-Kelley", "Andrew Adams", "Dillon Sharlet"]
+    },
+    {
+      "id": "pldi2015-helium",
+      "title": "Helium: Lifting High-Performance Stencil Kernels from Stripped x86 Binaries to Halide DSL Code",
+      "year": 2015,
+      "venue": "PLDI",
+      "url": "https://doi.org/10.1145/2737924.2737974",
+      "dois": ["10.1145/2737924.2737974", "10.1145/2813885.2737974"],
+      "doi_notes": "proceedings DOI and SIGPLAN Notices DOI",
+      "authors": ["Charith Mendis", "Jeffrey Bosboom", "Kevin Wu", "Shoaib Kamil", "Jonathan Ragan-Kelley", "Sylvain Paris", "Qin Zhao", "Saman Amarasinghe"]
+    },
+    {
+      "id": "ppopp2016-distributed",
+      "title": "Distributed Halide",
+      "year": 2016,
+      "venue": "PPoPP",
+      "url": "https://doi.org/10.1145/2851141.2851157",
+      "dois": ["10.1145/2851141.2851157", "10.1145/3016078.2851157"],
+      "doi_notes": "proceedings DOI and SIGPLAN Notices DOI",
+      "authors": ["Tyler Denniston", "Shoaib Kamil", "Saman Amarasinghe"]
+    },
+    {
+      "id": "siggraph2016-autoscheduler",
+      "title": "Automatically Scheduling Halide Image Processing Pipelines",
+      "year": 2016,
+      "venue": "SIGGRAPH",
+      "url": "https://doi.org/10.1145/2897824.2925952",
+      "dois": ["10.1145/2897824.2925952"],
+      "authors": ["Ravi Teja Mullapudi", "Andrew Adams", "Dillon Sharlet", "Jonathan Ragan-Kelley", "Kayvon Fatahalian"]
+    },
+    {
+      "id": "cgo2017-reductions",
+      "title": "Parallel Associative Reductions in Halide",
+      "year": 2017,
+      "venue": "CGO",
+      "url": "https://doi.org/10.1109/CGO.2017.7863747",
+      "dois": ["10.1109/CGO.2017.7863747"],
+      "doi_notes": "DBLP carries no DOI for this record; DOI resolved via Crossref",
+      "authors": ["Patricia Suriana", "Andrew Adams", "Shoaib Kamil"]
+    },
+    {
+      "id": "cacm2018-halide",
+      "title": "Halide: Decoupling Algorithms from Schedules for High-Performance Image Processing",
+      "year": 2018,
+      "venue": "Communications of the ACM (Research Highlights)",
+      "url": "https://doi.org/10.1145/3150211",
+      "dois": ["10.1145/3150211"],
+      "authors": ["Jonathan Ragan-Kelley", "Andrew Adams", "Dillon Sharlet", "Connelly Barnes", "Sylvain Paris", "Marc Levoy", "Saman Amarasinghe", "Fredo Durand"]
+    },
+    {
+      "id": "siggraph2018-differentiable",
+      "title": "Differentiable Programming for Image Processing and Deep Learning in Halide",
+      "year": 2018,
+      "venue": "SIGGRAPH",
+      "url": "https://doi.org/10.1145/3197517.3201383",
+      "dois": ["10.1145/3197517.3201383"],
+      "authors": ["Tzu-Mao Li", "Michael Gharbi", "Andrew Adams", "Fredo Durand", "Jonathan Ragan-Kelley"]
+    },
+    {
+      "id": "siggraph2019-treesearch",
+      "title": "Learning to Optimize Halide with Tree Search and Random Programs",
+      "year": 2019,
+      "venue": "SIGGRAPH",
+      "url": "https://doi.org/10.1145/3306346.3322967",
+      "dois": ["10.1145/3306346.3322967"],
+      "authors": ["Andrew Adams", "Karima Ma", "Luke Anderson", "Riyadh Baghdadi", "Tzu-Mao Li", "Michael Gharbi", "Benoit Steiner", "Steven Johnson", "Kayvon Fatahalian", "Fredo Durand", "Jonathan Ragan-Kelley"]
+    },
+    {
+      "id": "siggraphasia2019-translating",
+      "title": "Automatically Translating Image Processing Libraries to Halide",
+      "year": 2019,
+      "venue": "SIGGRAPH Asia",
+      "url": "https://doi.org/10.1145/3355089.3356549",
+      "dois": ["10.1145/3355089.3356549"],
+      "authors": ["Maaz Bin Safeer Ahmad", "Jonathan Ragan-Kelley", "Alvin Cheung", "Shoaib Kamil"]
+    },
+    {
+      "id": "oopsla2020-trs",
+      "title": "Verifying and Improving Halide's Term Rewriting System with Program Synthesis",
+      "year": 2020,
+      "venue": "OOPSLA",
+      "url": "https://doi.org/10.1145/3428234",
+      "dois": ["10.1145/3428234"],
+      "authors": ["Julie L. Newcomb", "Andrew Adams", "Steven Johnson", "Rastislav Bodik", "Shoaib Kamil"]
+    },
+    {
+      "id": "oopsla2021-gpu",
+      "title": "Efficient Automatic Scheduling of Imaging and Vision Pipelines for the GPU",
+      "year": 2021,
+      "venue": "OOPSLA",
+      "url": "https://doi.org/10.1145/3485486",
+      "dois": ["10.1145/3485486"],
+      "doi_notes": "the 2020 arXiv preprint 2012.07145, titled 'Learning to Schedule Halide Pipelines for the GPU', is the same work and is not a separate anchor",
+      "aliases": ["arXiv:2012.07145"],
+      "authors": ["Luke Anderson", "Andrew Adams", "Karima Ma", "Tzu-Mao Li", "Tian Jin", "Jonathan Ragan-Kelley"]
+    },
+    {
+      "id": "arxiv2022-semantics",
+      "title": "Formal Semantics for the Halide Language",
+      "year": 2022,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2210.15740",
+      "dois": ["10.48550/arXiv.2210.15740"],
+      "authors": ["Alex Reinking", "Gilbert Louis Bernstein", "Jonathan Ragan-Kelley"]
+    },
+    {
+      "id": "repo-halide",
+      "title": "halide/Halide",
+      "kind": "repository",
+      "url": "https://github.com/halide/Halide",
+      "dois": []
+    }
+  ]
+}
