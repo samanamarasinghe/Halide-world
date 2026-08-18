@@ -211,6 +211,24 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
     await settle();
   }
 
+  console.log('person layer');
+  $('btn-clear').click();
+  await settle();
+  [...q('.view-btn')].find((b) => b.textContent.startsWith('People')).click();
+  await settle();
+  const psorts = [...$('sort-within').options].map((o) => o.value);
+  check('people offer a commits sort', psorts.indexOf('commits') >= 0);
+  $('sort-within').value = 'commits'; $('sort-within').onchange.call($('sort-within'));
+  await settle();
+  const top = q('.pub-item')[0].querySelector('.pub-dim').textContent;
+  // Contribution data only exists once halide_contributors.json is on disk, so the share
+  // is asserted when there is one and reported as absent when there is not.
+  if (INFO.people_with_contributions) {
+    check('top person shows a contribution share', /commits to .+\(\d/.test(top), top.trim());
+  } else {
+    console.log('  --   no contributor data in this payload; share not asserted');
+  }
+
   console.log('retired duplicates are gone, not gated');
   check('no retired-duplicate control', !$('btn-retired'));
   check('no retired-duplicate records', q('.pub-item.tier-duplicate').length === 0);

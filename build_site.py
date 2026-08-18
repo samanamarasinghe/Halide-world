@@ -138,12 +138,21 @@ def build_anchors(anchors_json, papers):
     return out
 
 
-def build_doi_only(oc, dup):
-    """The 221 works Semantic Scholar's 1,000-result cap hid. DOI and nothing else."""
+def build_doi_only(oc, dup, enriched):
+    """The works Semantic Scholar's 1,000-result cap hid.
+
+    `opencitations_only.json` carries a bare DOI and nothing else, so these render as
+    identifiers until `enrich_papers.py` has run. Where its state file has a record, the
+    paper gets its real title, venue, year, authors and citation count and stops being a
+    second-class row — only the `doi_only` tier remains, since the provenance is still
+    worth knowing.
+    """
     retired = duplicate_map(dup)
     out = []
     for doi in (oc or {}).get('dois') or []:
         key = 'oc:' + doi
+        if key in retired:
+            continue
         entry = {
             'kind': 'paper',
             'tier': 'doi_only',
@@ -153,8 +162,24 @@ def build_doi_only(oc, dup):
             'anchors': [],
             'authors': [],
         }
-        if key in retired:
-            continue
+        rec = (enriched or {}).get(doi) or {}
+        if rec.get('title'):
+            entry['title'] = rec['title']
+        for src, dst in (('venue', 'venue'), ('year', 'year'), ('cited_by_count', 'cited')):
+            if rec.get(src) not in (None, '', []):
+                entry[dst] = rec[src]
+        names = []
+        for author in rec.get('authors') or []:
+            name = author.get('name') if isinstance(author, dict) else author
+            if name:
+                names.append(name)
+        if names:
+            entry['authors'] = names
+        if rec.get('concepts'):
+            entry['fields'] = rec['concepts'][:4]
+        if rec.get('pdf_url'):
+            entry['pdf_url'] = rec['pdf_url']
+        carry_curation(rec, entry)
         out.append(entry)
     return out
 
@@ -275,12 +300,41 @@ def build_people(papers, anchors, authorship, contributors):
             person.setdefault('affiliations', [])
             if aff not in person['affiliations']:
                 person['affiliations'].append(aff)
-    for rec in (contributors or {}).get('people', []) if isinstance(contributors, dict) else (contributors or []):
-        person = by_name.get(rec.get('name')) or people.get(rec.get('id') or '')
-        if not person:
+
+    # Repo contributors. contributors.py resolves halide/Halide's 359 raw git identities
+    # into people and counts their commits, so the share is a real fraction of the tree.
+    #
+    # A contributor is joined to an author node only on an EXACT display-name or alias
+    # match. Anything looser would merge two people who share a surname, and a wrong merge
+    # in a person index is worse than two rows for one person: it silently reassigns
+    # authorship. Unmatched contributors become their own nodes keyed `git:`.
+    rows = (contributors or {}).get('people') or []
+    total = sum(r.get('commits') or 0 for r in rows if not r.get('is_bot')) or 1
+    for rec in rows:
+        if rec.get('is_bot'):
             continue
-        person.setdefault('contributions', [])
-        person['contributions'].extend(rec.get('repos') or [])
+        name = rec.get('name')
+        person = by_name.get(name)
+        if not person:
+            for alias in rec.get('aliases') or []:
+                person = by_name.get(alias)
+                if person:
+                    break
+        if not person:
+            person = {'kind': 'person', 'id': 'git:' + str(name), 'title': name,
+                      'name': name, 'papers': [], 'anchors': [], 'years': []}
+            people['git:' + str(name)] = person
+            by_name[name] = person
+        share = round(100.0 * (rec.get('commits') or 0) / total, 2)
+        person.setdefault('contributions', []).append({
+            'repo': 'halide/Halide',
+            'commits': rec.get('commits'),
+            'share': share,
+            'first': rec.get('first_commit'),
+            'last': rec.get('last_commit'),
+        })
+        person['contrib_commits'] = max(person.get('contrib_commits') or 0,
+                                        rec.get('commits') or 0)
 
     out = []
     for person in people.values():
@@ -305,14 +359,15 @@ def main():
     artifacts = load('data/pools/artifacts_attributed.json') or {}
     oc = load('data/pools/opencitations_only.json') or {}
     curatable = load('data/pools/lane_b_curatable.json')
+    enriched = load('data/pools/doi_enriched_state.json')
+    contributors = load('data/people/halide_contributors.json')
     authorship = load('data/pools/authorship.json')
-    contributors = load('data/pools/contributors.json')
 
     papers, anchor_ids, n_retired = build_papers(lane_a, anchors_json, dup, artifacts)
     anchors = build_anchors(anchors_json, papers)
-    doi_only = build_doi_only(oc, dup)
+    doi_only = build_doi_only(oc, dup, enriched)
     repos = build_repos(lane_b, artifacts, curatable)
-    people = build_people(papers + [], anchors, authorship, contributors)
+    people = build_people(papers + doi_only, anchors, authorship, contributors)
 
     entries = anchors + papers + doi_only + repos + people
     curated = sum(1 for e in entries if 'role' in e or 'importance' in e)
@@ -329,6 +384,7 @@ def main():
         'people': len(people),
         'people_with_affiliation': sum(1 for p in people if p.get('affiliations')),
         'people_with_contributions': sum(1 for p in people if p.get('contributions')),
+        'doi_only_enriched': sum(1 for p in doi_only if p.get('year')),
         'curated': curated,
     }
     for key, value in counts.items():
@@ -336,7 +392,9 @@ def main():
     if not authorship:
         print('\nNOTE  data/pools/authorship.json absent — no affiliation-at-time-of-paper')
     if not contributors:
-        print('NOTE  data/pools/contributors.json absent — no per-repo contribution share')
+        print('NOTE  data/people/halide_contributors.json absent — no contribution share')
+    if not enriched:
+        print('NOTE  data/pools/doi_enriched_state.json absent — DOI-only papers stay bare')
     if not curatable:
         print('NOTE  data/pools/lane_b_curatable.json absent — no stars, no cleanup status')
     if not curated:

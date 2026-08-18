@@ -31,11 +31,12 @@ facets that mean something for them; everything else — search, sort, tier gate
 |---|---|---|
 | Papers | works citing an anchor | cites anchor, year, venue, citation intent, artifact, field, role\* |
 | Repositories | repositories with Halide in them | verdict, evidence, signature, where it sits, paper artifact, cleanup status\*, language\*, role\* |
-| People | authors of indexed papers | anchor author, papers in the index, cites anchor, affiliation\* |
+| People | authors of indexed papers and halide/Halide committers | Halide contributor\*, anchor author, papers in the index, cites anchor, affiliation\* |
 | Anchors | the Halide works themselves | none — sixteen records |
 
 \* Hidden until the data carries the field. `role` and `importance` arrive with curation;
-`affiliation` arrives with `data/pools/authorship.json`; cleanup status, language, stars and
+`affiliation` arrives with `data/pools/authorship.json`; the contributor facet and the
+commits sort arrive with `data/people/halide_contributors.json`; cleanup status, language, stars and
 descriptions arrive with `data/pools/lane_b_curatable.json`, which the build merges onto
 `lane_b_classified.json` where it has an opinion — the classified pool stays the base
 because it is the only file covering bundles and prose-only repositories. Nothing needs a front-end change
@@ -48,7 +49,8 @@ navigates to the node at the far end.
 
 - paper → the repositories it published as artifacts, and the repositories it merely names
 - repository → the papers it is the artifact of
-- person → the papers they wrote, and any anchor work they authored
+- person → the papers they wrote, any anchor work they authored, and the repositories they
+  committed to with their commit count and share of the tree
 - author names on a paper card → that person's node
 - anchor → its citing works, as a filter rather than a stored reverse edge
 
@@ -69,7 +71,9 @@ disagree with the header.
 - **Dropped repositories**, the ones the cleanup pass judged redistributed copies or
   unmodified re-uploads. Kept with their reason rather than deleted, off by default.
 - **DOI-only records**, the 161 works Semantic Scholar's 1,000-result cap hid. Shown by
-  default, since the citation is real and only the metadata is missing.
+  default, since the citation is real. Where `data/pools/doi_enriched_state.json` has a
+  record they carry a real title, venue, year, authors and citation count and keep the tier
+  only as provenance; without it they render as bare identifiers.
 
 ## Two rules the page keeps
 

@@ -10,9 +10,10 @@
   "repos_dropped": 102,
   "repos_with_stars": 540,
   "bundles": 2828,
-  "people": 5692,
+  "people": 6492,
   "people_with_affiliation": 0,
-  "people_with_contributions": 0,
+  "people_with_contributions": 222,
+  "doi_only_enriched": 157,
   "curated": 0
  }
 }

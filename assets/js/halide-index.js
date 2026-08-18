@@ -60,6 +60,7 @@
   };
   var ARTIFACT_LABELS = { has: 'Published an artifact', none: 'No artifact found' };
   var PAPERS_LABELS = { yes: 'Is a paper artifact', no: 'No paper attached' };
+  var CONTRIB_LABELS = { yes: 'Committed to halide/Halide' };
   var BAND_LABELS = { '1': '1 paper', '2-4': '2–4 papers', '5-9': '5–9 papers', '10+': '10 or more' };
 
   var IMPORTANCE_NOTE = [
@@ -134,10 +135,12 @@
             'their facets appear as soon as those files are there.',
       sorts: [
         { key: 'papers_n', label: 'Papers in the index', title: 'How many indexed works the person authored' },
+        { key: 'commits', label: 'Commits to Halide', title: 'Commits to halide/Halide, with the git identities merged. People who never committed sort last' },
         { key: 'title', label: 'Name (A–Z)', title: 'Alphabetical' },
         { key: 'first', label: 'First appearance', title: 'Earliest indexed paper first' }
       ],
       facets: [
+        { facet: 'contributor', label: 'Halide contributor', optional: true, hint: 'Whether the person has commits in halide/Halide. The commit log is resolved from 359 raw name-and-email identities into people first, so a share is a fraction of the whole tree rather than of one identity. A contributor is joined to an author only on an exact name match; anyone unmatched appears as their own entry.' },
         { facet: 'anchor_author', label: 'Anchor author', hint: 'People who wrote one of the anchor works themselves: the authors of the Halide papers, matched on name because the anchor records carry names rather than author ids.' },
         { facet: 'papers_band', label: 'Papers in the index', hint: 'How many indexed works the person authored. Most people appear exactly once, so this is the quickest way to the recurring names.' },
         { facet: 'anchors', label: 'Cites anchor', hint: 'Which anchor works this person\u2019s papers cite, pooled across all of them.' },
@@ -213,6 +216,7 @@
     if (facet === 'role') return ROLE_LABELS[v] || prettify(v);
     if (facet === 'artifact') return ARTIFACT_LABELS[v] || prettify(v);
     if (facet === 'has_paper') return PAPERS_LABELS[v] || prettify(v);
+    if (facet === 'contributor') return CONTRIB_LABELS[v] || prettify(v);
     if (facet === 'papers_band') return BAND_LABELS[v] || v;
     return String(v);
   }
@@ -236,6 +240,8 @@
         return [n >= 10 ? '10+' : n >= 5 ? '5-9' : n >= 2 ? '2-4' : '1'];
       case 'anchor_author':
         return rec.anchor_papers || [];
+      case 'contributor':
+        return rec.contributions && rec.contributions.length ? ['yes'] : [];
       case 'role':
         return rec.role ? [rec.role] : [];
       default:
@@ -552,6 +558,10 @@
     }
     if (rec.kind === 'person') {
       bits.push(rec.n_papers + (rec.n_papers === 1 ? ' paper' : ' papers'));
+      (rec.contributions || []).forEach(function (c) {
+        bits.push(c.commits + ' commits to ' + c.repo +
+          (c.share != null ? ' (' + c.share + '%)' : ''));
+      });
       if (rec.first_year) {
         bits.push(rec.first_year === rec.last_year ? String(rec.first_year)
           : rec.first_year + '\u2013' + rec.last_year);
@@ -637,8 +647,10 @@
       (rec.contributions || []).forEach(function (c) {
         var row = el('div', 'edge-group');
         row.appendChild(el('span', 'edge-label', 'Contributed'));
+        edgeLink(row, c.repo, c.repo, githubUrl(c.repo));
         row.appendChild(el('span', 'edge-more',
-          (c.share != null ? c.share + '% of ' : '') + (c.repo || '')));
+          c.commits + ' commits, ' + c.share + '% of the tree' +
+          (c.first ? ', ' + String(c.first).slice(0, 10) + ' to ' + String(c.last).slice(0, 10) : '')));
         edges.appendChild(row);
       });
     }
@@ -680,6 +692,7 @@
       },
       papers: function (a, b) { return ((b.papers || []).length) - ((a.papers || []).length); },
       papers_n: function (a, b) { return (b.n_papers || 0) - (a.n_papers || 0); },
+      commits: function (a, b) { return (b.contrib_commits || 0) - (a.contrib_commits || 0); },
       first: function (a, b) { return (a.first_year || 9999) - (b.first_year || 9999); },
       cited_by_pool: function (a, b) { return (b.cited_by_pool || 0) - (a.cited_by_pool || 0); },
       title: function () { return 0; }
