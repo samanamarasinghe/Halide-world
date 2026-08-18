@@ -64,6 +64,7 @@ def build_papers(lane_a, anchors_json, dup, artifacts):
     anchor_ids = set(anchors_json.get('anchors_in_pool') or dup.get('anchors_inside_pool') or [])
     retired = duplicate_map(dup)
 
+    n_retired = [0]
     own = {}          # s2_id -> [repo, ...] the paper's own artifact
     mentioned = {}    # s2_id -> [repo, ...] merely named in the text
     for rec in (artifacts or {}).get('papers', []):
@@ -102,11 +103,14 @@ def build_papers(lane_a, anchors_json, dup, artifacts):
         if mentioned.get(s2_id):
             entry['mentions'] = mentioned[s2_id]
         if s2_id in retired:
-            entry['tier'] = 'duplicate'
-            entry.update(retired[s2_id])
+            # A retired duplicate is not shown at all: its survivor carries the work, and a
+            # page that offers both is offering the same paper twice. The count still gets
+            # reported, so the arithmetic from duplicates.json stays checkable.
+            n_retired[0] += 1
+            continue
         carry_curation(rec, entry)
         out.append(entry)
-    return out, anchor_ids
+    return out, anchor_ids, n_retired[0]
 
 
 def build_anchors(anchors_json, papers):
@@ -150,14 +154,23 @@ def build_doi_only(oc, dup):
             'authors': [],
         }
         if key in retired:
-            entry['tier'] = 'duplicate'
-            entry.update(retired[key])
+            continue
         out.append(entry)
     return out
 
 
-def build_repos(lane_b, artifacts):
-    """Repo nodes, plus the reverse artifact edge back to the papers that published them."""
+def build_repos(lane_b, artifacts, curatable):
+    """Repo nodes, plus the reverse artifact edge back to the papers that published them.
+
+    `lane_b_classified.json` is the base because it is the only file covering every repo,
+    bundles and prose-only included. `lane_b_curatable.json` covers the three source-bearing
+    verdicts and carries the cleanup pass's status and the ecosyste.ms metadata, so it is
+    merged on top where it has an opinion. Absent, the site is exactly what it was before.
+    """
+    extra = {}
+    for rec in (curatable or {}).get('repos', []):
+        extra[rec['repo']] = rec
+
     # Edges carry ids only. The page holds every node in memory, so a title stored on the
     # far end of an edge is a second copy of a string it already has -- 5MB of payload
     # became 2MB by dropping them.
@@ -181,6 +194,24 @@ def build_repos(lane_b, artifacts):
             'path_kinds': sorted((rec.get('path_kinds') or {}).keys()),
             'paths': (rec.get('paths') or [])[:6],
         }
+        clean = extra.get(name) or {}
+        meta = clean.get('meta') or {}
+        if meta.get('stargazers_count') is not None:
+            entry['stars'] = meta['stargazers_count']
+        for src, dst in (('description', 'description'), ('language', 'language'),
+                         ('pushed_at', 'pushed_at')):
+            if meta.get(src):
+                entry[dst] = meta[src]
+        if clean.get('status'):
+            entry['status'] = clean['status']
+        if clean.get('flags'):
+            entry['flags'] = clean['flags']
+        if clean.get('reason'):
+            entry['reason'] = clean['reason']
+        # His ruling: a dropped repo is kept with its reason rather than deleted, and
+        # hidden from the page by default. Same gate as a retired duplicate, not a facet.
+        if clean.get('status') == 'drop':
+            entry['tier'] = 'dropped'
         if rec.get('verdict') == BUNDLE:
             entry['tier'] = 'bundle'
         if from_paper.get(name):
@@ -273,13 +304,14 @@ def main():
     anchors_json = load('data/anchors.json') or {}
     artifacts = load('data/pools/artifacts_attributed.json') or {}
     oc = load('data/pools/opencitations_only.json') or {}
+    curatable = load('data/pools/lane_b_curatable.json')
     authorship = load('data/pools/authorship.json')
     contributors = load('data/pools/contributors.json')
 
-    papers, anchor_ids = build_papers(lane_a, anchors_json, dup, artifacts)
+    papers, anchor_ids, n_retired = build_papers(lane_a, anchors_json, dup, artifacts)
     anchors = build_anchors(anchors_json, papers)
     doi_only = build_doi_only(oc, dup)
-    repos = build_repos(lane_b, artifacts)
+    repos = build_repos(lane_b, artifacts, curatable)
     people = build_people(papers + [], anchors, authorship, contributors)
 
     entries = anchors + papers + doi_only + repos + people
@@ -287,10 +319,12 @@ def main():
 
     counts = {
         'anchors': len(anchors),
-        'papers': sum(1 for p in papers if p.get('tier') != 'duplicate'),
-        'papers_retired': sum(1 for p in papers if p.get('tier') == 'duplicate'),
-        'doi_only': sum(1 for p in doi_only if p.get('tier') != 'duplicate'),
-        'repos': sum(1 for r in repos if r.get('tier') != 'bundle'),
+        'papers': len(papers),
+        'papers_retired': n_retired,
+        'doi_only': len(doi_only),
+        'repos': sum(1 for r in repos if not r.get('tier')),
+        'repos_dropped': sum(1 for r in repos if r.get('tier') == 'dropped'),
+        'repos_with_stars': sum(1 for r in repos if r.get('stars') is not None),
         'bundles': sum(1 for r in repos if r.get('tier') == 'bundle'),
         'people': len(people),
         'people_with_affiliation': sum(1 for p in people if p.get('affiliations')),
@@ -303,6 +337,8 @@ def main():
         print('\nNOTE  data/pools/authorship.json absent — no affiliation-at-time-of-paper')
     if not contributors:
         print('NOTE  data/pools/contributors.json absent — no per-repo contribution share')
+    if not curatable:
+        print('NOTE  data/pools/lane_b_curatable.json absent — no stars, no cleanup status')
     if not curated:
         print('NOTE  no record carries role or importance — curation has not run')
 

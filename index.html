@@ -46,7 +46,7 @@
               <button id="btn-clear" type="button" class="btn">Clear filters</button>
               <button id="btn-expand" type="button" class="btn" aria-pressed="false" title="Open the edge list on every card: the artifacts a paper published, the papers a repository belongs to, the papers a person wrote.">Show edges</button>
               <button id="btn-bundles" type="button" class="btn" aria-pressed="false" title="Repositories whose only Halide is a vendored third-party copy — Halide arrived inside something else they depend on, and nothing in the repository was written against it. 2,828 of them, four fifths of everything the repository harvest found, which is why they are off by default. They load on demand from a separate file.">Include vendored bundles</button>
-              <button id="btn-retired" type="button" class="btn" aria-pressed="false" title="Records retired as duplicates of another record: an ACM twin, a preprint alongside its published version, or the same work under two identifiers. They are retired rather than deleted so the merge stays auditable.">Include retired duplicates</button>
+              <button id="btn-dropped" type="button" class="btn" aria-pressed="false" title="Repositories the cleanup pass dropped: a redistributed copy of someone else's Halide-touching source, or an unmodified re-upload of Halide. They are kept with the reason recorded rather than deleted, so a later harvest does not rediscover and rejudge them, and hidden here unless you ask.">Include dropped repositories</button>
 
               <div class="sort-multilevel">
                 <span class="sort-label">Sort:</span>

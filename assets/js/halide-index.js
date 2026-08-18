@@ -53,8 +53,10 @@
     core: 'Core', extends: 'Extends', uses: 'Uses',
     'writes-about': 'Writes about', writes_about: 'Writes about', descendant: 'Descendant'
   };
+  /* Retired duplicates are not in the payload at all — the build drops them in favour of
+     their survivor, so there is no tier for them here. */
   var TIER_LABELS = {
-    bundle: 'Vendored bundle', duplicate: 'Retired duplicate', doi_only: 'DOI only'
+    bundle: 'Vendored bundle', doi_only: 'DOI only', dropped: 'Dropped by cleanup'
   };
   var ARTIFACT_LABELS = { has: 'Published an artifact', none: 'No artifact found' };
   var PAPERS_LABELS = { yes: 'Is a paper artifact', no: 'No paper attached' };
@@ -103,8 +105,12 @@
       note: 'Repositories with Halide in them, classified by what the code actually does with it. ' +
             'Vendored bundles — where Halide arrived inside a third-party dependency and nothing ' +
             'was written against it — are four fifths of the harvest and are off by default.',
+      /* Signature matches stays the default rather than stars: every repository has a
+         match count and only the enriched ones have a star count, so opening on stars
+         would bury the unenriched tail before the reader knew there was one. */
       sorts: [
         { key: 'matches', label: 'Signature matches', title: 'How many Halide signatures the scan found in the tree. Volume, not importance' },
+        { key: 'stars', label: 'Stars', title: 'GitHub stars, as ecosyste.ms reports them. Attention the repository has drawn, which says nothing about how much Halide is in it. Repositories with no star count on record sort last' },
         { key: 'title', label: 'Name (A–Z)', title: 'Alphabetical by owner/name' },
         { key: 'papers', label: 'Attached to a paper', title: 'Repositories published as a paper\u2019s artifact first' }
       ],
@@ -114,6 +120,8 @@
         { facet: 'signatures', label: 'Signature', hint: 'Which Halide signatures appear anywhere in the tree. A repository usually matches several; selecting several shows a repository matching any one of them.' },
         { facet: 'path_kinds', label: 'Where it sits', hint: 'Whether the matching files are the repository\u2019s own code or something it vendored. This is the distinction that separates a Halide user from a tree that merely contains Halide.' },
         { facet: 'has_paper', label: 'Paper artifact', hint: 'Whether this repository was published as the artifact of a paper in the index. The edge runs both ways: the paper\u2019s card lists the repository too.' },
+        { facet: 'status', label: 'Cleanup status', optional: true, hint: 'What the repo cleanup pass concluded: curatable, fork_review where a whole Halide tree needs a commit diff to tell a copy from an extending fork, anchor for Halide itself, or drop. Dropped records are kept with their reason and hidden unless you ask for them.' },
+        { facet: 'language', label: 'Language', searchable: true, optional: true, hint: 'The repository\u2019s primary language, as ecosyste.ms reports it.' },
         { facet: 'role', label: 'Role', curated: true, hint: 'How the repository stands to Halide, assigned during curation.' }
       ]
     },
@@ -169,7 +177,7 @@
     focus: null,       // a single node id, set by following an edge
     expand: false,
     bundles: false,
-    retired: false,
+    dropped: false,
     showAll: false,
     minImportance: 0
   };
@@ -253,7 +261,7 @@
      duplicates would be a different number from the one in the header. */
   function passesTier(rec) {
     if (rec.tier === 'bundle') return state.bundles;
-    if (rec.tier === 'duplicate') return state.retired;
+    if (rec.tier === 'dropped') return state.dropped;
     return true;
   }
 
@@ -516,7 +524,8 @@
     var meta = el('div', 'pub-meta');
     meta.appendChild(el('span', 'badge badge-' + rec.kind, KIND_LABELS[rec.kind] || rec.kind));
     if (rec.tier) {
-      var cls = rec.tier === 'duplicate' ? 'badge-dup' : rec.tier === 'doi_only' ? 'badge-doionly' : 'badge-tail';
+      var cls = rec.tier === 'dropped' ? 'badge-dup'
+        : rec.tier === 'doi_only' ? 'badge-doionly' : 'badge-tail';
       meta.appendChild(el('span', 'badge ' + cls, TIER_LABELS[rec.tier] || rec.tier));
     }
     if (rec.kind === 'repo' && rec.verdict) {
@@ -536,6 +545,8 @@
     if (rec.cited != null) bits.push('cited by ' + rec.cited);
     if (rec.importance != null) bits.push('importance ' + rec.importance);
     if (rec.kind === 'repo') {
+      if (rec.stars != null) bits.push('\u2605 ' + rec.stars);
+      if (rec.language) bits.push(rec.language);
       bits.push(rec.n_matches + ' signature matches');
       if (rec.evidence) bits.push('evidence: ' + (EVIDENCE_LABELS[rec.evidence] || rec.evidence));
     }
@@ -574,13 +585,8 @@
       li.appendChild(el('div', 'pub-evidence', 'DOIs: ' + rec.dois.join(' \u00b7 ') +
         (rec.doi_notes ? ' \u2014 ' + rec.doi_notes : '')));
     }
-    if (rec.tier === 'duplicate' && rec.survivor) {
-      var dup = el('div', 'pub-evidence');
-      dup.appendChild(el('span', 'edge-label', 'Retired in favour of'));
-      edgeLink(dup, rec.survivor, rec.survivor, null);
-      dup.appendChild(el('span', 'edge-more', '(' + prettify(rec.dup_kind) + ')'));
-      li.appendChild(dup);
-    }
+    if (rec.description) li.appendChild(el('div', 'pub-authors', rec.description));
+    if (rec.reason) li.appendChild(el('div', 'pub-evidence', rec.reason));
     if (rec.kind === 'repo' && rec.paths && rec.paths.length) {
       li.appendChild(el('div', 'pub-paths', rec.paths.slice(0, 3).join('  \u00b7  ')));
     }
@@ -666,6 +672,12 @@
       year: function (a, b) { return (b.year || 0) - (a.year || 0); },
       contexts: function (a, b) { return (b.n_contexts || 0) - (a.n_contexts || 0); },
       matches: function (a, b) { return (b.n_matches || 0) - (a.n_matches || 0); },
+      /* A repository with no star count on record is unknown rather than unpopular, so it
+         sorts below zero-star repositories instead of tying with them. */
+      stars: function (a, b) {
+        var x = a.stars == null ? -1 : a.stars, y = b.stars == null ? -1 : b.stars;
+        return y - x;
+      },
       papers: function (a, b) { return ((b.papers || []).length) - ((a.papers || []).length); },
       papers_n: function (a, b) { return (b.n_papers || 0) - (a.n_papers || 0); },
       first: function (a, b) { return (a.first_year || 9999) - (b.first_year || 9999); },
@@ -870,12 +882,15 @@
       this.setAttribute('aria-pressed', state.expand ? 'true' : 'false');
       renderResults();
     };
-    $('btn-retired').onclick = function () {
-      state.retired = !state.retired;
-      this.setAttribute('aria-pressed', state.retired ? 'true' : 'false');
-      buildViewToggles();
-      applyFilters();
-    };
+    var dropBtn = $('btn-dropped');
+    if (dropBtn) {
+      dropBtn.onclick = function () {
+        state.dropped = !state.dropped;
+        this.setAttribute('aria-pressed', state.dropped ? 'true' : 'false');
+        buildViewToggles();
+        applyFilters();
+      };
+    }
     $('btn-bundles').onclick = function () {
       var btn = this;
       state.bundles = !state.bundles;

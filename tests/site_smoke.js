@@ -8,6 +8,10 @@ const path = require('path');
 const { JSDOM, VirtualConsole } = require('jsdom');
 
 const ROOT = path.join(__dirname, '..');
+// Expected counts come from the payload the page is about to load, not from constants:
+// the corpus legitimately changes as pools land, and a test that hardcodes 736 fails for
+// the wrong reason the first time a repo is dropped.
+const INFO = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/site/build-info.json'), 'utf8')).counts;
 const fail = [];
 function check(name, cond, detail) {
   if (cond) { console.log('  ok   ' + name); return; }
@@ -53,7 +57,8 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
   q('.view-btn').forEach((b) => { counts[b.textContent.replace(/\d+$/, '')] = parseInt(b.querySelector('.view-badge').textContent, 10); });
   console.log('  view counts ' + JSON.stringify(counts));
   check('papers view non-empty', counts.Papers > 1000);
-  check('repos exclude bundles', counts.Repositories === 736, 'got ' + counts.Repositories);
+  check('repos exclude bundles and dropped', counts.Repositories === INFO.repos,
+    'got ' + counts.Repositories + ', payload says ' + INFO.repos);
   check('people present', counts.People > 4000);
   check('anchors 16', counts.Anchors === 16);
 
@@ -117,8 +122,8 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
   await settle();
   await settle();
   const repoBtn = [...q('.view-btn')].find((b) => b.textContent.startsWith('Repositories'));
-  check('bundles load', parseInt(repoBtn.querySelector('.view-badge').textContent, 10) === 3564,
-    repoBtn.querySelector('.view-badge').textContent);
+  check('bundles load', parseInt(repoBtn.querySelector('.view-badge').textContent, 10) === INFO.repos + INFO.bundles,
+    repoBtn.querySelector('.view-badge').textContent + ' vs ' + (INFO.repos + INFO.bundles));
   repoBtn.click();
   await settle();
   check('bundle cards render', q('.pub-item.tier-bundle').length > 0);
@@ -151,12 +156,64 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
     await settle();
   }
 
-  console.log('retired duplicates');
-  $('btn-retired').click();
+  console.log('sorting');
+  $('btn-clear').click();
   await settle();
+  [...q('.view-btn')].find((b) => b.textContent.startsWith('Repositories')).click();
+  await settle();
+  const sort = $('sort-within');
+  const hasStars = [...sort.options].some((o) => o.value === 'stars');
+  check('repositories offer a stars sort', hasStars);
+  if (hasStars) {
+    sort.value = 'stars'; sort.onchange.call(sort);
+    await settle();
+    // Stars render in the dim meta line as "★ N". Unknown counts sort last, so the
+    // sequence has to be non-increasing over the cards that carry one.
+    const seq = [...q('.pub-item')].map((li) => {
+      const m = (li.querySelector('.pub-dim') || {}).textContent || '';
+      const hit = m.match(/\u2605\s(\d+)/);
+      return hit ? parseInt(hit[1], 10) : null;
+    }).filter((n) => n !== null);
+    // Star counts only exist once lane_b_curatable.json is in the pools, so the ordering
+    // is asserted when there is something to order and reported as absent when there is not.
+    if (seq.length < 10) {
+      console.log('  --   no star data in this payload; ordering not asserted');
+    } else {
+      let ok = true;
+      for (let i = 1; i < seq.length; i++) if (seq[i] > seq[i - 1]) ok = false;
+      check('stars sort is non-increasing', ok, seq.slice(0, 6).join(','));
+    }
+  }
   [...q('.view-btn')].find((b) => b.textContent.startsWith('Papers')).click();
   await settle();
-  check('retired duplicates appear', q('.pub-item.tier-duplicate').length >= 0);
+  const psort = $('sort-within');
+  psort.value = 'cited'; psort.onchange.call(psort);
+  await settle();
+  const cites = [...q('.pub-item')].map((li) => {
+    const m = ((li.querySelector('.pub-dim') || {}).textContent || '').match(/cited by (\d+)/);
+    return m ? parseInt(m[1], 10) : null;
+  }).filter((n) => n !== null);
+  let cok = cites.length > 10;
+  for (let i = 1; i < cites.length; i++) if (cites[i] > cites[i - 1]) cok = false;
+  check('citation sort is non-increasing', cok, cites.slice(0, 6).join(','));
+
+  console.log('dropped repositories');
+  const drop = $('btn-dropped');
+  check('dropped gate exists', !!drop);
+  if (drop) {
+    [...q('.view-btn')].find((b) => b.textContent.startsWith('Repositories')).click();
+    await settle();
+    const before2 = q('.pub-item').length;
+    drop.click();
+    await settle();
+    check('dropped repos appear only when asked', q('.pub-item').length >= before2);
+    drop.click();
+    await settle();
+  }
+
+  console.log('retired duplicates are gone, not gated');
+  check('no retired-duplicate control', !$('btn-retired'));
+  check('no retired-duplicate records', q('.pub-item.tier-duplicate').length === 0);
 
   console.log(fail.length ? '\n' + fail.length + ' FAILURES' : '\nall checks passed');
   process.exit(fail.length ? 1 : 0);

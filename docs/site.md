@@ -30,12 +30,15 @@ facets that mean something for them; everything else — search, sort, tier gate
 | View | Nodes | Facets |
 |---|---|---|
 | Papers | works citing an anchor | cites anchor, year, venue, citation intent, artifact, field, role\* |
-| Repositories | repositories with Halide in them | verdict, evidence, signature, where it sits, paper artifact, role\* |
+| Repositories | repositories with Halide in them | verdict, evidence, signature, where it sits, paper artifact, cleanup status\*, language\*, role\* |
 | People | authors of indexed papers | anchor author, papers in the index, cites anchor, affiliation\* |
 | Anchors | the Halide works themselves | none — sixteen records |
 
 \* Hidden until the data carries the field. `role` and `importance` arrive with curation;
-`affiliation` arrives with `data/pools/authorship.json`. Nothing needs a front-end change
+`affiliation` arrives with `data/pools/authorship.json`; cleanup status, language, stars and
+descriptions arrive with `data/pools/lane_b_curatable.json`, which the build merges onto
+`lane_b_classified.json` where it has an opinion — the classified pool stays the base
+because it is the only file covering bundles and prose-only repositories. Nothing needs a front-end change
 when they land: the facet appears because a record has the field.
 
 ## Edges
@@ -63,6 +66,8 @@ disagree with the header.
   when the button is pressed.
 - **Retired duplicates**, the 93 records the duplicate classification retired in favour of
   another. Off by default; each card names the survivor and why.
+- **Dropped repositories**, the ones the cleanup pass judged redistributed copies or
+  unmodified re-uploads. Kept with their reason rather than deleted, off by default.
 - **DOI-only records**, the 161 works Semantic Scholar's 1,000-result cap hid. Shown by
   default, since the citation is real and only the metadata is missing.
 
