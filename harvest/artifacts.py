@@ -309,6 +309,11 @@ def main():
                         help="run a single phase instead of all three")
     args = parser.parse_args()
 
+    # Progress is usually watched with `tail -f` on a redirected log. Python
+    # block-buffers stdout when it is not a terminal, so without this the log
+    # sits empty for a long time and looks like a hung job.
+    sys.stdout.reconfigure(line_buffering=True)
+
     pool = json.load(open(args.pool))
     works = pool["works"] if isinstance(pool.get("works"), dict) else {
         w["s2_id"]: w for w in pool["works"]
