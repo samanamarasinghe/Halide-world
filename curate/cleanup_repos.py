@@ -25,6 +25,8 @@ writes its own state file; `lane_b_classified.json` is never rewritten.
    of 540 enriched repos only 5 carry it, and `wsmoses/Halide-AS` and
    `Zineeddine998/Halide` are plain Halide trees created by download-and-push
    rather than by the fork button.  Whole-tree evidence is the better signal.
+   Those go to `fork_review`, and `fork_diff.py` rules on them; its verdicts
+   are folded back in here when `--forks` points at its output.
 
 4. THE SIX RESOLVED FORK CASES were classified and then left outside the 661.
 
@@ -35,9 +37,10 @@ and `drop` is a real verdict whose records are kept, not deleted.
     python3 curate/cleanup_repos.py \
         --pool data/pools/lane_b_classified.json \
         --meta data/pools/repo_meta_state.json \
+        --forks data/pools/fork_verdicts.json \
         --out data/pools/lane_b_curatable.json
 """
-import argparse, json, re, sys, collections
+import argparse, json, os, re, sys, collections
 
 sys.stdout.reconfigure(line_buffering=True)
 
@@ -154,6 +157,17 @@ CONFIRMED_COPIES = {
 }
 ANCHOR_REPOS = {"halide/Halide"}
 
+# --- 5. distribution package trees -----------------------------------------
+# FreeBSD ports, nixpkgs, Homebrew, Portage, the AUR and conda feedstocks carry
+# a Halide PORT RECIPE, not Halide. They are a real relationship -- somebody
+# packages Halide for a distribution -- but they are neither `uses` nor
+# `extends`, so they get their own bucket rather than a forced role. Six of the
+# nine repos that timed out in the fork diff were FreeBSD ports trees.
+PACKAGING = re.compile(
+    r"(^|[-_/])(ports|portage|nixpkgs|homebrew|linuxbrew|macports|aur|"
+    r"conda-forge|.*-feedstock|spack|vcpkg|conan-center-index|buildroot|"
+    r"yocto|meta-.*|pkgsrc|debian|rpms?)([-_/]|$)", re.I)
+
 # A repo whose NAME is Halide-something is a copy or an extending fork.
 # wsmoses/Halide-AS and Zineeddine998/Halide both carry the stock Halide README
 # and neither carries GitHub's `fork` flag: they were made by download-and-push.
@@ -166,10 +180,16 @@ def main():
     ap.add_argument("--meta", default="data/pools/repo_meta_state.json")
     ap.add_argument("--out", default="data/pools/lane_b_curatable.json")
     ap.add_argument("--verdicts", default="uses_source,consumer,generator")
+    ap.add_argument("--forks", default="data/pools/fork_verdicts.json",
+                    help="fork_diff.py output, folded in when present")
     args = ap.parse_args()
 
     all_repos = {r["repo"]: r for r in json.load(open(args.pool))["repos"]}
     meta = json.load(open(args.meta))
+    forks = {}
+    if os.path.exists(args.forks):
+        forks = {r["repo"]: r for r in json.load(open(args.forks))["repos"]}
+        print(f"folding in {len(forks)} fork-diff verdicts")
     wanted = set(args.verdicts.split(","))
 
     scope = [r for r in all_repos.values() if r["verdict"] in wanted]
@@ -241,6 +261,37 @@ def main():
                              + ", ".join(copied_from)
                              + "; the repo carries someone else's "
                                "Halide-touching source, not its own")
+        elif repo in forks:
+            fv = forks[repo]["verdict"]
+            if fv == "extending_fork":
+                rec["status"], rec["role"] = "curatable", "extends"
+                rec["role_source"] = "fork_diff"
+                rec["reason"] = ("commit diff against upstream: +"
+                                 f"{forks[repo]['commits_ahead']} commits in "
+                                 + ", ".join(list(forks[repo]["touched"])[:3]))
+                if forks[repo].get("ahead_inflated_by_history_rewrite"):
+                    flags.append("commits_ahead_inflated_by_history_rewrite")
+            elif fv == "unmodified_copy":
+                rec["status"], rec["role"] = "drop", "drop"
+                rec["reason"] = "commit diff against upstream: nothing ahead"
+            elif fv == "gone_or_private":
+                rec["status"], rec["role"] = "drop", "drop"
+                rec["reason"] = "repository no longer reachable"
+            elif fv == "fetch_timeout" and PACKAGING.search(repo):
+                rec["status"] = "packaging"
+                rec["reason"] = ("a distribution package tree carrying a Halide "
+                                 "port recipe, not Halide itself")
+            else:
+                # `vendored_subtree` means no shared history with upstream, so
+                # the diff cannot rule. Judge the project instead. For a repo
+                # NAMED Halide this is a download-and-push copy rather than a
+                # subtree, which the diff also cannot distinguish.
+                rec["status"] = "curatable"
+                flags.append("halide_vendored_no_shared_history")
+                if HALIDE_NAMED.match(repo.split("/")[-1]):
+                    flags.append("likely_unmodified_copy_reuploaded")
+                if fv == "fetch_timeout":
+                    flags.append("fork_diff_incomplete_fetch_timeout")
         elif (n_halide == n
               or (HALIDE_NAMED.match(repo.split("/")[-1])
                   and r["n_matches"] > 100 and n_halide)):
@@ -276,18 +327,18 @@ def main():
     # A small companion file. The record file runs to ~400 KB, which is data
     # rather than judgement and is regenerable by re-running this script. What
     # the pass actually DECIDES -- which clusters exist, which repo was crowned
-    # canonical, and every dropped repo -- is small enough to keep in the repo.
+    # canonical, which roles the fork diff settled, and every dropped repo -- is
+    # small enough to keep in the repo.
     summary = {
         "schema_version": 1,
         "note": ("Summary of the cleanup pass. Regenerate everything with "
-                 "curate/enrich_repos.py then curate/cleanup_repos.py."),
+                 "curate/enrich_repos.py, curate/fork_diff.py, then this."),
         "counts": doc["counts"],
         "redistributed_clusters": doc["redistributed_clusters"],
-        "fork_review_head": [
-            {"repo": r["repo"], "n_matches": r["n_matches"],
-             "description": r["meta"].get("description")}
-            for r in sorted((x for x in out if x["status"] == "fork_review"),
-                            key=lambda y: -y["n_matches"])[:25]],
+        "roles_already_decided": [
+            {"repo": r["repo"], "role": r["role"], "reason": r["reason"]}
+            for r in out if r.get("role_source") == "fork_diff"],
+        "packaging": [r["repo"] for r in out if r["status"] == "packaging"],
         "dropped": sorted(r["repo"] for r in out if r["status"] == "drop"),
     }
     sm = args.out.replace(".json", "_summary.json")
