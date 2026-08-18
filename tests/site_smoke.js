@@ -57,8 +57,9 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
   q('.view-btn').forEach((b) => { counts[b.textContent.replace(/\d+$/, '')] = parseInt(b.querySelector('.view-badge').textContent, 10); });
   console.log('  view counts ' + JSON.stringify(counts));
   check('papers view non-empty', counts.Papers > 1000);
-  check('repos exclude bundles and dropped', counts.Repositories === INFO.repos,
-    'got ' + counts.Repositories + ', payload says ' + INFO.repos);
+  check('repos include bundles, exclude dropped',
+    counts.Repositories === INFO.repos + INFO.bundles,
+    'got ' + counts.Repositories + ', payload says ' + (INFO.repos + INFO.bundles));
   check('people present', counts.People > 4000);
   check('anchors 16', counts.Anchors === 16);
 
@@ -117,16 +118,19 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
     await settle();
   }
 
-  console.log('bundles');
-  $('btn-bundles').click();
-  await settle();
-  await settle();
+  console.log('bundles are ordinary repository records');
+  check('no bundles gate', !$('btn-bundles'));
   const repoBtn = [...q('.view-btn')].find((b) => b.textContent.startsWith('Repositories'));
-  check('bundles load', parseInt(repoBtn.querySelector('.view-badge').textContent, 10) === INFO.repos + INFO.bundles,
+  check('bundles counted in the view',
+    parseInt(repoBtn.querySelector('.view-badge').textContent, 10) === INFO.repos + INFO.bundles,
     repoBtn.querySelector('.view-badge').textContent + ' vs ' + (INFO.repos + INFO.bundles));
   repoBtn.click();
   await settle();
-  check('bundle cards render', q('.pub-item.tier-bundle').length > 0);
+  const vblock = [...q('#filter-grid .filter-block')]
+    .find((b) => /Verdict/.test(b.querySelector('.filter-label').textContent));
+  const vbundle = [...vblock.querySelectorAll('.facet-item')]
+    .find((l) => /Vendored third-party bundle/.test(l.textContent));
+  check('the Verdict facet carries them', !!vbundle, vblock.textContent.slice(0, 80));
   check('results capped with a way past it', /Show all/.test($('pubs-more').textContent), $('pubs-more').textContent);
 
   console.log('anchor navigation and authorship edges');
@@ -197,19 +201,9 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
   for (let i = 1; i < cites.length; i++) if (cites[i] > cites[i - 1]) cok = false;
   check('citation sort is non-increasing', cok, cites.slice(0, 6).join(','));
 
-  console.log('dropped repositories');
-  const drop = $('btn-dropped');
-  check('dropped gate exists', !!drop);
-  if (drop) {
-    [...q('.view-btn')].find((b) => b.textContent.startsWith('Repositories')).click();
-    await settle();
-    const before2 = q('.pub-item').length;
-    drop.click();
-    await settle();
-    check('dropped repos appear only when asked', q('.pub-item').length >= before2);
-    drop.click();
-    await settle();
-  }
+  console.log('dropped repositories are gone, not gated');
+  check('no dropped-repo control', !$('btn-dropped'));
+  check('no dropped-repo records', q('.pub-item.tier-dropped').length === 0);
 
   console.log('person layer');
   $('btn-clear').click();
@@ -236,16 +230,22 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
   check('people offer a combined score sort', ssorts.indexOf('score') >= 0);
   $('sort-within').value = 'score'; $('sort-within').onchange.call($('sort-within'));
   await settle();
-  const scores = [...q('.pub-item')].map((li) => {
-    const m = (li.querySelector('.pub-dim').textContent || '').match(/total contributions ([\d.]+)/);
-    return m ? parseFloat(m[1]) : null;
-  }).filter((n) => n !== null);
-  let sok = scores.length > 10;
-  for (let i = 1; i < scores.length; i++) if (scores[i] > scores[i - 1] + 1e-9) sok = false;
-  check('score sort is non-increasing', sok, scores.slice(0, 5).join(','));
-  // The figure is only meaningful against the largest values in the index, so the top
-  // person must not exceed the two-unit ceiling the normalisation implies.
-  check('score stays within its scale', !scores.length || scores[0] <= 2.0001, String(scores[0]));
+  // The figure itself is internal, so the ordering is checked against the payload: rebuild
+  // the score from the data and require the rendered names to match its ranking.
+  const people = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/site/halide-index.json'), 'utf8'))
+    .entries.filter((e) => e.kind === 'person');
+  const maxC = Math.max(1, ...people.map((p) => p.contrib_commits || 0));
+  const maxP = Math.max(1, ...people.map((p) => p.n_papers || 0));
+  const ranked = people
+    .map((p) => ({ name: p.name, s: (p.contrib_commits || 0) / maxC + (p.n_papers || 0) / maxP }))
+    .sort((a, b) => (b.s - a.s) || String(a.name).localeCompare(String(b.name)))
+    .slice(0, 5).map((p) => p.name);
+  const rendered = [...q('.pub-item')].slice(0, 5)
+    .map((li) => li.querySelector('.pub-title').textContent.trim());
+  check('score ranking reaches the page', ranked.join('|') === rendered.join('|'),
+    rendered.join('|') + ' vs ' + ranked.join('|'));
+  check('the figure itself stays off the card',
+    ![...q('.pub-dim')].some((d) => /total contributions/.test(d.textContent)));
 
   console.log('contributions facet');
   $('btn-clear').click();

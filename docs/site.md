@@ -67,8 +67,9 @@ values are all lit.
 
 **Total contributions** is the default sort: commits divided by the largest commit count in
 the index, plus papers divided by the largest paper count. Both denominators are measured at
-load rather than fixed, because both move as the index grows. It is a display ordering, not
-a judgement of importance — that is what curation will assign.
+load rather than fixed, because both move as the index grows. The figure is internal: it
+orders the list and is not printed on the cards. It is a display ordering, not a judgement
+of importance — that is what curation will assign.
 
 A contributor is joined to an author node only on an exact display-name or alias match, and
 anyone unmatched appears as their own entry. A wrong merge in a person index silently

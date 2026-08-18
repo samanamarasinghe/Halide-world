@@ -321,7 +321,5 @@ a:hover { text-decoration: underline; }
 .edge-link:hover { text-decoration: underline; }
 .edge-more { color: var(--dim); font-size: 90%; }
 .pub-paths { color: var(--dim); font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 88%; }
-.pub-item.tier-bundle { opacity: 0.9; background: #fafafa; }
-.pub-item.tier-dropped { background: #fdf8f8; }
 .pub-item.tier-doi_only { background: #fafafa; }
 .more-row { margin: 4px 0 14px; }

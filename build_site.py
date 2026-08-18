@@ -27,8 +27,9 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 POOLS = os.path.join(ROOT, 'data', 'pools')
 OUT_DIR = os.path.join(ROOT, 'data', 'site')
 
-# Repos whose only Halide is a vendored third-party copy. Kept in the payload but flagged,
-# because dropping 2,828 records outright would make the corpus unauditable from the page.
+# Repos whose only Halide is a vendored third-party copy. They are ordinary records
+# carrying an ordinary verdict; the page filters them through the Verdict facet like any
+# other, which is why they no longer travel in a file of their own.
 BUNDLE = 'third_party_bundle'
 
 
@@ -192,6 +193,7 @@ def build_repos(lane_b, artifacts, curatable):
     verdicts and carries the cleanup pass's status and the ecosyste.ms metadata, so it is
     merged on top where it has an opinion. Absent, the site is exactly what it was before.
     """
+    n_dropped = [0]
     extra = {}
     for rec in (curatable or {}).get('repos', []):
         extra[rec['repo']] = rec
@@ -233,17 +235,18 @@ def build_repos(lane_b, artifacts, curatable):
             entry['flags'] = clean['flags']
         if clean.get('reason'):
             entry['reason'] = clean['reason']
-        # His ruling: a dropped repo is kept with its reason rather than deleted, and
-        # hidden from the page by default. Same gate as a retired duplicate, not a facet.
+        # A dropped repo carries someone else's Halide-touching source and no relationship
+        # of its own, so it does not belong in a browsable index at all. The record still
+        # exists in lane_b_curatable.json with its reason, which is where a wrong drop is
+        # audited; the page just does not carry it.
         if clean.get('status') == 'drop':
-            entry['tier'] = 'dropped'
-        if rec.get('verdict') == BUNDLE:
-            entry['tier'] = 'bundle'
+            n_dropped[0] += 1
+            continue
         if from_paper.get(name):
             entry['papers'] = from_paper[name]
         carry_curation(rec, entry)
         out.append(entry)
-    return out
+    return out, n_dropped[0]
 
 
 def build_people(papers, anchors, authorship, contributors):
@@ -369,7 +372,7 @@ def main():
     papers, anchor_ids, n_retired = build_papers(lane_a, anchors_json, dup, artifacts)
     anchors = build_anchors(anchors_json, papers)
     doi_only = build_doi_only(oc, dup, enriched)
-    repos = build_repos(lane_b, artifacts, curatable)
+    repos, n_dropped = build_repos(lane_b, artifacts, curatable)
     people = build_people(papers + doi_only, anchors, authorship, contributors)
 
     entries = anchors + papers + doi_only + repos + people
@@ -380,10 +383,10 @@ def main():
         'papers': len(papers),
         'papers_retired': n_retired,
         'doi_only': len(doi_only),
-        'repos': sum(1 for r in repos if not r.get('tier')),
-        'repos_dropped': sum(1 for r in repos if r.get('tier') == 'dropped'),
+        'repos': sum(1 for r in repos if r.get('verdict') != BUNDLE),
+        'repos_dropped': n_dropped,
         'repos_with_stars': sum(1 for r in repos if r.get('stars') is not None),
-        'bundles': sum(1 for r in repos if r.get('tier') == 'bundle'),
+        'bundles': sum(1 for r in repos if r.get('verdict') == BUNDLE),
         'people': len(people),
         'people_with_affiliation': sum(1 for p in people if p.get('affiliations')),
         'people_with_contributions': sum(1 for p in people if p.get('contributions')),
@@ -406,16 +409,12 @@ def main():
     if not args.write:
         return
     os.makedirs(OUT_DIR, exist_ok=True)
-    # The 2,828 vendored bundles are four fifths of the repo records and are off by
-    # default, so they ship in their own file and the page fetches it only when the
-    # reader asks for them.
-    bundles = [r for r in repos if r.get('tier') == 'bundle']
-    main = [e for e in entries if e.get('tier') != 'bundle']
-    payload = {'schema_version': 1, 'counts': counts, 'entries': main}
+    payload = {'schema_version': 1, 'counts': counts, 'entries': entries}
     with open(os.path.join(OUT_DIR, 'halide-index.json'), 'w') as fh:
         json.dump(payload, fh, separators=(',', ':'))
-    with open(os.path.join(OUT_DIR, 'halide-bundles.json'), 'w') as fh:
-        json.dump({'schema_version': 1, 'entries': bundles}, fh, separators=(',', ':'))
+    stale = os.path.join(OUT_DIR, 'halide-bundles.json')
+    if os.path.exists(stale):
+        os.remove(stale)        # bundles now travel in the main payload
     version = '0.1'
     version_file = os.path.join(ROOT, 'VERSION')
     if os.path.exists(version_file):
