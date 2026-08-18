@@ -223,6 +223,16 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
     console.log('  --   no contributor data in this payload; share not asserted');
   }
 
+  console.log('default sorts');
+  for (const [name, want] of [['Papers', 'contexts'], ['Repositories', 'matches'],
+                              ['People', 'score'], ['Anchors', 'cited_by_pool']]) {
+    $('btn-clear').click();
+    await settle();
+    [...q('.view-btn')].find((b) => b.textContent.startsWith(name)).click();
+    await settle();
+    check(name + ': opens on ' + want, $('sort-within').value === want, $('sort-within').value);
+  }
+
   console.log('total contributions');
   [...q('.view-btn')].find((b) => b.textContent.startsWith('People')).click();
   await settle();

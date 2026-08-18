@@ -87,9 +87,9 @@
             'Records shown as DOI only are the works Semantic Scholar\u2019s 1,000-result cap hid: ' +
             'the citation is known, the metadata has not been harvested.',
       sorts: [
+        { key: 'contexts', label: 'Citation contexts', title: 'How many passages in the work cite an anchor. A rough proxy for engagement until curation rates it' },
         { key: 'cited', label: 'Times cited', title: 'Citations the work itself has drawn — nothing to do with how much Halide is in it' },
         { key: 'year', label: 'Year (newest)', title: 'Newest first' },
-        { key: 'contexts', label: 'Citation contexts', title: 'How many passages in the work cite an anchor. A rough proxy for engagement until curation rates it' },
         { key: 'title', label: 'Title (A–Z)', title: 'Alphabetical' }
       ],
       facets: [
@@ -156,8 +156,8 @@
             'the name and that were written by the Halide authors, plus the Halide repository. ' +
             'Everything else in the index is here because it cites one of these.',
       sorts: [
-        { key: 'year', label: 'Year (newest)', title: 'Newest first' },
         { key: 'cited_by_pool', label: 'Citations in this index', title: 'How many indexed works cite this anchor' },
+        { key: 'year', label: 'Year (newest)', title: 'Newest first' },
         { key: 'title', label: 'Title (A–Z)', title: 'Alphabetical' }
       ],
       facets: []
@@ -863,6 +863,11 @@
     state.focus = null;
     state.showAll = false;
     state.minImportance = 0;
+    /* Clearing restores the sort too. Otherwise a sort chosen once sticks to a view for the
+       rest of the session with no control that puts it back, and the default a view opens
+       on becomes unreachable. */
+    state.sort = {};
+    buildSortOptions();
     applyFacetDefaults();
     els.text.value = '';
     if (els.importance) els.importance.value = 0;

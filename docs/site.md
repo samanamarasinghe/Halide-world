@@ -99,6 +99,23 @@ default: the citation is real. Where `data/pools/doi_enriched_state.json` has a 
 carry a real title, venue, year, authors and citation count and keep the tier only as
 provenance; without it they render as bare identifiers.
 
+## What each view opens on
+
+| View | Default sort | Why |
+|---|---|---|
+| Papers | Citation contexts | How much the citing work engages with an anchor, rather than its standing elsewhere |
+| Repositories | Signature matches | Volume of Halide references in the tree — see the caveat below |
+| People | Total contributions | Commits and papers on one axis |
+| Anchors | Citations in this index | Which anchor the literature actually builds on |
+
+`Clear filters` restores the sort as well as the facets, so a view's default is always
+reachable.
+
+**Signature matches is not an impact measure.** For a repository carrying a vendored Halide
+tree the count includes Halide's own files, so it says how much Halide-shaped code sits in
+the tree and not how much the project does with it. Sorting by stars is the quicker route to
+the projects people actually use.
+
 ## Two rules the page keeps
 
 - **No silent truncation.** Every capped list says so: a facet header reads `(183)`,
