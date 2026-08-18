@@ -13,13 +13,24 @@ Requires a token, because code search is not available unauthenticated:
     python3 harvest/github_repos.py --out data/pools/lane_b.json
 
 Authenticated code search allows 10 requests/minute, so a full run takes on the
-order of 20 minutes. It is resumable -- re-running skips completed shards.
+order of 20 minutes. It is resumable -- re-running skips completed shards. Pass
+--only <signature name> to redo a single signature; its shard markers are
+discarded so it re-runs while everything else is left alone.
+
+A note on quoting, learned the hard way. GitHub's code search does not accept
+backslash-escaped quotes inside a quoted phrase: `"#include \"Halide.h\""`
+returns zero results for every shard, silently, which looks exactly like a
+signature nobody uses. Nested bare quotes work: `"#include "Halide.h""` returns
+2,432 hits in the 1-2KB shard alone. Any new signature containing a quote
+character should be spot-checked against the API before a full run.
 
 Two things the results will contain that curation has to handle. Vendored
-bundles (OpenCV distributions, ceph, vcpkg ports) match the source signatures
-without using Halide, which is why `evidence` separates consumer signatures from
-source ones. And prose about Halide matches too -- any repo whose documentation
-quotes a signature string will appear, including our own notes.
+bundles match the source signatures without using Halide -- OpenCV ships a
+Halide backend, so every project that vendors OpenCV sources appears. And prose
+about Halide matches too: any repo whose documentation quotes a signature string
+will show up, including our own notes. Classification should key on the matched
+PATH, not the repo name: `find_package(Halide` at `CMakeLists.txt` is a
+consumer, the same line at `.../opencv/cmake/OpenCVDetectHalide.cmake` is not.
 """
 
 import argparse
@@ -44,7 +55,7 @@ SIGNATURES = [
     {"name": "cmake_find_package", "query": '"find_package(Halide"', "weight": "consumer"},
     {"name": "cmake_add_library", "query": '"add_halide_library("', "weight": "consumer"},
     {"name": "generator_macro", "query": '"HALIDE_REGISTER_GENERATOR"', "weight": "generator"},
-    {"name": "include_header", "query": '"#include \\"Halide.h\\""', "weight": "source"},
+    {"name": "include_header", "query": '"#include "Halide.h""', "weight": "source"},
     {"name": "cpp_func", "query": '"Halide::Func"', "weight": "source"},
     {"name": "cpp_buffer", "query": '"Halide::Buffer"', "weight": "source"},
     {"name": "runtime_header", "query": '"HalideBuffer.h"', "weight": "runtime"},
@@ -123,13 +134,17 @@ def harvest_shard(signature, low, high, token, hits):
     return True
 
 
-def harvest(token, out_path):
+def harvest(token, out_path, only=None):
     state_path = out_path.replace(".json", "_state.json")
     state = json.load(open(state_path)) if os.path.exists(state_path) else {}
     hits = state.get("hits", {})
     done = set(state.get("done", []))
 
     for signature in SIGNATURES:
+        if only and signature["name"] != only:
+            continue
+        if only:  # re-running one signature: discard its stale shard markers
+            done = {k for k in done if not k.startswith(f"{only}:")}
         print(f"\n{signature['name']}  ({signature['weight']})")
         queue = list(INITIAL_RANGES)
         while queue:
@@ -151,6 +166,7 @@ def harvest(token, out_path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", default="data/pools/lane_b.json")
+    parser.add_argument("--only", help="re-run a single signature by name")
     args = parser.parse_args()
 
     token = os.environ.get("GITHUB_TOKEN")
@@ -159,7 +175,7 @@ def main():
         return 1
 
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
-    hits = harvest(token, args.out)
+    hits = harvest(token, args.out, args.only)
 
     # A repo matching a consumer signature builds against Halide; one matching
     # only source signatures may simply be a vendored copy of Halide itself.
