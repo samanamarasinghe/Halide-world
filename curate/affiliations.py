@@ -29,9 +29,9 @@ Explicit aliases are slower to write and do not misfire.
     python3 curate/affiliations.py --pool data/pools/lane_a.json \
         --out data/people/authorship.json
 
-DOIs are read from harvest/artifacts.py's enrich state rather than from the
-pool, because that pass records them in its own state file and never rewrites
-the pool.
+DOIs come from two places, neither of them the pool: harvest/artifacts.py's
+enrich state, which records them without rewriting the pool, and the
+OpenCitations-only list, whose works have no Semantic Scholar id at all.
 """
 
 import argparse
@@ -172,6 +172,21 @@ def fetch_authorships(dois, cache_path):
     return cache
 
 
+def read_extra_dois(path):
+    """Accept a bare list, {"dois": [...]}, or a list of records with a doi field."""
+    if not os.path.exists(path):
+        return set()
+    payload = json.load(open(path))
+    if isinstance(payload, dict):
+        payload = payload.get("dois") or payload.get("works") or []
+    found = set()
+    for entry in payload:
+        doi = entry.get("doi") if isinstance(entry, dict) else entry
+        if doi:
+            found.add(str(doi).lower())
+    return found
+
+
 def build_edges(works_by_doi, pool):
     """One edge per author per paper, carrying affiliation at that time."""
     edges = []
@@ -221,6 +236,9 @@ def main():
     parser.add_argument("--cache", default="data/people/openalex_cache.json")
     parser.add_argument("--enrich-state", default="data/pools/artifacts_state.json",
                         help="where harvest/artifacts.py recorded each work's DOI")
+    parser.add_argument("--extra-dois", default="data/pools/opencitations_only.json",
+                        help="further DOIs to include, e.g. works found only by "
+                             "OpenCitations and so absent from the S2 pool")
     args = parser.parse_args()
     sys.stdout.reconfigure(line_buffering=True)
 
@@ -235,6 +253,10 @@ def main():
         enriched = json.load(open(args.enrich_state)).get("enrich", {})
         dois |= {v["doi"].lower() for v in enriched.values() if v.get("doi")}
         print(f"{len(enriched)} works in {args.enrich_state}")
+    extra = read_extra_dois(args.extra_dois)
+    if extra:
+        print(f"{len(extra)} extra DOIs from {args.extra_dois}")
+        dois |= extra
     dois = sorted(d for d in dois if d)
     if not dois:
         print(f"no DOIs found. They are written by harvest/artifacts.py --phase enrich "
