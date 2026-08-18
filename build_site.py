@@ -1,0 +1,336 @@
+#!/usr/bin/env python3
+"""Merge the Halide-world pools into data/site/halide-index.json for the web page.
+
+The site is a graph browser: paper, repo and person nodes joined by authorship,
+contribution and artifact edges. This script flattens that graph into one payload the
+page can hold in memory, and is the only place that knows the pool file layout.
+
+Curation has not run. `role` and `importance` are copied through when a record carries
+them and omitted otherwise; the page hides the controls that depend on them until they
+appear, so this script and the page both work before and after curation.
+
+Nothing here is judgement. The one derived rule is the duplicate survivor: in every
+non-garbage group of data/pools/duplicates.json the first id is the survivor and the rest
+are retired, which is the convention that file's own note states. Garbage groups are
+title-match artefacts over distinct papers and are never merged.
+
+    python3 build_site.py            # report counts, write nothing
+    python3 build_site.py --write    # write data/site/halide-index.json and build-info.json
+"""
+import argparse
+import collections
+import datetime
+import json
+import os
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+POOLS = os.path.join(ROOT, 'data', 'pools')
+OUT_DIR = os.path.join(ROOT, 'data', 'site')
+
+# Repos whose only Halide is a vendored third-party copy. Kept in the payload but flagged,
+# because dropping 2,828 records outright would make the corpus unauditable from the page.
+BUNDLE = 'third_party_bundle'
+
+
+def load(path, default=None):
+    """Pools that have not been pushed yet are absent, not an error."""
+    full = path if os.path.isabs(path) else os.path.join(ROOT, path)
+    if not os.path.exists(full):
+        return default
+    with open(full) as fh:
+        return json.load(fh)
+
+
+def carry_curation(src, dst):
+    """Copy the curation fields when they exist. They do not exist yet."""
+    for field in ('role', 'importance'):
+        if src.get(field) not in (None, '', [], {}):
+            dst[field] = src[field]
+
+
+def duplicate_map(dup):
+    """s2_id -> {survivor, kind} for every retired record."""
+    retired = {}
+    for kind, groups in (dup.get('groups') or {}).items():
+        if kind == 'garbage':
+            continue
+        for group in groups:
+            for loser in group[1:]:
+                retired[loser] = {'survivor': group[0], 'dup_kind': kind}
+    return retired
+
+
+def build_papers(lane_a, anchors_json, dup, artifacts):
+    anchor_ids = set(anchors_json.get('anchors_in_pool') or dup.get('anchors_inside_pool') or [])
+    retired = duplicate_map(dup)
+
+    own = {}          # s2_id -> [repo, ...] the paper's own artifact
+    mentioned = {}    # s2_id -> [repo, ...] merely named in the text
+    for rec in (artifacts or {}).get('papers', []):
+        own[rec['s2_id']] = list(rec.get('own_artifacts') or [])
+        mentioned[rec['s2_id']] = [
+            link['repo'] for link in rec.get('links') or []
+            if link.get('verdict') != 'own_artifact'
+        ]
+
+    out = []
+    # lane_a.json keys works by s2_id; lane_a_compact.json lists them. Accept either.
+    works = lane_a.get('works') or []
+    works = list(works.values()) if isinstance(works, dict) else works
+    for rec in works:
+        s2_id = rec.get('s2_id')
+        if s2_id in anchor_ids:
+            continue                      # anchors are emitted from anchors.json
+        entry = {
+            'kind': 'paper',
+            'id': s2_id,
+            'title': rec.get('title') or 'Untitled',
+            'year': rec.get('year'),
+            'venue': rec.get('venue'),
+            'cited': rec.get('num_cited_by'),
+            'fields': rec.get('fields') or [],
+            'authors': rec.get('authors') or [],
+            'author_ids': rec.get('author_s2_ids') or [],
+            'anchors': rec.get('cites_anchors') or [],
+            'key_on': rec.get('key_on') or [],
+            'intents': rec.get('intents') or [],
+            'n_contexts': rec.get('n_contexts') or 0,
+            'url': 'https://www.semanticscholar.org/paper/' + s2_id,
+        }
+        if own.get(s2_id):
+            entry['artifacts'] = own[s2_id]
+        if mentioned.get(s2_id):
+            entry['mentions'] = mentioned[s2_id]
+        if s2_id in retired:
+            entry['tier'] = 'duplicate'
+            entry.update(retired[s2_id])
+        carry_curation(rec, entry)
+        out.append(entry)
+    return out, anchor_ids
+
+
+def build_anchors(anchors_json, papers):
+    """The 15 anchor papers and the Halide repo, with how many pool works cite each."""
+    cites = collections.Counter()
+    for paper in papers:
+        for anchor in paper['anchors']:
+            cites[anchor] += 1
+    out = []
+    for rec in anchors_json.get('anchors') or []:
+        entry = {
+            'kind': 'anchor',
+            'id': rec['id'],
+            'title': rec.get('title') or rec['id'],
+            'year': rec.get('year'),
+            'venue': rec.get('venue'),
+            'url': rec.get('url'),
+            'authors': rec.get('authors') or [],
+            'dois': rec.get('dois') or [],
+            'doi_notes': rec.get('doi_notes'),
+            'cited_by_pool': cites.get(rec['id'], 0),
+        }
+        carry_curation(rec, entry)
+        out.append(entry)
+    return out
+
+
+def build_doi_only(oc, dup):
+    """The 221 works Semantic Scholar's 1,000-result cap hid. DOI and nothing else."""
+    retired = duplicate_map(dup)
+    out = []
+    for doi in (oc or {}).get('dois') or []:
+        key = 'oc:' + doi
+        entry = {
+            'kind': 'paper',
+            'tier': 'doi_only',
+            'id': key,
+            'title': doi,
+            'url': 'https://doi.org/' + doi,
+            'anchors': [],
+            'authors': [],
+        }
+        if key in retired:
+            entry['tier'] = 'duplicate'
+            entry.update(retired[key])
+        out.append(entry)
+    return out
+
+
+def build_repos(lane_b, artifacts):
+    """Repo nodes, plus the reverse artifact edge back to the papers that published them."""
+    # Edges carry ids only. The page holds every node in memory, so a title stored on the
+    # far end of an edge is a second copy of a string it already has -- 5MB of payload
+    # became 2MB by dropping them.
+    from_paper = collections.defaultdict(list)
+    for rec in (artifacts or {}).get('papers', []):
+        for repo in rec.get('own_artifacts') or []:
+            from_paper[repo].append(rec['s2_id'])
+
+    out = []
+    for rec in (lane_b or {}).get('repos', []):
+        name = rec['repo']
+        entry = {
+            'kind': 'repo',
+            'id': name,
+            'title': name,
+            'url': 'https://github.com/' + name,
+            'verdict': rec.get('verdict'),
+            'evidence': rec.get('evidence'),
+            'n_matches': rec.get('n_matches') or 0,
+            'signatures': sorted((rec.get('signatures') or {}).keys()),
+            'path_kinds': sorted((rec.get('path_kinds') or {}).keys()),
+            'paths': (rec.get('paths') or [])[:6],
+        }
+        if rec.get('verdict') == BUNDLE:
+            entry['tier'] = 'bundle'
+        if from_paper.get(name):
+            entry['papers'] = from_paper[name]
+        carry_curation(rec, entry)
+        out.append(entry)
+    return out
+
+
+def build_people(papers, anchors, authorship, contributors):
+    """Person nodes keyed on the Semantic Scholar author id.
+
+    Built from the paper author lists, which is everything the pushed pools carry. When
+    authorship.json and the contributors output arrive they fill affiliation-at-time-of-
+    paper and per-repo contribution share, which cannot be derived from the pools here.
+    """
+    people = {}
+    for paper in papers:
+        ids = paper.get('author_ids') or []
+        names = paper.get('authors') or []
+        for i, name in enumerate(names):
+            pid = ids[i] if i < len(ids) and ids[i] else 'name:' + name
+            person = people.setdefault(pid, {
+                'kind': 'person', 'id': pid, 'title': name, 'name': name,
+                'papers': [], 'anchors': [], 'years': [],
+            })
+            person['papers'].append(paper['id'])
+            if paper.get('year'):
+                person['years'].append(paper['year'])
+            for anchor in paper.get('anchors') or []:
+                if anchor not in person['anchors']:
+                    person['anchors'].append(anchor)
+
+    # Anchor authorship is the one edge that identifies the people who built Halide, and
+    # anchors carry names only, so those match on name rather than on an id.
+    by_name = {}
+    for person in people.values():
+        by_name.setdefault(person['name'], person)
+    for anchor in anchors:
+        for name in anchor.get('authors') or []:
+            person = by_name.get(name)
+            if not person:
+                person = people.setdefault('name:' + name, {
+                    'kind': 'person', 'id': 'name:' + name, 'title': name, 'name': name,
+                    'papers': [], 'anchors': [], 'years': [],
+                })
+                by_name[name] = person
+            person.setdefault('anchor_papers', [])
+            if anchor['id'] not in person['anchor_papers']:
+                person['anchor_papers'].append(anchor['id'])
+
+    # Optional enrichment. Absent files leave the fields off the record entirely, and the
+    # page hides the facets that depend on them rather than showing an empty list.
+    for rec in (authorship or {}).get('edges', []) if isinstance(authorship, dict) else (authorship or []):
+        pid = rec.get('author_id') or ('name:' + str(rec.get('name')))
+        person = people.get(pid) or by_name.get(rec.get('name'))
+        if not person:
+            continue
+        aff = rec.get('affiliation') or rec.get('raw_affiliation')
+        if aff:
+            person.setdefault('affiliations', [])
+            if aff not in person['affiliations']:
+                person['affiliations'].append(aff)
+    for rec in (contributors or {}).get('people', []) if isinstance(contributors, dict) else (contributors or []):
+        person = by_name.get(rec.get('name')) or people.get(rec.get('id') or '')
+        if not person:
+            continue
+        person.setdefault('contributions', [])
+        person['contributions'].extend(rec.get('repos') or [])
+
+    out = []
+    for person in people.values():
+        years = person.pop('years')
+        person['n_papers'] = len(person['papers'])
+        if years:
+            person['first_year'], person['last_year'] = min(years), max(years)
+        out.append(person)
+    out.sort(key=lambda p: (-p['n_papers'], p['name']))
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--write', action='store_true', help='write the payload')
+    args = ap.parse_args()
+
+    lane_a = load('data/pools/lane_a_compact.json') or {}
+    lane_b = load('data/pools/lane_b_classified.json') or {}
+    dup = load('data/pools/duplicates.json') or {}
+    anchors_json = load('data/anchors.json') or {}
+    artifacts = load('data/pools/artifacts_attributed.json') or {}
+    oc = load('data/pools/opencitations_only.json') or {}
+    authorship = load('data/pools/authorship.json')
+    contributors = load('data/pools/contributors.json')
+
+    papers, anchor_ids = build_papers(lane_a, anchors_json, dup, artifacts)
+    anchors = build_anchors(anchors_json, papers)
+    doi_only = build_doi_only(oc, dup)
+    repos = build_repos(lane_b, artifacts)
+    people = build_people(papers + [], anchors, authorship, contributors)
+
+    entries = anchors + papers + doi_only + repos + people
+    curated = sum(1 for e in entries if 'role' in e or 'importance' in e)
+
+    counts = {
+        'anchors': len(anchors),
+        'papers': sum(1 for p in papers if p.get('tier') != 'duplicate'),
+        'papers_retired': sum(1 for p in papers if p.get('tier') == 'duplicate'),
+        'doi_only': sum(1 for p in doi_only if p.get('tier') != 'duplicate'),
+        'repos': sum(1 for r in repos if r.get('tier') != 'bundle'),
+        'bundles': sum(1 for r in repos if r.get('tier') == 'bundle'),
+        'people': len(people),
+        'people_with_affiliation': sum(1 for p in people if p.get('affiliations')),
+        'people_with_contributions': sum(1 for p in people if p.get('contributions')),
+        'curated': curated,
+    }
+    for key, value in counts.items():
+        print('%-26s %d' % (key, value))
+    if not authorship:
+        print('\nNOTE  data/pools/authorship.json absent — no affiliation-at-time-of-paper')
+    if not contributors:
+        print('NOTE  data/pools/contributors.json absent — no per-repo contribution share')
+    if not curated:
+        print('NOTE  no record carries role or importance — curation has not run')
+
+    if not args.write:
+        return
+    os.makedirs(OUT_DIR, exist_ok=True)
+    # The 2,828 vendored bundles are four fifths of the repo records and are off by
+    # default, so they ship in their own file and the page fetches it only when the
+    # reader asks for them.
+    bundles = [r for r in repos if r.get('tier') == 'bundle']
+    main = [e for e in entries if e.get('tier') != 'bundle']
+    payload = {'schema_version': 1, 'counts': counts, 'entries': main}
+    with open(os.path.join(OUT_DIR, 'halide-index.json'), 'w') as fh:
+        json.dump(payload, fh, separators=(',', ':'))
+    with open(os.path.join(OUT_DIR, 'halide-bundles.json'), 'w') as fh:
+        json.dump({'schema_version': 1, 'entries': bundles}, fh, separators=(',', ':'))
+    version = '0.1'
+    version_file = os.path.join(ROOT, 'VERSION')
+    if os.path.exists(version_file):
+        version = open(version_file).read().strip()
+    with open(os.path.join(OUT_DIR, 'build-info.json'), 'w') as fh:
+        json.dump({
+            'version': version,
+            'built': datetime.date.today().isoformat(),
+            'counts': counts,
+        }, fh, indent=1)
+    print('\nwrote data/site/halide-index.json and data/site/build-info.json')
+
+
+if __name__ == '__main__':
+    main()

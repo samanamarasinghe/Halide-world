@@ -1,0 +1,16 @@
+{
+ "version": "0.1",
+ "built": "2026-08-18",
+ "counts": {
+  "anchors": 16,
+  "papers": 1795,
+  "papers_retired": 33,
+  "doi_only": 161,
+  "repos": 736,
+  "bundles": 2828,
+  "people": 5712,
+  "people_with_affiliation": 0,
+  "people_with_contributions": 0,
+  "curated": 0
+ }
+}
