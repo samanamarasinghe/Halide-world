@@ -1,0 +1,14 @@
+{
+"schema_version": 1,
+"note": "Citing works found by OpenCitations that Semantic Scholar never returned, mostly because its citations endpoint caps at 1000 results and the PLDI 2013 anchor exceeds it. Kept as a separate pool because they carry no S2 id. Note that 22 of these turned out to be ACM SIGPLAN Notices twins of works already in lane_a, so the net gain is about 201, not 223. Two further OpenCitations rows were unusable: they cram several DOIs, space separated, into a single field.",
+"n_works": 221,
+"works": [
+{"doi": "10.1145/3453483.3454030", "title": "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation", "year": 2021, "cited_by": 524},
+{"doi": "10.1145/2499370.2462176", "title": "Halide", "year": 2013, "cited_by": 500},
+{"doi": "10.1145/2980179.2982399", "title": "Deep joint demosaicking and denoising", "year": 2016, "cited_by": 495},
+{"doi": "10.1145/3084873.3084921", "title": "libigl", "year": 2017, "cited_by": 290},
+{"doi": "10.1145/2980179.2982423", "title": "Bilateral guided upsampling", "year": 2016, "cited_by": 134},
+{"doi": "10.1145/3037697.3037749", "title": "Reconfiguring the Imaging Pipeline for Computer Vision", "year": 2017, "cited_by": 112}
+],
+"regenerate": "This file is a checkpoint of the 221 DOIs OpenCitations returned that Semantic Scholar did not, with only enough metadata to identify them; affiliations.py needs the doi field alone. The full list is rebuilt by unioning opencitations.net/index/api/v1/citations/<doi> across every DOI alias in data/anchors.json and subtracting the S2 pool. Only the six most-cited entries are inlined here; rerun the union to restore the rest."
+}
