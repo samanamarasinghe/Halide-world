@@ -28,8 +28,9 @@ Explicit aliases are slower to write and do not misfire.
     python3 curate/affiliations.py --pool data/pools/lane_a.json \
         --out data/people/authorship.json
 
-The pool must already carry DOIs, which harvest/artifacts.py --phase enrich
-attaches.
+DOIs are read from harvest/artifacts.py's enrich state rather than from the
+pool, because that pass records them in its own state file and never rewrites
+the pool.
 """
 
 import argparse
@@ -208,17 +209,28 @@ def main():
     parser.add_argument("--pool", default="data/pools/lane_a.json")
     parser.add_argument("--out", default="data/people/authorship.json")
     parser.add_argument("--cache", default="data/people/openalex_cache.json")
+    parser.add_argument("--enrich-state", default="data/pools/artifacts_state.json",
+                        help="where harvest/artifacts.py recorded each work's DOI")
     args = parser.parse_args()
     sys.stdout.reconfigure(line_buffering=True)
 
     pool = json.load(open(args.pool))
     works = pool["works"] if isinstance(pool.get("works"), dict) else {
         w["s2_id"]: w for w in pool["works"]}
-    dois = sorted({(w.get("doi") or "").lower() for w in works.values() if w.get("doi")})
+    # DOIs are not in the pool. harvest/artifacts.py records them in its own
+    # enrich state and never rewrites the pool, so read them from there and
+    # fall back to the pool for any that were attached some other way.
+    dois = {(w.get("doi") or "").lower() for w in works.values() if w.get("doi")}
+    if os.path.exists(args.enrich_state):
+        enriched = json.load(open(args.enrich_state)).get("enrich", {})
+        dois |= {v["doi"].lower() for v in enriched.values() if v.get("doi")}
+        print(f"{len(enriched)} works in {args.enrich_state}")
+    dois = sorted(d for d in dois if d)
     if not dois:
-        print("pool carries no DOIs -- run harvest/artifacts.py --phase enrich first, "
-              "which is what attaches them")
+        print(f"no DOIs found. They are written by harvest/artifacts.py --phase enrich "
+              f"into {args.enrich_state}; pass --enrich-state if it lives elsewhere.")
         return 1
+    print(f"{len(dois)} distinct DOIs")
 
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
     os.makedirs(os.path.dirname(args.cache) or ".", exist_ok=True)
