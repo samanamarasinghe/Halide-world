@@ -8,15 +8,18 @@ and is meant to be left alone for a few hours:
   1. enrich   ask the Semantic Scholar detail endpoint for each work's DOI,
               open-access status and candidate PDF links (~5 minutes)
   2. fetch    download each reachable PDF, extract its text, harvest every URL
-              in it, then DELETE the PDF (hours)
+              in it (hours)
   3. resolve  classify the harvested URLs into artifact candidates
 
-Phase 2 deletes each PDF after extraction on purpose. Keeping 1,400 of them
-costs several GB and buys nothing -- the text is what we need, and a paper can
-always be refetched from its recorded link. Pass --keep-pdfs to override.
+Phase 2 discards each PDF after extraction by default, since the text is all the
+artifact pass needs. Pass --keep-pdfs to save them instead -- worth it, because
+full-text curation later wants the papers anyway, and a kept PDF is re-read from
+disk rather than re-downloaded on any rerun. Budget about 1.3 MB per paper,
+roughly 2 GB in total.
 
     pip install pypdf
-    python3 harvest/artifacts.py --pool data/pools/lane_a.json --out data/pools/artifacts.json
+    python3 harvest/artifacts.py --pool data/pools/lane_a.json \
+        --out data/pools/artifacts.json --keep-pdfs
 
 Interrupt it freely. State lives in <out>_state.json and every phase skips work
 already done, so re-running continues rather than restarting.
@@ -26,6 +29,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -140,14 +144,30 @@ def pdf_candidates(record):
 
 # ---------------------------------------------------------------- phase 2
 
-def fetch_text(url):
-    """Download to a temp file, verify it really is a PDF, extract, discard.
+def extract_text(path):
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        return None, "pypdf missing -- pip install pypdf"
+    try:
+        reader = PdfReader(path)
+        return "\n".join((page.extract_text() or "") for page in reader.pages), None
+    except Exception as exc:
+        return None, f"extract failed: {type(exc).__name__}"
+
+
+def fetch_text(url, keep_path=None):
+    """Download to a temp file, verify it really is a PDF, extract, then either
+    move it to keep_path or discard it.
 
     Fetching to a temp name matters: retrying straight into the destination can
-    overwrite a good download with an error page on the second attempt.
+    overwrite a good download with an error page on the second attempt. The move
+    to keep_path only happens after the %PDF check passes, so a kept file is
+    always a real PDF.
     """
     handle, tmp = tempfile.mkstemp(suffix=".pdf")
     os.close(handle)
+    moved = False
     try:
         result = subprocess.run(
             ["curl", "-sSL", "-m", "90", "-A", BROWSER_UA, "-o", tmp, url],
@@ -158,18 +178,14 @@ def fetch_text(url):
         with open(tmp, "rb") as fh:
             if fh.read(4) != b"%PDF":
                 return None, "not a pdf"
-        try:
-            from pypdf import PdfReader
-        except ImportError:
-            return None, "pypdf missing -- pip install pypdf"
-        try:
-            reader = PdfReader(tmp)
-            text = "\n".join((page.extract_text() or "") for page in reader.pages)
-        except Exception as exc:
-            return None, f"extract failed: {type(exc).__name__}"
-        return text, None
+        text, error = extract_text(tmp)
+        if keep_path:
+            os.makedirs(os.path.dirname(keep_path) or ".", exist_ok=True)
+            shutil.move(tmp, keep_path)
+            moved = True
+        return text, error
     finally:
-        if os.path.exists(tmp):
+        if not moved and os.path.exists(tmp):
             os.remove(tmp)
 
 
@@ -183,18 +199,26 @@ def harvest_urls(text):
     return list(dict.fromkeys(found))[:60]
 
 
-def fetch(works, state, state_path, keep_pdfs=False):
+def fetch(works, state, state_path, keep_pdfs=False, pdf_dir="data/pdfs"):
     reachable = [k for k, v in state["enrich"].items() if pdf_candidates(v)]
     todo = [k for k in reachable if k not in state["fetch"]]
     print(f"[fetch] {len(reachable)} works have a candidate link; "
           f"{len(state['fetch'])} done, {len(todo)} to go")
+    if keep_pdfs:
+        print(f"[fetch] keeping PDFs in {pdf_dir}/ (~1.3 MB each, about 2 GB in total)")
     started = time.time()
     for n, s2_id in enumerate(todo, 1):
         text, error = None, "no candidate"
-        for url in pdf_candidates(state["enrich"][s2_id]):
-            text, error = fetch_text(url)
-            if text:
-                break
+        keep_path = os.path.join(pdf_dir, f"{s2_id}.pdf") if keep_pdfs else None
+        # A PDF already on disk is re-read rather than re-downloaded, so a rerun
+        # after clearing fetch state costs no network at all.
+        if keep_path and os.path.exists(keep_path):
+            text, error = extract_text(keep_path)
+        else:
+            for url in pdf_candidates(state["enrich"][s2_id]):
+                text, error = fetch_text(url, keep_path)
+                if text:
+                    break
         state["fetch"][s2_id] = (
             {"urls": harvest_urls(text), "chars": len(text)} if text else {"error": error}
         )
@@ -278,7 +302,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--pool", default="data/pools/lane_a.json")
     parser.add_argument("--out", default="data/pools/artifacts.json")
-    parser.add_argument("--keep-pdfs", action="store_true")
+    parser.add_argument("--keep-pdfs", action="store_true",
+                        help="save each PDF instead of discarding it after extraction")
+    parser.add_argument("--pdf-dir", default="data/pdfs")
     parser.add_argument("--phase", choices=["enrich", "fetch", "resolve"],
                         help="run a single phase instead of all three")
     args = parser.parse_args()
@@ -296,7 +322,7 @@ def main():
     if args.phase in (None, "enrich"):
         enrich(works, state, state_path)
     if args.phase in (None, "fetch"):
-        fetch(works, state, state_path, args.keep_pdfs)
+        fetch(works, state, state_path, args.keep_pdfs, args.pdf_dir)
     if args.phase in (None, "resolve"):
         resolve(works, state, args.out)
     return 0
