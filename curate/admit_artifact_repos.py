@@ -34,11 +34,23 @@ and mirage, all correct. 115 of 226 edges match on neither. Artifact names routi
 nothing to do with paper titles, so the gate costs more real edges than it saves false
 ones. Hand-reviewing 19 heads is cheaper and does not misfire.
 
+The metadata probe runs inside this script rather than from a saved file, so the output is
+regenerable from the repo alone in about a minute. No state file on one disk.
+
     python3 curate/artifact_edges.py --out data/pools/artifact_edges.json
     python3 curate/admit_artifact_repos.py --out data/pools/artifact_repos.json
 """
 import argparse
 import json
+import sys
+import time
+import urllib.error
+import urllib.request
+
+sys.stdout.reconfigure(line_buffering=True)
+
+ECOSYSTEMS = "https://repos.ecosyste.ms/api/v1/hosts/GitHub/repositories/{}"
+UA = {"User-Agent": "halide-world/1.0 (+saman@lcs.mit.edu)"}
 
 # Read against each claim's own paper, 2026-08-19. Only repos with >=1000 stars needed
 # this: below that the population is small research repos where the cue is nearly always
@@ -74,10 +86,37 @@ UNVERIFIED_NAME = {
 }
 
 
+def probe(repos):
+    """Fetch repo metadata from ecosyste.ms, no key, ~0.25s each.
+
+    A 404 here means NOT INDEXED, not gone -- of the 21 misses on this set, 10 serve a
+    README on GitHub and are real repos. So a miss is recorded as a miss and never as a
+    dead repo.
+    """
+    out = {}
+    for i, repo in enumerate(repos, 1):
+        try:
+            req = urllib.request.Request(ECOSYSTEMS.format(repo), headers=UA)
+            with urllib.request.urlopen(req, timeout=20) as f:
+                m = json.load(f)
+            out[repo] = {"ok": True, "stars": m.get("stargazers_count"),
+                         "desc": (m.get("description") or "")[:90],
+                         "lang": m.get("language"), "archived": m.get("archived"),
+                         "fork": m.get("fork")}
+        except urllib.error.HTTPError as e:
+            out[repo] = {"ok": False, "err": f"http {e.code}"}
+        except Exception as e:
+            out[repo] = {"ok": False, "err": type(e).__name__}
+        if i % 50 == 0:
+            print(f"  probed {i}/{len(repos)}")
+        time.sleep(0.05)
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--edges", default="data/pools/artifact_edges.json")
-    ap.add_argument("--meta", help="optional ecosyste.ms probe output, repo -> metadata")
+    ap.add_argument("--meta", help="cached ecosyste.ms probe output; fetched live if omitted")
     ap.add_argument("--out")
     args = ap.parse_args()
 
@@ -93,6 +132,10 @@ def main():
         if e.get("in_repo_pool"):
             continue
         by_repo.setdefault(e["repo"].lower(), []).append(e)
+
+    if not meta:
+        print(f"no --meta given; probing ecosyste.ms for {len(by_repo)} repos")
+        meta = probe(sorted(by_repo))
 
     records = []
     for repo, es in sorted(by_repo.items()):
