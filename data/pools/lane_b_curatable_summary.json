@@ -1,0 +1,262 @@
+{
+ "schema_version": 1,
+ "note": "Summary of the cleanup pass. Regenerate everything with curate/enrich_repos.py, curate/fork_diff.py, then this.",
+ "counts": {
+  "curatable": 552,
+  "anchor": 1,
+  "drop": 102,
+  "packaging": 12
+ },
+ "redistributed_clusters": {
+  "_internal/torch/_inductor/codecache.py": {
+   "canonical": null,
+   "n_repos": 13
+  },
+  "docs/rule/halide_library.soy": {
+   "canonical": null,
+   "n_repos": 7
+  },
+  "duguang_liteocr_ios_demo/mnn.framework/headers/halideruntime.h": {
+   "canonical": null,
+   "n_repos": 5
+  },
+  "extra/gemm/halide_gemm.py": {
+   "canonical": null,
+   "n_repos": 5
+  },
+  "features/apple/projectv2/buildconfiguration.java": {
+   "canonical": null,
+   "n_repos": 5
+  },
+  "features/apple/projectv2/buildconfigurationtest.java": {
+   "canonical": null,
+   "n_repos": 5
+  },
+  "mnn/include/halideruntime.h": {
+   "canonical": null,
+   "n_repos": 6
+  },
+  "prelude/decls/halide_rules.bzl": {
+   "canonical": null,
+   "n_repos": 11
+  },
+  "pytorch/test/inductor/test_halide.py": {
+   "canonical": null,
+   "n_repos": 6
+  },
+  "pytorch/torch/_inductor/codecache.py": {
+   "canonical": null,
+   "n_repos": 5
+  },
+  "test/inductor/test_halide.py": {
+   "canonical": null,
+   "n_repos": 49
+  },
+  "tinygrad_repo/extra/gemm/halide_gemm.py": {
+   "canonical": null,
+   "n_repos": 6
+  },
+  "torch/_inductor/codecache.py": {
+   "canonical": "pytorch/pytorch",
+   "n_repos": 51
+  },
+  "torch/_inductor/codegen/halide.py": {
+   "canonical": "pytorch/pytorch",
+   "n_repos": 64
+  },
+  "torch/_inductor/runtime/halide_helpers.py": {
+   "canonical": "pytorch/pytorch",
+   "n_repos": 37
+  }
+ },
+ "roles_already_decided": [
+  {
+   "repo": "akothen/Hydride",
+   "role": "extends",
+   "reason": "resolved by commit diff: vendored subtree that extends Halide"
+  },
+  {
+   "repo": "RafaeNoor/MISAAL",
+   "role": "extends",
+   "reason": "resolved by commit diff: vendored subtree that extends Halide"
+  },
+  {
+   "repo": "Kowrisaan11/Halide",
+   "role": "extends",
+   "reason": "resolved by commit diff: 29 commits, all in src/autoschedulers"
+  },
+  {
+   "repo": "zivid/zivid-halide-fork",
+   "role": "extends",
+   "reason": "resolved by commit diff: 38 commits in runtime and python_bindings"
+  },
+  {
+   "repo": "4vtomat/HalideX",
+   "role": "extends",
+   "reason": "resolved by commit diff: adds src/CodeGen_MLIR.cpp, a Halide-to-MLIR backend"
+  },
+  {
+   "repo": "wsmoses/Halide-AS",
+   "role": "extends",
+   "reason": "commit diff against upstream: +574 commits in apps/autoscheduler, apps/random_pipeline, apps/resnet_50"
+  },
+  {
+   "repo": "jingpu/Halide-HLS",
+   "role": "extends",
+   "reason": "commit diff against upstream: +13418 commits in src/runtime, test/correctness, cpp/src"
+  },
+  {
+   "repo": "jeffsetter/Halide-to-Hardware",
+   "role": "extends",
+   "reason": "commit diff against upstream: +35 commits in apps/hardware_benchmarks, src/Lower.cpp, src/CodeGen_CoreIR_Target.cpp"
+  },
+  {
+   "repo": "kevinkim06/Halide-FIRRTL",
+   "role": "extends",
+   "reason": "commit diff against upstream: +13385 commits in src/runtime, test/correctness, cpp/src"
+  },
+  {
+   "repo": "jrk/gradient-halide",
+   "role": "extends",
+   "reason": "commit diff against upstream: +14842 commits in src/runtime, test/correctness, cpp/src"
+  },
+  {
+   "repo": "halide/Halide_old_history",
+   "role": "extends",
+   "reason": "commit diff against upstream: +5 commits in src/AddImageChecks.cpp, src/ScheduleFunctions.cpp, src/BoundsInference.cpp"
+  },
+  {
+   "repo": "jeffsetter/Halide_CoreIR",
+   "role": "extends",
+   "reason": "commit diff against upstream: +10839 commits in src/runtime, test/correctness, cpp/src"
+  },
+  {
+   "repo": "jeffsetter/Halide-HLS-f4graph",
+   "role": "extends",
+   "reason": "commit diff against upstream: +10579 commits in src/runtime, test/correctness, cpp/src"
+  },
+  {
+   "repo": "manya-bansal/gern",
+   "role": "uses",
+   "reason": "resolved by commit diff: vendored subtree, a consumer"
+  }
+ ],
+ "packaging": [
+  "freebsd/freebsd-ports-gnome",
+  "Martinfx/FreeBSD-Ports",
+  "ghelmer/freebsd-ports",
+  "Jehops/freebsd-ports-legacy",
+  "bsdlabs/ports",
+  "Zirias/zfbsd-ports",
+  "truenas/ports",
+  "yzgyyang/freebsd-ports",
+  "5u623l20/freebsd-ports-ci",
+  "Jehops/freebsd-ports-ci",
+  "chrullrich/freebsd-ports-public",
+  "Kamillaova/nixpkgs-termux"
+ ],
+ "dropped": [
+  "4sameek4/YourJobs",
+  "4strium/Ansiflow",
+  "ADAPT-uiuc/VTC",
+  "AG2AI-Admin/FILEBOSS",
+  "Addanine/tinygrad-fork-1",
+  "AimarUrteaga/pytorchDockerRetroVllm",
+  "AlibabaResearch/AdvancedLiterateMachinery",
+  "AntonioRamos11/OpenMiner-Tinygrad",
+  "Ayush170-Future/galoy2",
+  "ChanHoya/openpilot",
+  "Cihan9946/AI-powered-software-testing",
+  "DanielCMBC/IDP-Interpretador-de-Gestos-WGI-",
+  "Divigroup-RAP/PYTORCH",
+  "FanBB2333/pytorch-fakegpu",
+  "Gager-Git-life/Face-alignment",
+  "Gager-Git-life/Face_Spoof_MNN",
+  "GitMonsters/tinygrad",
+  "J506918/openpilot",
+  "Mahdi-01-dev/apps-android-wikipedia-copy",
+  "MaybeShewill-CV/MNN-LaneNet",
+  "Maykonlincoln/Rede-neural",
+  "MetaX-MACA/mcPytorch",
+  "Michelle-Wang0/lab3_pytorch_copy",
+  "Michelle-Wang0/lab3_pytorch_copy_demo",
+  "MingyeongKim0708/CICA",
+  "MonakaResearch/pytorch-a64fx",
+  "Ottowski/warhammer-ai-chatbot",
+  "POC-2025/pytorch",
+  "Pavelanln/Coppy",
+  "Rajeevveera24/pytorch-copy",
+  "SyGoing/LFFD-MNN",
+  "Unknorienov/pytorch",
+  "UtkrishtP/torch_repo",
+  "adam-singer/buck2-example",
+  "adityapattar3322/Sonalika-NX-Integration",
+  "allbilly/tinygrad-2025",
+  "anonyauthorforpapers/EasyFHE",
+  "bandisasmito/GRDDprocessing_v1",
+  "bluestacks/external-pytorch-a16",
+  "bryandong24/treehacks2026",
+  "caio96/pytorch-zero-copy",
+  "danielzayas/pytorch__pytorch.05b94c54",
+  "danielzayas/pytorch__pytorch.c8a37a2d",
+  "david0100101/pytorch",
+  "deepin-community/pytorch",
+  "desai0007/test-repo-pytorch",
+  "dragonpilot/dev",
+  "dromniscience/pytorch-theseus-nv25.06",
+  "enter-ctrl9/pytorch11",
+  "ep-infosec/24_airbnb_buck",
+  "esinanturan/tinygrad",
+  "fnichol/systeminit",
+  "francograndegmailcom/pytorch-pytorch",
+  "gayoung127/CICA",
+  "glen-amd/rocm_pytorch",
+  "heieveryone/battery_test_project",
+  "herizon1054/openpilot",
+  "hnajada/pytorch-copy",
+  "hnlgzgf/GGS_hhjk_AI",
+  "j1lecks/pytorch-main",
+  "jhelwig/si-backup",
+  "jizhuoran/FABLE",
+  "jizhuoran/FHEAdvisor",
+  "leijurv/pytorch",
+  "linjunhui/cuda-learning",
+  "llv22/pytorch.mps",
+  "marcelomaurin/Assistente",
+  "mnt-unripe/SmartCamTest",
+  "msft-mirror-aosp/platform.external.pytorch",
+  "nahso/pytorch-sve512-2.10.0-backport",
+  "navjit00/pytorch",
+  "netanelcyber/zenday1",
+  "peterzheng98/gpu-memory",
+  "platformxlab/teraio",
+  "punksm4ck/pytorch",
+  "qjaxoddl522/YCA",
+  "ruisizhang123/pytorch_intern24",
+  "samsmusa/bangla-doc-parser",
+  "sdh5349/document_layout_analysis",
+  "shuang2099/Auto-evacuation-network-modeling-tool",
+  "shubhamkumar13/ocaml-buck2-template",
+  "steleman/pytorch-cuda-2.11.0",
+  "steleman/pytorch-cuda-2.7.1",
+  "straylight-archive/buck2-haskell-nix",
+  "straylight-archive/render-gateway",
+  "suiwombat/buck_prelude",
+  "surispace/openpilot",
+  "svekars/sphinx-read-thedocs-test",
+  "svermeulen/buck2-windows-c-include-directory-issue-example",
+  "thisguysiadbas/pytorch",
+  "tiendatngcs/pytorch-2.7.0",
+  "tiendatngcs/pytorch-Dec25",
+  "utkmohan/heterogeneous-memory-management",
+  "vors/buck2_python_sandbox",
+  "xt2201/Finetune-Doclayout",
+  "yhs0602/pytorch",
+  "ysun209/pytorch_v2.7.1",
+  "zach909/.my-ai",
+  "zczjx/es_ai_inference",
+  "zhengly1/pytorch1",
+  "zhengly1/pytorch2",
+  "zhengly1/pytorch3"
+ ]
+}

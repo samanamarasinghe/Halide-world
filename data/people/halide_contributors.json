@@ -1,0 +1,2666 @@
+{
+ "schema_version": 1,
+ "n_people": 227,
+ "n_commits": 23757,
+ "people": [
+  {
+   "name": "Andrew Adams",
+   "aliases": [
+    "U-calculon\\abadams",
+    "abadams",
+    "unknown"
+   ],
+   "emails": [
+    "abadams@30-99-14.dynamic.csail.mit.edu",
+    "abadams@abadams-macbookpro.roam.corp.google.com",
+    "abadams@calculon.(none)",
+    "abadams@calculon.mtv.corp.google.com",
+    "abadams@csail.mit.edu",
+    "abadams@e85f4cc9-3b08-0410-8ae2-992ae7edad4e",
+    "abadams@falloff.(none)",
+    "abadams@fb.com",
+    "abadams@google.com",
+    "abadams@lagrange.ad.corp.google.com",
+    "abadams@mojo.(none)",
+    "abadams@omap4.csail.mit.edu",
+    "abadams@stanford.edu",
+    "andrew.b.adams@gmail.com"
+   ],
+   "commits": 7466,
+   "first_commit": "2010-08-17",
+   "last_commit": "2026-08-18",
+   "is_bot": false
+  },
+  {
+   "name": "Steven Johnson",
+   "aliases": [],
+   "emails": [
+    "srj@google.com",
+    "srj@srj-macbookpro2.roam.corp.google.com",
+    "srj@srj3.sfo.corp.google.com",
+    "steven@crinklink.com"
+   ],
+   "commits": 5476,
+   "first_commit": "2013-06-18",
+   "last_commit": "2025-01-02",
+   "is_bot": false
+  },
+  {
+   "name": "Dillon Sharlet",
+   "aliases": [
+    "dsharlet-intel",
+    "dsharletg"
+   ],
+   "emails": [
+    "dillon.sharlet@intel.com",
+    "dsharlet@dsharlet-macbookpro.roam.corp.google.com",
+    "dsharlet@dsharlet-macbookpro2.roam.corp.google.com",
+    "dsharlet@google.com"
+   ],
+   "commits": 2629,
+   "first_commit": "2013-10-31",
+   "last_commit": "2022-01-07",
+   "is_bot": false
+  },
+  {
+   "name": "Z Stern",
+   "aliases": [
+    "Zalman Stern"
+   ],
+   "emails": [
+    "1501716+zvookin@users.noreply.github.com",
+    "zalman@dhcp-172-19-28-101.mtv.corp.google.com",
+    "zalman@dhcp-172-19-28-118.mtv.corp.google.com",
+    "zalman@dhcp-172-19-28-202.mtv.corp.google.com",
+    "zalman@dhcp-172-19-28-95.mtv.corp.google.com",
+    "zalman@dhcp-172-19-29-126.mtv.corp.google.com",
+    "zalman@dhcp-172-19-29-179.mtv.corp.google.com",
+    "zalman@dhcp-172-19-29-224.mtv.corp.google.com",
+    "zalman@dhcp-172-19-6-82.mtv.corp.google.com",
+    "zalman@dhcp-172-19-6-97.mtv.corp.google.com",
+    "zalman@google.com",
+    "zalman@rodete-desktop-imager.corp.google.com",
+    "zalman@zalman-macbookpro.local",
+    "zalman@zalman-macbookpro.roam.corp.google.com",
+    "zalman@zalman-macbookpro2.roam.corp.google.com",
+    "zalman@zalman.c.googlers.com",
+    "zalman@zalman2.sfo.corp.google.com",
+    "zalman@zalmans-macbook-air.local"
+   ],
+   "commits": 1407,
+   "first_commit": "2013-02-24",
+   "last_commit": "2025-11-17",
+   "is_bot": false
+  },
+  {
+   "name": "Jonathan Ragan-Kelley",
+   "aliases": [],
+   "emails": [
+    "jrk@berkeley.edu",
+    "jrk@cs.stanford.edu",
+    "jrk@csail.mit.edu",
+    "jrk@eecs.berkeley.edu",
+    "jrk@google.com",
+    "katokop1@gmail.com"
+   ],
+   "commits": 744,
+   "first_commit": "2010-12-06",
+   "last_commit": "2019-06-13",
+   "is_bot": false
+  },
+  {
+   "name": "Patricia Suriana",
+   "aliases": [
+    "Patricia Adriana Suriana",
+    "psuriana"
+   ],
+   "emails": [
+    "patricia.suriana@gmail.com",
+    "psuriana@google.com",
+    "psuriana@patricias-macbook-pro.local",
+    "psuriana@psuriana-macbookpro.roam.corp.google.com",
+    "psuriana@psuriana0.mtv.corp.google.com"
+   ],
+   "commits": 638,
+   "first_commit": "2016-03-03",
+   "last_commit": "2018-09-23",
+   "is_bot": false
+  },
+  {
+   "name": "Alex Reinking",
+   "aliases": [],
+   "emails": [
+    "alex.reinking@gmail.com",
+    "alex_reinking@berkeley.edu",
+    "alexreinking@fb.com",
+    "areinking@adobe.com",
+    "quic_areinkin@quicinc.com",
+    "reinking@google.com"
+   ],
+   "commits": 567,
+   "first_commit": "2018-10-09",
+   "last_commit": "2026-08-16",
+   "is_bot": false
+  },
+  {
+   "name": "Pranav Bhandarkar",
+   "aliases": [
+    "pranavb-ca"
+   ],
+   "emails": [
+    "pranavb@codeaurora.org",
+    "pranavb@quicinc.com"
+   ],
+   "commits": 388,
+   "first_commit": "2016-01-20",
+   "last_commit": "2023-09-18",
+   "is_bot": false
+  },
+  {
+   "name": "Tzu-Mao Li",
+   "aliases": [],
+   "emails": [
+    "bachi722@gmail.com",
+    "tzumao@mit.edu",
+    "tzumao@persephone.csail.mit.edu",
+    "tzumao@tefnut.csail.mit.edu"
+   ],
+   "commits": 378,
+   "first_commit": "2019-01-22",
+   "last_commit": "2025-04-18",
+   "is_bot": false
+  },
+  {
+   "name": "Connelly Barnes",
+   "aliases": [
+    "Connelly",
+    "connelly",
+    "csbarnes"
+   ],
+   "emails": [
+    "cbarnes@mgarbi-macbookpro.(none)",
+    "connellybarnes@gmail.com",
+    "connellybarnes@yahoo.com",
+    "csbarnes@adobe-cbarnes.csail.mit.edu",
+    "csbarnes@bigboy.csail.mit.edu",
+    "csbarnes@cbarnes-mbp.local",
+    "csbarnes@default-ubuntu.(none)",
+    "csbarnes@intern4-macbookpro.(none)",
+    "csbarnes@luxobe.local",
+    "csbarnes@vision01.csail.mit.edu"
+   ],
+   "commits": 373,
+   "first_commit": "2011-10-12",
+   "last_commit": "2013-10-30",
+   "is_bot": false
+  },
+  {
+   "name": "Volodymyr Kysenko",
+   "aliases": [],
+   "emails": [
+    "rizen.wp@gmail.com",
+    "vksnk@google.com"
+   ],
+   "commits": 287,
+   "first_commit": "2014-05-01",
+   "last_commit": "2025-08-29",
+   "is_bot": false
+  },
+  {
+   "name": "Marcos Slomp",
+   "aliases": [],
+   "emails": [
+    "mslomp@gmail.com",
+    "slomp@adobe.com"
+   ],
+   "commits": 279,
+   "first_commit": "2018-01-04",
+   "last_commit": "2025-08-20",
+   "is_bot": false
+  },
+  {
+   "name": "Kree Cole-McLaughlin",
+   "aliases": [],
+   "emails": [
+    "kree@google.com"
+   ],
+   "commits": 252,
+   "first_commit": "2014-07-16",
+   "last_commit": "2015-03-12",
+   "is_bot": false
+  },
+  {
+   "name": "Daniel Heck",
+   "aliases": [],
+   "emails": [
+    "dheck@dheck-macbookpro.roam.corp.google.com",
+    "dheck@gmx.de",
+    "dheck@google.com"
+   ],
+   "commits": 250,
+   "first_commit": "2014-01-24",
+   "last_commit": "2014-10-28",
+   "is_bot": false
+  },
+  {
+   "name": "Shoaib Kamil",
+   "aliases": [],
+   "emails": [
+    "kamil@adobe.com",
+    "shoaibkamil@gmail.com",
+    "skamil@mit.edu"
+   ],
+   "commits": 180,
+   "first_commit": "2016-05-03",
+   "last_commit": "2026-02-05",
+   "is_bot": false
+  },
+  {
+   "name": "Rodrigo Benenson",
+   "aliases": [],
+   "emails": [
+    "benenson@mpi-inf.mpg.de",
+    "rodrigo.benenson@gmail.com"
+   ],
+   "commits": 151,
+   "first_commit": "2014-12-01",
+   "last_commit": "2015-08-03",
+   "is_bot": false
+  },
+  {
+   "name": "Ron Lieberman",
+   "aliases": [
+    "ronlieb"
+   ],
+   "emails": [
+    "ronl@codeaurora.org"
+   ],
+   "commits": 149,
+   "first_commit": "2015-12-03",
+   "last_commit": "2018-07-23",
+   "is_bot": false
+  },
+  {
+   "name": "Alexander Aprelev",
+   "aliases": [],
+   "emails": [
+    "aam@chromium.org",
+    "aam@google.com",
+    "aprelev@gmail.com"
+   ],
+   "commits": 123,
+   "first_commit": "2014-12-02",
+   "last_commit": "2015-12-02",
+   "is_bot": false
+  },
+  {
+   "name": "Dan Liew",
+   "aliases": [],
+   "emails": [
+    "daniel.liew@imperial.ac.uk",
+    "delcypher@gmail.com"
+   ],
+   "commits": 123,
+   "first_commit": "2015-06-16",
+   "last_commit": "2015-11-30",
+   "is_bot": false
+  },
+  {
+   "name": "Abe Stephens",
+   "aliases": [
+    "abestephensg"
+   ],
+   "emails": [
+    "abstephens@google.com"
+   ],
+   "commits": 121,
+   "first_commit": "2014-07-21",
+   "last_commit": "2015-05-15",
+   "is_bot": false
+  },
+  {
+   "name": "Dan Palermo",
+   "aliases": [
+    "dpalermo"
+   ],
+   "emails": [
+    "dpalermo@codeaurora.org",
+    "dpalermo@quicinc.com"
+   ],
+   "commits": 120,
+   "first_commit": "2016-01-13",
+   "last_commit": "2021-06-14",
+   "is_bot": false
+  },
+  {
+   "name": "Ankit Aggarwal",
+   "aliases": [
+    "aankit-ca"
+   ],
+   "emails": [
+    "aankit-ca@codeaurora.org",
+    "aankit@aankit-linux.ap.qualcomm.com",
+    "aankit@aankit-linux.qualcomm.com",
+    "aankit@codeaurora.org",
+    "aankit@quicinc.com"
+   ],
+   "commits": 118,
+   "first_commit": "2017-03-14",
+   "last_commit": "2023-06-01",
+   "is_bot": false
+  },
+  {
+   "name": "Benoit Steiner",
+   "aliases": [],
+   "emails": [
+    "benoit.steiner@fb.com",
+    "benoitsteiner@fb.com",
+    "benoitsteiner@users.noreply.github.com"
+   ],
+   "commits": 110,
+   "first_commit": "2018-11-20",
+   "last_commit": "2020-02-26",
+   "is_bot": false
+  },
+  {
+   "name": "Ahmed S. Taei",
+   "aliases": [
+    "=",
+    "Ahmed Taei"
+   ],
+   "emails": [
+    "ahmed.saad.aldien@gmail.com",
+    "asaadaldien@users.noreply.github.com",
+    "ataei@fb.com"
+   ],
+   "commits": 95,
+   "first_commit": "2019-01-16",
+   "last_commit": "2019-06-19",
+   "is_bot": false
+  },
+  {
+   "name": "Martijn Courteaux",
+   "aliases": [],
+   "emails": [
+    "courteauxmartijn@gmail.com"
+   ],
+   "commits": 69,
+   "first_commit": "2021-11-24",
+   "last_commit": "2026-08-14",
+   "is_bot": false
+  },
+  {
+   "name": "Jing Pu",
+   "aliases": [],
+   "emails": [
+    "jimmypu07@gmail.com",
+    "jingpu@google.com"
+   ],
+   "commits": 58,
+   "first_commit": "2016-06-13",
+   "last_commit": "2019-01-04",
+   "is_bot": false
+  },
+  {
+   "name": "Alexander Root",
+   "aliases": [],
+   "emails": [
+    "32245479+rootjalex@users.noreply.github.com",
+    "aroot222@mit.edu"
+   ],
+   "commits": 53,
+   "first_commit": "2020-10-05",
+   "last_commit": "2025-04-24",
+   "is_bot": false
+  },
+  {
+   "name": "Matthias Kramm",
+   "aliases": [],
+   "emails": [
+    "kramm@google.com"
+   ],
+   "commits": 49,
+   "first_commit": "2018-05-09",
+   "last_commit": "2019-03-28",
+   "is_bot": false
+  },
+  {
+   "name": "Michael Gharbi",
+   "aliases": [],
+   "emails": [
+    "gharbi@mit.edu",
+    "michael.yanis.gharbi@gmail.com"
+   ],
+   "commits": 44,
+   "first_commit": "2019-07-08",
+   "last_commit": "2022-01-27",
+   "is_bot": false
+  },
+  {
+   "name": "Nikita Glukhov",
+   "aliases": [],
+   "emails": [
+    "nikita.glukhov@gmail.com"
+   ],
+   "commits": 44,
+   "first_commit": "2019-07-22",
+   "last_commit": "2020-01-30",
+   "is_bot": false
+  },
+  {
+   "name": "ronen barzel",
+   "aliases": [],
+   "emails": [
+    "ronen@barzel.org"
+   ],
+   "commits": 37,
+   "first_commit": "2016-05-27",
+   "last_commit": "2017-10-13",
+   "is_bot": false
+  },
+  {
+   "name": "Roman Lebedev",
+   "aliases": [],
+   "emails": [
+    "lebedev.ri@gmail.com"
+   ],
+   "commits": 35,
+   "first_commit": "2019-09-23",
+   "last_commit": "2024-08-09",
+   "is_bot": false
+  },
+  {
+   "name": "Derek Gerstmann",
+   "aliases": [],
+   "emails": [
+    "derek.gerstmann@gmail.com"
+   ],
+   "commits": 34,
+   "first_commit": "2022-07-15",
+   "last_commit": "2026-08-08",
+   "is_bot": false
+  },
+  {
+   "name": "Steve Suzuki",
+   "aliases": [],
+   "emails": [
+    "86288577+stevesuzuki-arm@users.noreply.github.com",
+    "shinsuke.suzuki@arm.com"
+   ],
+   "commits": 31,
+   "first_commit": "2021-06-28",
+   "last_commit": "2026-08-03",
+   "is_bot": false
+  },
+  {
+   "name": "Khouri Giordano",
+   "aliases": [
+    "kgnk",
+    "unknown"
+   ],
+   "emails": [
+    "kg@mperpetuo.com",
+    "kgiordano@dhq1098-14752.nikonimaging.net",
+    "kgiordano@nikon.net"
+   ],
+   "commits": 31,
+   "first_commit": "2016-05-12",
+   "last_commit": "2017-07-27",
+   "is_bot": false
+  },
+  {
+   "name": "dependabot[bot]",
+   "aliases": [],
+   "emails": [
+    "49699333+dependabot[bot]@users.noreply.github.com"
+   ],
+   "commits": 26,
+   "first_commit": "2026-03-21",
+   "last_commit": "2026-08-15",
+   "is_bot": true
+  },
+  {
+   "name": "Mark Glines",
+   "aliases": [
+    "Infinoid"
+   ],
+   "emails": [
+    "mark@glines.org"
+   ],
+   "commits": 24,
+   "first_commit": "2020-03-17",
+   "last_commit": "2022-01-04",
+   "is_bot": false
+  },
+  {
+   "name": "Photos Test 1",
+   "aliases": [],
+   "emails": [
+    "test1@test1.local"
+   ],
+   "commits": 23,
+   "first_commit": "2015-06-29",
+   "last_commit": "2015-08-25",
+   "is_bot": false
+  },
+  {
+   "name": "Tyler Denniston",
+   "aliases": [],
+   "emails": [
+    "tyler@csail.mit.edu"
+   ],
+   "commits": 22,
+   "first_commit": "2015-09-22",
+   "last_commit": "2016-05-03",
+   "is_bot": false
+  },
+  {
+   "name": "Nick Chornay",
+   "aliases": [
+    "Nick"
+   ],
+   "emails": [
+    "nickchornay@gmail.com"
+   ],
+   "commits": 22,
+   "first_commit": "2012-03-09",
+   "last_commit": "2013-06-19",
+   "is_bot": false
+  },
+  {
+   "name": "James Price",
+   "aliases": [],
+   "emails": [
+    "j.price@bristol.ac.uk",
+    "jrprice@google.com"
+   ],
+   "commits": 21,
+   "first_commit": "2014-02-11",
+   "last_commit": "2024-02-09",
+   "is_bot": false
+  },
+  {
+   "name": "Sean Lee",
+   "aliases": [],
+   "emails": [
+    "selee@nvidia.com"
+   ],
+   "commits": 21,
+   "first_commit": "2020-02-28",
+   "last_commit": "2020-03-24",
+   "is_bot": false
+  },
+  {
+   "name": "jn80842",
+   "aliases": [
+    "Julie Newcomb"
+   ],
+   "emails": [
+    "newcombj@cs.washington.edu"
+   ],
+   "commits": 21,
+   "first_commit": "2018-07-18",
+   "last_commit": "2020-03-09",
+   "is_bot": false
+  },
+  {
+   "name": "halide-ci[bot]",
+   "aliases": [],
+   "emails": [
+    "266445882+halide-ci[bot]@users.noreply.github.com"
+   ],
+   "commits": 19,
+   "first_commit": "2026-03-16",
+   "last_commit": "2026-08-15",
+   "is_bot": true
+  },
+  {
+   "name": "Kern Handa",
+   "aliases": [],
+   "emails": [
+    "kern.handa@gmail.com",
+    "kernhanda@users.noreply.github.com"
+   ],
+   "commits": 19,
+   "first_commit": "2017-11-16",
+   "last_commit": "2018-04-24",
+   "is_bot": false
+  },
+  {
+   "name": "Ka Chan",
+   "aliases": [],
+   "emails": [
+    "kationgc@blr-ubuntu-143.ap.qualcomm.com"
+   ],
+   "commits": 18,
+   "first_commit": "2018-10-12",
+   "last_commit": "2018-12-13",
+   "is_bot": false
+  },
+  {
+   "name": "Uday Bondhugula",
+   "aliases": [],
+   "emails": [
+    "udayb@iisc.ac.in"
+   ],
+   "commits": 18,
+   "first_commit": "2017-09-04",
+   "last_commit": "2017-09-18",
+   "is_bot": false
+  },
+  {
+   "name": "Fred Rotbart",
+   "aliases": [],
+   "emails": [
+    "rotbart@softbart.com"
+   ],
+   "commits": 17,
+   "first_commit": "2014-04-16",
+   "last_commit": "2014-10-02",
+   "is_bot": false
+  },
+  {
+   "name": "Alina Sbirlea",
+   "aliases": [],
+   "emails": [
+    "alina.g.simion@gmail.com",
+    "asbirlea@google.com"
+   ],
+   "commits": 16,
+   "first_commit": "2016-02-18",
+   "last_commit": "2023-01-05",
+   "is_bot": false
+  },
+  {
+   "name": "Shubham Pawar",
+   "aliases": [],
+   "emails": [
+    "shubhamp@codeaurora.org"
+   ],
+   "commits": 14,
+   "first_commit": "2019-05-14",
+   "last_commit": "2020-07-13",
+   "is_bot": false
+  },
+  {
+   "name": "Ian Taylor",
+   "aliases": [],
+   "emails": [
+    "ian@paracosm.io",
+    "ibtaylor@gmail.com"
+   ],
+   "commits": 13,
+   "first_commit": "2017-06-06",
+   "last_commit": "2019-05-15",
+   "is_bot": false
+  },
+  {
+   "name": "mugwort_rc",
+   "aliases": [],
+   "emails": [
+    "mugwort.rc@gmail.com"
+   ],
+   "commits": 12,
+   "first_commit": "2019-06-22",
+   "last_commit": "2019-10-03",
+   "is_bot": false
+  },
+  {
+   "name": "zingales",
+   "aliases": [],
+   "emails": [
+    "zingales@mit.edu"
+   ],
+   "commits": 12,
+   "first_commit": "2014-07-24",
+   "last_commit": "2014-07-28",
+   "is_bot": false
+  },
+  {
+   "name": "Matt Pharr",
+   "aliases": [],
+   "emails": [
+    "mpharr@google.com"
+   ],
+   "commits": 12,
+   "first_commit": "2013-06-12",
+   "last_commit": "2014-02-07",
+   "is_bot": false
+  },
+  {
+   "name": "antonysigma",
+   "aliases": [],
+   "emails": [
+    "antony.sigma@gmail.com"
+   ],
+   "commits": 10,
+   "first_commit": "2023-08-10",
+   "last_commit": "2026-07-09",
+   "is_bot": false
+  },
+  {
+   "name": "Xuanda Yang",
+   "aliases": [],
+   "emails": [
+    "th3charlie@gmail.com"
+   ],
+   "commits": 10,
+   "first_commit": "2021-10-20",
+   "last_commit": "2023-12-01",
+   "is_bot": false
+  },
+  {
+   "name": "Martin Pelik\u00e1n",
+   "aliases": [],
+   "emails": [
+    "mpel@google.com"
+   ],
+   "commits": 10,
+   "first_commit": "2020-04-10",
+   "last_commit": "2020-04-18",
+   "is_bot": false
+  },
+  {
+   "name": "Gundluru Venugopal Reddy",
+   "aliases": [
+    "vgundlur"
+   ],
+   "emails": [
+    "quic_vgundlur@quicinc.com"
+   ],
+   "commits": 10,
+   "first_commit": "2018-10-12",
+   "last_commit": "2019-01-10",
+   "is_bot": false
+  },
+  {
+   "name": "Eric Stollnitz",
+   "aliases": [],
+   "emails": [
+    "stollnit@adobe.com"
+   ],
+   "commits": 10,
+   "first_commit": "2016-10-28",
+   "last_commit": "2017-01-25",
+   "is_bot": false
+  },
+  {
+   "name": "Jiawen (Kevin) Chen",
+   "aliases": [],
+   "emails": [
+    "jiawen@users.noreply.github.com"
+   ],
+   "commits": 9,
+   "first_commit": "2021-04-14",
+   "last_commit": "2026-07-01",
+   "is_bot": false
+  },
+  {
+   "name": "Katrina Passarella",
+   "aliases": [],
+   "emails": [
+    "53918528+kpassarella@users.noreply.github.com",
+    "kpassarella@google.com"
+   ],
+   "commits": 9,
+   "first_commit": "2019-08-19",
+   "last_commit": "2020-01-31",
+   "is_bot": false
+  },
+  {
+   "name": "Suyog Sarda",
+   "aliases": [],
+   "emails": [
+    "ssarda@codeaurora.org"
+   ],
+   "commits": 9,
+   "first_commit": "2017-11-22",
+   "last_commit": "2018-07-27",
+   "is_bot": false
+  },
+  {
+   "name": "Michael Liao",
+   "aliases": [],
+   "emails": [
+    "michael.hliao@gmail.com"
+   ],
+   "commits": 9,
+   "first_commit": "2016-07-15",
+   "last_commit": "2017-12-03",
+   "is_bot": false
+  },
+  {
+   "name": "Cheng Wang",
+   "aliases": [],
+   "emails": [
+    "wangcheng@google.com"
+   ],
+   "commits": 8,
+   "first_commit": "2019-07-11",
+   "last_commit": "2024-05-31",
+   "is_bot": false
+  },
+  {
+   "name": "John Lawson",
+   "aliases": [],
+   "emails": [
+    "john@codeplay.com"
+   ],
+   "commits": 8,
+   "first_commit": "2021-02-02",
+   "last_commit": "2021-03-10",
+   "is_bot": false
+  },
+  {
+   "name": "Kern Handa (KERN)",
+   "aliases": [],
+   "emails": [
+    "kerha@microsoft.com"
+   ],
+   "commits": 8,
+   "first_commit": "2018-02-11",
+   "last_commit": "2018-03-27",
+   "is_bot": false
+  },
+  {
+   "name": "SanderX Vocke",
+   "aliases": [],
+   "emails": [
+    "sanderx.vocke@intel.com"
+   ],
+   "commits": 8,
+   "first_commit": "2017-06-23",
+   "last_commit": "2017-10-12",
+   "is_bot": false
+  },
+  {
+   "name": "Jiawen Chen",
+   "aliases": [],
+   "emails": [
+    "jiawen@google.com"
+   ],
+   "commits": 8,
+   "first_commit": "2015-05-07",
+   "last_commit": "2016-09-09",
+   "is_bot": false
+  },
+  {
+   "name": "Andreas Hollandt",
+   "aliases": [],
+   "emails": [
+    "trass3r@gmail.com"
+   ],
+   "commits": 8,
+   "first_commit": "2015-07-28",
+   "last_commit": "2015-09-03",
+   "is_bot": false
+  },
+  {
+   "name": "soma0212",
+   "aliases": [],
+   "emails": [
+    "soma@digiscrypt.com"
+   ],
+   "commits": 7,
+   "first_commit": "2026-07-16",
+   "last_commit": "2026-08-10",
+   "is_bot": false
+  },
+  {
+   "name": "arcbbb",
+   "aliases": [
+    "ShihPo Hung",
+    "Shihpo Hung"
+   ],
+   "emails": [
+    "arcbbb@gmail.com"
+   ],
+   "commits": 7,
+   "first_commit": "2019-03-25",
+   "last_commit": "2021-02-23",
+   "is_bot": false
+  },
+  {
+   "name": "kasper93",
+   "aliases": [],
+   "emails": [
+    "kasper93@gmail.com"
+   ],
+   "commits": 7,
+   "first_commit": "2019-10-11",
+   "last_commit": "2019-10-28",
+   "is_bot": false
+  },
+  {
+   "name": "Ray Molenkamp",
+   "aliases": [],
+   "emails": [
+    "github@lazydodo.com"
+   ],
+   "commits": 7,
+   "first_commit": "2018-04-18",
+   "last_commit": "2019-07-02",
+   "is_bot": false
+  },
+  {
+   "name": "Alexander B\u00f6hn",
+   "aliases": [
+    "Alexander Bo\u0308hn"
+   ],
+   "emails": [
+    "fish2000@gmail.com",
+    "fish2000@users.noreply.github.com"
+   ],
+   "commits": 7,
+   "first_commit": "2016-03-08",
+   "last_commit": "2018-06-18",
+   "is_bot": false
+  },
+  {
+   "name": "Ken Kuang",
+   "aliases": [],
+   "emails": [
+    "kenkuang1213@gmail.com"
+   ],
+   "commits": 7,
+   "first_commit": "2015-04-18",
+   "last_commit": "2015-04-18",
+   "is_bot": false
+  },
+  {
+   "name": "Philippe Crassous",
+   "aliases": [],
+   "emails": [
+    "p.crassous@free.fr"
+   ],
+   "commits": 7,
+   "first_commit": "2014-10-10",
+   "last_commit": "2014-11-05",
+   "is_bot": false
+  },
+  {
+   "name": "nashit hayat",
+   "aliases": [],
+   "emails": [
+    "nashit@bugqore.com"
+   ],
+   "commits": 6,
+   "first_commit": "2026-07-24",
+   "last_commit": "2026-08-18",
+   "is_bot": false
+  },
+  {
+   "name": "Jason Ansel",
+   "aliases": [],
+   "emails": [
+    "jansel@csail.mit.edu",
+    "jansel@jansel.net"
+   ],
+   "commits": 6,
+   "first_commit": "2013-09-01",
+   "last_commit": "2024-06-04",
+   "is_bot": false
+  },
+  {
+   "name": "Nathaniel Brough",
+   "aliases": [],
+   "emails": [
+    "nathaniel.brough@gmail.com"
+   ],
+   "commits": 6,
+   "first_commit": "2023-05-01",
+   "last_commit": "2023-06-01",
+   "is_bot": false
+  },
+  {
+   "name": "xndcn",
+   "aliases": [],
+   "emails": [
+    "xndchn@gmail.com"
+   ],
+   "commits": 6,
+   "first_commit": "2020-10-13",
+   "last_commit": "2021-01-09",
+   "is_bot": false
+  },
+  {
+   "name": "Zvi Rackover",
+   "aliases": [],
+   "emails": [
+    "zvirack@gmail.com"
+   ],
+   "commits": 6,
+   "first_commit": "2018-01-04",
+   "last_commit": "2018-01-05",
+   "is_bot": false
+  },
+  {
+   "name": "Brian Leibig",
+   "aliases": [],
+   "emails": [
+    "brian@mperpetuo.com"
+   ],
+   "commits": 6,
+   "first_commit": "2015-10-19",
+   "last_commit": "2017-08-14",
+   "is_bot": false
+  },
+  {
+   "name": "Hyunchul Park",
+   "aliases": [],
+   "emails": [
+    "parkhc@gmail.com",
+    "parkhc@google.com"
+   ],
+   "commits": 6,
+   "first_commit": "2016-12-06",
+   "last_commit": "2017-03-03",
+   "is_bot": false
+  },
+  {
+   "name": "Florian Kriener",
+   "aliases": [],
+   "emails": [
+    "floriank@google.com"
+   ],
+   "commits": 6,
+   "first_commit": "2013-12-10",
+   "last_commit": "2015-02-18",
+   "is_bot": false
+  },
+  {
+   "name": "Sylvain Paris",
+   "aliases": [],
+   "emails": [
+    "sparis@adobe.com",
+    "sparis@csail.mit.edu",
+    "sparis@sparis-macbook2.(none)"
+   ],
+   "commits": 6,
+   "first_commit": "2011-12-13",
+   "last_commit": "2012-06-20",
+   "is_bot": false
+  },
+  {
+   "name": "Steven Raphael",
+   "aliases": [],
+   "emails": [
+    "stevenraphael44@gmail.com"
+   ],
+   "commits": 5,
+   "first_commit": "2025-12-16",
+   "last_commit": "2026-07-16",
+   "is_bot": false
+  },
+  {
+   "name": "Dmitry Kurtaev",
+   "aliases": [
+    "dkurt"
+   ],
+   "emails": [
+    "dmitry.kurtaev+github@gmail.com",
+    "dmitry.kurtaev@gmail.com"
+   ],
+   "commits": 5,
+   "first_commit": "2017-05-04",
+   "last_commit": "2023-02-07",
+   "is_bot": false
+  },
+  {
+   "name": "Omar Emara",
+   "aliases": [],
+   "emails": [
+    "mail@omaremara.dev"
+   ],
+   "commits": 5,
+   "first_commit": "2021-10-25",
+   "last_commit": "2021-11-04",
+   "is_bot": false
+  },
+  {
+   "name": "cimes-isi",
+   "aliases": [],
+   "emails": [
+    "41927022+cimes-isi@users.noreply.github.com"
+   ],
+   "commits": 5,
+   "first_commit": "2020-12-15",
+   "last_commit": "2021-03-04",
+   "is_bot": false
+  },
+  {
+   "name": "Martin Johnson",
+   "aliases": [
+    "dzo"
+   ],
+   "emails": [
+    "ginnieandmartin@gmail.com",
+    "m.j.johnson@massey.ac.nz"
+   ],
+   "commits": 5,
+   "first_commit": "2019-03-15",
+   "last_commit": "2020-01-24",
+   "is_bot": false
+  },
+  {
+   "name": "Igor Nazarenko",
+   "aliases": [],
+   "emails": [
+    "inazarenko@google.com"
+   ],
+   "commits": 5,
+   "first_commit": "2018-04-04",
+   "last_commit": "2018-08-27",
+   "is_bot": false
+  },
+  {
+   "name": "Sander Vocke",
+   "aliases": [],
+   "emails": [
+    "sander@screenpointmed.com",
+    "sandervocke@gmail.com"
+   ],
+   "commits": 5,
+   "first_commit": "2017-05-11",
+   "last_commit": "2018-08-01",
+   "is_bot": false
+  },
+  {
+   "name": "Doug Kwan",
+   "aliases": [],
+   "emails": [
+    "dougkwan@google.com"
+   ],
+   "commits": 5,
+   "first_commit": "2015-09-23",
+   "last_commit": "2016-01-28",
+   "is_bot": false
+  },
+  {
+   "name": "Len Hamey",
+   "aliases": [],
+   "emails": [
+    "len.hamey@mq.edu.au"
+   ],
+   "commits": 5,
+   "first_commit": "2013-03-14",
+   "last_commit": "2013-05-10",
+   "is_bot": false
+  },
+  {
+   "name": "github-actions[bot]",
+   "aliases": [],
+   "emails": [
+    "41898282+github-actions[bot]@users.noreply.github.com"
+   ],
+   "commits": 4,
+   "first_commit": "2026-02-20",
+   "last_commit": "2026-03-02",
+   "is_bot": true
+  },
+  {
+   "name": "Jun Jie",
+   "aliases": [],
+   "emails": [
+    "ongjunjie@hotmail.com",
+    "ongjunjie@programmer.net"
+   ],
+   "commits": 4,
+   "first_commit": "2017-08-10",
+   "last_commit": "2025-06-24",
+   "is_bot": false
+  },
+  {
+   "name": "Mike Woodworth",
+   "aliases": [
+    "mike woodworth"
+   ],
+   "emails": [
+    "mike@divergentmedia.com"
+   ],
+   "commits": 4,
+   "first_commit": "2017-02-28",
+   "last_commit": "2024-01-16",
+   "is_bot": false
+  },
+  {
+   "name": "Luke Anderson",
+   "aliases": [],
+   "emails": [
+    "aekul@users.noreply.github.com"
+   ],
+   "commits": 4,
+   "first_commit": "2023-04-03",
+   "last_commit": "2023-08-21",
+   "is_bot": false
+  },
+  {
+   "name": "Svenn-Arne Dragly",
+   "aliases": [],
+   "emails": [
+    "s@dragly.com",
+    "svenn.arne.dragly@zivid.com"
+   ],
+   "commits": 4,
+   "first_commit": "2020-09-02",
+   "last_commit": "2023-04-13",
+   "is_bot": false
+  },
+  {
+   "name": "Terry Heo",
+   "aliases": [],
+   "emails": [
+    "terryheo@google.com"
+   ],
+   "commits": 4,
+   "first_commit": "2023-02-07",
+   "last_commit": "2023-03-03",
+   "is_bot": false
+  },
+  {
+   "name": "Min RK",
+   "aliases": [],
+   "emails": [
+    "benjaminrk@gmail.com"
+   ],
+   "commits": 4,
+   "first_commit": "2017-03-05",
+   "last_commit": "2020-01-30",
+   "is_bot": false
+  },
+  {
+   "name": "Jonathan L Long",
+   "aliases": [],
+   "emails": [
+    "jonlong@cs.berkeley.edu",
+    "jonlong@gmail.com"
+   ],
+   "commits": 4,
+   "first_commit": "2015-11-07",
+   "last_commit": "2019-07-30",
+   "is_bot": false
+  },
+  {
+   "name": "Sahar Fatima",
+   "aliases": [],
+   "emails": [
+    "c_sfatim@blr-ubuntu-143.ap.qualcomm.com"
+   ],
+   "commits": 4,
+   "first_commit": "2018-09-19",
+   "last_commit": "2018-10-29",
+   "is_bot": false
+  },
+  {
+   "name": "Andrew Casper",
+   "aliases": [],
+   "emails": [
+    "acasper@google.com"
+   ],
+   "commits": 4,
+   "first_commit": "2017-12-11",
+   "last_commit": "2017-12-15",
+   "is_bot": false
+  },
+  {
+   "name": "poxvoculi",
+   "aliases": [],
+   "emails": [
+    "paul.tucker@gmail.com"
+   ],
+   "commits": 4,
+   "first_commit": "2016-04-20",
+   "last_commit": "2016-04-20",
+   "is_bot": false
+  },
+  {
+   "name": "Kevin Wampler",
+   "aliases": [
+    "wampler"
+   ],
+   "emails": [
+    "kwampler@adobe.com"
+   ],
+   "commits": 4,
+   "first_commit": "2012-10-02",
+   "last_commit": "2016-03-03",
+   "is_bot": false
+  },
+  {
+   "name": "Jim",
+   "aliases": [],
+   "emails": [
+    "jmccann@adobe.com"
+   ],
+   "commits": 4,
+   "first_commit": "2012-04-12",
+   "last_commit": "2012-07-30",
+   "is_bot": false
+  },
+  {
+   "name": "John Ingve Schj\u00f8lberg",
+   "aliases": [],
+   "emails": [
+    "johningveolsen@gmail.com"
+   ],
+   "commits": 3,
+   "first_commit": "2026-07-24",
+   "last_commit": "2026-08-09",
+   "is_bot": false
+  },
+  {
+   "name": "Fabian Schuetze",
+   "aliases": [],
+   "emails": [
+    "fabian.schutze@eui.eu"
+   ],
+   "commits": 3,
+   "first_commit": "2024-04-11",
+   "last_commit": "2026-08-09",
+   "is_bot": false
+  },
+  {
+   "name": "John Laxson",
+   "aliases": [],
+   "emails": [
+    "jlaxson@mac.com"
+   ],
+   "commits": 3,
+   "first_commit": "2020-10-05",
+   "last_commit": "2020-11-04",
+   "is_bot": false
+  },
+  {
+   "name": "Tal Ben-Nun",
+   "aliases": [],
+   "emails": [
+    "tbennun@users.noreply.github.com"
+   ],
+   "commits": 3,
+   "first_commit": "2018-06-24",
+   "last_commit": "2018-07-27",
+   "is_bot": false
+  },
+  {
+   "name": "Aly, Mohamed",
+   "aliases": [],
+   "emails": [
+    "maly@irobot.com"
+   ],
+   "commits": 3,
+   "first_commit": "2018-05-31",
+   "last_commit": "2018-06-01",
+   "is_bot": false
+  },
+  {
+   "name": "Aditya Atluri",
+   "aliases": [],
+   "emails": [
+    "aditya.atluri@amd.com"
+   ],
+   "commits": 3,
+   "first_commit": "2018-02-06",
+   "last_commit": "2018-02-06",
+   "is_bot": false
+  },
+  {
+   "name": "Francisco Facioni",
+   "aliases": [],
+   "emails": [
+    "fran6co@gmail.com",
+    "francisco.facioni@hawkeyeinnovations.com"
+   ],
+   "commits": 3,
+   "first_commit": "2017-06-20",
+   "last_commit": "2017-11-16",
+   "is_bot": false
+  },
+  {
+   "name": "Piotr Rak",
+   "aliases": [],
+   "emails": [
+    "piotr.rak@gmail.com"
+   ],
+   "commits": 3,
+   "first_commit": "2017-03-02",
+   "last_commit": "2017-03-15",
+   "is_bot": false
+  },
+  {
+   "name": "Jaakko Tuosa",
+   "aliases": [],
+   "emails": [
+    "jaakko.tuosa@nokia.com"
+   ],
+   "commits": 3,
+   "first_commit": "2014-05-28",
+   "last_commit": "2014-12-05",
+   "is_bot": false
+  },
+  {
+   "name": "Aiden Grossman",
+   "aliases": [],
+   "emails": [
+    "agrossman154@yahoo.com"
+   ],
+   "commits": 2,
+   "first_commit": "2025-12-11",
+   "last_commit": "2025-12-11",
+   "is_bot": false
+  },
+  {
+   "name": "Ryan Zambrotta",
+   "aliases": [],
+   "emails": [
+    "rzambrotta@adobe.com"
+   ],
+   "commits": 2,
+   "first_commit": "2025-08-21",
+   "last_commit": "2025-09-02",
+   "is_bot": false
+  },
+  {
+   "name": "Prasoon Mishra",
+   "aliases": [],
+   "emails": [
+    "132343640+prasmish@users.noreply.github.com",
+    "quic_prasmish@quicinc.com"
+   ],
+   "commits": 2,
+   "first_commit": "2024-02-07",
+   "last_commit": "2024-03-07",
+   "is_bot": false
+  },
+  {
+   "name": "Tom Westerhout",
+   "aliases": [],
+   "emails": [
+    "14264576+twesterhout@users.noreply.github.com"
+   ],
+   "commits": 2,
+   "first_commit": "2023-02-01",
+   "last_commit": "2024-01-09",
+   "is_bot": false
+  },
+  {
+   "name": "Ttayu",
+   "aliases": [],
+   "emails": [
+    "32290119+ttayu@users.noreply.github.com"
+   ],
+   "commits": 2,
+   "first_commit": "2023-03-11",
+   "last_commit": "2023-03-12",
+   "is_bot": false
+  },
+  {
+   "name": "Fangrui Song",
+   "aliases": [],
+   "emails": [
+    "i@maskray.me",
+    "maskray@google.com"
+   ],
+   "commits": 2,
+   "first_commit": "2021-04-29",
+   "last_commit": "2022-09-07",
+   "is_bot": false
+  },
+  {
+   "name": "Basile Clement",
+   "aliases": [],
+   "emails": [
+    "elarnon@users.noreply.github.com"
+   ],
+   "commits": 2,
+   "first_commit": "2021-10-05",
+   "last_commit": "2022-02-14",
+   "is_bot": false
+  },
+  {
+   "name": "Ashish Uthama",
+   "aliases": [],
+   "emails": [
+    "ashish.uthama@gmail.com",
+    "you@example.com"
+   ],
+   "commits": 2,
+   "first_commit": "2019-11-19",
+   "last_commit": "2021-11-18",
+   "is_bot": false
+  },
+  {
+   "name": "Thales Sabino",
+   "aliases": [],
+   "emails": [
+    "tluisrs@gmail.com"
+   ],
+   "commits": 2,
+   "first_commit": "2021-03-30",
+   "last_commit": "2021-10-21",
+   "is_bot": false
+  },
+  {
+   "name": "Evan Lee",
+   "aliases": [],
+   "emails": [
+    "54553658+evanleenyc@users.noreply.github.com"
+   ],
+   "commits": 2,
+   "first_commit": "2021-06-15",
+   "last_commit": "2021-08-04",
+   "is_bot": false
+  },
+  {
+   "name": "Kai Wolf",
+   "aliases": [],
+   "emails": [
+    "kai.wolf@gmail.com"
+   ],
+   "commits": 2,
+   "first_commit": "2020-09-22",
+   "last_commit": "2021-06-28",
+   "is_bot": false
+  },
+  {
+   "name": "Shivam Gupta",
+   "aliases": [],
+   "emails": [
+    "shivam98.tkg@rediffmail.com"
+   ],
+   "commits": 2,
+   "first_commit": "2021-03-30",
+   "last_commit": "2021-04-23",
+   "is_bot": false
+  },
+  {
+   "name": "Alexei Colin",
+   "aliases": [],
+   "emails": [
+    "acolin@isi.edu"
+   ],
+   "commits": 2,
+   "first_commit": "2020-06-08",
+   "last_commit": "2020-07-07",
+   "is_bot": false
+  },
+  {
+   "name": "Developer Ecosystem Engineering",
+   "aliases": [],
+   "emails": [
+    "developerecosystemengineering@apple.com"
+   ],
+   "commits": 2,
+   "first_commit": "2020-06-25",
+   "last_commit": "2020-06-29",
+   "is_bot": false
+  },
+  {
+   "name": "Martin Roa Villescas",
+   "aliases": [],
+   "emails": [
+    "m.roa.villescas@tue.nl"
+   ],
+   "commits": 2,
+   "first_commit": "2020-03-25",
+   "last_commit": "2020-03-26",
+   "is_bot": false
+  },
+  {
+   "name": "Marc Peter",
+   "aliases": [],
+   "emails": [
+    "macpete@gmx.de",
+    "marc.peter@solectrix.de"
+   ],
+   "commits": 2,
+   "first_commit": "2018-09-28",
+   "last_commit": "2019-05-18",
+   "is_bot": false
+  },
+  {
+   "name": "pontiusplatypus",
+   "aliases": [],
+   "emails": [
+    "28521495+pontiusplatypus@users.noreply.github.com"
+   ],
+   "commits": 2,
+   "first_commit": "2017-11-09",
+   "last_commit": "2017-11-09",
+   "is_bot": false
+  },
+  {
+   "name": "Rackover, Zvi",
+   "aliases": [],
+   "emails": [
+    "zvi.rackover@intel.com"
+   ],
+   "commits": 2,
+   "first_commit": "2016-11-22",
+   "last_commit": "2016-11-30",
+   "is_bot": false
+  },
+  {
+   "name": "Shoaib Meenai",
+   "aliases": [],
+   "emails": [
+    "smeenai@fb.com"
+   ],
+   "commits": 2,
+   "first_commit": "2016-09-07",
+   "last_commit": "2016-09-07",
+   "is_bot": false
+  },
+  {
+   "name": "Masahiro Wada",
+   "aliases": [],
+   "emails": [
+    "argon.argon.argon@gmail.com"
+   ],
+   "commits": 2,
+   "first_commit": "2016-03-27",
+   "last_commit": "2016-03-27",
+   "is_bot": false
+  },
+  {
+   "name": "unknown",
+   "aliases": [],
+   "emails": [
+    "schuttek@pc-14444.tsn.tno.nl"
+   ],
+   "commits": 2,
+   "first_commit": "2016-01-10",
+   "last_commit": "2016-01-10",
+   "is_bot": false
+  },
+  {
+   "name": "Spencer Whitt",
+   "aliases": [],
+   "emails": [
+    "sw@swhitt.me"
+   ],
+   "commits": 2,
+   "first_commit": "2015-12-03",
+   "last_commit": "2015-12-03",
+   "is_bot": false
+  },
+  {
+   "name": "bobobo1618",
+   "aliases": [],
+   "emails": [
+    "bobobo1618@users.noreply.github.com"
+   ],
+   "commits": 2,
+   "first_commit": "2015-10-24",
+   "last_commit": "2015-10-29",
+   "is_bot": false
+  },
+  {
+   "name": "Dan Tull",
+   "aliases": [],
+   "emails": [
+    "dtull@adobe.com"
+   ],
+   "commits": 2,
+   "first_commit": "2015-08-05",
+   "last_commit": "2015-08-05",
+   "is_bot": false
+  },
+  {
+   "name": "Zachary Dremann",
+   "aliases": [],
+   "emails": [
+    "dremann@gmail.com"
+   ],
+   "commits": 2,
+   "first_commit": "2014-08-16",
+   "last_commit": "2014-08-16",
+   "is_bot": false
+  },
+  {
+   "name": "\u9646\u51a0\u7fa4",
+   "aliases": [],
+   "emails": [
+    "guanqun.lu@gmail.com"
+   ],
+   "commits": 2,
+   "first_commit": "2014-08-15",
+   "last_commit": "2014-08-15",
+   "is_bot": false
+  },
+  {
+   "name": "rajeshgangam",
+   "aliases": [],
+   "emails": [
+    "rajeshgangam@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2026-07-16",
+   "last_commit": "2026-07-16",
+   "is_bot": false
+  },
+  {
+   "name": "Piotr Kubaj",
+   "aliases": [],
+   "emails": [
+    "pkubaj@freebsd.org"
+   ],
+   "commits": 1,
+   "first_commit": "2026-07-09",
+   "last_commit": "2026-07-09",
+   "is_bot": false
+  },
+  {
+   "name": "Copilot",
+   "aliases": [],
+   "emails": [
+    "198982749+copilot@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2026-06-02",
+   "last_commit": "2026-06-02",
+   "is_bot": false
+  },
+  {
+   "name": "SoufianeKHIAT",
+   "aliases": [],
+   "emails": [
+    "soufiane.khiat@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2026-05-19",
+   "last_commit": "2026-05-19",
+   "is_bot": false
+  },
+  {
+   "name": "halide-llvm-updater[bot]",
+   "aliases": [],
+   "emails": [
+    "266445882+halide-llvm-updater[bot]@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2026-03-08",
+   "last_commit": "2026-03-08",
+   "is_bot": true
+  },
+  {
+   "name": "Vaibhav Awale",
+   "aliases": [],
+   "emails": [
+    "vaibhavawale3@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2025-08-14",
+   "last_commit": "2025-08-14",
+   "is_bot": false
+  },
+  {
+   "name": "Changhoon Sung",
+   "aliases": [],
+   "emails": [
+    "changhoon.dev@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2025-05-08",
+   "last_commit": "2025-05-08",
+   "is_bot": false
+  },
+  {
+   "name": "Ralf W. Grosse-Kunstleve",
+   "aliases": [],
+   "emails": [
+    "rwgkio@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2024-08-03",
+   "last_commit": "2024-08-03",
+   "is_bot": false
+  },
+  {
+   "name": "Li-Huai (Allan) Lin",
+   "aliases": [],
+   "emails": [
+    "qqaatw@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2024-06-27",
+   "last_commit": "2024-06-27",
+   "is_bot": false
+  },
+  {
+   "name": "Yueming Hao",
+   "aliases": [],
+   "emails": [
+    "findhao@outlook.com"
+   ],
+   "commits": 1,
+   "first_commit": "2024-06-25",
+   "last_commit": "2024-06-25",
+   "is_bot": false
+  },
+  {
+   "name": "aankit-quic",
+   "aliases": [],
+   "emails": [
+    "166656642+aankit-quic@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2024-04-19",
+   "last_commit": "2024-04-19",
+   "is_bot": false
+  },
+  {
+   "name": "Tarushii Goel",
+   "aliases": [],
+   "emails": [
+    "tishi.tng@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2024-02-19",
+   "last_commit": "2024-02-19",
+   "is_bot": false
+  },
+  {
+   "name": "Teo",
+   "aliases": [],
+   "emails": [
+    "wraith1995@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2024-02-06",
+   "last_commit": "2024-02-06",
+   "is_bot": false
+  },
+  {
+   "name": "Tyler Hou",
+   "aliases": [],
+   "emails": [
+    "tylerhoucs@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2024-01-02",
+   "last_commit": "2024-01-02",
+   "is_bot": false
+  },
+  {
+   "name": "Haojian Wu",
+   "aliases": [],
+   "emails": [
+    "hokein.wu@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2023-11-09",
+   "last_commit": "2023-11-09",
+   "is_bot": false
+  },
+  {
+   "name": "philboske",
+   "aliases": [],
+   "emails": [
+    "philboske@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2023-05-16",
+   "last_commit": "2023-05-16",
+   "is_bot": false
+  },
+  {
+   "name": "Dmitry Babokin",
+   "aliases": [],
+   "emails": [
+    "dmitry.y.babokin@intel.com"
+   ],
+   "commits": 1,
+   "first_commit": "2023-05-02",
+   "last_commit": "2023-05-02",
+   "is_bot": false
+  },
+  {
+   "name": "Maaz Ahmad",
+   "aliases": [],
+   "emails": [
+    "maaz.c10@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2023-04-11",
+   "last_commit": "2023-04-11",
+   "is_bot": false
+  },
+  {
+   "name": "\u90d1\u542f\u822a",
+   "aliases": [],
+   "emails": [
+    "597323109@qq.com"
+   ],
+   "commits": 1,
+   "first_commit": "2023-04-12",
+   "last_commit": "2023-04-12",
+   "is_bot": false
+  },
+  {
+   "name": "Yongqi",
+   "aliases": [],
+   "emails": [
+    "yongqi-zhuo@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2023-03-28",
+   "last_commit": "2023-03-28",
+   "is_bot": false
+  },
+  {
+   "name": "Adrian Lebioda",
+   "aliases": [],
+   "emails": [
+    "14971507+adrian-lebioda@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2023-02-28",
+   "last_commit": "2023-02-28",
+   "is_bot": false
+  },
+  {
+   "name": "Mikhail Usvyatsov",
+   "aliases": [],
+   "emails": [
+    "aelphy@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2023-01-25",
+   "last_commit": "2023-01-25",
+   "is_bot": false
+  },
+  {
+   "name": "Alex",
+   "aliases": [],
+   "emails": [
+    "aleksandrosansan@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2022-10-31",
+   "last_commit": "2022-10-31",
+   "is_bot": false
+  },
+  {
+   "name": "Varun Sharma",
+   "aliases": [],
+   "emails": [
+    "varunsh@stepsecurity.io"
+   ],
+   "commits": 1,
+   "first_commit": "2022-09-14",
+   "last_commit": "2022-09-14",
+   "is_bot": false
+  },
+  {
+   "name": "Frederik",
+   "aliases": [],
+   "emails": [
+    "frederik.engels@codeplay.com"
+   ],
+   "commits": 1,
+   "first_commit": "2022-08-02",
+   "last_commit": "2022-08-02",
+   "is_bot": false
+  },
+  {
+   "name": "Karthik Nishanth",
+   "aliases": [],
+   "emails": [
+    "55433069+knzivid@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2022-03-06",
+   "last_commit": "2022-03-06",
+   "is_bot": false
+  },
+  {
+   "name": "Masahiro Masuda",
+   "aliases": [],
+   "emails": [
+    "masahi129@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2022-01-19",
+   "last_commit": "2022-01-19",
+   "is_bot": false
+  },
+  {
+   "name": "Jin Yue",
+   "aliases": [],
+   "emails": [
+    "jinyue.derek@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2021-12-23",
+   "last_commit": "2021-12-23",
+   "is_bot": false
+  },
+  {
+   "name": "sksarda",
+   "aliases": [],
+   "emails": [
+    "84098132+sksarda@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2021-05-14",
+   "last_commit": "2021-05-14",
+   "is_bot": false
+  },
+  {
+   "name": "AbdouTlili",
+   "aliases": [],
+   "emails": [
+    "34886705+abdoutlili@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2021-04-28",
+   "last_commit": "2021-04-28",
+   "is_bot": false
+  },
+  {
+   "name": "Mario Emmenlauer",
+   "aliases": [],
+   "emails": [
+    "memmenlauer@biodataanalysis.de"
+   ],
+   "commits": 1,
+   "first_commit": "2021-04-12",
+   "last_commit": "2021-04-12",
+   "is_bot": false
+  },
+  {
+   "name": "Ming Yan",
+   "aliases": [],
+   "emails": [
+    "1120132531@bit.edu.cn"
+   ],
+   "commits": 1,
+   "first_commit": "2021-04-07",
+   "last_commit": "2021-04-07",
+   "is_bot": false
+  },
+  {
+   "name": "Lars",
+   "aliases": [],
+   "emails": [
+    "l.b.vandenhaak@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2021-03-10",
+   "last_commit": "2021-03-10",
+   "is_bot": false
+  },
+  {
+   "name": "prdelgado",
+   "aliases": [],
+   "emails": [
+    "6540814+paulrdelg@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2021-01-05",
+   "last_commit": "2021-01-05",
+   "is_bot": false
+  },
+  {
+   "name": "pkubaj",
+   "aliases": [],
+   "emails": [
+    "pkubaj@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2020-12-23",
+   "last_commit": "2020-12-23",
+   "is_bot": false
+  },
+  {
+   "name": "Tian Jin",
+   "aliases": [],
+   "emails": [
+    "tjingrant@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2020-11-22",
+   "last_commit": "2020-11-22",
+   "is_bot": false
+  },
+  {
+   "name": "Emil Melnikov",
+   "aliases": [],
+   "emails": [
+    "emilmelnikov@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2020-11-20",
+   "last_commit": "2020-11-20",
+   "is_bot": false
+  },
+  {
+   "name": "Mirsad Makalic",
+   "aliases": [],
+   "emails": [
+    "mirsadm@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2020-09-16",
+   "last_commit": "2020-09-16",
+   "is_bot": false
+  },
+  {
+   "name": "Joe Savage",
+   "aliases": [],
+   "emails": [
+    "joe.savage@arm.com"
+   ],
+   "commits": 1,
+   "first_commit": "2020-05-19",
+   "last_commit": "2020-05-19",
+   "is_bot": false
+  },
+  {
+   "name": "leifhelm",
+   "aliases": [],
+   "emails": [
+    "31693262+leifhelm@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2020-05-12",
+   "last_commit": "2020-05-12",
+   "is_bot": false
+  },
+  {
+   "name": "David OK",
+   "aliases": [],
+   "emails": [
+    "david.ok8@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2020-03-22",
+   "last_commit": "2020-03-22",
+   "is_bot": false
+  },
+  {
+   "name": "clutzweiler",
+   "aliases": [],
+   "emails": [
+    "58919300+clutzweiler@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-12-16",
+   "last_commit": "2019-12-16",
+   "is_bot": false
+  },
+  {
+   "name": "siddharth-krishna",
+   "aliases": [],
+   "emails": [
+    "siddharth-krishna@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-12-16",
+   "last_commit": "2019-12-16",
+   "is_bot": false
+  },
+  {
+   "name": "Timo Stich",
+   "aliases": [],
+   "emails": [
+    "timo.stich@zeiss.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-11-19",
+   "last_commit": "2019-11-19",
+   "is_bot": false
+  },
+  {
+   "name": "Peter",
+   "aliases": [],
+   "emails": [
+    "peter-d@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-10-22",
+   "last_commit": "2019-10-22",
+   "is_bot": false
+  },
+  {
+   "name": "shubhamp-ca",
+   "aliases": [],
+   "emails": [
+    "48491501+shubhamp-ca@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-09-04",
+   "last_commit": "2019-09-04",
+   "is_bot": false
+  },
+  {
+   "name": "Tiago De Gaspari",
+   "aliases": [],
+   "emails": [
+    "gaspari.tiago@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-08-07",
+   "last_commit": "2019-08-07",
+   "is_bot": false
+  },
+  {
+   "name": "Ng Zhi An",
+   "aliases": [],
+   "emails": [
+    "zhin@google.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-07-31",
+   "last_commit": "2019-07-31",
+   "is_bot": false
+  },
+  {
+   "name": "miheer vaidya",
+   "aliases": [],
+   "emails": [
+    "v.miheer@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-06-09",
+   "last_commit": "2019-06-09",
+   "is_bot": false
+  },
+  {
+   "name": "Giovanni",
+   "aliases": [],
+   "emails": [
+    "sinkingsugar@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-05-28",
+   "last_commit": "2019-05-28",
+   "is_bot": false
+  },
+  {
+   "name": "Yuka Takahashi",
+   "aliases": [],
+   "emails": [
+    "yukatkh@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-03-24",
+   "last_commit": "2019-03-24",
+   "is_bot": false
+  },
+  {
+   "name": "Fran\u00e7ois Bleibel",
+   "aliases": [],
+   "emails": [
+    "fbleibel@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-04-28",
+   "last_commit": "2019-04-28",
+   "is_bot": false
+  },
+  {
+   "name": "Karima Ma",
+   "aliases": [],
+   "emails": [
+    "karima_ma@berkeley.edu"
+   ],
+   "commits": 1,
+   "first_commit": "2019-04-26",
+   "last_commit": "2019-04-26",
+   "is_bot": false
+  },
+  {
+   "name": "K\u00e9vin Petit",
+   "aliases": [],
+   "emails": [
+    "kpet@free.fr"
+   ],
+   "commits": 1,
+   "first_commit": "2019-04-10",
+   "last_commit": "2019-04-10",
+   "is_bot": false
+  },
+  {
+   "name": "tokkot",
+   "aliases": [],
+   "emails": [
+    "tokkot@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-01-15",
+   "last_commit": "2019-01-15",
+   "is_bot": false
+  },
+  {
+   "name": "jiakai",
+   "aliases": [],
+   "emails": [
+    "jia.kai66@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2019-01-09",
+   "last_commit": "2019-01-09",
+   "is_bot": false
+  },
+  {
+   "name": "Misha Brukman",
+   "aliases": [],
+   "emails": [
+    "mbrukman@google.com"
+   ],
+   "commits": 1,
+   "first_commit": "2018-12-27",
+   "last_commit": "2018-12-27",
+   "is_bot": false
+  },
+  {
+   "name": "Alexander (Zan) Bridi",
+   "aliases": [],
+   "emails": [
+    "zanbridi@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2018-08-23",
+   "last_commit": "2018-08-23",
+   "is_bot": false
+  },
+  {
+   "name": "Shunning Jiang",
+   "aliases": [],
+   "emails": [
+    "jiangshunning@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2018-06-28",
+   "last_commit": "2018-06-28",
+   "is_bot": false
+  },
+  {
+   "name": "Saleem Abdulrasool",
+   "aliases": [],
+   "emails": [
+    "compnerd@compnerd.org"
+   ],
+   "commits": 1,
+   "first_commit": "2018-05-22",
+   "last_commit": "2018-05-22",
+   "is_bot": false
+  },
+  {
+   "name": "hanhanW",
+   "aliases": [],
+   "emails": [
+    "hanhanw@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2018-04-29",
+   "last_commit": "2018-04-29",
+   "is_bot": false
+  },
+  {
+   "name": "WillBrennan",
+   "aliases": [],
+   "emails": [
+    "willbrennan@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2018-03-15",
+   "last_commit": "2018-03-15",
+   "is_bot": false
+  },
+  {
+   "name": "Ruiling Song",
+   "aliases": [],
+   "emails": [
+    "ruiling.song@intel.com"
+   ],
+   "commits": 1,
+   "first_commit": "2017-11-24",
+   "last_commit": "2017-11-24",
+   "is_bot": false
+  },
+  {
+   "name": "Jon Chappelow",
+   "aliases": [],
+   "emails": [
+    "chappjc@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2017-08-29",
+   "last_commit": "2017-08-29",
+   "is_bot": false
+  },
+  {
+   "name": "Maarten Bosmans",
+   "aliases": [],
+   "emails": [
+    "maarten@vortech.nl"
+   ],
+   "commits": 1,
+   "first_commit": "2017-08-19",
+   "last_commit": "2017-08-19",
+   "is_bot": false
+  },
+  {
+   "name": "mcragun",
+   "aliases": [],
+   "emails": [
+    "mcragun@nvidia.com"
+   ],
+   "commits": 1,
+   "first_commit": "2017-08-14",
+   "last_commit": "2017-08-14",
+   "is_bot": false
+  },
+  {
+   "name": "Julien Dehos",
+   "aliases": [],
+   "emails": [
+    "dehos@univ-littoral.fr"
+   ],
+   "commits": 1,
+   "first_commit": "2017-08-07",
+   "last_commit": "2017-08-07",
+   "is_bot": false
+  },
+  {
+   "name": "Marc-Andre\u0301 Moreau",
+   "aliases": [],
+   "emails": [
+    "mamoreau@devolutions.net"
+   ],
+   "commits": 1,
+   "first_commit": "2017-07-21",
+   "last_commit": "2017-07-21",
+   "is_bot": false
+  },
+  {
+   "name": "Christian Sachs",
+   "aliases": [],
+   "emails": [
+    "c.sachs@fz-juelich.de"
+   ],
+   "commits": 1,
+   "first_commit": "2016-06-16",
+   "last_commit": "2016-06-16",
+   "is_bot": false
+  },
+  {
+   "name": "shrutisharmavsco",
+   "aliases": [],
+   "emails": [
+    "shrutisharmavsco@users.noreply.github.com"
+   ],
+   "commits": 1,
+   "first_commit": "2016-05-02",
+   "last_commit": "2016-05-02",
+   "is_bot": false
+  },
+  {
+   "name": "Yuxin Wu",
+   "aliases": [],
+   "emails": [
+    "ppwwyyxxc@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2016-03-19",
+   "last_commit": "2016-03-19",
+   "is_bot": false
+  },
+  {
+   "name": "Sam Hasinoff",
+   "aliases": [],
+   "emails": [
+    "hasinoff@google.com"
+   ],
+   "commits": 1,
+   "first_commit": "2015-07-20",
+   "last_commit": "2015-07-20",
+   "is_bot": false
+  },
+  {
+   "name": "pankonop",
+   "aliases": [],
+   "emails": [
+    "pankonop@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2015-07-08",
+   "last_commit": "2015-07-08",
+   "is_bot": false
+  },
+  {
+   "name": "sting47",
+   "aliases": [],
+   "emails": [
+    "sting47@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2015-04-24",
+   "last_commit": "2015-04-24",
+   "is_bot": false
+  },
+  {
+   "name": "unknown",
+   "aliases": [],
+   "emails": [
+    "halidenightly@lagrange.ad.corp.google.com"
+   ],
+   "commits": 1,
+   "first_commit": "2015-04-14",
+   "last_commit": "2015-04-14",
+   "is_bot": true
+  },
+  {
+   "name": "Mingjie Xing",
+   "aliases": [],
+   "emails": [
+    "mingjie.xing@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2014-12-05",
+   "last_commit": "2014-12-05",
+   "is_bot": false
+  },
+  {
+   "name": "Pekka J\u00e4\u00e4skel\u00e4inen",
+   "aliases": [],
+   "emails": [
+    "pekka.jaaskelainen@tut.fi"
+   ],
+   "commits": 1,
+   "first_commit": "2014-11-27",
+   "last_commit": "2014-11-27",
+   "is_bot": false
+  },
+  {
+   "name": "Philippe",
+   "aliases": [],
+   "emails": [
+    "philippe.crassous@ubisoft.org"
+   ],
+   "commits": 1,
+   "first_commit": "2014-09-22",
+   "last_commit": "2014-09-22",
+   "is_bot": false
+  },
+  {
+   "name": "U-user-THINK\\user",
+   "aliases": [],
+   "emails": [
+    "user@user-think.(none)"
+   ],
+   "commits": 1,
+   "first_commit": "2014-09-17",
+   "last_commit": "2014-09-17",
+   "is_bot": false
+  },
+  {
+   "name": "Richard Membarth",
+   "aliases": [],
+   "emails": [
+    "richard.membarth@uni-saarland.de"
+   ],
+   "commits": 1,
+   "first_commit": "2014-09-05",
+   "last_commit": "2014-09-05",
+   "is_bot": false
+  },
+  {
+   "name": "Neta Zmora",
+   "aliases": [],
+   "emails": [
+    "neta.zmora@intel.com"
+   ],
+   "commits": 1,
+   "first_commit": "2014-06-29",
+   "last_commit": "2014-06-29",
+   "is_bot": false
+  },
+  {
+   "name": "Victor Oliveira",
+   "aliases": [],
+   "emails": [
+    "victormatheus@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2013-12-15",
+   "last_commit": "2013-12-15",
+   "is_bot": false
+  },
+  {
+   "name": "Gerrit Code Review",
+   "aliases": [],
+   "emails": [
+    "gerrit@fmygit6002.fm.intel.com"
+   ],
+   "commits": 1,
+   "first_commit": "2013-10-30",
+   "last_commit": "2013-10-30",
+   "is_bot": false
+  },
+  {
+   "name": "pmoulon",
+   "aliases": [],
+   "emails": [
+    "pmoulon@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2013-06-22",
+   "last_commit": "2013-06-22",
+   "is_bot": false
+  },
+  {
+   "name": "Vladimir Bychkovsky",
+   "aliases": [],
+   "emails": [
+    "vladimir.bychkovsky@gmail.com"
+   ],
+   "commits": 1,
+   "first_commit": "2013-02-27",
+   "last_commit": "2013-02-27",
+   "is_bot": false
+  }
+ ]
+}

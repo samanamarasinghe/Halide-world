@@ -1,0 +1,548 @@
+[
+ [
+  [
+   "AI Chip Center for Emerging Smart Systems,China",
+   "CHI Systems (United States)"
+  ],
+  10
+ ],
+ [
+  [
+   "KAUST, Thuwal, Saudi Arabia",
+   "King Abdullah University of Science and Technology"
+  ],
+  7
+ ],
+ [
+  [
+   "CA, US",
+   "CollegeAmerica"
+  ],
+  5
+ ],
+ [
+  [
+   "EPFL, Switzerland",
+   "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne"
+  ],
+  5
+ ],
+ [
+  [
+   "Quarkslab, Paris",
+   "Quark Pharmaceuticals (United States)"
+  ],
+  4
+ ],
+ [
+  [
+   "DFKI, Germany",
+   "German Research Centre for Artificial Intelligence"
+  ],
+  4
+ ],
+ [
+  [
+   "College of Computer, National University of Defence Technology, 410073 Changsha, China",
+   "National University of Defense Technology"
+  ],
+  4
+ ],
+ [
+  [
+   "SENAI CIMATEC, Salvador, Brazil",
+   "Servi\u00e7o Nacional de Aprendizagem Industrial"
+  ],
+  4
+ ],
+ [
+  [
+   "EPITA Research and Development Laboratory, Le Kremlin-Bic\u00eatre, France",
+   "\u00c9cole Pour l'Informatique et les Techniques Avanc\u00e9es"
+  ],
+  3
+ ],
+ [
+  [
+   "Du Xiaoman Technology Co., Ltd",
+   "Xiaomi (China)"
+  ],
+  3
+ ],
+ [
+  [
+   "Red Hat Inc",
+   "Red Hat (United States)"
+  ],
+  3
+ ],
+ [
+  [
+   "SmartMore",
+   "SMART Reading"
+  ],
+  3
+ ],
+ [
+  [
+   "Stream Computing Inc",
+   "Computing Center"
+  ],
+  3
+ ],
+ [
+  [
+   "Univ. Gent (Belgium)",
+   "Ghent University"
+  ],
+  3
+ ],
+ [
+  [
+   "KTH, Sweden",
+   "KTH Royal Institute of Technology"
+  ],
+  3
+ ],
+ [
+  [
+   "POSTECH, South Korea",
+   "Pohang University of Science and Technology"
+  ],
+  3
+ ],
+ [
+  [
+   "EPITA Research Laboratory, France",
+   "\u00c9cole Pour l'Informatique et les Techniques Avanc\u00e9es"
+  ],
+  3
+ ],
+ [
+  [
+   "ONERA, France",
+   "Office National d'\u00c9tudes et de Recherches A\u00e9rospatiales"
+  ],
+  3
+ ],
+ [
+  [
+   "UCSD, La Jolla, USA",
+   "University of California San Diego"
+  ],
+  3
+ ],
+ [
+  [
+   "Instituto de Inform\u00e1tica, UFRGS, Porto Alegre, RS, Brazil",
+   "Universidade Federal do Rio Grande do Sul"
+  ],
+  2
+ ],
+ [
+  [
+   "Krig Research, Folsom, USA",
+   "KRI"
+  ],
+  2
+ ],
+ [
+  [
+   "LHCb Experiment, CERN, Geneva, Switzerland",
+   "European Organization for Nuclear Research"
+  ],
+  2
+ ],
+ [
+  [
+   "ECE and Coordinated Science Lab, UIUC",
+   "International University of the Caribbean"
+  ],
+  2
+ ],
+ [
+  [
+   "Samsung AI Centre (SAIC), Toronto, Canada",
+   "Centre for Social Innovation"
+  ],
+  2
+ ],
+ [
+  [
+   "PES Institute of Technology,Department of Computer Science and Engineering,Bangalore,560100",
+   "PES University"
+  ],
+  2
+ ],
+ [
+  [
+   "PES University,Department of Computer Science and Engineering,Bangalore,560100",
+   "PES University"
+  ],
+  2
+ ],
+ [
+  [
+   "ARM Research",
+   "American Rock Mechanics Association"
+  ],
+  2
+ ],
+ [
+  [
+   "Instituto de Inform\u00e1tica - UFRGS, Porto Alegre, RS, Brazil",
+   "Universidade Federal do Rio Grande do Sul"
+  ],
+  2
+ ],
+ [
+  [
+   "KAUST",
+   "Kootenay Association for Science & Technology"
+  ],
+  2
+ ],
+ [
+  [
+   "IRISA, Rennes, France",
+   "Institut de Recherche en Informatique et Syst\u00e8mes Al\u00e9atoires"
+  ],
+  2
+ ],
+ [
+  [
+   "Xi'an Traffic Engineering Institute, China",
+   "Xi'an Railway Survey and Design Institute"
+  ],
+  2
+ ],
+ [
+  [
+   "University of Science and Technology",
+   "University of Science and Technology"
+  ],
+  2
+ ],
+ [
+  [
+   "TIMA, University Grenoble Alpes, Grenoble, France",
+   "Techniques of Informatics and Microelectronics for Integrated Systems Architecture"
+  ],
+  2
+ ],
+ [
+  [
+   "Technische Universit\u00e4t M\u00fcnchen",
+   "Technical University of Munich"
+  ],
+  2
+ ],
+ [
+  [
+   "HKUST",
+   "Hong Kong University of Science and Technology"
+  ],
+  2
+ ],
+ [
+  [
+   "ENSTA-ParisTech, Palaiseau CEDEX, France",
+   "\u00c9cole Nationale Sup\u00e9rieure de Techniques Avanc\u00e9es"
+  ],
+  2
+ ],
+ [
+  [
+   "Sapienza University of Rome, Rome, Italy",
+   "Universit\u00e0 della Svizzera italiana"
+  ],
+  1
+ ],
+ [
+  [
+   "Department of Telecommunications and Information Processing, Ghent University, Sint-Pietersnieuwstraat 41, 9000, Ghent, Belgium",
+   "Vlaams Instituut voor Biotechnologie"
+  ],
+  1
+ ],
+ [
+  [
+   "Inflammation Research Center, Flanders Institute for Biotechnology, Technologiepark 927, Zwijnaarde, 9052, Ghent, Belgium",
+   "Vlaams Instituut voor Biotechnologie"
+  ],
+  1
+ ],
+ [
+  [
+   "School of Experimental Center, The Open University of Maoming, Maoming, 525000, GuangDong, China",
+   "Hong Kong Metropolitan University"
+  ],
+  1
+ ],
+ [
+  [
+   "Krig Research",
+   "KRI"
+  ],
+  1
+ ],
+ [
+  [
+   "High-Performance Computing & Visualization, SURF, Amsterdam, The Netherlands",
+   "Computing Center"
+  ],
+  1
+ ],
+ [
+  [
+   "Department of Mechanical Engineering, SRM University, Amaravti, India",
+   "SRM University"
+  ],
+  1
+ ],
+ [
+  [
+   "Embedded System Architecture, Technische Universit\u00e4t Berlin, Berlin, Germany",
+   "Jet Company (Czechia)"
+  ],
+  1
+ ],
+ [
+  [
+   "School of Automation and Information Engineering, Xi\u2019an University of Technology, Xi\u2019an 710048, China",
+   "Xi'an University of Technology"
+  ],
+  1
+ ],
+ [
+  [
+   "IMEC, Remisebosweg 1, 3001 Leuven, Belgium",
+   "Ghent University"
+  ],
+  1
+ ],
+ [
+  [
+   "UGent, Krijgslaan 281-S9, 9000 Gent, Belgium",
+   "Ghent University"
+  ],
+  1
+ ],
+ [
+  [
+   "CS and Coordinated Science Lab, UIUC",
+   "International University of the Caribbean"
+  ],
+  1
+ ],
+ [
+  [
+   "KTH,Stockholm,Sweden",
+   "KTH Royal Institute of Technology"
+  ],
+  1
+ ],
+ [
+  [
+   "UCSD",
+   "Universidad Cat\u00f3lica Santo Domingo"
+  ],
+  1
+ ],
+ [
+  [
+   "Department of Computer Science, PSG College of Arts & Science, Coimbatore, India",
+   "PSG INSTITUTE OF TECHNOLOGY AND APPLIED RESEARCH"
+  ],
+  1
+ ],
+ [
+  [
+   "Skywatch Inc",
+   "SK Group (South Korea)"
+  ],
+  1
+ ],
+ [
+  [
+   "Institute of Computational Science, University of Lugano, Switzerland",
+   "Universit\u00e0 della Svizzera italiana"
+  ],
+  1
+ ],
+ [
+  [
+   "PathScale Inc",
+   "Program for Appropriate Technology in Health"
+  ],
+  1
+ ],
+ [
+  [
+   "UPC BarcelonaTech,Dept. Computer Architecture",
+   "Universitat Polit\u00e8cnica de Catalunya"
+  ],
+  1
+ ],
+ [
+  [
+   "Devito Codes,Atlanta,USA",
+   "DeVry University"
+  ],
+  1
+ ],
+ [
+  [
+   "German Aerospace Center (DLR)",
+   "Deutsches Zentrum f\u00fcr Luft- und Raumfahrt e. V. (DLR)"
+  ],
+  1
+ ],
+ [
+  [
+   "Staff member at IBM, part time Professor, TU Delft",
+   "IBM (United States)"
+  ],
+  1
+ ],
+ [
+  [
+   "Institute of High Performance Computing, A*STAR,Singapore",
+   "Agency for Science, Technology and Research"
+  ],
+  1
+ ],
+ [
+  [
+   "TotalEnergies EP Research & Technology US, LLC.,Houston,TX,USA",
+   "Total (United States)"
+  ],
+  1
+ ],
+ [
+  [
+   "The Islamic University,College of Technical Engineering,Najaf,Iraq",
+   "Iraqi University"
+  ],
+  1
+ ],
+ [
+  [
+   "New Prince Shri Bhavani College Of Engineering And Technology,Tamilnadu,India",
+   "Bharath University"
+  ],
+  1
+ ],
+ [
+  [
+   "FPT Software AI Center,Hanoi,Vietnam",
+   "FPT University"
+  ],
+  1
+ ],
+ [
+  [
+   "CWI, Netherlands / University of Groningen, Netherlands",
+   "Centrum Wiskunde & Informatica"
+  ],
+  1
+ ],
+ [
+  [
+   "Arm Research",
+   "American Rock Mechanics Association"
+  ],
+  1
+ ],
+ [
+  [
+   "University of Texas at Austin, USA / VMware, USA",
+   "Kitware (United States)"
+  ],
+  1
+ ],
+ [
+  [
+   "Shanghai AI Lab, China",
+   "Beijing Academy of Artificial Intelligence"
+  ],
+  1
+ ],
+ [
+  [
+   "BEAT, Greece",
+   "Frontier Science Foundation-Hellas"
+  ],
+  1
+ ],
+ [
+  [
+   "Xi'an Jiao Tong University",
+   "Xi'an Jiaotong University"
+  ],
+  1
+ ],
+ [
+  [
+   "NYU Abu Dhabi, United Arab Emirates",
+   "Sup\u00e9lec"
+  ],
+  1
+ ],
+ [
+  [
+   "ESI, Algiers, Algeria",
+   "\u00c9cole Nationale Sup\u00e9rieure d'Informatique"
+  ],
+  1
+ ],
+ [
+  [
+   "University of Texas at Austin, Austin, Texas, United States of America",
+   "Amazon (United States)"
+  ],
+  1
+ ],
+ [
+  [
+   "Taichi Graphics, Shenzhen, China",
+   "Siemens (Hungary)"
+  ],
+  1
+ ],
+ [
+  [
+   "IBM Research, Yorktown Heights, USA",
+   "IBM (United States)"
+  ],
+  1
+ ],
+ [
+  [
+   "( . Sourcera Science and Technology Co. , Limited Hong Kong 999077",
+   "Applied Science and Technology Research Institute"
+  ],
+  1
+ ],
+ [
+  [
+   "Department of Computer Science, University of Neuchatel, Neuch\u00e2tel, Switzerland",
+   "Victoria School of Management"
+  ],
+  1
+ ],
+ [
+  [
+   "Department of Electrical and Computer Engineering and Institute for Advanced Computer Studies, University of Maryland, College Park, MD, USA",
+   "EarthTech International (United States)"
+  ],
+  1
+ ],
+ [
+  [
+   "SAIT-India, Bangalore, India",
+   "Sri Aurobindo Institute of Technology"
+  ],
+  1
+ ]
+]
