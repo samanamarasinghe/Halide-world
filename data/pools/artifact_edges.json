@@ -1,0 +1,2742 @@
+{
+ "schema_version": 1,
+ "note": "An artifact edge asserts the paper shipped this code. It does NOT assert the repo uses Halide; that is a curation judgement.",
+ "n_edges": 226,
+ "n_repos": 213,
+ "n_repos_new": 198,
+ "edges": [
+  {
+   "paper": "0136cb8abb987ed63948404e1ce682965823e2a3",
+   "title": "Looplets: A Language for Structured Coiteration",
+   "year": 2023,
+   "repo": "willow-ahrens/finch.jl",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "021bbcefc993c389bad6c1daefd8ff92d0fc2441",
+   "title": "Contrastive Code Representation Learning",
+   "year": 2021,
+   "repo": "parasj/contracode",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "0261195ae7e1545caefb0ea7afb92bd66bfbb790",
+   "title": "Glow: Graph Lowering Compiler Techniques for Neural Networks",
+   "year": 2018,
+   "repo": "pytorch/glow",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:publicly available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "026ab4ed573b3439ba89bbb193478e9ff396ef24",
+   "title": "Balsa: Learning a Query Optimizer Without Expert Demonstrations",
+   "year": 2022,
+   "repo": "balsa-project/balsa",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source",
+    "title:balsa"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "027d2b1d6a09a0df9c400fe935e93ef0918b9a38",
+   "title": "Kuiper: Correct and Efficient GPU Programming with Dependent Types and Separation Logic",
+   "year": 2026,
+   "repo": "fstarlang/kuiper",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "02a4be57475ace69f67e999b8a0c8023b256ee62",
+   "title": "Retargeting and Respecializing GPU Workloads for Performance Portability",
+   "year": 2024,
+   "repo": "llvm/polygeist",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "02c12d1ea9b018b2506c1de675db2c214e3e1c89",
+   "title": "ImaGen: A General Framework for Generating Memory- and Power-Efficient Image Processing Accelerators",
+   "year": 2023,
+   "repo": "horizon-research/imagen",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "0382a148473b9c008061d8757b8580f3e5f9a3a1",
+   "title": "Syno: Structured Synthesis for Neural Operators",
+   "year": 2025,
+   "repo": "tsinghua-ideal/syno",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:open source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "0400fc88e2249c93cc59e1a5cbc61901664c8ec6",
+   "title": "High-Performance Code Generation though Fusion and Vectorization",
+   "year": 2017,
+   "repo": "intel/hfav",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "065b316adc4589eb43cebca91faae2bbcea3d011",
+   "title": "The Next 700 Accelerated Layers",
+   "year": 2020,
+   "repo": "nicolasvasilache/tensorcomprehensions",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "095321ec64d7b1e9fb54815463d74279d62bc043",
+   "title": "Fast Kronecker Matrix-Matrix Multiplication on GPUs",
+   "year": 2024,
+   "repo": "abhijangda/fastkron",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "0a6afe62735bf0ec3097c25694b038e39b432538",
+   "title": "RaTrace: simple and efficient abstractions for BVH ray traversal algorithms",
+   "year": 2017,
+   "repo": "anydsl/traversal",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:are available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "0d9ff8227539b4091ed1a676ac32096255eb3975",
+   "title": "SLANG.D: Fast, Modular and Differentiable Shader Programming",
+   "year": 2023,
+   "repo": "nvlabs/nvdiffmodeling",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "0d9ff8227539b4091ed1a676ac32096255eb3975",
+   "title": "SLANG.D: Fast, Modular and Differentiable Shader Programming",
+   "year": 2023,
+   "repo": "nvlabs/nvdiffrec",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "0e2fa6bfa46f49dcab516c438d59664813a09360",
+   "title": "A \ud835\udeff : Autodiff for Discontinuous Programs \u2013 Applied to Shaders",
+   "year": 2022,
+   "repo": "yyuting/adelta",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "13eed8c35582619bb857e0a78a58ee9d25f6ad6e",
+   "title": "Romou: rapidly generate high-performance tensor kernels for mobile GPUs",
+   "year": 2022,
+   "repo": "microsoft/archprobe",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "14ac03260a290a8b6effa303b50f4d0fa1ae0034",
+   "title": "Iskra: A System for Inverse Geometry Processing",
+   "year": 2026,
+   "repo": "anadodik/iskra",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "153d2d5475e85638b14f52ad24eb7dbce9246b3d",
+   "title": "UniEP: Unified Expert-Parallel MoE MegaKernel for LLM Training",
+   "year": 2026,
+   "repo": "bytedance-seed/triton-distributed",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "1795a62eb1bfd952c73acb18ca81f174b0042cae",
+   "title": "Deferred neural rendering",
+   "year": 2019,
+   "repo": "microsoft/uvatlas",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "17c7d659923e616e36f4865f1457dcd80d415791",
+   "title": "Proposition d'un mod\u00e8le pour l'optimisation automatique de boucles dans le compilateur Tiramisu : cas d'optimisation de d\u00e9roulage",
+   "year": 2019,
+   "repo": "tiramisu-compiler/tiramisu",
+   "in_repo_pool": true,
+   "reasons": [
+    "title:tiramisu"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "19b5e0b1e5c95770b0e3537734f8d96d6037cfd5",
+   "title": "Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler",
+   "year": 2025,
+   "repo": "bytedance-seed/triton-distributed",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:distributed"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "1a2955b4bc88132fc676ad831c221d726248b8c1",
+   "title": "Adaptive Auto-Tuning Framework for Global Exploration of Stencil Optimization on GPUs",
+   "year": 2024,
+   "repo": "sunqingxiao/gstuner",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "1ba5bab9b7645f968ab704413f5052feca088997",
+   "title": "Dato: A Task-Based Programming Model for Dataflow Accelerators",
+   "year": 2025,
+   "repo": "cornell-zhang/allo",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "1c2d3dbc5a828890007b0ad9c4bef8e4318d4c9a",
+   "title": "CDMPP: A Device-Model Agnostic Framework for Latency Prediction of Tensor Programs",
+   "year": 2024,
+   "repo": "joapolarbear/cdmpp",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:are available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "1e9633768f6c8448347d3d6adcf06b5b59c9ccec",
+   "title": "nncase: An End-to-End Compiler for Efficient LLM Deployment on Heterogeneous Storage Architectures",
+   "year": 2025,
+   "repo": "kendryte/nncase",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "21dce185ca8f4b783e59cc6b6c404b6c047ce31c",
+   "title": "LayerDAG: A Layerwise Autoregressive Diffusion Model for Directed Acyclic Graph Generation",
+   "year": 2025,
+   "repo": "graph-com/layerdag",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:graph"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "23be5f6da58a143c6d4632166ac1fe188f3f3561",
+   "title": "Pruner: A Draft-then-Verify Exploration Mechanism to Accelerate Tensor Program Tuning",
+   "year": 2025,
+   "repo": "qiaolian9/pruner",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "248031105cc00737877ded134852d0edeb43b73c",
+   "title": "FeatGraph: A Flexible and Efficient Backend for Graph Neural Network Systems",
+   "year": 2020,
+   "repo": "dglai/featgraph",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "24e82e90f4b7dc31e94ba546411733c9f57404e5",
+   "title": "Reflection of terms in attribute grammars: Design and applications",
+   "year": 2021,
+   "repo": "melt-umn/ablec-unification",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "24e82e90f4b7dc31e94ba546411733c9f57404e5",
+   "title": "Reflection of terms in attribute grammars: Design and applications",
+   "year": 2021,
+   "repo": "melt-umn/lambda-calculus",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "24e82e90f4b7dc31e94ba546411733c9f57404e5",
+   "title": "Reflection of terms in attribute grammars: Design and applications",
+   "year": 2021,
+   "repo": "melt-umn/meta-ocaml-lite",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "24e82e90f4b7dc31e94ba546411733c9f57404e5",
+   "title": "Reflection of terms in attribute grammars: Design and applications",
+   "year": 2021,
+   "repo": "melt-umn/silver-ablec",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "24e82e90f4b7dc31e94ba546411733c9f57404e5",
+   "title": "Reflection of terms in attribute grammars: Design and applications",
+   "year": 2021,
+   "repo": "melt-umn/silver",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "24e82e90f4b7dc31e94ba546411733c9f57404e5",
+   "title": "Reflection of terms in attribute grammars: Design and applications",
+   "year": 2021,
+   "repo": "inkytonik/kiama",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "24e82e90f4b7dc31e94ba546411733c9f57404e5",
+   "title": "Reflection of terms in attribute grammars: Design and applications",
+   "year": 2021,
+   "repo": "melt-umn/ablec",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "25360591188dba8c6ca5f5c4d2a69d675c3b1864",
+   "title": "TensorRight: Automated Verification of Tensor Graph Rewrites",
+   "year": 2025,
+   "repo": "adapt-uiuc/tensorright",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "26cf961bcd9b69455e3f30af58621aaa6311c934",
+   "title": "Optimization of Halide Image Processing Schedules with Reinforcement Learning",
+   "year": 2019,
+   "repo": "mpecenin/wscad-2019",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "2714c11c0809d638e1e501831913671914407e5d",
+   "title": "MemPool: A Scalable Manycore Architecture With a Low-Latency Shared L1 Memory",
+   "year": 2023,
+   "repo": "pulp-platform/mempool",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "274a1fb36c9881a95b4b34771196adc57d86a26c",
+   "title": "OpenABL: A Domain-Specific Language for Parallel and Distributed Agent-Based Simulations",
+   "year": 2018,
+   "repo": "flamegpu/tutorial",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "281c9a64b6e19004727b46d8f23e73d17f999288",
+   "title": "Automatic Data Enumeration for Fast Collections",
+   "year": 2026,
+   "repo": "arcana-lab/memoir",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "29feeee61f9dbfc3b1e9b78d390c8c40ecb60c44",
+   "title": "A Symbolic Emulator for Shuffle Synthesis on the NVIDIA PTX Code",
+   "year": 2023,
+   "repo": "khaki3/ptxas-wrapper",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "2f4007c7559b6eee846578f60d1ec2a9392bdfa8",
+   "title": "Democratizing Domain-Specific Computing",
+   "year": 2023,
+   "repo": "xilinx/merlin-compiler",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "2f6f3164d5aa508aa3019c7f62038c10de451a78",
+   "title": "A \ud835\udeff : Autodiff for Discontinuous Programs \u2013 Applied to Shaders",
+   "year": 2022,
+   "repo": "yyuting/adelta",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "30d51a26086a6632d2ed0edd882054b46e8519a9",
+   "title": "Automating reinforcement learning architecture design for code optimization",
+   "year": 2022,
+   "repo": "huantwang/supersonic",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "31406228e15e0d6990e73eb07fc39dfffcee4352",
+   "title": "Reverse-Mode Automatic Differentiation and Optimization of GPU Kernels via Enzyme",
+   "year": 2021,
+   "repo": "wsmoses/enzyme-gpu-tests",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:gpu"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "318965feea1adca8dd6b81c5c2db696b5168de94",
+   "title": "ACC Saturator: Automatic Kernel Optimization for Directive-Based GPU Code",
+   "year": 2024,
+   "repo": "khaki3/acc-saturator",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:saturator"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "322b3d01a10bc4d649d4f415415328b9612ca6ce",
+   "title": "Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs",
+   "year": 2025,
+   "repo": "meta-llama/llama3",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "322b3d01a10bc4d649d4f415415328b9612ca6ce",
+   "title": "Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs",
+   "year": 2025,
+   "repo": "lsds/tempo",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "342fd56481179cd355abf1427847d23b56c578b0",
+   "title": "Indexed Streams: A Formal Intermediate Representation for Fused Contraction Programs",
+   "year": 2023,
+   "repo": "kovach/etch",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "author-owner"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "35189542f250aa17915b1b6ea03e3a335409ae0d",
+   "title": "ScanWeaver: Compiler-Driven Parallelization of Affine Recurrences via Associative Scan Lowering",
+   "year": 2026,
+   "repo": "qiyingwu/scanweaver",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "36ccf42c8e2963436daa6e02340cd20b533a04b7",
+   "title": "A Python-based optimization framework for high-performance genomics",
+   "year": 2020,
+   "repo": "0xtcg/haptreex",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "36ccf42c8e2963436daa6e02340cd20b533a04b7",
+   "title": "A Python-based optimization framework for high-performance genomics",
+   "year": 2020,
+   "repo": "seq-lang/seq",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "3783f1e46012925efbf1107d3476eea6b4631045",
+   "title": "Equivalence by Canonicalization for Synthesis-Backed Refactoring",
+   "year": 2024,
+   "repo": "justinlubin/cobbler",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "37a8e303d1ca9a7cbfee39f6e0563bf8da610b7b",
+   "title": "ETO: Accelerating Optimization of DNN Operators by High-Performance Tensor Program Reuse",
+   "year": 2021,
+   "repo": "experiment-code/eto",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "39500b0be259dac9595e98057df4efb7095d4dbd",
+   "title": "PolyGym: Polyhedral Optimizations as an Environment for Reinforcement Learning",
+   "year": 2021,
+   "repo": "llvm/llvm-project",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "39500b0be259dac9595e98057df4efb7095d4dbd",
+   "title": "PolyGym: Polyhedral Optimizations as an Environment for Reinforcement Learning",
+   "year": 2021,
+   "repo": "tud-ccc/polygym",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "3a29a9e6168cf1620fe76b3702e473de6f6fec67",
+   "title": "Saturn: An Optimized Data System for Multi-Large-Model Deep Learning Workloads",
+   "year": 2023,
+   "repo": "knagrecha/saturn",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "3aac89fe0acb362547ba55bd2df25edf82acbc7b",
+   "title": "Vector instruction selection for digital signal processors using program synthesis",
+   "year": 2022,
+   "repo": "uwplse/rake",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "3ae1b5b2b11568ace711ede57563d32187e6461a",
+   "title": "Building Code Transpilers for Domain-Specific Languages Using Program Synthesis (Experience Paper)",
+   "year": 2023,
+   "repo": "metalift/metalift",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:supplementary"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "3b8a4ba8b9d6e4291790c86f0c076749b50b75da",
+   "title": "\u2207-Prox: Differentiable Proximal Algorithm Modeling for Large-Scale Optimization",
+   "year": 2023,
+   "repo": "princeton-computational-imaging/delta-prox",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:prox"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "3bcce8f6d8edc9eb1a837a7f51206179e6578bbb",
+   "title": "DR.JIT",
+   "year": 2022,
+   "repo": "mitsuba-renderer/mitsuba3",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "3bfda090ce59c0556308c9f377946efb8615309c",
+   "title": "Optimal Kernel Orchestration for Tensor Programs with Korch",
+   "year": 2024,
+   "repo": "humuyan/asplos24-korch-ae",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:korch"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "3bfda090ce59c0556308c9f377946efb8615309c",
+   "title": "Optimal Kernel Orchestration for Tensor Programs with Korch",
+   "year": 2024,
+   "repo": "humuyan/korch",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "3fe84b5564868336625f0edaec69b9eeee6b8f55",
+   "title": "1 Instruction-Level Abstraction ( ILA ) : A Uniform Specification for System-on-Chip ( SoC ) Verification",
+   "year": 2018,
+   "repo": "princetonuniversity/ila-modeling-verification",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:are available",
+    "title:verification"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "4060a385ce490af742cc4420d776e37c9a02df9e",
+   "title": "Generating Systolic Array Accelerators With Reusable Blocks",
+   "year": 2020,
+   "repo": "hngenc/systolic-array",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:array"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "418857dee87aed6fdc4e1bff5ee76170baa7a41f",
+   "title": "MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
+   "year": 2025,
+   "repo": "mirage-project/mirage",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:publicly available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "42830ed2ceec7be6d279b202dd28dd2fb503beb3",
+   "title": "DBMS Fitting: Why should we learn what we already know?",
+   "year": 2020,
+   "repo": "hips/autogradr",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:source code"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "46d082480191d18d33a1c4ca2ce815ea5bd754c6",
+   "title": "Optimizing Deep Learning Inference via Global Analysis and Tensor Expressions",
+   "year": 2024,
+   "repo": "souffle-ae/souffle.git",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "496ab2c36409b80f306d2f6d2195552faf4010e3",
+   "title": "Stateful Dataflow Multigraphs: A Data-Centric Model for Performance Portability on Heterogeneous Architectures",
+   "year": 2019,
+   "repo": "spcl/dace",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:source code"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "4a03044de0831e3d411d1604ba7a0dc5c19ef7bf",
+   "title": "Optimisation of a modern numerical library: a bottom-up approach",
+   "year": 2019,
+   "repo": "jzstark/ninox",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:source code"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "4b42dbb2833d295579d3b1babd331d20c4884f07",
+   "title": "Fast Autoscheduling for Sparse ML Frameworks",
+   "year": 2026,
+   "repo": "bobbyyyan/scorch",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "4c2289fee8badf7ba942c5d58807270e7933dcfc",
+   "title": "Stream-K: Work-Centric Parallel Decomposition for Dense Matrix-Matrix Multiplication on the GPU",
+   "year": 2023,
+   "repo": "nvidia/cutlass",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "4ecca3953d572b3a39565b7583450fc092a4597c",
+   "title": "Exo 2: Growing a Scheduling Language",
+   "year": 2025,
+   "repo": "exo-lang/exo2-artifact",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:exo",
+    "named-artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "4ecca3953d572b3a39565b7583450fc092a4597c",
+   "title": "Exo 2: Growing a Scheduling Language",
+   "year": 2025,
+   "repo": "exo-lang/exoblas",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:exo"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "4ecca3953d572b3a39565b7583450fc092a4597c",
+   "title": "Exo 2: Growing a Scheduling Language",
+   "year": 2025,
+   "repo": "exo-lang/exo",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:artifact",
+    "title:exo"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "4f226dbc5d9461de72685dc7f7beac14b6450e06",
+   "title": "\u03bbA: A Typed Lambda Calculus for LLM Agent Composition",
+   "year": 2026,
+   "repo": "kenny67nju/lambdagent.1",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "5005af94ab8cde1a8aad4f37afb0c7de43f5e4c2",
+   "title": "Fast Stencil Computations using Fast Fourier Transforms",
+   "year": 2021,
+   "repo": "tealab/fftstencils",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "5054083d227c1f7e66edb14a5ef94901abb275b2",
+   "title": "Bonsai: Compiling Queries to Pruned Tree Traversals",
+   "year": 2026,
+   "repo": "rootjalex/bonsai",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "50ac3b6bb980016189c142f67e35406a2b623b08",
+   "title": "P3 problem and Magnolia language: Specializing array computations for emerging architectures",
+   "year": 2022,
+   "repo": "magnolia-lang/magnolia-lang",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available",
+    "title:magnolia"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "52dcb932a00a8db72abbb162ab2c000f6c219b41",
+   "title": "Cross-Feature Transfer Learning for Ef\ufb01cient Tensor Program Generation",
+   "year": null,
+   "repo": "xintin/transferlearn_hetfeat_tenproggen",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "52f6470de8e089370d49004a544889f28f04c62e",
+   "title": "TLP: A Deep Learning-Based Cost Model for Tensor Program Tuning",
+   "year": 2023,
+   "repo": "zhaiyi000/tlp",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "547079ea3a60b23d39e0a8958922e1a368eeecbd",
+   "title": "Precise reasoning with structured time, structured heaps, and collective operations",
+   "year": 2019,
+   "repo": "tiarkrompf/sigma",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:are available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "5550ae3b1831b50ba561d5f6c3c541069377684a",
+   "title": "TorchSparse++: Efficient Point Cloud Engine",
+   "year": 2023,
+   "repo": "mit-han-lab/torchsparse",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:released at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "5550ae3b1831b50ba561d5f6c3c541069377684a",
+   "title": "TorchSparse++: Efficient Point Cloud Engine",
+   "year": 2023,
+   "repo": "mit-han-lab/bevfusion",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "5641bde98f029f319b233192cc8e492a261caed9",
+   "title": "Layout-Agnostic MPI Abstraction for Distributed Computing in Modern C++",
+   "year": 2025,
+   "repo": "jiriklepl/noarr-mpi",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:mpi"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "565c0a34d07d7a07fd84cc2050ff39745901dec2",
+   "title": "ConvStencil: Transform Stencil Computation to Matrix Multiplication on Tensor Cores",
+   "year": 2024,
+   "repo": "microsoft/convstencil",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "56d06dc65b9af94703448d21b9acdc814d81f650",
+   "title": "Enabling RISC-V Vector Code Generation in MLIR through Custom xDSL Lowerings",
+   "year": 2026,
+   "repo": "jiegh/rvv_code_gen_via_mlir_xdsl",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:mlir,xdsl"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "5876b63c49631ddb8f769d27a5346875e4669f43",
+   "title": "InferQ: A Database-Oriented Benchmark for Quantum Circuits Simulation",
+   "year": 2026,
+   "repo": "infinidata-lab/inferq",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "5889b156cdd7b1f0ac4e0d2f9ef100edd7166cb2",
+   "title": "Optimizing Block-Sparse Matrix Multiplications on CUDA with TVM",
+   "year": 2020,
+   "repo": "ceruleangu/block-sparse",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available",
+    "title:sparse"
+   ],
+   "truncated": true
+  },
+  {
+   "paper": "61a20b95d256becc52c5a7b83989dbab6778e33c",
+   "title": "Destination-passing style for efficient memory management",
+   "year": 2017,
+   "repo": "awf/coconut",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "6255f67e4aba95075b5e30269a03fa4372c6e699",
+   "title": "nn-Meter: towards accurate latency prediction of deep-learning model inference on diverse edge devices",
+   "year": 2021,
+   "repo": "microsoft/nn-meter",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:meter"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "63e3c99d29c2cb029e46d9dfa03c4ec12aefa3a5",
+   "title": "Transparent Compiler and Runtime Specializations for Accelerating Managed Languages on FPGAs",
+   "year": 2021,
+   "repo": "beehive-lab/tornadovm",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "64d2af5337d388995148234df8e98aade35b933b",
+   "title": "Programming Abstractions and Synthesis-Aided Compilation for Emerging Computing Platforms",
+   "year": 2018,
+   "repo": "mangpo/chlorophyll",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "64d2af5337d388995148234df8e98aade35b933b",
+   "title": "Programming Abstractions and Synthesis-Aided Compilation for Emerging Computing Platforms",
+   "year": 2018,
+   "repo": "mangpo/greenthumb",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "64d2af5337d388995148234df8e98aade35b933b",
+   "title": "Programming Abstractions and Synthesis-Aided Compilation for Emerging Computing Platforms",
+   "year": 2018,
+   "repo": "mschuldt/ga144",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "64d2af5337d388995148234df8e98aade35b933b",
+   "title": "Programming Abstractions and Synthesis-Aided Compilation for Emerging Computing Platforms",
+   "year": 2018,
+   "repo": "mangpo/floem",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:can be found at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "650ffe556925a9c97d7a819a8ab10b9aae31dbdd",
+   "title": "A Unified Optimization Approach for CNN Model Inference on Integrated GPUs",
+   "year": 2019,
+   "repo": "dmlc/tvm",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "656c7ced1692bbb288225b87884200e00333775b",
+   "title": "AlphaSparse: Generating High Performance SpMV Codes Directly from Sparse Matrices",
+   "year": 2022,
+   "repo": "dumerrill/merge-spmv",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:spmv"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "65ce7c4a0a49558452c5b524d4970a9d019ffddd",
+   "title": "Correct Compilation of Semiring Contractions",
+   "year": 2022,
+   "repo": "kovach/etch",
+   "in_repo_pool": false,
+   "reasons": [
+    "author-owner"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "6abcb4ec469633f140d4f0be886e62f752479241",
+   "title": "Systematically differentiating parametric discontinuities",
+   "year": 2021,
+   "repo": "chezjrk/teg_applications",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "6f374359a7e41e5a70d25d56c88487df8cd293f4",
+   "title": "ATiM: Autotuning Tensor Programs for Processing-in-DRAM",
+   "year": 2025,
+   "repo": "snu-codelab/atim.git",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "73beece7cae691debd1a4227a3ae293b1b690e9b",
+   "title": "Counting Without Running: Evaluating LLMs' Reasoning About Code Complexity",
+   "year": 2025,
+   "repo": "scientific-computing-lab/gpuflopbench",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "74009c57ded629bf5cae2021805fbdd0f693f331",
+   "title": "Data Models for Dataset Drift Controls in Machine Learning With Optical Images",
+   "year": 2023,
+   "repo": "aiaudit-org/raw2logit",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "751b47358775539b03dca1dc84132d15d89391bd",
+   "title": "Seq: A High-Performance Language for Bioinformatics",
+   "year": 2019,
+   "repo": "amplab/snap",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:can be found at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7565a2d1843f5625f7a35d4991b7e504b1d69e39",
+   "title": "Automatic Differentiation for Adjoint Stencil Loops",
+   "year": 2019,
+   "repo": "jhueckelheim/perforad",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:we release"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "765ae4aee20af83b39c35cf81626bb85948552f1",
+   "title": "An Evaluation of Edge TPU Accelerators for Convolutional Neural Networks",
+   "year": 2022,
+   "repo": "google-research/google-research",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7695b134c6250ea44a2f4279d3e64df44d1a11da",
+   "title": "Automatic Code Generation and Optimization of Large-scale Stencil Computation on Many-core Processors",
+   "year": 2021,
+   "repo": "buaa-hipo/msc-stencil-compiler",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source",
+    "title:stencil"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "787e6403ced0aa920fbace3646efcbecbc8c3e14",
+   "title": "High-Resolution Photo Enhancement in Real-Time: A Laplacian Pyramid Network",
+   "year": 2026,
+   "repo": "fengzhang427/llf-lut",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7906159afac47695c5d87bc38baf8c75d3512c24",
+   "title": "The Sparse Abstract Machine",
+   "year": 2023,
+   "repo": "weiya711/sam-artifact",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "named-artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7906159afac47695c5d87bc38baf8c75d3512c24",
+   "title": "The Sparse Abstract Machine",
+   "year": 2023,
+   "repo": "weiya711/sam",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:publicly available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "797d9ff8179df9594970ce56f278dfefc30be8c9",
+   "title": "GRANITE: A Graph Neural Network Model for Basic Block Throughput Estimation",
+   "year": 2022,
+   "repo": "google/gematria",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "79af14ccbbdd8f386bce8ee5c6ef467171cbd45d",
+   "title": "SAIL: Sound Abstract Interpreters with LLMs",
+   "year": 2026,
+   "repo": "uiuc-focal-lab/sail",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7ae61bf6f0f48e5a544b87429e321150e167e8f0",
+   "title": "Software-Defined Imaging: A Survey",
+   "year": 2023,
+   "repo": "oiqbal95/fpga_adaptive_tracking",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7b36407564f3eecfe3f10a4ab62f84e2d556798c",
+   "title": "Arc: an IR for batch and stream programming",
+   "year": 2019,
+   "repo": "cda-group/arc",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:can be found at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7be8750e3b3d1d004b9dd91a11e0c508495969a2",
+   "title": "Mirage: A Multi-Level Superoptimizer for Tensor Programs",
+   "year": 2025,
+   "repo": "mirage-project/mirage",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:mirage"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7e33430926579d63cf31c42b3ca116d10eb8181a",
+   "title": "Neptune: Advanced ML Operator Fusion for Locality and Parallelism on GPUs",
+   "year": 2026,
+   "repo": "uiuc-arc/neptune",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7e87494443919e63bda159e906f5ca91bb3d61a0",
+   "title": "QuanTaichi: A Compiler for Quantized Simulations",
+   "year": 2021,
+   "repo": "taichi-dev/quantaichi",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "7ec26134629db00ae54fd7f046e33be9a1c641c6",
+   "title": "Compilation and Code Optimization for Data Analytics",
+   "year": 2018,
+   "repo": "awf/coconut",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "83190a55a737703f1953300816ce276aa9aefc36",
+   "title": "Neural architecture search using property guided synthesis",
+   "year": 2022,
+   "repo": "google-research/google-research",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "8414f37e5cb6cbc7abad956bac64c9caf7b62794",
+   "title": "Felix: Optimizing Tensor Programs with Gradient Descent",
+   "year": 2024,
+   "repo": "uiuc-arc/felix",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "851feb4bc316518ff9d9cc05bdef17eb857fa8e5",
+   "title": "Transfer-Tuning: Reusing Auto-Schedules for Efficient Tensor Program Code Generation",
+   "year": 2022,
+   "repo": "giclab/transfer-tuning",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:tuning"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "85de3a3af39ed39dc73bc41e021f21edd5e45792",
+   "title": "Cinnamon: A Domain-Specific Language for Binary Profiling and Monitoring",
+   "year": 2021,
+   "repo": "comparchcam/cinnamon",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "860c254f7aea5f2d04db5de51c888e5962596546",
+   "title": "Copy-and-patch compilation: a fast compilation algorithm for high-level languages and bytecode",
+   "year": 2021,
+   "repo": "sillycross/pochivm",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "860c254f7aea5f2d04db5de51c888e5962596546",
+   "title": "Copy-and-patch compilation: a fast compilation algorithm for high-level languages and bytecode",
+   "year": 2021,
+   "repo": "sillycross/wasmnow",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "87c5b281fa43e6f27191b20a8dd694eda1126336",
+   "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+   "year": 2022,
+   "repo": "hazyresearch/flash-attention",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:attention"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "87c5b281fa43e6f27191b20a8dd694eda1126336",
+   "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+   "year": 2022,
+   "repo": "nvidia/apex",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:our implementation"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "891784839461f54fb9e56da7cbcda0606fb0bf46",
+   "title": "GAMA: High-Performance GEMM Acceleration on AMD Versal ML-Optimized AI Engines",
+   "year": 2025,
+   "repo": "advent-lab/gama",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "89dd8106fcbde3f66110a11fcc923d9823440086",
+   "title": "Snippet from the Black Scholes options pricing benchmark implemented using Intel MKL",
+   "year": 2019,
+   "repo": "weld-project/split-annotations",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "8a02e3747123a605174beac0d622dff386d2a8db",
+   "title": "Coverage-guided tensor compiler fuzzing with joint IR-pass mutation",
+   "year": 2022,
+   "repo": "ise-uiuc/tzer",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "8b9c6c9a7d44ac23411f97c413e0b1a56761e6fd",
+   "title": "DNN-Chip Predictor: An Analytical Performance Predictor for DNN Accelerators with Various Dataflows and Hardware Architectures",
+   "year": 2020,
+   "repo": "rice-eic/dnn-chip-predictor",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:chip,predictor"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "8cfed15f222db9af89cd867a2fe99a83a59cb9b6",
+   "title": "Optimizing ordered graph algorithms with GraphIt",
+   "year": 2020,
+   "repo": "graphit-dsl/graphit",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:graphit"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "91b29761840442005da39bc258e2298b528f31aa",
+   "title": "Breaking the computation and communication abstraction barrier in distributed machine learning workloads",
+   "year": 2022,
+   "repo": "parasailteam/coconet",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "91cc09651bbcc232da5a6549812c4ae833c98e18",
+   "title": "Finch: Sparse and Structured Tensor Programming with Control Flow",
+   "year": 2025,
+   "repo": "finch-tensor/finchbenchmarks",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:finch",
+    "in-bibliography"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "91cc09651bbcc232da5a6549812c4ae833c98e18",
+   "title": "Finch: Sparse and Structured Tensor Programming with Control Flow",
+   "year": 2025,
+   "repo": "tensor-compiler/taco",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:tensor",
+    "in-bibliography"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9233a4d46adc39b54dc45223f9302bb6b45fa50a",
+   "title": "HDagg: Hybrid Aggregation of Loop-carried Dependence Iterations in Sparse Matrix Computations",
+   "year": 2022,
+   "repo": "behroozzare/hdagg-benchmark",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9233a4d46adc39b54dc45223f9302bb6b45fa50a",
+   "title": "HDagg: Hybrid Aggregation of Loop-carried Dependence Iterations in Sparse Matrix Computations",
+   "year": 2022,
+   "repo": "sympiler/aggregation",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "93f0df3050c2048c08f26765dc387af70f60a362",
+   "title": "AMOS: enabling automatic mapping for tensor computations on spatial accelerators with hardware abstraction",
+   "year": 2022,
+   "repo": "pku-liang/amos",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:publicly available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9404dc5c41f96a16bf9ca16f6088682d23eb4b30",
+   "title": "Optimizing data-intensive computations in existing libraries with split annotations",
+   "year": 2019,
+   "repo": "weld-project/split-annotations",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:annotations"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "95ddab6fcd670090e341b1616e3cab3ecf682f43",
+   "title": "Tackling the Matrix Multiplication Micro-Kernel Generation with Exo",
+   "year": 2024,
+   "repo": "adcastel/exo",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "95ddab6fcd670090e341b1616e3cab3ecf682f43",
+   "title": "Tackling the Matrix Multiplication Micro-Kernel Generation with Exo",
+   "year": 2024,
+   "repo": "adcastel/cgo",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9644ae9230034159ca7f2192bec26f7c9b83af3f",
+   "title": "Edinburgh Research Explorer CoSense: Compiler Optimizations using Sensor Technical Specifications",
+   "year": null,
+   "repo": "systems-nuts/cosense",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9647a92d5ab280831cad43f61cf4cc9d4905682f",
+   "title": "Astra: A Multi-Agent System for GPU Kernel Performance Optimization",
+   "year": 2025,
+   "repo": "anjiang-wei/astra",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "96fb9770ec4ca9b8e163d400d263915fe5064844",
+   "title": "HaliVer: Deductive Verification and Scheduling Languages Join Forces",
+   "year": 2024,
+   "repo": "sakehl/haliverexperiments",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:can be found at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9734b213e134675187ba569c77276004d8cb3f7c",
+   "title": "A sparse iteration space transformation framework for sparse tensor algebra",
+   "year": 2020,
+   "repo": "tensor-compiler/taco",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source",
+    "title:tensor"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "97ec1629243a06edffc7718192a777480ea71128",
+   "title": "ClangJIT: Enhancing C++ with Just-in-Time Compilation",
+   "year": 2019,
+   "repo": "hfinkel/llvm-project-cxxjit",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "991673b5db4df43847bf68a7011175d4761d0047",
+   "title": "Improving Programming Support for Hardware Accelerators Through Automata Processing Abstractions",
+   "year": 2020,
+   "repo": "kevinaangstadt/vasim",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9a0f543c3b3a8b1c0c9c44f8194c00b6de002b21",
+   "title": "BaCO: A Fast and Portable Bayesian Compiler Optimization Framework",
+   "year": 2023,
+   "repo": "baco-authors/baco",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:baco"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9a0f543c3b3a8b1c0c9c44f8194c00b6de002b21",
+   "title": "BaCO: A Fast and Portable Bayesian Compiler Optimization Framework",
+   "year": 2023,
+   "repo": "baco-authors/baco-artifact.git",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:baco",
+    "named-artifact",
+    "in-bibliography"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9a0f543c3b3a8b1c0c9c44f8194c00b6de002b21",
+   "title": "BaCO: A Fast and Portable Bayesian Compiler Optimization Framework",
+   "year": 2023,
+   "repo": "baco-authors/baco-artifact",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:baco",
+    "named-artifact",
+    "in-bibliography"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9c615553d77760919bf2f2f031de228639afd014",
+   "title": "TCL: Enabling Fast and Efficient Cross-Hardware Tensor Program Optimization via Continual Learning",
+   "year": 2026,
+   "repo": "booker0415/large-scale-tensor-program-dataset-on-rtx-3080-ti-and-intel-i7-12",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:program,tensor"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9ef22b72ee28c1cb04e07108bf3cc899ab6f5332",
+   "title": "Accelerating Legacy String Kernels via Bounded Automata Learning",
+   "year": 2020,
+   "repo": "kevinaangstadt/automata-synth",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:source code"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9f721e41c2380a494bb4c8a78139638ef5310a38",
+   "title": "RAF: Holistic Compilation for Deep Learning Model Training",
+   "year": 2023,
+   "repo": "awslabs/raf",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "9fe9c846e4885550097118ca77d5a5df2c28e96f",
+   "title": "Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs",
+   "year": 2026,
+   "repo": "hexcute/hexcute-bench",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "a12b6c79da5c251bd674dc3901e6c4f37d5559b4",
+   "title": "Galley: Modern Query Optimization for Sparse Tensor Programs",
+   "year": 2025,
+   "repo": "kylebd99/galley.jl",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "a509670659e8b054e2b7d1b6f8a0bc722398fa62",
+   "title": "PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation",
+   "year": 2024,
+   "repo": "pytorch/benchmark",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:publicly available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "a509670659e8b054e2b7d1b6f8a0bc722398fa62",
+   "title": "PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation",
+   "year": 2024,
+   "repo": "pytorch/pytorch",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "a559717fc77c041ab28e3f51ceba0ddae82547ab",
+   "title": "A compiler infrastructure for accelerator generators",
+   "year": 2021,
+   "repo": "cucapra/calyx-evaluation",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "a6cc3f1aad0743393826e955b3247dcd61fd9719",
+   "title": "Reveal training performance mystery between TensorFlow and PyTorch in the single GPU environment",
+   "year": 2021,
+   "repo": "seannaren/deepspeech.pytorch",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:pytorch"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "a7dda4a4c457ea2fa8b8c0cbdbe86514cc607512",
+   "title": "IOS: Inter-Operator Scheduler for CNN Acceleration",
+   "year": 2021,
+   "repo": "mit-han-lab/inter-operator-scheduler",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:operator,scheduler"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "a88e4bf2a8d3be9cc6f7998e97078c69b336a54e",
+   "title": "Collage: Seamless Integration of Deep Learning Backends with Automatic Placement",
+   "year": 2022,
+   "repo": "cmu-catalyst/collage",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "a9c2e887295e973c14201674d19e840274b2d20f",
+   "title": "HPCTransCompile: An AI Compiler Generated Dataset for High-Performance CUDA Transpilation and LLM Preliminary Exploration",
+   "year": 2025,
+   "repo": "pjlab-chip/hpctranscompile",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "aa6c7aa308e722bb511e606dfa4ee2dbd470a125",
+   "title": "Instruction-Level Abstraction (ILA)",
+   "year": 2019,
+   "repo": "princetonuniversity/ila-modeling-verification",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:are available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ae1cb33dbf633b8f0a9202b856e17fb1836fa0c1",
+   "title": "Easy and efficient agent-based simulations with the OpenABL language and compiler",
+   "year": 2021,
+   "repo": "isislab-unisa/dmason",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ae1cb33dbf633b8f0a9202b856e17fb1836fa0c1",
+   "title": "Easy and efficient agent-based simulations with the OpenABL language and compiler",
+   "year": 2021,
+   "repo": "flamegpu/flamegpu",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ae1cb33dbf633b8f0a9202b856e17fb1836fa0c1",
+   "title": "Easy and efficient agent-based simulations with the OpenABL language and compiler",
+   "year": 2021,
+   "repo": "flamegpu/tutorial",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ae1cb33dbf633b8f0a9202b856e17fb1836fa0c1",
+   "title": "Easy and efficient agent-based simulations with the OpenABL language and compiler",
+   "year": 2021,
+   "repo": "openabl/openabl",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ae1cb33dbf633b8f0a9202b856e17fb1836fa0c1",
+   "title": "Easy and efficient agent-based simulations with the OpenABL language and compiler",
+   "year": 2021,
+   "repo": "openabl/790",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ae4181492498ad1894d02280f6af2a248de454b3",
+   "title": "A performance portability framework for Python",
+   "year": 2021,
+   "repo": "kokkos/pykokkos",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:are available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ae464dc54a594de682fddd59479736b1e65bbf52",
+   "title": "TENET: A Framework for Modeling Tensor Dataflow Based on Relation-centric Notation",
+   "year": 2021,
+   "repo": "pku-liang/tenet",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:source code"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "af5958f026701156099245f41694acee0e599d20",
+   "title": "TenSet: A Large-scale Program Performance Dataset for Learned Tensor Compilers",
+   "year": 2021,
+   "repo": "tlc-pack/tenset",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "b007da645cc2189fa551ff7fbaa3ff9bdd3c9ef5",
+   "title": "Deep Guided Learning for Fast Multi-Exposure Image Fusion",
+   "year": 2020,
+   "repo": "makedede/mefnet",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "b0f1223e75b763b4a3579c6a546f10694792b7b0",
+   "title": "Habitat: A Runtime-Based Computational Performance Predictor for Deep Neural Network Training",
+   "year": 2021,
+   "repo": "geoffxy/habitat",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "b310c520a7c1357587a671bc4f424d23b3534b31",
+   "title": "A general construction for abstract interpretation of higher-order automatic differentiation",
+   "year": 2022,
+   "repo": "uiuc-arc/abstractad",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "b632301f92c1b16859092282b9f8e8c0996f12cd",
+   "title": "Moses: Exploiting Cross-Device Transferable Features for on-Device Tensor Program Optimization",
+   "year": 2023,
+   "repo": "kyrie-zhao/moses",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "beec5e96c8f7ee25e29f98f8dcd09e49b6fbae33",
+   "title": "Explore as a Storm, Exploit as a Raindrop: On the Benefit of Fine-Tuning Kernel Schedulers with Coordinate Descent",
+   "year": 2024,
+   "repo": "lac-dcc/bennu",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "beec5e96c8f7ee25e29f98f8dcd09e49b6fbae33",
+   "title": "Explore as a Storm, Exploit as a Raindrop: On the Benefit of Fine-Tuning Kernel Schedulers with Coordinate Descent",
+   "year": 2024,
+   "repo": "onnx/models",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "bf613617441bb40645e789ddb75b8027827f42a1",
+   "title": "Pushing Tensor Accelerators beyond MatMul in a User-Schedulable Language",
+   "year": 2026,
+   "repo": "halide/halide",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "c085b33901a11847c26cdb5b5b40f3c0352ebbc7",
+   "title": "Guided Equality Saturation",
+   "year": 2024,
+   "repo": "bastacyclop/egg-sketches",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "c142bfce3b6849ee9d6aa0d5637ab28b170fd507",
+   "title": "SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning",
+   "year": 2023,
+   "repo": "uwsampl/sparsetir-artifact",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "named-artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "c3607d87792ed6bb08c3ac4442b0e3a05bf2e15b",
+   "title": "Caviar: an e-graph based TRS for automatic code optimization",
+   "year": 2022,
+   "repo": "caviar-trs/caviar",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:caviar"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "c485924b4dac6bf46a45732dbe5569c058cb8546",
+   "title": "TpuGraphs: A Performance Prediction Dataset on Large Tensor Computational Graphs",
+   "year": 2023,
+   "repo": "google-research-datasets/tpu_graphs",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:graphs"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "c5304b0a651a34e0b679be111a2c50892148e47f",
+   "title": "Optimizing Streaming Parallelism on Heterogeneous Many-Core Architectures",
+   "year": 2020,
+   "repo": "wisdom-moon/autostreamer",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "c60e3ea97ad81b0a8454d3e762821c4cdfd21781",
+   "title": "Splitability Annotations: Optimizing Black-Box Function Composition in Existing Libraries",
+   "year": 2018,
+   "repo": "weld-project/split-annotations",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at",
+    "title:annotations"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "c999a3ef8397ed157f6e3f5d1e41ac45ea1149ec",
+   "title": "TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis",
+   "year": 2023,
+   "repo": "pku-liang/tileflow",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "cb58763d0516d7e949312347997a3f96e8ca4e0d",
+   "title": "Parallelizing Julia with a Non-Invasive DSL",
+   "year": 2017,
+   "repo": "intellabs/parallelaccelerator.jl",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:is available"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "cc8c7a302d2f0f70dd050801a3e60c9287492038",
+   "title": "Pearl: Automatic Code Optimization Using Deep Reinforcement Learning",
+   "year": 2025,
+   "repo": "modern-compilers-lab/gnn_rl_pretrain",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "cceebe411b0a0805982046bd1bdebec2ea6d4996",
+   "title": "Accelerating Nested Data Parallelism: Preserving Regularity",
+   "year": 2020,
+   "repo": "sakehl/accelerate",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "cd7c0a763ab9be4db2491319eb11a43f86b670e4",
+   "title": "Learning to Optimize by Differentiable Programming",
+   "year": 2026,
+   "repo": "convexsoft/diffprog",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "d24b6764cdae25b181d9ea39819d43938f92c3a5",
+   "title": "Scaling Instruction-Selection Verification against Authoritative ISA Semantics",
+   "year": 2025,
+   "repo": "mmcloughlin/arrival",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "d5ed39387bda324b0067e2cd3ac1f9a3c530db84",
+   "title": "Matrix-Free 3D SIMP Topology Optimization with Fused Gather-GEMM-Scatter Kernels",
+   "year": 2026,
+   "repo": "nbbllxx0/fused-gather-gemm-scatter-kernels",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:gather,gemm"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "da3b996e8b427ef3a8fca1b39e0845d950bf8e57",
+   "title": "IRONSmith: A Visual Dataflow Design Environment for AMD Ryzen AI NPUs",
+   "year": 2026,
+   "repo": "advent-lab/ironsmith",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "dac955cbb88d2fa3a8180d3442a52011071d4b94",
+   "title": "Array languages make neural networks fast",
+   "year": 2021,
+   "repo": "maratyszcza/nnpack",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "dac955cbb88d2fa3a8180d3442a52011071d4b94",
+   "title": "Array languages make neural networks fast",
+   "year": 2021,
+   "repo": "sacbase/cnn",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:can be found at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "db58757f329b76c2046ea5c46ebe68fdb10afab0",
+   "title": "Diderot: a Domain-Specific Language for Portable Parallel Scientific Visualization and Image Analysis",
+   "year": 2016,
+   "repo": "diderot-language/examples",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:diderot"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "dbb89e29f18cbf011cc31d748503a3070cf1d544",
+   "title": "Allo: A Programming Model for Composable Accelerator Design",
+   "year": 2024,
+   "repo": "cornell-zhang/allo",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "dcb25e0ebfe080947075252c7f75bf92296afe04",
+   "title": "Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation",
+   "year": 2026,
+   "repo": "yaoyaoding/tilus-artifacts",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "named-artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "dcb25e0ebfe080947075252c7f75bf92296afe04",
+   "title": "Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation",
+   "year": 2026,
+   "repo": "nvidia/tilus",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e1e18f27e4aec1648f440a526f56b66dba2e1f5c",
+   "title": "PET: Optimizing Tensor Programs with Partially Equivalent Transformations and Automated Corrections",
+   "year": 2021,
+   "repo": "thu-pacman/pet",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e30994a86d2aacc7a2eee5e9a2b9eced5a8b446c",
+   "title": "Equality Saturation Theory Exploration \u00e0 la Carte",
+   "year": 2023,
+   "repo": "uwplse/ruler",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:can be found at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e444a741ae656773a26f70139155ceaf58246a1e",
+   "title": "Lightweight, Modular Verification for WebAssembly-to-Native Instruction Selection",
+   "year": 2024,
+   "repo": "avanhatt/asplos24-ae-crocus",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e473ec16223dbd7f4c126a0fb248ef5a80f4d306",
+   "title": "Towards a Domain-Extensible Compiler: Optimizing an Image Processing Pipeline on Mobile CPUs",
+   "year": 2021,
+   "repo": "rise-lang/2021-cgo-artifact",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:artifact",
+    "named-artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e5decee4dbf82f468c652d8454666f9fd4c24ca4",
+   "title": "Lifting C semantics for dataflow optimization",
+   "year": 2022,
+   "repo": "spcl/c2dace",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e5e206392c1b94c7656cb6512b6dadc03971f236",
+   "title": "Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs",
+   "year": 2026,
+   "repo": "uwm-se/cutile",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e61e896ee96c8d6ae13c34c9d66e8ee879489f75",
+   "title": "PENCIL: A Platform-Neutral Compute Intermediate Language for Accelerator Programming",
+   "year": 2015,
+   "repo": "meinersbur/pencil-driver",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e64aa5b9f905454a697f10dda149b4de605e8b98",
+   "title": "Pure tensor program rewriting via access patterns (representation pearl)",
+   "year": 2021,
+   "repo": "gussmith23/glenside",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e6c4121a6f2e7fd696f659dff9df433e956cc923",
+   "title": "Verified code generation for the polyhedral model",
+   "year": 2021,
+   "repo": "ekdohibs/polygen",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e74b043ffd2ebf4cb946bd41574647d3689b098e",
+   "title": "Quantum Data Management in the NISQ Era",
+   "year": 2025,
+   "repo": "infinidata-lab/quantum",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e9bf383dd76f2df2ed84ea07949b63852557f174",
+   "title": "Programming Heterogeneous Systems from an Image Processing DSL",
+   "year": 2017,
+   "repo": "jingpu/halide-hls",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "e9ef6a006e01d6219fb3528d02ec59308ccf7bd2",
+   "title": "PyFRep: Shape Modeling with Differentiable Function Representation",
+   "year": 2025,
+   "repo": "fayolle/pyfrep",
+   "in_repo_pool": false,
+   "reasons": [
+    "author-owner"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ea5768d746378940d4c062c523f7f3356625177e",
+   "title": "Fast On-device LLM Inference with NPUs",
+   "year": 2025,
+   "repo": "ubiquitouslearning/mllm",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ea9bdd6de80ea298f0a4ec9aaa7be44dc3ebc2ef",
+   "title": "Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs",
+   "year": 2023,
+   "repo": "hidet-org/hidet",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:open-source",
+    "title:hidet"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ea9bdd6de80ea298f0a4ec9aaa7be44dc3ebc2ef",
+   "title": "Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs",
+   "year": 2023,
+   "repo": "yaoyaoding/hidet-artifacts",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:publicly available",
+    "named-artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "f2b840c3c14b9f05106589c1be0a2dd4a494c0ba",
+   "title": "Learning to Perform Local Rewriting for Combinatorial Optimization",
+   "year": 2019,
+   "repo": "facebookresearch/neural-rewriter",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "f463b6d692704baf9463e7d8b39e6032c23c4ec9",
+   "title": "Futhark: purely functional GPU-programming with nested parallelism and in-place array updates",
+   "year": 2017,
+   "repo": "hiperfit/futhark-pldi17",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "f5db5693e67b0437fde23ef537322fe9fc17ff45",
+   "title": "The Deep Learning Compiler: A Comprehensive Survey",
+   "year": 2021,
+   "repo": "buaa-hipo/dlcompiler-comparison",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:source code"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "f6c15f15b98afeb8a23e321e098b7fd9f3bce85a",
+   "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
+   "year": 2023,
+   "repo": "fpsg-uiuc/micro23-teaal-artifact",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact",
+    "title:teaal",
+    "named-artifact",
+    "in-bibliography"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "f6c15f15b98afeb8a23e321e098b7fd9f3bce85a",
+   "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
+   "year": 2023,
+   "repo": "fpsg-uiuc/teaal",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": true
+  },
+  {
+   "paper": "f7626520c495706280780f6dddf8929a79c77723",
+   "title": "Interactive Source-to-Source Optimizations Validated using Static Resource Analysis",
+   "year": 2024,
+   "repo": "charguer/optitrust",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "f80e0ee17fb9098d57b19b3642d3cf76103655c6",
+   "title": "Vectorization for digital signal processors via equality saturation",
+   "year": 2021,
+   "repo": "cucapra/diospyros",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "f930fe86da74a48556b6c8b6af23a1a595747a3f",
+   "title": "GraphOpt: Constrained-Optimization-Based Parallelization of Irregular Graphs",
+   "year": 2022,
+   "repo": "nimish15shah/graphopt",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "f98b7d9ba8d4bd85d322220ba14a941f9d42a935",
+   "title": "Programming by Navigation",
+   "year": 2025,
+   "repo": "justinlubin/honeybee",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "fc27f18b50a95b6c07ccb517cd5c385582d9a4cf",
+   "title": "HASCO: Towards Agile HArdware and Software CO-design for Tensor Computation",
+   "year": 2021,
+   "repo": "pku-liang/hasco",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "fe24761c9104ec614d0d4172d8c337f9f9ba4a72",
+   "title": "ASV: Accelerated Stereo Vision System",
+   "year": 2019,
+   "repo": "horizon-research/systolic-array-dataflow-optimizer",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "fe24761c9104ec614d0d4172d8c337f9f9ba4a72",
+   "title": "ASV: Accelerated Stereo Vision System",
+   "year": 2019,
+   "repo": "horizon-research/ism-algorithm",
+   "in_repo_pool": false,
+   "reasons": [
+    "cue:artifact"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "fe56c854e337f4eed7f2d8dfb06426cf79507ef5",
+   "title": "A \ud835\udeff : Autodiff for Discontinuous Programs \u2013 Applied to Shaders",
+   "year": 2022,
+   "repo": "yyuting/adelta",
+   "in_repo_pool": true,
+   "reasons": [
+    "cue:available at"
+   ],
+   "truncated": false
+  },
+  {
+   "paper": "ff3a38355125d633bbb2211929ad61ff5ce999b7",
+   "title": "Ikra-Cpp: A C++/CUDA DSL for Object-Oriented Programming with Structure-of-Arrays Layout",
+   "year": 2018,
+   "repo": "prg-titech/ikra-cpp",
+   "in_repo_pool": false,
+   "reasons": [
+    "title:cpp"
+   ],
+   "truncated": false
+  }
+ ],
+ "repos_not_in_pool": [
+  "0xtcg/haptreex",
+  "abhijangda/fastkron",
+  "adapt-uiuc/tensorright",
+  "adcastel/cgo",
+  "adcastel/exo",
+  "advent-lab/gama",
+  "advent-lab/ironsmith",
+  "aiaudit-org/raw2logit",
+  "amplab/snap",
+  "anadodik/iskra",
+  "anjiang-wei/astra",
+  "anydsl/traversal",
+  "arcana-lab/memoir",
+  "avanhatt/asplos24-ae-crocus",
+  "awf/coconut",
+  "awslabs/raf",
+  "baco-authors/baco",
+  "baco-authors/baco-artifact",
+  "baco-authors/baco-artifact.git",
+  "balsa-project/balsa",
+  "bastacyclop/egg-sketches",
+  "beehive-lab/tornadovm",
+  "behroozzare/hdagg-benchmark",
+  "bobbyyyan/scorch",
+  "booker0415/large-scale-tensor-program-dataset-on-rtx-3080-ti-and-intel-i7-12",
+  "buaa-hipo/dlcompiler-comparison",
+  "buaa-hipo/msc-stencil-compiler",
+  "bytedance-seed/triton-distributed",
+  "caviar-trs/caviar",
+  "cda-group/arc",
+  "ceruleangu/block-sparse",
+  "chezjrk/teg_applications",
+  "cmu-catalyst/collage",
+  "comparchcam/cinnamon",
+  "convexsoft/diffprog",
+  "cornell-zhang/allo",
+  "cucapra/calyx-evaluation",
+  "cucapra/diospyros",
+  "dglai/featgraph",
+  "diderot-language/examples",
+  "dmlc/tvm",
+  "dumerrill/merge-spmv",
+  "ekdohibs/polygen",
+  "exo-lang/exo2-artifact",
+  "exo-lang/exoblas",
+  "experiment-code/eto",
+  "facebookresearch/neural-rewriter",
+  "fayolle/pyfrep",
+  "fengzhang427/llf-lut",
+  "finch-tensor/finchbenchmarks",
+  "flamegpu/flamegpu",
+  "flamegpu/tutorial",
+  "fpsg-uiuc/micro23-teaal-artifact",
+  "fpsg-uiuc/teaal",
+  "fstarlang/kuiper",
+  "geoffxy/habitat",
+  "giclab/transfer-tuning",
+  "google-research-datasets/tpu_graphs",
+  "google-research/google-research",
+  "google/gematria",
+  "graph-com/layerdag",
+  "graphit-dsl/graphit",
+  "gussmith23/glenside",
+  "hazyresearch/flash-attention",
+  "hexcute/hexcute-bench",
+  "hfinkel/llvm-project-cxxjit",
+  "hidet-org/hidet",
+  "hiperfit/futhark-pldi17",
+  "hips/autogradr",
+  "hngenc/systolic-array",
+  "horizon-research/imagen",
+  "horizon-research/ism-algorithm",
+  "horizon-research/systolic-array-dataflow-optimizer",
+  "huantwang/supersonic",
+  "humuyan/asplos24-korch-ae",
+  "humuyan/korch",
+  "infinidata-lab/inferq",
+  "infinidata-lab/quantum",
+  "inkytonik/kiama",
+  "intel/hfav",
+  "intellabs/parallelaccelerator.jl",
+  "ise-uiuc/tzer",
+  "isislab-unisa/dmason",
+  "jhueckelheim/perforad",
+  "jiegh/rvv_code_gen_via_mlir_xdsl",
+  "jiriklepl/noarr-mpi",
+  "joapolarbear/cdmpp",
+  "justinlubin/cobbler",
+  "justinlubin/honeybee",
+  "jzstark/ninox",
+  "kenny67nju/lambdagent.1",
+  "kevinaangstadt/automata-synth",
+  "kevinaangstadt/vasim",
+  "khaki3/acc-saturator",
+  "khaki3/ptxas-wrapper",
+  "knagrecha/saturn",
+  "kokkos/pykokkos",
+  "kovach/etch",
+  "kylebd99/galley.jl",
+  "kyrie-zhao/moses",
+  "lac-dcc/bennu",
+  "llvm/llvm-project",
+  "llvm/polygeist",
+  "lsds/tempo",
+  "magnolia-lang/magnolia-lang",
+  "makedede/mefnet",
+  "mangpo/chlorophyll",
+  "mangpo/floem",
+  "mangpo/greenthumb",
+  "maratyszcza/nnpack",
+  "meinersbur/pencil-driver",
+  "melt-umn/ablec",
+  "melt-umn/ablec-unification",
+  "melt-umn/lambda-calculus",
+  "melt-umn/meta-ocaml-lite",
+  "melt-umn/silver",
+  "melt-umn/silver-ablec",
+  "meta-llama/llama3",
+  "metalift/metalift",
+  "microsoft/archprobe",
+  "microsoft/convstencil",
+  "microsoft/nn-meter",
+  "microsoft/uvatlas",
+  "mirage-project/mirage",
+  "mit-han-lab/bevfusion",
+  "mit-han-lab/inter-operator-scheduler",
+  "mit-han-lab/torchsparse",
+  "mitsuba-renderer/mitsuba3",
+  "mmcloughlin/arrival",
+  "mschuldt/ga144",
+  "nbbllxx0/fused-gather-gemm-scatter-kernels",
+  "nicolasvasilache/tensorcomprehensions",
+  "nimish15shah/graphopt",
+  "nvidia/apex",
+  "nvidia/cutlass",
+  "nvidia/tilus",
+  "nvlabs/nvdiffmodeling",
+  "nvlabs/nvdiffrec",
+  "oiqbal95/fpga_adaptive_tracking",
+  "onnx/models",
+  "openabl/790",
+  "openabl/openabl",
+  "parasailteam/coconet",
+  "parasj/contracode",
+  "pjlab-chip/hpctranscompile",
+  "pku-liang/amos",
+  "pku-liang/hasco",
+  "pku-liang/tenet",
+  "pku-liang/tileflow",
+  "prg-titech/ikra-cpp",
+  "princeton-computational-imaging/delta-prox",
+  "princetonuniversity/ila-modeling-verification",
+  "pytorch/benchmark",
+  "pytorch/glow",
+  "qiaolian9/pruner",
+  "qiyingwu/scanweaver",
+  "rice-eic/dnn-chip-predictor",
+  "rootjalex/bonsai",
+  "sacbase/cnn",
+  "sakehl/accelerate",
+  "scientific-computing-lab/gpuflopbench",
+  "seannaren/deepspeech.pytorch",
+  "seq-lang/seq",
+  "sillycross/pochivm",
+  "sillycross/wasmnow",
+  "snu-codelab/atim.git",
+  "souffle-ae/souffle.git",
+  "spcl/c2dace",
+  "spcl/dace",
+  "sunqingxiao/gstuner",
+  "sympiler/aggregation",
+  "systems-nuts/cosense",
+  "taichi-dev/quantaichi",
+  "tealab/fftstencils",
+  "tensor-compiler/taco",
+  "thu-pacman/pet",
+  "tiarkrompf/sigma",
+  "tlc-pack/tenset",
+  "tud-ccc/polygym",
+  "ubiquitouslearning/mllm",
+  "uiuc-arc/abstractad",
+  "uiuc-arc/felix",
+  "uiuc-arc/neptune",
+  "uiuc-focal-lab/sail",
+  "uwm-se/cutile",
+  "uwplse/ruler",
+  "uwsampl/sparsetir-artifact",
+  "weiya711/sam",
+  "weiya711/sam-artifact",
+  "weld-project/split-annotations",
+  "willow-ahrens/finch.jl",
+  "wisdom-moon/autostreamer",
+  "wsmoses/enzyme-gpu-tests",
+  "xilinx/merlin-compiler",
+  "xintin/transferlearn_hetfeat_tenproggen",
+  "yaoyaoding/hidet-artifacts",
+  "yaoyaoding/tilus-artifacts",
+  "zhaiyi000/tlp"
+ ]
+}

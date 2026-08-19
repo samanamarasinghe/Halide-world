@@ -1,14 +1,15 @@
 {
  "version": "0.1",
- "built": "2026-08-18",
+ "built": "2026-08-19",
  "counts": {
   "anchors": 16,
   "papers": 1795,
   "papers_retired": 33,
   "doi_only": 161,
-  "repos": 634,
+  "repos": 822,
   "repos_dropped": 102,
-  "repos_with_stars": 479,
+  "repos_with_stars": 646,
+  "repos_from_artifact_edges": 188,
   "bundles": 2828,
   "people": 6492,
   "people_with_affiliation": 0,
