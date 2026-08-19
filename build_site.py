@@ -185,13 +185,19 @@ def build_doi_only(oc, dup, enriched):
     return out
 
 
-def build_repos(lane_b, artifacts, curatable):
+def build_repos(lane_b, artifacts, curatable, artifact_repos=None):
     """Repo nodes, plus the reverse artifact edge back to the papers that published them.
 
     `lane_b_classified.json` is the base because it is the only file covering every repo,
     bundles and prose-only included. `lane_b_curatable.json` covers the three source-bearing
     verdicts and carries the cleanup pass's status and the ecosyste.ms metadata, so it is
     merged on top where it has an opinion. Absent, the site is exactly what it was before.
+
+    `artifact_repos.json` is appended after it. Those repos were never found by code search
+    -- they are reachable only because a paper named its own artifact -- so they carry NO
+    signatures, paths or n_matches. Every one is stamped `discovered_via: artifact_edge`;
+    anything reading signature counts must branch on it or it will read zero and conclude
+    "no Halide evidence", dropping exactly the repos this lane exists to surface.
     """
     n_dropped = [0]
     extra = {}
@@ -244,6 +250,32 @@ def build_repos(lane_b, artifacts, curatable):
             continue
         if from_paper.get(name):
             entry['papers'] = from_paper[name]
+        carry_curation(rec, entry)
+        out.append(entry)
+
+    seen = {e['id'] for e in out}
+    for rec in (artifact_repos or {}).get('repos', []):
+        name = rec['repo']
+        # Hand review rejected these against their own paper: a workload, a substrate or a
+        # monorepo the cue happened to sit next to. The reason stays in the pool file so the
+        # judgement is auditable; the page just does not carry them.
+        if rec.get('head_review') == 'reject' or name in seen:
+            continue
+        entry = {
+            'kind': 'repo',
+            'id': name,
+            'title': name,
+            'url': 'https://github.com/' + name,
+            'discovered_via': 'artifact_edge',
+            'papers': [p['s2_id'] for p in rec.get('papers') or []],
+        }
+        for src, dst in (('stars', 'stars'), ('description', 'description'),
+                         ('language', 'language')):
+            if rec.get(src) is not None:
+                entry[dst] = rec[src]
+        for flag in ('unverified_name', 'truncated_source_link'):
+            if rec.get(flag):
+                entry[flag] = True
         carry_curation(rec, entry)
         out.append(entry)
     return out, n_dropped[0]
@@ -365,6 +397,7 @@ def main():
     artifacts = load('data/pools/artifacts_attributed.json') or {}
     oc = load('data/pools/opencitations_only.json') or {}
     curatable = load('data/pools/lane_b_curatable.json')
+    artifact_repos = load('data/pools/artifact_repos.json')
     enriched = load('data/pools/doi_enriched_state.json')
     contributors = load('data/people/halide_contributors.json')
     authorship = load('data/pools/authorship.json')
@@ -372,7 +405,7 @@ def main():
     papers, anchor_ids, n_retired = build_papers(lane_a, anchors_json, dup, artifacts)
     anchors = build_anchors(anchors_json, papers)
     doi_only = build_doi_only(oc, dup, enriched)
-    repos, n_dropped = build_repos(lane_b, artifacts, curatable)
+    repos, n_dropped = build_repos(lane_b, artifacts, curatable, artifact_repos)
     people = build_people(papers + doi_only, anchors, authorship, contributors)
 
     entries = anchors + papers + doi_only + repos + people
@@ -386,6 +419,8 @@ def main():
         'repos': sum(1 for r in repos if r.get('verdict') != BUNDLE),
         'repos_dropped': n_dropped,
         'repos_with_stars': sum(1 for r in repos if r.get('stars') is not None),
+        'repos_from_artifact_edges': sum(
+            1 for r in repos if r.get('discovered_via') == 'artifact_edge'),
         'bundles': sum(1 for r in repos if r.get('verdict') == BUNDLE),
         'people': len(people),
         'people_with_affiliation': sum(1 for p in people if p.get('affiliations')),
