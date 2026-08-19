@@ -22,6 +22,10 @@ before any work starts.
    look at what landed before pushing again; the other session may have solved your problem
    already.
 
+Step 1 is the one that actually gets skipped. The affiliations lane was started without it
+on 2026-08-19 and only checked at push time; it happened to be free, which was luck rather
+than process.
+
 ## Claims
 
 | paths | lane | claimed |
@@ -34,7 +38,7 @@ before any work starts.
 | `curate/repo_contributors.py`, `data/pilot/CONTRIBUTOR_PILOT.md` | contributor lane | 2026-08-18 |
 | `build_site.py`, `index.html`, `assets/*`, `data/site/*`, `patch_*.py` | site and GUI | 2026-08-18 |
 | `curate/artifact_edges.py`, `data/pilot/ARTIFACT_EDGES.md`, `data/pools/artifact_edges.json` | artifact edges: paper -> repo, and the repos Lane B cannot see | 2026-08-19 |
-| `curate/resolve_dois.py`, `curate/affiliations.py`, `data/pools/s2_doi_map.json` | affiliations: "where they were when that happened" | 2026-08-19 |
+| `curate/resolve_dois.py`, `curate/harvest_affiliations.py`, `curate/affiliations.py`, `data/pools/s2_doi_map.json`, `data/pools/affiliations_state.json`, `data/pilot/AFFILIATIONS.md` | affiliations: where they were when that happened | 2026-08-19 |
 
 The person layer is deliberately two rows, not one. The two halves must *run* together —
 a contributor joined "to the author record" joins one of several until the author side is
@@ -46,13 +50,14 @@ deduped — but they are separate files and can be built independently.
 rather than derived output. Those are edited rarely and by agreement, never as a side
 effect of a lane.
 
-## Note for the affiliations lane
+## Cross-lane dependency, affiliations to person layer
 
 `docs/name_matching.md` (cross-layer alias lane) concludes that affiliation strings are the
 remedy for the altered-name blind spot, and `data/pilot/AUTHOR_DEDUPE.md` names them as the
-next signal for its 143 unresolved groups. Both are *consumers* of this lane's output, not
-owners of it. When affiliations land, re-run `author_dedupe.py` against the residual rather
-than editing either file from here.
+next signal for its unresolved groups. Both are *consumers* of this lane's output, not
+owners of it. That dependency has now been discharged once: affiliations were folded into
+`author_dedupe.py` and took its residual from 143 groups to 117. When affiliation coverage
+improves, re-run the dedupe rather than editing either consumer by hand.
 
 ## Note for the curation lane
 
