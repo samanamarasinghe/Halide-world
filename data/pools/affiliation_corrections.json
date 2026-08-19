@@ -1,0 +1,20 @@
+{
+ "schema_version": 1,
+ "note": "Hand-verified corrections where the PUBLISHER'S OWN Crossref deposit is wrong. Normalisation cannot fix these -- the string is recorded faithfully and is simply not true. `corrections` fixes one author on one paper; `blanket` pins a person for the whole period this index covers, so a re-harvest that re-introduces a misaligned deposit cannot silently reopen it. Every entry states its evidence.",
+ "corrections": [
+  {
+   "surname": "amarasinghe",
+   "paper_doi": "10.1109/CGO.2019.8661185",
+   "deposited": ["Adobe Research, USA"],
+   "institutions": ["Massachusetts Institute of Technology"],
+   "evidence": "IEEE's deposit for 'Tensor Algebra Compilation with Workspaces' (CGO 2019) shifted affiliations by one position: Kjolstad MIT, Ahrens MIT, Kamil Adobe Research, Amarasinghe Adobe Research. Kamil is the Adobe author; Amarasinghe inherited his address. Ruled by Saman 2026-08-19."
+  }
+ ],
+ "blanket": [
+  {
+   "surname": "amarasinghe",
+   "institutions": ["Massachusetts Institute of Technology"],
+   "evidence": "Ruled by Saman 2026-08-19: MIT for the whole period this index covers."
+  }
+ ]
+}
