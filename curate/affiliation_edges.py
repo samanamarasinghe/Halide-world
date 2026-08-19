@@ -17,8 +17,8 @@ Person ids are the POST-DEDUPE canonical ids from `curate/author_dedupe.py`, so
 an author whose S2 record was split does not appear as two people with half a
 career each.
 
-Measured 2026-08-19: 6,775 author slots -> 4,242 edges carrying an institution,
-2,817 people with a dated institution, 299 of them at more than one institution
+Measured 2026-08-19: 6,775 author slots -> ~4,220 edges carrying an institution,
+2,817 people with a dated institution, 270 of them at more than one institution
 over time. The losses are all named in `counts` and none is silent: 1,633 slots
 matched a Crossref author who has no affiliation deposited, 535 papers have no
 Crossref record at all (arXiv and the Springer/Elsevier gap), 360 affiliation
@@ -26,9 +26,11 @@ strings did not normalise, 157 surnames did not match.
 
 Spot-checked against careers that are publicly known: Ragan-Kelley MIT /
 Stanford / Berkeley / Google, Kamil MIT -> Adobe, Tzu-Mao Li MIT -> Berkeley ->
-UCSD. Those three are also how the normalisation leaks were found -- a person
-appearing to "move" between two spellings of one university is the visible
-symptom of an under-merged institution name.
+UCSD. THAT SPOT-CHECK IS ALSO THE BUG DETECTOR: a person appearing to "move"
+between two spellings of one university is the visible symptom of an
+under-merged institution name, and it is how several normalisation leaks were
+found. It also catches genuine publisher errors, which normalisation cannot
+touch -- see `data/pools/affiliation_corrections.json`.
 
     python3 curate/affiliation_edges.py --out data/pools/affiliation_edges.json
 """
@@ -49,6 +51,8 @@ def main():
     ap.add_argument("--affiliations", default="data/pools/affiliations_state.json")
     ap.add_argument("--normalized", default="data/pools/affiliations_normalized.json")
     ap.add_argument("--dedupe", default="data/pools/author_dedupe.json")
+    ap.add_argument("--corrections",
+                    default="data/pools/affiliation_corrections.json")
     ap.add_argument("--out", default="data/pools/affiliation_edges.json")
     args = ap.parse_args()
 
@@ -63,6 +67,22 @@ def main():
     for m in json.load(open(args.dedupe))["merged"]:
         for i in m["ids"]:
             canon[i] = m["canonical_id"]
+
+    # Hand-verified corrections. A publisher's deposit can be simply wrong --
+    # IEEE shifted the affiliations by one position on CGO 2019, giving
+    # Amarasinghe Kamil's Adobe address. Normalisation cannot see that: the
+    # string is recorded faithfully and is still untrue. `blanket` pins a person
+    # for the whole period so a re-harvest cannot silently reopen it.
+    corr, blanket = {}, {}
+    try:
+        c = json.load(open(args.corrections))
+        for x in c.get("corrections", []):
+            corr[(x["surname"].lower(), x["paper_doi"])] = x["institutions"]
+        for x in c.get("blanket", []):
+            blanket[x["surname"].lower()] = x["institutions"]
+        print(f"{len(corr)} paper-level and {len(blanket)} blanket corrections")
+    except OSError:
+        pass
 
     edges = []
     stats = collections.Counter()
@@ -83,7 +103,8 @@ def main():
             if not aid:
                 continue
             stats["author_slots"] += 1
-            cands = by_sn.get(surname(a.get("name"))) or []
+            sn = surname(a.get("name"))
+            cands = by_sn.get(sn) or []
             if not cands:
                 stats["no_surname_match"] += 1
                 continue
@@ -101,6 +122,12 @@ def main():
                 for i in (norm.get(r.strip()) or []):
                     if i not in insts:
                         insts.append(i)
+            if sn in blanket:
+                insts = blanket[sn]
+                stats["corrected_blanket"] += 1
+            elif (sn, sid2doi.get(sid)) in corr:
+                insts = corr[(sn, sid2doi.get(sid))]
+                stats["corrected_paper"] += 1
             if not insts:
                 stats["affiliation_unresolved"] += 1
                 continue
@@ -144,7 +171,8 @@ def main():
                         "was at FOR THAT PAPER. Surname-matched within a single "
                         "paper's author list; a surname appearing twice in one "
                         "list is skipped, not guessed. Person ids are "
-                        "post-dedupe canonical ids."),
+                        "post-dedupe canonical ids. Hand-verified overrides come "
+                        "from affiliation_corrections.json."),
                "counts": dict(stats), "n_edges": len(edges),
                "n_people": len(timelines), "n_movers": movers,
                "timelines": timelines, "edges": edges},
