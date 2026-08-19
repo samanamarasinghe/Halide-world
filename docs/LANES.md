@@ -65,10 +65,17 @@ improves, re-run the dedupe rather than editing either consumer by hand.
 `curate/extract_pdf_text.py` and its output `data/pools/fulltext_state.json` belong to the
 curation lane and were not edited from here. But a finding that changes how they should be
 read is recorded in `curate/fulltext_evidence.py`, in this lane: **a "Halide sentence" is
-often a line from the paper's own bibliography.** Depending on the detector, **54 to 207 of
-the 1,062 papers have no Halide sentence outside their reference list**, so the
-citation-only population is 115-268 rather than the 61 with no hit at all. The judged pass
-should read the `body` / `bibliography` / `none` verdict rather than the raw hit count.
+often a line from the paper's own bibliography.**
+
+Of the 1,062 papers, **197 have no Halide sentence outside their reference list and 61 have
+no Halide sentence at all, so the citation-only population is 258** — not the 61 a raw hit
+count reports. The judged pass should read the `body` / `bibliography` / `none` verdict
+rather than the hit count.
+
+Four signals decide it, each added because the previous set got a real case wrong: venue
+tails, a verbatim anchor title covering >=30% of the sentence, a leading `[16]` citation
+marker, and an author-list run. `arXiv:` was tested and rejected — it appears in the
+page-margin stamp of every preprint and sits inside body sentences.
 
 ## Note for the curation lane
 
