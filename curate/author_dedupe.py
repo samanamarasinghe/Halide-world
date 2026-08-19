@@ -1,144 +1,135 @@
-#!/usr/bin/env python3
-"""Propose merges for person records that share a name but hold different author ids.
+"""Author-layer dedupe — collapse the S2 author ids that are the same human.
 
-Semantic Scholar issues several author ids to one human, so the person layer carries the
-same name many times over -- Yun Liang 7 records, Tianqi Chen 6. A contributor joining
-"on the name" therefore joins one of several, which is why this must run WITH the
-cross-layer merge in data/pools/person_aliases.json rather than after it.
+S2 over-splits authors and never conflates them: 5,214 distinct names carry
+5,688 ids, 362 names hold more than one id, and NO id holds more than one name
+spelling. So the id is a safe atom and the only question is whether two ids
+under the same name are one person.
 
-The evidence is SHARED COAUTHORS. Two ids of one person never appear on the same paper,
-but their papers reach the same collaborators, so an overlap between two same-named
-records' coauthor sets is positive evidence they are one human. A name match alone is not,
-and is never enough here.
+His ruling of 2026-08-19: resolve with a SECOND SIGNAL, no hand review.
 
-    ONE HARD VETO: if two same-named records appear on the SAME paper, they are not merged
-    at any threshold. Either they are two different people, or the source duplicated one
-    author within one author list; both cases need a human, and the coauthor rule would
-    otherwise merge them confidently -- the one such case in this data is also the group
-    with the MOST shared coauthors, so the veto is not hypothetical.
+Evidence, in order of strength:
+  paper     the two ids appear on the same paper
+  coauthor  their coauthor NAME sets intersect. Keyed on name, never on id --
+            an id key is degraded by the very splitting it is meant to fix,
+            because the coauthor is split too (name-keyed links 251 groups
+            where id-keyed links 218)
+  2-hop     one id's coauthors, expanded one hop through the global coauthor
+            graph, reach the other's. MEASURED against a control of random
+            different-name id pairs: 17% on target vs 4% on control. Real but
+            thin -- it settles 22 further groups, among them Andrew Adams
+            (3 ids, all genuinely his) and Frédo Durand (2)
 
-No-evidence is not counter-evidence. A record holding one paper may simply have no
-observable overlap, so an unmerged group means "not shown to be the same", not "shown to
-be different". Under-merging stays the safe direction: a split person is visible and
-fixable, a wrongly merged one is not.
+Signals measured and REJECTED as non-discriminative: shared venue (9% target /
+5% control) and shared field of study (98% / 97% -- almost every record is
+"Computer Science").
 
-    python3 curate/author_dedupe.py --index data/site/halide-index.json
-    python3 curate/author_dedupe.py --threshold 2 --out data/pools/author_dedupe.json
+A group merges only if EVERY pair inside it is linked. Requiring a clique is
+the whole point: linking A-B and B-C does not make A and C the same person, and
+merging is transitive, which is how `unknown` once chained four different
+halide/Halide contributors into one node.
+
+What cannot be settled is LEFT SPLIT and tagged, never guessed. Over-merging is
+worse than under-merging: a split person is visible and fixable, a falsely
+merged one is not. THE COST IS REAL AND SHOULD NOT BE HIDDEN -- 143 groups stay
+split, and some are obviously one person (Christophe Dubach, two ids with 1 and
+17 papers and no shared coauthor at all; Michel Steuwer 2/3 pairs; Albert Cohen
+5/6). Affiliation strings are the next signal for exactly these.
+
+    python3 curate/author_dedupe.py --out data/pools/author_dedupe.json
 """
-import argparse
-import collections
-import itertools
-import json
+import argparse, collections, itertools, json, sys
+
+sys.stdout.reconfigure(line_buffering=True)
 
 
-def load(path):
-    with open(path) as f:
-        data = json.load(f)
-    papers, people = {}, []
-    for e in data.get("entries", []):
-        if e.get("kind") in ("paper", "anchor"):
-            papers[e["id"]] = e
-        elif e.get("kind") == "person":
-            people.append(e)
-    return papers, people
+def build(works):
+    co = collections.defaultdict(set)      # id -> coauthor NAMES
+    papers = collections.defaultdict(set)  # id -> paper ids
+    name_ids = collections.defaultdict(set)
+    nbr = collections.defaultdict(set)     # global coauthor graph, name -> names
+    for pid, w in works.items():
+        names = [(a.get("name") or "").strip()
+                 for a in (w.get("authors") or []) if a.get("name")]
+        for x in names:
+            nbr[x] |= set(names) - {x}
+        for a in (w.get("authors") or []):
+            i, n = a.get("s2_author_id"), (a.get("name") or "").strip()
+            if not i or not n:
+                continue
+            name_ids[n].add(i)
+            papers[i].add(pid)
+            co[i] |= set(names) - {n}
+    return co, papers, name_ids, nbr
 
 
-def coauthors(people, papers):
-    out = collections.defaultdict(set)
-    for p in people:
-        for w in p.get("papers") or []:
-            pa = papers.get(w)
-            if pa:
-                out[p["id"]] |= set(pa.get("author_ids") or []) - {p["id"]}
-    return out
-
-
-def cooccurring(name_ids, papers):
-    """Names whose records share an author list -- the hard veto."""
-    veto = {}
-    for name, ids in name_ids.items():
-        s = set(ids)
-        for pa in papers.values():
-            both = set(pa.get("author_ids") or []) & s
-            if len(both) > 1:
-                veto[name] = {"paper": pa.get("title"), "ids": sorted(both)}
-                break
-    return veto
-
-
-def n_works(p):
-    return len(p.get("papers") or []) + len(p.get("anchor_papers") or [])
+def evidence(a, b, co, papers, nbr):
+    if papers[a] & papers[b]:
+        return "paper"
+    if co[a] & co[b]:
+        return "coauthor"
+    expanded = set(co[a])
+    for x in co[a]:
+        expanded |= nbr[x]
+    if expanded & co[b]:
+        return "2-hop"
+    return None
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--index", default="data/site/halide-index.json")
-    ap.add_argument("--threshold", type=int, default=2,
-                    help="minimum shared coauthors between two records to merge them")
-    ap.add_argument("--out", help="write the proposal as JSON")
+    ap.add_argument("--papers", default="data/pools/lane_a.json")
+    ap.add_argument("--out", default="data/pools/author_dedupe.json")
     args = ap.parse_args()
 
-    papers, people = load(args.index)
-    byid = {p["id"]: p for p in people}
-    coa = coauthors(people, papers)
+    works = json.load(open(args.papers))["works"]
+    co, papers, name_ids, nbr = build(works)
+    multi = {n: sorted(ids) for n, ids in name_ids.items() if len(ids) > 1}
+    print(f"{len(name_ids)} names, {sum(len(v) for v in name_ids.values())} ids, "
+          f"{len(multi)} names with more than one id")
 
-    groups = collections.defaultdict(list)
-    for p in people:
-        groups[p["name"]].append(p["id"])
-    dups = {n: ids for n, ids in groups.items() if len(ids) > 1}
-    veto = cooccurring(dups, papers)
+    merged, split = [], []
+    counts = collections.Counter()
+    for n, ids in sorted(multi.items()):
+        pairs = list(itertools.combinations(ids, 2))
+        ev = {p: evidence(p[0], p[1], co, papers, nbr) for p in pairs}
+        if all(ev.values()):
+            strongest = "paper" if "paper" in ev.values() else (
+                "2-hop" if "2-hop" in ev.values() else "coauthor")
+            merged.append({"name": n, "ids": ids, "canonical_id": max(
+                ids, key=lambda i: len(papers[i])),
+                "n_papers": {i: len(papers[i]) for i in ids},
+                "evidence": strongest,
+                "pair_evidence": {f"{a}+{b}": v for (a, b), v in ev.items()}})
+            counts["merged_" + strongest] += 1
+        else:
+            split.append({"name": n, "ids": ids,
+                          "n_papers": {i: len(papers[i]) for i in ids},
+                          "linked_pairs": sum(1 for v in ev.values() if v),
+                          "total_pairs": len(pairs),
+                          "reason": "no evidence links every pair; left split "
+                                    "rather than guessed"})
+            counts["left_split"] += 1
 
-    proposals, removed = [], 0
-    for name, ids in sorted(dups.items()):
-        if name in veto:
-            continue
-        parent = {i: i for i in ids}
+    ids_removed = sum(len(m["ids"]) - 1 for m in merged)
+    print(f"\n  merged on a shared paper     : {counts['merged_paper']}")
+    print(f"  merged on a shared coauthor  : {counts['merged_coauthor']}")
+    print(f"  merged via the 2-hop signal  : {counts['merged_2-hop']}")
+    print(f"  LEFT SPLIT, tagged           : {counts['left_split']}")
+    print(f"  author ids collapsed away    : {ids_removed}")
 
-        def find(x):
-            while parent[x] != x:
-                parent[x] = parent[parent[x]]
-                x = parent[x]
-            return x
-
-        best = 0
-        for a, b in itertools.combinations(ids, 2):
-            n = len(coa[a] & coa[b])
-            best = max(best, n)
-            if n >= args.threshold:
-                ra, rb = find(a), find(b)
-                if ra != rb:
-                    parent[ra] = rb
-                    removed += 1
-        clusters = collections.defaultdict(list)
-        for i in ids:
-            clusters[find(i)].append(i)
-        for members in clusters.values():
-            if len(members) > 1:
-                # the record with the most works keeps the node
-                keep = max(members, key=lambda i: n_works(byid[i]))
-                proposals.append({
-                    "name": name,
-                    "keep": keep,
-                    "merge": [i for i in members if i != keep],
-                    "shared_coauthors": best,
-                    "works": {i: n_works(byid[i]) for i in members},
-                })
-
-    one_work = sum(1 for ids in dups.values() if all(n_works(byid[i]) == 1 for i in ids))
-    print(f"duplicate-name groups: {len(dups)}  ({sum(len(v) for v in dups.values())} person records)")
-    print(f"vetoed by co-occurrence on one paper: {len(veto)}")
-    for n, v in veto.items():
-        print(f"  - {n}: {v['ids']} both on {v['paper'][:60]!r}")
-    print(f"proposed merges at >={args.threshold} shared coauthors: "
-          f"{len(proposals)} clusters, {removed} records disappear")
-    print(f"groups where every record holds one work: {one_work} "
-          f"-- no overlap is observable either way; left split")
-
-    if args.out:
-        with open(args.out, "w") as f:
-            json.dump({"threshold": args.threshold, "vetoed": veto,
-                       "proposals": proposals}, f, indent=1)
-        print(f"wrote {args.out}")
+    json.dump({"schema_version": 1,
+               "note": ("Author-layer dedupe. A group merges only when EVERY "
+                        "pair in it is linked. Unsettled groups are LEFT SPLIT "
+                        "and tagged, never guessed -- affiliation strings are "
+                        "the next signal for them."),
+               "signals_rejected": {"shared_venue": "9% target vs 5% control",
+                                    "shared_field": "98% vs 97%, non-discriminative"},
+               "two_hop_discrimination": "17% target vs 4% control",
+               "n_merged": len(merged), "n_left_split": len(split),
+               "ids_collapsed": ids_removed,
+               "merged": merged, "left_split": split},
+              open(args.out, "w"), indent=1)
+    print(f"\nwrote {args.out}")
 
 
 if __name__ == "__main__":

@@ -1,81 +1,73 @@
-# Author-layer dedupe — measurement and pilot
+# Author-layer dedupe — 2026-08-19
 
-Sibling of `data/pools/person_aliases.json`, which merges git contributors to authors.
-This one merges authors to each other. The two must land together: two of the alias
-targets (Alexander J. Root, Jiawen Chen) are themselves split across author ids, so a
-contributor joined "to the author record" would otherwise join one of several.
+His ruling: resolve the ambiguous groups with a **second signal, no hand
+review**. Regenerate with `python3 curate/author_dedupe.py`.
 
-Script: `curate/author_dedupe.py`. It proposes; it applies nothing.
+## The asymmetry that makes this tractable
 
-## The space
+**5,214 author names carry 5,688 S2 ids. 362 names hold more than one id, and
+zero ids hold more than one name spelling.** S2 over-splits people and never
+conflates them, so the id is a safe atom and the whole problem is "are two
+same-name ids one human".
+
+Note this is the *opposite* of the DBLP defect already on record, where two
+different Andrew Adamses were merged into one entry. S2 splits, DBLP conflates —
+the fix for one is the wrong instinct for the other.
+
+## Signals, measured against a control
+
+The control is random pairs of ids belonging to *different* names — pairs we
+know should not merge. A signal is only worth having if it fires far more often
+on the target set.
+
+| signal | target | control | verdict |
+|---|---|---|---|
+| shared coauthor (keyed on **name**) | — | — | primary; links 251 groups |
+| 2-hop coauthor | 17% | 4% | kept — real but thin |
+| shared venue | 9% | 5% | rejected |
+| shared field of study | 98% | 97% | rejected, non-discriminative |
+
+Coauthor overlap must key on coauthor **name**, not coauthor id: an id key is
+degraded by the very splitting it is meant to fix, because the coauthor is split
+too. Name-keyed links 251 groups where id-keyed links 218.
+
+## Result
 
 | | |
 |---|---|
-| Person records sharing a name with another record | **1,255** across **542 name groups** |
-| Groups where every record holds exactly one work | **206** — no coauthor overlap is observable either way |
-| Vetoed (see below) | 1 |
+| merged on a shared paper | 1 |
+| merged on a shared coauthor | 196 |
+| merged via the 2-hop signal | 22 |
+| **left split, tagged** | **143** |
+| author ids collapsed away | 258 |
 
-## The rule
+A group merges only when **every** pair inside it is linked. Requiring a clique
+is deliberate: linking A–B and B–C does not make A and C the same person, and
+merging is transitive — that is how the display name `unknown` once chained four
+different halide/Halide contributors into a single node.
 
-Two ids of one human never appear on the same author list, but their papers reach the
-same collaborators. **Shared coauthors are therefore the evidence**; an identical name on
-its own is not, and never was. Records are clustered with union-find, and the record
-holding the most works keeps the node.
+The 2-hop signal earned its place on cases like **Andrew Adams**, three ids all
+genuinely his (Halide and differentiable programming, 17 works; Burst
+photography and median filters, 2; the A𝛿 autodiff and Bonsai papers, 4), and
+**Frédo Durand**, two ids.
 
-| Threshold | Clusters | Person records removed |
+## What no-hand-review costs, stated plainly
+
+143 groups stay split, and some are obviously one person:
+
+| name | pairs linked | papers per id |
 |---|---|---|
-| >=1 shared coauthor | 225 | **275** |
-| >=2 | 169 | 203 |
-| >=3 | 116 | 137 |
+| Christophe Dubach | 0/1 | 1, 17 |
+| Michel Steuwer | 2/3 | 26, 2, 6 |
+| Albert Cohen | 5/6 | 15, 5, 1, 1 |
+| Alvin Cheung | 1/3 | 11, 1, 5 |
+| Tianqi Chen | 6/10 | 17, 1, 2, 2, 1 |
 
-## The veto, and it is not hypothetical
+Dubach is the sharpest case — two ids, no shared coauthor at all, which is
+implausible for one compiler researcher and shows the coauthor graph has blind
+spots wherever someone's record is thin.
 
-**If two same-named records appear on the SAME paper, no merge happens at any threshold.**
-Either they are two different people, or the source listed one author twice; both need a
-human. Exactly one case:
-
-> `Zihao Ye` — ids 3060913 and 2402503197 both appear in the author list of *MPK: A
-> Compiler and Runtime for Mega-Kernelizing Tensor Programs* (2025).
-
-That group is also **the highest-evidence group in the whole set (19 shared coauthors)**,
-so every threshold would have merged it confidently. One case out of 542 does not
-threaten the rule, but it does mean the veto has to exist.
-
-## Spot checks
-
-The thin end of >=2 — common names, one work each — reads correct:
-
-| Name | Records | Shared coauthors | Reading |
-|---|---|---|---|
-| Zhen Zhang | Slapo / Decoupled Model Schedule | Hongzheng Chen, C. Yu | same person |
-| Yong Li | IMESH / I-heart-LA | Y. Gingold, Shoaib Kamil | same person |
-| Yanjie Wei | conv kernel gen / autoGEMM | Mohamed Wahib, Minwen Deng | same person |
-| Yu Liu | **4 records** | Luhong Liang; Ning Li + Zhipeng Wu | **two different Yu Lius**, correctly split into two pairs rather than collapsed into one |
-
-The Yu Liu case is the one worth noting: evidence-driven clustering separated two people of
-one name instead of merging them, which a name rule could not do.
-
-Groups whose best evidence is exactly **one** shared coauthor (56 of them, the difference
-between the >=1 and >=2 rows). Five sampled, five read correct:
-
-| Name | Shared | Reading |
-|---|---|---|
-| Chris Fallin | Alexa VanHattum | same person |
-| Hugh Leather | Riyadh Baghdadi | same person |
-| Tian Zhao | K. Olukotun | same person |
-| Huanqi Cao | Shizhi Tang | same person |
-| Haibing Guan | Liang Zhu | same person |
-
-**This is a sample, not a precision estimate.** It reads well because the pool is
-topically narrow — everything in it cites Halide — so an identical full name plus any
-shared collaborator is a stronger signal here than it would be across all of literature.
-
-## What needs deciding
-
-1. **>=1 shared coauthor** — 275 records removed. Recommended: the 56 one-evidence groups
-   sampled correct, and the veto covers the failure mode.
-2. **>=2** — 203 removed. The conservative cut.
-3. **>=3** — 137 removed. Leaves most real duplicates in place.
-
-The 206 one-work groups stay split under all three. No evidence is not counter-evidence:
-an unmerged group means "not shown to be the same", not "shown to be different".
+Leaving them split is the deliberate choice, not an oversight: a split person is
+visible in the data and fixable later, a falsely merged one is invisible.
+**Affiliation strings are the obvious next signal for exactly this residual**,
+and they arrive with the affiliations lane.
