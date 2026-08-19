@@ -39,6 +39,10 @@ and `drop` is a real verdict whose records are kept, not deleted.
         --meta data/pools/repo_meta_state.json \
         --forks data/pools/fork_verdicts.json \
         --out data/pools/lane_b_curatable.json
+
+Reproducibility: from the files committed here plus a fresh run of
+`curate/enrich_repos.py`, this reproduces anchor 1 / curatable 552 / drop 102 /
+packaging 12.
 """
 import argparse, json, os, re, sys, collections
 
@@ -161,8 +165,7 @@ ANCHOR_REPOS = {"halide/Halide"}
 # FreeBSD ports, nixpkgs, Homebrew, Portage, the AUR and conda feedstocks carry
 # a Halide PORT RECIPE, not Halide. They are a real relationship -- somebody
 # packages Halide for a distribution -- but they are neither `uses` nor
-# `extends`, so they get their own bucket rather than a forced role. Six of the
-# nine repos that timed out in the fork diff were FreeBSD ports trees.
+# `extends`, so they get their own bucket rather than a forced role.
 PACKAGING = re.compile(
     r"(^|[-_/])(ports|portage|nixpkgs|homebrew|linuxbrew|macports|aur|"
     r"conda-forge|.*-feedstock|spack|vcpkg|conan-center-index|buildroot|"
@@ -277,10 +280,18 @@ def main():
             elif fv == "gone_or_private":
                 rec["status"], rec["role"] = "drop", "drop"
                 rec["reason"] = "repository no longer reachable"
-            elif fv == "fetch_timeout" and PACKAGING.search(repo):
+            elif fv in ("fetch_timeout", "vendored_subtree") and PACKAGING.search(repo):
+                # Key on the NAME plus "the diff could not tie this to Halide's
+                # history". Keying on fetch_timeout alone was wrong twice over:
+                # that label moves between runs with the network, and it hid the
+                # distribution trees that fetched fine and landed in
+                # vendored_subtree (freebsd-ports-gnome, bsdlabs/ports and
+                # friends). With the name test, 6 packaging repos become 12.
                 rec["status"] = "packaging"
                 rec["reason"] = ("a distribution package tree carrying a Halide "
                                  "port recipe, not Halide itself")
+                if fv == "fetch_timeout":
+                    flags.append("fork_diff_incomplete_fetch_timeout")
             else:
                 # `vendored_subtree` means no shared history with upstream, so
                 # the diff cannot rule. Judge the project instead. For a repo
