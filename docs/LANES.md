@@ -37,7 +37,7 @@ than process.
 | `curate/person_aliases.py`, `data/pools/person_aliases.json`, `docs/name_matching.md` | person layer: cross-layer contributor/author aliases, and name-matching method | 2026-08-19 |
 | `curate/repo_contributors.py`, `data/pilot/CONTRIBUTOR_PILOT.md` | contributor lane | 2026-08-18 |
 | `build_site.py`, `index.html`, `assets/*`, `data/site/*`, `patch_*.py` | site and GUI | 2026-08-18 |
-| `curate/artifact_edges.py`, `data/pilot/ARTIFACT_EDGES.md`, `data/pools/artifact_edges.json` | artifact edges: paper -> repo, and the repos Lane B cannot see | 2026-08-19 |
+| `curate/artifact_edges.py`, `curate/admit_artifact_repos.py`, `data/pilot/ARTIFACT_EDGES.md`, `data/pools/artifact_edges.json`, `data/pools/artifact_repos.json` | artifact edges: paper -> repo, and admitting the repos Lane B cannot see | 2026-08-19 |
 | `curate/fulltext_evidence.py`, `data/pools/fulltext_evidence.json` | full-text evidence: telling a Halide sentence from a reference line | 2026-08-19 |
 | `curate/resolve_dois.py`, `curate/harvest_affiliations.py`, `curate/affiliations.py`, `data/pools/s2_doi_map.json`, `data/pools/affiliations_state.json`, `data/pilot/AFFILIATIONS.md` | affiliations: where they were when that happened | 2026-08-19 |
 
@@ -79,7 +79,12 @@ page-margin stamp of every preprint and sits inside body sentences.
 
 ## Note for the curation lane
 
-`data/pilot/ARTIFACT_EDGES.md` asks whether the 198 repos reachable only through an
-artifact edge should enter the repo pool. If they do, they become curation's problem —
-198 records on top of the 262 already queued for the judged pass. The artifact lane
-surfaces them and does not admit them on its own.
+He ruled on 2026-08-19 that the repos reachable only through an artifact edge do enter the
+repo pool. `curate/admit_artifact_repos.py` prepares them: **198 candidates, 10 rejected at
+the head by hand review, 188 admitted**, 11 flagged `unverified_name`.
+
+**They arrive with no `signatures`, `paths` or `n_matches`, because code search never found
+them.** Any rule, tier score or facet keyed on those fields reads zero and will conclude
+"no Halide evidence" — dropping exactly the repos this lane exists to surface. Every record
+carries `discovered_via: artifact_edge`; branch on it, and read the parent paper instead.
+That is +188 records for the judged pass on top of the 262 already queued.
