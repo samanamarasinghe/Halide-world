@@ -9,6 +9,14 @@
        from data/pools/. To change what the page shows, change a pool and rebuild —
        never hand-edit the generated payload. -->
   <link rel="stylesheet" href="assets/css/style.css"/>
+  <!-- Umami, cookieless. data-domains keeps localhost and anyone's fork out of the numbers,
+       so the counts are this site and nothing else. The page tracks four custom events in
+       assets/js/usage.js: view switch, search, facet select, record open. Pageviews
+       alone say almost nothing here, because this is one page and every visit is one hit. -->
+  <script defer src="https://cloud.umami.is/script.js"
+          data-website-id="c2156649-6b1f-4993-b31e-4fee725cf0a4"
+          data-domains="samanamarasinghe.github.io"></script>
+  <script defer src="assets/js/usage.js"></script>
 </head>
 <body>
   <div class="pagewidth">
