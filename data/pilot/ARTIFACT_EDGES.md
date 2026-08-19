@@ -54,20 +54,74 @@ background while its artifact has nothing to do with it. Whether a newly reached
 `descendant`, `uses` or `drop` is a curation judgement; the script emits candidates and
 says so.
 
-## The decision this raises
+---
 
-Do the 198 enter the repo pool as curatable records needing a role and importance, or stay
-artifact-only nodes reachable through their paper?
+# Admission: his ruling is to admit the 198. What that costs, and how each cost is handled
 
-1. **Admit them to the pool.** Closes the `descendant` blind spot properly, and the site
-   can show them beside the code-discovered repos. Cost: 198 more records for the judged
-   pass, on top of 262 already queued, and many will land at `drop`.
-2. **Keep them as artifact nodes only.** No new curation load; the edge is still visible
-   from the paper. Cost: the index continues to under-represent descendants, and a
-   researcher looking for "repos related to Halide" will not find Polygeist or Glow.
-3. **Admit a scored subset** — those whose paper is itself high-importance, or whose repo
-   name or paper title suggests a compiler or DSL. Bounded, but introduces a threshold on
-   a population nobody has measured yet.
+## 1. The head is where the attribution is wrong
 
-Option 3 needs the judged pass to have run on the parent papers first, so 1 and 2 are the
-live choices today.
+The 198 were probed against ecosyste.ms: **177 indexed, 21 not; median 24 stars, 45 with
+≥100, 19 with ≥1000.** Reading the 19 high-star claims against their papers shows the
+attributor's precision collapses exactly there:
+
+| claim | paper | verdict |
+|---|---|---|
+| `meta-llama/llama3` | Tempo: Compiled Dynamic Deep Learning | **wrong** — a workload, not the artifact |
+| `llvm/llvm-project` | PolyGym | **wrong** — the substrate |
+| `nvidia/apex` | FlashAttention | **wrong** — the artifact is Dao-AILab/flash-attention |
+| `onnx/models` | Explore as a Storm… | **wrong** — a benchmark source |
+| `nvidia/cutlass` | Stream-K | **wrong as a node** — upstreamed into it, not its artifact |
+| `google-research/google-research` ×2 | two unrelated papers | **wrong as a node** — a monorepo |
+| `seannaren/deepspeech.pytorch` | TensorFlow-vs-PyTorch study | **wrong** — matched on the word "pytorch" in the title |
+| `pytorch/benchmark` | PyTorch 2 | **weak** — real but not the paper's artifact |
+| `mit-han-lab/bevfusion` | TorchSparse++ | **near miss** — right lab, wrong repo (torchsparse) |
+| `mitsuba-renderer/mitsuba3` | Dr.Jit | **near miss** — right group, wrong repo (drjit) |
+| `pytorch/glow`, `mirage-project/mirage`, `tensor-compiler/taco`, `mit-han-lab/torchsparse`, `beehive-lab/tornadovm`, `ubiquitouslearning/mllm`, `maratyszcza/nnpack`, `bytedance-seed/triton-distributed` | their own papers | **correct** |
+
+The mechanism is legible: the cue is a phrase like "open-source" or "available at" near a
+URL, and the attributor pairs it with the nearest link — which may be a workload, a
+dependency or a baseline. **Precision is worst on famous repos precisely because papers
+mention famous repos.**
+
+**Handling: hand-review the 19 heads before admission.** That is the whole exposure and it
+is bounded; the review above is most of it. Below 1000 stars the population is small
+research repos where "available at <url>" is nearly always the artifact.
+
+## 2. An automatic gate was tried and does not work
+
+Token overlap between repo name/owner and paper title rejects 7 of the 8 known-bad claims —
+but also rejects `uwplse/rake`, `llvm/polygeist`, `willow-ahrens/finch.jl`, `yyuting/adelta`
+and `mirage-project/mirage`, all correct. **115 of 226 edges match on neither name nor
+owner.** Artifact names routinely have nothing to do with paper titles, so the gate costs
+more real edges than it saves false ones. Recorded so it is not rebuilt; hand-review of the
+head is cheaper and does not misfire.
+
+## 3. The 21 that ecosyste.ms does not index
+
+Re-probed against `raw.githubusercontent`: **10 have a reachable README and are real** (the
+known "404 means not indexed, not gone" finding). **11 have no README on master or main**
+and stay unverified — `adcastel/cgo`, `baco-authors/baco-artifact.git`,
+`ceruleangu/block-sparse`, `fpsg-uiuc/teaal`, `hips/autogradr`,
+`intellabs/parallelaccelerator.jl`, `kenny67nju/lambdagent.1`, `openabl/790`,
+`qiyingwu/scanweaver`, `snu-codelab/atim.git`, `souffle-ae/souffle.git`. Two of them
+(`ceruleangu/block-sparse`, `fpsg-uiuc/teaal`) come from the truncated source links, and
+several show the tell of a bad parse — a trailing `.git`, a bare number, `autogradr` for
+`autograd`. **Handling: admit with `unverified_name`, never silently.**
+
+## 4. The schema consequence, and it is the dangerous one
+
+Every Lane B record carries `signatures`, `paths` and `n_matches`. **These 198 carry none,
+because they were never found by code search.** Any rule, tier score or site facet that
+reads those fields sees zero and can conclude "no Halide evidence" — dropping exactly the
+repos this lane exists to surface. The project has hit this shape before: *a zero-hit
+result is a reason to look harder, never to drop*.
+
+**Handling: every admitted record carries `discovered_via: artifact_edge`, and anything
+keyed on signature counts must branch on it.** Their evidence is the parent paper, so the
+judged pass should read the paper, not the repo.
+
+## 5. Curation load
+
++198 records on top of the 262 already queued, and many will land at `drop`. Unavoidable
+under this ruling — but the parent paper gives each one evidence the Lane B tail often
+lacks, so they are not evidence-poor in the way the 502 papers are.
