@@ -281,7 +281,16 @@ def build_repos(lane_b, artifacts, curatable, artifact_repos=None):
     return out, n_dropped[0]
 
 
-def build_people(papers, anchors, authorship, contributors):
+# Never a join key. Several unrelated people commit under each of these, and merging is
+# transitive, so one placeholder chains them all onto one node. curate/contributors.py
+# denies the same set at the git layer; this is the site-side half of that guard.
+PLACEHOLDER_NAMES = {
+    'unknown', 'user', 'root', 'admin', 'none', 'na', 'nobody', 'your name',
+    'ubuntu', 'builder', '',
+}
+
+
+def build_people(papers, anchors, affiliations, contrib_edges):
     """Person nodes keyed on the Semantic Scholar author id.
 
     Built from the paper author lists, which is everything the pushed pools carry. When
@@ -325,51 +334,104 @@ def build_people(papers, anchors, authorship, contributors):
 
     # Optional enrichment. Absent files leave the fields off the record entirely, and the
     # page hides the facets that depend on them rather than showing an empty list.
-    for rec in (authorship or {}).get('edges', []) if isinstance(authorship, dict) else (authorship or []):
-        pid = rec.get('author_id') or ('name:' + str(rec.get('name')))
-        person = people.get(pid) or by_name.get(rec.get('name'))
+    # affiliation_edges.py answers "where were they when that happened": every edge is one
+    # author on one paper with the institution deposited for it, and `timelines` rolls
+    # those into first/last year per institution. Person ids there are POST-DEDUPE
+    # canonical, so they key straight onto the author nodes here.
+    timelines = (affiliations or {}).get('timelines') or {}
+    for pid, entry in timelines.items():
+        person = people.get(str(pid)) or by_name.get(entry.get('name'))
         if not person:
             continue
-        aff = rec.get('affiliation') or rec.get('raw_affiliation')
-        if aff:
-            person.setdefault('affiliations', [])
-            if aff not in person['affiliations']:
-                person['affiliations'].append(aff)
+        insts = entry.get('institutions') or {}
+        person['affiliations'] = sorted(insts)
+        person['affiliation_spans'] = [
+            {'institution': name, 'first': span.get('first'), 'last': span.get('last'),
+             'n_papers': span.get('n_papers')}
+            for name, span in sorted(insts.items(),
+                                     key=lambda kv: (kv[1].get('first') or 0))]
+        # A person at more than one institution over time is the thing he asked the index
+        # to show, so it is a field the page can facet on rather than a computed guess.
+        person['n_institutions'] = len(insts)
 
-    # Repo contributors. contributors.py resolves halide/Halide's 359 raw git identities
-    # into people and counts their commits, so the share is a real fraction of the tree.
+    # Repo contributors, from contributor_edges.py: 886 merged people over 564 repos,
+    # every edge stamped core / extends / packaging / uses. This supersedes the
+    # anchor-only file the page used to read, which showed contribution for
+    # halide/Halide and nothing else.
     #
-    # A contributor is joined to an author node only on an EXACT display-name or alias
-    # match. Anything looser would merge two people who share a surname, and a wrong merge
-    # in a person index is worse than two rows for one person: it silently reassigns
-    # authorship. Unmatched contributors become their own nodes keyed `git:`.
-    rows = (contributors or {}).get('people') or []
-    total = sum(r.get('commits') or 0 for r in rows if not r.get('is_bot')) or 1
-    for rec in rows:
-        if rec.get('is_bot'):
-            continue
+    # A contributor is joined to an author node on its hand-reviewed `author_id` first,
+    # then on an EXACT display-name or alias match. Anything looser would merge two
+    # people who share a surname, and a wrong merge in a person index is worse than two
+    # rows for one person: it silently reassigns authorship. Unmatched contributors
+    # become their own nodes keyed on the contributor lane's person_id.
+    #
+    # `share` arrives as a fraction of the repo's Halide-touching commits and is shown
+    # as a percentage. It is per-repo, so it is NOT comparable across repos: 91% of a
+    # four-person fork is not 91% of Halide.
+    edge_index = {}
+    for rec in (contrib_edges or {}).get('edges', []):
+        edge_index.setdefault(rec['person_id'], []).append(rec)
+
+    for rec in (contrib_edges or {}).get('people', []):
         name = rec.get('name')
-        person = by_name.get(name)
-        if not person:
+        placeholder = (name or '').strip().lower() in PLACEHOLDER_NAMES
+        person = None
+        if rec.get('author_id'):
+            person = people.get(str(rec['author_id']))
+        if not person and not placeholder:
+            person = by_name.get(name)
+        if not person and not placeholder:
             for alias in rec.get('aliases') or []:
+                if (alias or '').strip().lower() in PLACEHOLDER_NAMES:
+                    continue
                 person = by_name.get(alias)
                 if person:
                     break
         if not person:
-            person = {'kind': 'person', 'id': 'git:' + str(name), 'title': name,
+            # Keyed on the contributor lane's own person_id, which is unique, rather
+            # than on the display name. Keying on the name merged ten unrelated people
+            # onto one `git:unknown` node and two onto `git:root` -- the same failure
+            # contributors.py denies at the git layer, reappearing one layer up.
+            node_id = rec.get('person_id') or ('git:' + str(name))
+            person = {'kind': 'person', 'id': node_id, 'title': name,
                       'name': name, 'papers': [], 'anchors': [], 'years': []}
-            people['git:' + str(name)] = person
-            by_name[name] = person
-        share = round(100.0 * (rec.get('commits') or 0) / total, 2)
-        person.setdefault('contributions', []).append({
-            'repo': 'halide/Halide',
-            'commits': rec.get('commits'),
-            'share': share,
-            'first': rec.get('first_commit'),
-            'last': rec.get('last_commit'),
-        })
-        person['contrib_commits'] = max(person.get('contrib_commits') or 0,
-                                        rec.get('commits') or 0)
+            people[node_id] = person
+            if not placeholder:
+                by_name.setdefault(name, person)
+
+        cats = []
+        for edge in sorted(edge_index.get(rec['person_id'], []),
+                           key=lambda e: -(e.get('commits') or 0)):
+            person.setdefault('contributions', []).append({
+                'repo': edge['repo'],
+                'category': edge.get('category'),
+                'commits': edge.get('commits'),
+                'share': round(100.0 * (edge.get('share') or 0), 2),
+                'first': rec.get('first'),
+                'last': rec.get('last'),
+            })
+            if edge.get('category') and edge['category'] not in cats:
+                cats.append(edge['category'])
+        if cats:
+            # Accumulated, not assigned: two contributor records can land on one author
+            # node (S2 abbreviates given names, so `Sander Vocke` joins `S. Vocke` through
+            # the reviewed author_id while the display names never match). Assigning let
+            # the last record overwrite the first and reported one repo for a person
+            # carrying nine.
+            for cat in cats:
+                if cat not in person.setdefault('contrib_categories', []):
+                    person['contrib_categories'].append(cat)
+        person['contrib_repos'] = len(person.get('contributions') or [])
+        person['contrib_commits_total'] = (person.get('contrib_commits_total') or 0) \
+            + (rec.get('commits') or 0)
+        # `contrib_commits` stays COMMITS TO halide/Halide, unchanged, because the People
+        # score and its sort are calibrated on it. Cross-repo totals arrive beside it as
+        # contrib_commits_total rather than silently reordering the People view.
+        core = sum(e.get('commits') or 0
+                   for e in edge_index.get(rec['person_id'], [])
+                   if e.get('category') == 'core')
+        if core:
+            person['contrib_commits'] = max(person.get('contrib_commits') or 0, core)
 
     out = []
     for person in people.values():
@@ -399,14 +461,14 @@ def main():
     curatable = load('data/pools/lane_b_curatable.json')
     artifact_repos = load('data/pools/artifact_repos.json')
     enriched = load('data/pools/doi_enriched_state.json')
-    contributors = load('data/people/halide_contributors.json')
-    authorship = load('data/pools/authorship.json')
+    contrib_edges = load('data/pools/contributor_edges.json')
+    affiliations = load('data/pools/affiliation_edges.json')
 
     papers, anchor_ids, n_retired = build_papers(lane_a, anchors_json, dup, artifacts)
     anchors = build_anchors(anchors_json, papers)
     doi_only = build_doi_only(oc, dup, enriched)
     repos, n_dropped = build_repos(lane_b, artifacts, curatable, artifact_repos)
-    people = build_people(papers + doi_only, anchors, authorship, contributors)
+    people = build_people(papers + doi_only, anchors, affiliations, contrib_edges)
 
     entries = anchors + papers + doi_only + repos + people
     curated = sum(1 for e in entries if 'role' in e or 'importance' in e)
@@ -425,15 +487,20 @@ def main():
         'people': len(people),
         'people_with_affiliation': sum(1 for p in people if p.get('affiliations')),
         'people_with_contributions': sum(1 for p in people if p.get('contributions')),
+        'people_who_extend': sum(1 for p in people
+                                 if 'extends' in (p.get('contrib_categories') or [])),
+        'people_in_many_repos': sum(1 for p in people if (p.get('contrib_repos') or 0) > 1),
+        'people_at_many_institutions': sum(1 for p in people
+                                           if (p.get('n_institutions') or 0) > 1),
         'doi_only_enriched': sum(1 for p in doi_only if p.get('year')),
         'curated': curated,
     }
     for key, value in counts.items():
         print('%-26s %d' % (key, value))
-    if not authorship:
-        print('\nNOTE  data/pools/authorship.json absent — no affiliation-at-time-of-paper')
-    if not contributors:
-        print('NOTE  data/people/halide_contributors.json absent — no contribution share')
+    if not affiliations:
+        print('\nNOTE  data/pools/affiliation_edges.json absent — no affiliation-at-time-of-paper')
+    if not contrib_edges:
+        print('NOTE  data/pools/contributor_edges.json absent — no contribution share')
     if not enriched:
         print('NOTE  data/pools/doi_enriched_state.json absent — DOI-only papers stay bare')
     if not curatable:
