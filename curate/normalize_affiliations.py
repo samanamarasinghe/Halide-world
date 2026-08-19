@@ -8,48 +8,40 @@ CSAIL is not somewhere anyone is employed.
 The space, measured before choosing a method: 5,446 affiliation strings, 1,673
 distinct. MIT alone appears in 37 spellings, one of them misspelt
 ("Massachusettes Institute of Technology CSAIL"). The head is NOT enough to
-hand-alias -- the top 100 distinct strings cover only 34% of occurrences and the
-top 800 cover 82% -- so this is rules first, with an explicit table only where
-rules cannot reach.
+hand-alias -- the top 100 distinct strings cover only 34% of occurrences -- so
+this is rules first, with an explicit table only where rules cannot reach.
 
-THE RULES, in order:
+THE RULES, in order: split on commas and drop geography; drop sub-unit segments
+(Department, School, Laboratory, Centre, Institute-of, State Key Lab); prefer the
+segment naming an organisation; only then consult ALIASES.
 
-1. SPLIT ON COMMAS and drop geography. Country, US state, city, postcode and
-   street segments carry no institution and are most of what makes 37 spellings
-   of one university.
-2. DROP SUB-UNIT SEGMENTS -- Department of X, School of Y, Faculty, Laboratory,
-   Centre, Division, Group, College of. This is his ruling at segment level: the
-   university survives, its parts do not.
-3. Of what remains, prefer the segment that NAMES an organisation, else take the
-   last remaining segment.
-4. Only then consult ALIASES, and only as an explicit table.
+WHY NO ACRONYM EXPANSION: tried on this corpus and rejected, because it turned
+ARM into the American Rock Mechanics Association and MIT into the Moscow
+Institute of Thermal Technology. `ARM` maps to Arm because the table says so.
+Anything the table does not know stays UNRESOLVED rather than guessed --
+unresolved is a counted outcome (~10%), because a wrong institution is invisible
+once written and an unresolved one is visible and fixable.
 
-WHY NO ACRONYM EXPANSION: it was tried on this corpus and rejected, because it
-turned ARM into the American Rock Mechanics Association and MIT into the Moscow
-Institute of Thermal Technology. `ARM` here maps to Arm because the table says
-so, not because a rule inferred it. 175 distinct strings (522 occurrences, ~10%)
-begin with a bare acronym and name no university at all; those are what the
-table is for, and anything the table does not know stays UNRESOLVED rather than
-being guessed.
+RESULT: 5,446 strings, 1,673 distinct -> 559 institutions, 90% resolved.
 
-Unresolved is a real, counted outcome (453 of 5,446). A wrong institution is
-invisible once written; an unresolved one is visible and fixable.
-
-RESULT: 5,446 strings, 1,673 distinct -> 605 institutions, 91% resolved.
-
-THREE BUGS THIS PASS PRODUCED, each worth remembering:
-  * `\\b(universit|institut)\\b` MATCHES NOTHING -- a trailing word boundary
-    after a PREFIX can never fire, because "university" continues with a word
-    character. It sent Stanford, Tsinghua and Edinburgh to `unresolved` and
-    resolution read 34% instead of 91%. A regex matching nothing looks exactly
-    like a signal that is absent.
+FIVE BUGS THIS PASS PRODUCED, each worth remembering:
+  * `\\b(universit|institut)\\b` MATCHES NOTHING -- a trailing word boundary after
+    a PREFIX can never fire. It sent Stanford, Tsinghua and Edinburgh to
+    `unresolved` and resolution read 34% instead of 91%. A regex matching nothing
+    looks exactly like a signal that is absent.
   * Splitting on " and " whenever both halves looked organisational tore
     "University of Science and Technology of China" in half and made a bare
-    "Technology" the 11th most common institution. Both halves must resolve to a
-    KNOWN institution first.
+    "Technology" the 11th most common institution.
   * Fixing the UC over-merge traded it for an under-merge: Berkeley split three
     ways across "at Berkeley", ", Berkeley" and ", Berkeley, Berkeley".
-    `tidy_campus` is what keeps both directions honest.
+  * Crossref deposits carry raw HTML ENTITIES. `University of M&#x00FC` and
+    `Peking University &amp` were separate institutions until `unescape` ran.
+  * A bare legal suffix is not an institution -- `Inc` reached the index as one.
+
+The detector for all of the last three: A PERSON APPEARING TO MOVE BETWEEN TWO
+SPELLINGS OF ONE PLACE. Spot-checking careers that are publicly known is the
+cheapest test this lane has, and it also catches genuine publisher errors --
+see `data/pools/affiliation_corrections.json`.
 
     python3 curate/normalize_affiliations.py --out data/pools/affiliations_normalized.json
 """
@@ -87,7 +79,9 @@ SUBUNIT = re.compile(
     r"dept\.?|department|school|faculty|division|college of|graduate school|"
     r"laborator(y|ies)|lab\.?|centre|center|institute for|institute of|"
     r"research (group|center|centre|lab|laboratory|institute)|"
-    r"group|chair|section|program|programme|unit|team|academy of"
+    r"group|chair|section|program|programme|unit|team|academy of|"
+    r"state key lab\w*|joint (software )?institute|.*joint software institute|"
+    r"key laborator\w*|national (engineering|key) "
     r")\b", re.I)
 
 # a sub-unit ACRONYM that stands for a part of a named parent
@@ -99,8 +93,8 @@ SUBUNIT_ACRONYM = {
     "media lab": "Massachusetts Institute of Technology",
 }
 
-# NOTE the \w* suffixes. Written as `\b(universit|institut|...)\b` this regex
-# matches NOTHING -- see the docstring.
+# NOTE the \w* suffixes -- see the docstring. Written with a trailing \b after a
+# prefix this regex matches nothing at all.
 ORG_WORD = re.compile(
     r"\b(universit\w*|institut\w*|college|academy|polytechnic|school of|"
     r"inc\.?|ltd\.?|llc|corp\w*|gmbh|labs?\b|laborator\w*|"
@@ -139,12 +133,35 @@ ALIASES = {
 }
 
 
+# Crossref deposits carry raw HTML entities. Left undecoded they mint fake
+# institutions -- `University of M&#x00FC` and `Peking University &amp` both
+# appeared as separate institutions, and a person holding both spellings reads
+# as having moved.
+def unescape(s):
+    import html
+    s = html.unescape(html.unescape(s))
+    return re.sub(r"&[#\w]{1,8};?", " ", s)
+
+
+# German/Nordic transliterations of the same university.
+TRANSLIT = {"muenster": "münster", "koeln": "köln", "zuerich": "zürich",
+            "goettingen": "göttingen", "muenchen": "münchen",
+            "duesseldorf": "düsseldorf", "wuerzburg": "würzburg"}
+
+# A segment that is only a legal suffix or a stray fragment is not an
+# institution. `Inc` reached the index as an institution on its own.
+FRAGMENT = re.compile(r"^(inc|ltd|llc|corp|gmbh|co|plc|ag|sa|bv|the|and|"
+                      r"usa|research|labs?|group)\.?$", re.I)
+
+
 def strip_geo(seg):
     s = seg.strip().strip(".")
     low = s.lower().strip()
     if not low:
         return None
     if low in COUNTRIES or low in US_STATES:
+        return None
+    if FRAGMENT.match(low):
         return None
     if POSTCODE.search(s) and not ORG_WORD.search(s):
         return None
@@ -164,6 +181,37 @@ CAMPUS_SYSTEM = re.compile(
 
 CAMPUS_TIDY = re.compile(r"\s+at\s+", re.I)
 
+# Campus names appear with and without the comma. Left alone, "University of
+# California San Diego" and "University of California, San Diego" are two
+# institutions and one person looks like they moved between them.
+CAMPUS_NAMES = ("berkeley", "davis", "irvine", "los angeles", "san diego",
+                "santa barbara", "santa cruz", "riverside", "merced",
+                "san francisco", "austin", "dallas", "el paso", "arlington",
+                "urbana champaign", "chicago", "madison", "ann arbor", "boulder")
+
+# A sub-unit that names its parent inside the SAME segment, with no comma to
+# split on: "Institute of Computing Technology Chinese Academy of Sciences".
+# The parent survives, per his rollup ruling. Guarded so that a university whose
+# own name contains a parent -- "University of Chinese Academy of Sciences" --
+# is NOT swallowed by it: that is a different institution.
+PARENT_INSIDE = ("chinese academy of sciences", "russian academy of sciences",
+                 "max planck", "helmholtz")
+
+
+def rollup_parent(name):
+    # "University of the Chinese Academy of Sciences" and "University of Chinese
+    # Academy of Sciences" are one place. Done here rather than in tidy_campus,
+    # which only ever runs for the multi-campus systems.
+    name = re.sub(r"\buniversity of the\b", "University of", name, flags=re.I)
+    low = name.lower()
+    if low.startswith("university of") or low.startswith("univ"):
+        return name
+    for parent in PARENT_INSIDE:
+        if parent in low:
+            return " ".join(w.capitalize() if w not in ("of", "the") else w
+                            for w in parent.split()).replace("Of", "of")
+    return name
+
 
 def tidy_campus(name):
     """`University of California at Berkeley, Berkeley` and `..., Berkeley` are
@@ -172,7 +220,17 @@ def tidy_campus(name):
     n = CAMPUS_TIDY.sub(", ", name.strip())
     n = re.sub(r"\s*&amp;?\s*$", "", n)
     n = re.sub(r"[-\s]+", " ", n).strip(" ,")
+    n = re.sub(r"\buniversity of the\b", "University of", n, flags=re.I)
     parts = [p.strip() for p in n.split(",") if p.strip()]
+    # insert the missing comma before a known campus name, on the HEAD segment --
+    # "University of California San Diego, La Jolla" already has a comma, so a
+    # whole-string test skips it and San Diego stays split in two.
+    if parts:
+        for c in CAMPUS_NAMES:
+            m = re.search(rf"^(.*?)\s+({re.escape(c)})$", parts[0], re.I)
+            if m:
+                parts = [m.group(1).strip(), m.group(2)] + parts[1:]
+                break
     out = []
     for p in parts:
         if out and p.lower() == out[-1].lower():
@@ -199,7 +257,12 @@ def canonical(raw):
     """Return (institution, or a list of them for a dual affiliation, or None)."""
     if not raw or not raw.strip():
         return None, "empty"
+    raw = unescape(raw).strip()
     low = raw.lower().strip().strip(".")
+    for a, b in TRANSLIT.items():
+        if a in low:
+            low = low.replace(a, b)
+            raw = re.sub(a, b, raw, flags=re.I)
 
     # whole-string alias first -- catches `MIT CSAIL`, `ETH Zurich, Switzerland`
     head = re.split(r"[,;]", low)[0].strip()
@@ -207,11 +270,9 @@ def canonical(raw):
         return ALIASES[head], "alias"
 
     # A dual affiliation ("Adobe and MIT CSAIL") is TWO institutions, and taking
-    # the first silently deletes the other -- the same class of invisible loss as
-    # a wrong merge. BOTH halves must resolve to a KNOWN institution before
-    # splitting; a looser test tears real names apart (see the docstring). This
-    # must run BEFORE the sub-unit scan, or `csail` matches and the Adobe half
-    # is lost.
+    # the first silently deletes the other. BOTH halves must resolve to a KNOWN
+    # institution before splitting; a looser test tears real names apart. This
+    # must run BEFORE the sub-unit scan, or `csail` matches and Adobe is lost.
     if re.search(r"\s+and\s+", raw, re.I):
         parts = re.split(r"\s+and\s+", raw, flags=re.I)
         if len(parts) == 2:
@@ -246,7 +307,7 @@ def canonical(raw):
         if val and re.search(rf"\b{re.escape(key)}\b", p):
             return val, "alias_within"
     if ORG_WORD.search(pick):
-        out = tidy_campus(pick) if CAMPUS_SYSTEM.match(pick) else pick
+        out = tidy_campus(pick) if CAMPUS_SYSTEM.match(pick) else rollup_parent(pick)
         return out if any(c.isupper() for c in out) else out.title(), "as_written"
     return None, "unresolved"
 
@@ -269,6 +330,25 @@ def main():
         inst, reason = canonical(s)
         mapping[s] = inst if isinstance(inst, list) or inst is None else [inst]
         why[reason] += raw[s]
+
+    # Final consolidation: two spellings differing only by case or accent are one
+    # institution. The transliteration step above can leave `University of
+    # münster` beside `University of Münster`, and a person holding both reads as
+    # having moved. Keep the most frequent spelling as the canonical one.
+    def fold(x):
+        import unicodedata
+        x = unicodedata.normalize("NFKD", x.lower())
+        return re.sub(r"[^a-z0-9]", "", "".join(c for c in x if not unicodedata.combining(c)))
+
+    best = {}
+    for s_, insts in mapping.items():
+        for i in (insts or []):
+            k = fold(i)
+            best.setdefault(k, collections.Counter())[i] += raw[s_]
+    winner = {k: c.most_common(1)[0][0] for k, c in best.items()}
+    for s_ in mapping:
+        if mapping[s_]:
+            mapping[s_] = sorted({winner[fold(i)] for i in mapping[s_]})
 
     total = sum(raw.values())
     resolved = sum(raw[s] for s, v in mapping.items() if v)
