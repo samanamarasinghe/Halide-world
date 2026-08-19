@@ -41,6 +41,17 @@ too. Name-keyed links 251 groups where id-keyed links 218.
 | **left split, tagged** | **143** |
 | author ids collapsed away | 258 |
 
+**The shared-paper signal was contested and is now ruled.** A parallel session
+read two same-named ids in one author list the opposite way — a person appears
+once per author list, so co-occurrence should mean two different people or a
+source defect, and should VETO the merge rather than force it. His ruling of
+2026-08-19: **same paper means same person**; the source duplicated one author
+within one list. The one case is `Zihao Ye` (ids 3060913 and 2402503197, both
+among the 21 authors of *MPK: A Compiler and Runtime for Mega-Kernelizing Tensor
+Programs*, 2025), which is also the group with the most shared coauthors in the
+set — so both readings would have acted on it with full confidence, in opposite
+directions. Recorded here so the question is not re-opened a third time.
+
 A group merges only when **every** pair inside it is linked. Requiring a clique
 is deliberate: linking A–B and B–C does not make A and C the same person, and
 merging is transitive — that is how the display name `unknown` once chained four
