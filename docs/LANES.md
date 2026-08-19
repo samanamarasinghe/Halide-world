@@ -33,6 +33,7 @@ before any work starts.
 | `curate/person_aliases.py`, `data/pools/person_aliases.json`, `docs/name_matching.md` | person layer: cross-layer contributor/author aliases, and name-matching method | 2026-08-19 |
 | `curate/repo_contributors.py`, `data/pilot/CONTRIBUTOR_PILOT.md` | contributor lane | 2026-08-18 |
 | `build_site.py`, `index.html`, `assets/*`, `data/site/*`, `patch_*.py` | site and GUI | 2026-08-18 |
+| `curate/resolve_dois.py`, `curate/affiliations.py`, `data/pools/s2_doi_map.json` | affiliations: "where they were when that happened" | 2026-08-19 |
 
 The person layer is deliberately two rows, not one. The two halves must *run* together —
 a contributor joined "to the author record" joins one of several until the author side is
@@ -43,3 +44,11 @@ deduped — but they are separate files and can be built independently.
 `data/anchors.json`, `data/pools/duplicates.json` and anything else carrying judgement
 rather than derived output. Those are edited rarely and by agreement, never as a side
 effect of a lane.
+
+## Note for the affiliations lane
+
+`docs/name_matching.md` (cross-layer alias lane) concludes that affiliation strings are the
+remedy for the altered-name blind spot, and `data/pilot/AUTHOR_DEDUPE.md` names them as the
+next signal for its 143 unresolved groups. Both are *consumers* of this lane's output, not
+owners of it. When affiliations land, re-run `author_dedupe.py` against the residual rather
+than editing either file from here.
