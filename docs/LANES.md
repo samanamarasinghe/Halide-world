@@ -38,6 +38,7 @@ than process.
 | `curate/repo_contributors.py`, `data/pilot/CONTRIBUTOR_PILOT.md` | contributor lane | 2026-08-18 |
 | `build_site.py`, `index.html`, `assets/*`, `data/site/*`, `patch_*.py` | site and GUI | 2026-08-18 |
 | `curate/artifact_edges.py`, `data/pilot/ARTIFACT_EDGES.md`, `data/pools/artifact_edges.json` | artifact edges: paper -> repo, and the repos Lane B cannot see | 2026-08-19 |
+| `curate/fulltext_evidence.py`, `data/pools/fulltext_evidence.json` | full-text evidence: telling a Halide sentence from a reference line | 2026-08-19 |
 | `curate/resolve_dois.py`, `curate/harvest_affiliations.py`, `curate/affiliations.py`, `data/pools/s2_doi_map.json`, `data/pools/affiliations_state.json`, `data/pilot/AFFILIATIONS.md` | affiliations: where they were when that happened | 2026-08-19 |
 
 The person layer is deliberately two rows, not one. The two halves must *run* together —
@@ -58,6 +59,16 @@ next signal for its unresolved groups. Both are *consumers* of this lane's outpu
 owners of it. That dependency has now been discharged once: affiliations were folded into
 `author_dedupe.py` and took its residual from 143 groups to 117. When affiliation coverage
 improves, re-run the dedupe rather than editing either consumer by hand.
+
+## Note for the curation lane on full-text evidence
+
+`curate/extract_pdf_text.py` and its output `data/pools/fulltext_state.json` belong to the
+curation lane and were not edited from here. But a finding that changes how they should be
+read is recorded in `curate/fulltext_evidence.py`, in this lane: **a "Halide sentence" is
+often a line from the paper's own bibliography.** Depending on the detector, **54 to 207 of
+the 1,062 papers have no Halide sentence outside their reference list**, so the
+citation-only population is 115-268 rather than the 61 with no hit at all. The judged pass
+should read the `body` / `bibliography` / `none` verdict rather than the raw hit count.
 
 ## Note for the curation lane
 
