@@ -49,28 +49,60 @@ NEW_VALUES = """      case 'contributions':
         if (n) out.push(n >= 10 ? '10+' : n >= 5 ? '5-9' : n >= 2 ? '2-4' : '1');
         return out;"""
 
-OLD_HINT = '{ facet: \'contributions\', label: \'Contributions\', defaultAll: true, hint: \'What the person contributed: how many indexed works they authored, and whether they have commits in halide/Halide. Every value starts selected, so unlighting one removes that group — unlighting "1 paper" is the quickest way to the recurring names. The commit log is resolved from 359 raw name-and-email identities into people first, so a share is a fraction of the whole tree rather than of one identity; a contributor is joined to an author only on an exact name match, and anyone unmatched appears as their own entry.\' }'
+# The prose edits are expressed as replacements ON the old string rather than as new
+# literals. The old text contains an escaped quote around "1 paper"; re-typing that
+# through a source file and a JSON transport doubled the backslash once already, and a
+# stray backslash in a visible hint is exactly the kind of defect nobody re-reads for.
+# Deriving the new string touches only backslash-free spans.
 
-NEW_HINT = '{ facet: \'contributions\', label: \'Contributions\', defaultAll: true, hint: \'What the person contributed: how many indexed works they authored, and what kind of code they committed. Committed to halide/Halide is the compiler itself; Extended Halide means they modified it in a fork; the other two are downstream projects and distribution packaging. Every value starts selected, so unlighting one removes that group — unlighting \\"1 paper\\" is the quickest way to the recurring names. Git identities are resolved into people before anything is counted, so a share is a fraction of a repository’s Halide-touching commits rather than of one identity; a contributor is joined to an author on a reviewed alias or an exact name match, and anyone unmatched appears as their own entry.\' }'
+OLD_HINT_HEAD = ('and whether they have commits in halide/Halide.')
+NEW_HINT_HEAD = ('and what kind of code they committed. Committed to halide/Halide is '
+                 'the compiler itself; Extended Halide means they modified it in a fork; '
+                 'the other two are downstream projects and distribution packaging.')
 
-OLD_NOTE = "      note: 'Everyone who authored an indexed paper, keyed on their Semantic Scholar author id. ' +\n            'Affiliation at the time of the paper and per-repository contribution share need ' +\n            'authorship.json and the contributors output, which are not in the repository yet — ' +\n            'their facets appear as soon as those files are there.',"
+OLD_HINT_TAIL = ('The commit log is resolved from 359 raw name-and-email identities into '
+                 'people first, so a share is a fraction of the whole tree rather than of '
+                 'one identity; a contributor is joined to an author only on an exact '
+                 'name match,')
+NEW_HINT_TAIL = ('Git identities are resolved into people before anything is counted, so '
+                 'a share is a fraction of a repository\u2019s Halide-touching commits '
+                 'rather than of one identity; a contributor is joined to an author on a '
+                 'reviewed alias or an exact name match,')
 
-NEW_NOTE = "      note: 'Everyone who authored an indexed paper or committed Halide code, keyed on their ' +\n            'Semantic Scholar author id where there is one. Contribution covers 564 repositories, ' +\n            'not just halide/Halide, and each edge records what kind of contribution it was.',"
+OLD_NOTE_HEAD = ("'Everyone who authored an indexed paper, keyed on their Semantic "
+                 "Scholar author id. ' +")
+NEW_NOTE_HEAD = ("'Everyone who authored an indexed paper, keyed on their Semantic "
+                 "Scholar author id, ' +")
 
-OLD_SHARE = "          c.commits + ' commits, ' + c.share + '% of the tree' +"
+OLD_NOTE_TAIL = ("'Affiliation at the time of the paper and per-repository contribution "
+                 "share need ' +")
+OLD_NOTE_TAIL2 = ("'authorship.json and the contributors output, which are not in the "
+                  "repository yet \u2014 ' +")
+OLD_NOTE_TAIL3 = "'their facets appear as soon as those files are there.',"
+NEW_NOTE_TAIL = ("'plus everyone who committed Halide code. Contribution covers 564 "
+                 "repositories, ' +")
+NEW_NOTE_TAIL2 = "'not just halide/Halide, and each edge records what kind of ' +"
+NEW_NOTE_TAIL3 = "'contribution it was.',"
 
-NEW_SHARE = "          c.commits + ' commits, ' + c.share + '% of that repository’s Halide commits' +"
+OLD_SHARE = "' commits, ' + c.share + '% of the tree'"
+NEW_SHARE = "' commits, ' + c.share + '% of that repository\u2019s Halide commits'"
 
-OLD_SORT = "        { key: 'commits', label: 'Commits to Halide', title: 'Commits to halide/Halide, with the git identities merged. People who never committed sort last' },"
-
-NEW_SORT = "        { key: 'commits', label: 'Commits to Halide', title: 'Commits to halide/Halide itself, with the git identities merged. Commits to the other 563 repositories are on the card but do not move this sort. People who never committed sort last' },"
+OLD_SORT = ("'Commits to halide/Halide, with the git identities merged. People who never "
+            "committed sort last'")
+NEW_SORT = ("'Commits to halide/Halide itself, with the git identities merged. Commits to "
+            "the other 563 repositories are on the card but do not move this sort. People "
+            "who never committed sort last'")
 
 EDITS = [
     ('contribution labels', OLD_LABELS, NEW_LABELS),
     ('facet value order', OLD_ORDER, NEW_ORDER),
     ('facet values', OLD_VALUES, NEW_VALUES),
-    ('facet hint', OLD_HINT, NEW_HINT),
-    ('people view note', OLD_NOTE, NEW_NOTE),
+    ('facet hint, first half', OLD_HINT_HEAD, NEW_HINT_HEAD),
+    ('facet hint, second half', OLD_HINT_TAIL, NEW_HINT_TAIL),
+    ('people view note, line 1', OLD_NOTE_HEAD, NEW_NOTE_HEAD),
+    ('people view note, line 2', OLD_NOTE_TAIL, NEW_NOTE_TAIL),
+    ('people view note, line 3', OLD_NOTE_TAIL2, NEW_NOTE_TAIL2),
+    ('people view note, line 4', OLD_NOTE_TAIL3, NEW_NOTE_TAIL3),
     ('share wording on the card', OLD_SHARE, NEW_SHARE),
     ('commits sort title', OLD_SORT, NEW_SORT),
 ]
