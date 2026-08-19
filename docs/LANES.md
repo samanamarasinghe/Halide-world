@@ -33,6 +33,7 @@ before any work starts.
 | `curate/person_aliases.py`, `data/pools/person_aliases.json`, `docs/name_matching.md` | person layer: cross-layer contributor/author aliases, and name-matching method | 2026-08-19 |
 | `curate/repo_contributors.py`, `data/pilot/CONTRIBUTOR_PILOT.md` | contributor lane | 2026-08-18 |
 | `build_site.py`, `index.html`, `assets/*`, `data/site/*`, `patch_*.py` | site and GUI | 2026-08-18 |
+| `curate/artifact_edges.py`, `data/pilot/ARTIFACT_EDGES.md`, `data/pools/artifact_edges.json` | artifact edges: paper -> repo, and the repos Lane B cannot see | 2026-08-19 |
 | `curate/resolve_dois.py`, `curate/affiliations.py`, `data/pools/s2_doi_map.json` | affiliations: "where they were when that happened" | 2026-08-19 |
 
 The person layer is deliberately two rows, not one. The two halves must *run* together —
@@ -52,3 +53,10 @@ remedy for the altered-name blind spot, and `data/pilot/AUTHOR_DEDUPE.md` names 
 next signal for its 143 unresolved groups. Both are *consumers* of this lane's output, not
 owners of it. When affiliations land, re-run `author_dedupe.py` against the residual rather
 than editing either file from here.
+
+## Note for the curation lane
+
+`data/pilot/ARTIFACT_EDGES.md` asks whether the 198 repos reachable only through an
+artifact edge should enter the repo pool. If they do, they become curation's problem —
+198 records on top of the 262 already queued for the judged pass. The artifact lane
+surfaces them and does not admit them on its own.
