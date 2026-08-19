@@ -4,7 +4,7 @@
 The second half of the contributor lane, per his 2026-08-19 split. The harvest
 (contributor_harvest.py) is expensive and role-free; this is cheap and carries
 the judgement, so it re-runs whenever the judged pass refines a repo's role or
-the harvest improves. Nothing here re-clones anything.
+the harvest improves. Nothing here re-clones any of the 564 repos.
 
 CATEGORIES (his ruling, amending the earlier "inherit the repo's role"):
 
@@ -45,6 +45,7 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import contributors as ca                       # the anchor's merge rules
+import contributor_harvest as ch                # bot rules and the pool bootstrap
 
 ANCHOR = "halide/Halide"
 
@@ -77,7 +78,6 @@ def is_bot(name, email):
     """Union of both rules. contributors.py's was written against the anchor's
     nightly builders; the harvest's against CI accounts in other people's repos.
     Neither is a superset of the other."""
-    import contributor_harvest as ch
     if ca.BOTS.search(name or "") or ca.BOTS.search(email or ""):
         return "anchor_bot_rule"
     rule, _ = ch.bot_flag(email or "", [name] if name else [])
@@ -114,12 +114,14 @@ def main():
     ap.add_argument("--anchor", default="data/people/halide_contributors.json")
     ap.add_argument("--clone", default="/tmp/clones/Halide.git")
     ap.add_argument("--curatable", default="data/pools/lane_b_curatable.json")
+    ap.add_argument("--meta", default="data/pools/repo_meta_state.json")
     ap.add_argument("--forks", default="data/pools/fork_verdicts.json")
     ap.add_argument("--aliases", default="data/pools/person_aliases.json")
     ap.add_argument("--out", default="data/pools/contributor_edges.json")
     args = ap.parse_args()
     sys.stdout.reconfigure(line_buffering=True)
 
+    ch.ensure_pool(args.curatable, args.meta)   # same bootstrap as the harvest
     bootstrap_anchor(args.anchor, args.clone)
     harvest = json.load(open(args.harvest))
     anchor = json.load(open(args.anchor))
