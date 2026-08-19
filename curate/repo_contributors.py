@@ -99,8 +99,11 @@ def pick_paths(all_paths, sampled, grepped=()):
 
 def log_authors(d, paths, bulk_limit=200, rev_args=None, pickaxe=False, people=None):
     """pickaxe=True keeps only commits whose diff adds or removes a Halide line."""
+    if people is None:
+        people = defaultdict(lambda: {"commits": 0, "files": 0, "names": set(),
+                                      "first": None, "last": None, "examples": []})
     if not paths:
-        return (people if people is not None else {}), 0, 0
+        return people, 0, 0
     fmt = "%x01%H%x02%an%x02%ae%x02%aI%x02%s"
     args = ["git", "log", f"--format={fmt}", "--name-only"]
     if pickaxe:
@@ -108,9 +111,6 @@ def log_authors(d, paths, bulk_limit=200, rev_args=None, pickaxe=False, people=N
     args += list(rev_args or [])
     args += ["--"] + paths
     r = sh(args, cwd=d, timeout=3600)
-    if people is None:
-        people = defaultdict(lambda: {"commits": 0, "files": 0, "names": set(),
-                                      "first": None, "last": None, "examples": []})
     bulk = total = 0
     for rec in r.stdout.split("\x01"):
         if not rec.strip():
@@ -138,10 +138,16 @@ def log_authors(d, paths, bulk_limit=200, rev_args=None, pickaxe=False, people=N
     return people, total, bulk
 
 
-def run(repo, sampled, skip_shared=False):
+def run(repo, sampled, skip_shared=False, shared_budget=None):
     """skip_shared=True for very large repos: pickaxe on a blobless clone fetches
     blobs one at a time over the network and does not finish (pytorch's 11 shared
-    files ran >25 min). Use a full clone there, or take dedicated files only."""
+    files ran >25 min). Use a full clone there, or take dedicated files only.
+
+    shared_budget makes that decision measurable instead of manual: it caps the
+    number of commits touching the shared paths, which is the real cost driver
+    and which `rev-list --count` returns without fetching a blob. A count is a
+    stable, explainable omission; a wall-clock timeout is not, and nothing
+    downstream may key on one (the fork_diff `fetch_timeout` lesson)."""
     print(f"\n=== {repo} ===", flush=True)
     d = clone(repo)
     if not d:
@@ -154,6 +160,24 @@ def run(repo, sampled, skip_shared=False):
           f"vendored={len(vend)} bundled={len(bund)}", flush=True)
     dedicated = [p for p in kept if HALIDE_RE.search(p)]
     shared = [] if skip_shared else [p for p in kept if not HALIDE_RE.search(p)]
+    # Cost driver, measured on pytorch: pickaxe fetches ONE BLOB PER COMMIT that
+    # touches a shared path, so the count of those commits IS the cost. The first
+    # guess -- history depth times shared-path count -- scored pytorch at 180k,
+    # under any sane budget, while the run did not finish. rev-list needs no
+    # blobs, so asking for the real number is nearly free.
+    cost = 0
+    if shared:
+        r = sh(["git", "rev-list", "--count", "HEAD", "--"] + shared, cwd=d, timeout=300)
+        if r.returncode == 0 and r.stdout.strip().isdigit():
+            cost = int(r.stdout.strip())
+    depth = 0
+    r = sh(["git", "rev-list", "--count", "HEAD"], cwd=d)
+    if r.returncode == 0 and r.stdout.strip().isdigit():
+        depth = int(r.stdout.strip())
+    if shared_budget and cost > shared_budget:
+        print(f"    shared pass SKIPPED: {cost} commits touch the {len(shared)} "
+              f"shared paths, over budget {shared_budget}", flush=True)
+        shared, skip_shared = [], True
     people, tot_d, bulk_d = log_authors(d, dedicated)
     people, tot_s, bulk_s = log_authors(d, shared, pickaxe=True, people=people)
     print(f"    commits: {tot_d} dedicated + {tot_s} halide-touching on shared")
@@ -162,6 +186,7 @@ def run(repo, sampled, skip_shared=False):
             "n_shared": len(shared), "paths": kept, "vendored_paths": len(vend),
             "bundled_paths": len(bund), "n_commits": tot_d + tot_s,
             "bulk_skipped": bulk_d + bulk_s, "skip_shared": skip_shared,
+            "history_depth": depth, "shared_cost": cost,
             "people": [{"email": ae, "names": sorted(v["names"]), "commits": v["commits"],
                         "files": v["files"],
                         "first": v["first"][:10] if v["first"] else None,
@@ -179,7 +204,10 @@ def fork_authors(repo):
     jrk/gradient-halide, measured:
       no exclusion            Adams 11,454 / Johnson 4,586 / Sharlet 4,102
       --not halide/Halide     Adams  5,659   <- still wrong
-      --not BOTH              444 commits: Tzu-Mao Li 247, Michael Gharbi 77
+      --not BOTH              451 commits: Tzu-Mao Li 247, Michael Gharbi 77
+
+    The 451 figure is with --branches; the earlier 444 was a HEAD-only log, which
+    undercounts every fork and reported zero for Halide-to-Hardware.
     """
     d = clone(repo)
     for name, url in (("up", "https://github.com/halide/Halide.git"),
@@ -187,7 +215,12 @@ def fork_authors(repo):
         sh(["git", "remote", "add", name, url], cwd=d)
         sh(["git", "fetch", "--quiet", "--filter=blob:none", name,
             f"refs/heads/*:refs/remotes/{name}/*"], cwd=d, timeout=1800)
-    r = sh(["git", "log", "--format=%an\x02%ae", "HEAD",
+    # --branches, not HEAD. jeffsetter/Halide-to-Hardware's master is entirely
+    # contained in upstream and every extending commit sits on coreir_apps,
+    # coreir_target, hardware_benchmarks or hls, so a HEAD log reported ZERO
+    # commits for a confirmed extending fork. Excluding both upstream remotes is
+    # what keeps --branches honest.
+    r = sh(["git", "log", "--format=%an\x02%ae", "--branches",
             "--not", "--remotes=up", "--remotes=old"], cwd=d, timeout=1800)
     people = defaultdict(lambda: {"commits": 0, "names": set()})
     for line in r.stdout.splitlines():
