@@ -45,6 +45,41 @@ The person layer is deliberately two rows, not one. The two halves must *run* to
 a contributor joined "to the author record" joins one of several until the author side is
 deduped — but they are separate files and can be built independently.
 
+## The data lane wrote across the site lane's claim, twice, on his instruction
+
+`build_site.py` belongs to the site lane. It has been edited from the data lane twice, both
+times because he said to: once to render the artifact-edge repos, and on 2026-08-19 via
+`patch_person_edges.py` to point the person layer at `contributor_edges.json` and
+`affiliation_edges.json`. Both are flagged rather than silent.
+
+What that patch changed, so the site lane is not surprised by it:
+
+- The page read `data/people/halide_contributors.json`, which covers halide/Halide alone —
+  **222 people with contribution data out of 886**, and no edge carrying a category, so the
+  24 people who EXTENDED Halide outside the anchor were invisible. It now reads
+  `contributor_edges.json`: **884 people with contributions, 232 in more than one repo.**
+- Affiliations were read from `data/pools/authorship.json`, **a filename nothing ever
+  produced**. The real output is `affiliation_edges.json`, which is why every build has
+  reported `people_with_affiliation: 0`. Person nodes now carry `affiliations`,
+  `affiliation_spans` (institution + first/last year + n_papers) and `n_institutions`.
+- **`contrib_commits` deliberately still means commits to halide/Halide**, because the
+  People score and its default sort are calibrated on it. Cross-repo totals arrive beside
+  it as `contrib_commits_total` rather than silently reordering the People view. New
+  fields: `contrib_repos`, `contrib_categories`, and `category` on each contribution.
+- **A placeholder guard was added to the site-side join.** The join is exact display name,
+  and with 886 contributors instead of 227 that merged **ten unrelated people onto one
+  `git:unknown` node and two onto `git:root`** — the same failure `contributors.py` denies
+  at the git layer, reappearing one layer up. Unmatched contributors are now keyed on the
+  contributor lane's unique `person_id`, not on their display name.
+- Second bug from the same pass: two contributor records can land on ONE author node (S2
+  abbreviates given names, so `Sander Vocke` joins `S. Vocke` through the reviewed
+  `author_id` while the display names never match). `contrib_repos` was assigned rather
+  than accumulated and reported one repo for a person carrying nine.
+
+New `build-info.json` counts: `people_who_extend`, `people_in_many_repos`,
+`people_at_many_institutions`. The patch round-trips: applied to the pushed
+`build_site.py` it reproduces the tested file byte for byte.
+
 ## Cross-lane dependency, contributor lane to person layer
 
 `contributor_edges.py` imports `contributors.py`'s merge rules **unchanged** and runs them
