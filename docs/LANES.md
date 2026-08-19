@@ -35,7 +35,7 @@ than process.
 | `curate/tier_split.py`, `curate/rules_pass.py`, `curate/extract_pdf_text.py`, `data/pilot/TIER_SPLIT.md`, `data/pilot/RULES_PASS.md` | curation: tiers, rules, the judged pass | 2026-08-19 |
 | `curate/author_dedupe.py`, `data/pilot/AUTHOR_DEDUPE.md`, `data/pools/author_dedupe.json` | person layer: author-side dedupe | 2026-08-19 |
 | `curate/person_aliases.py`, `data/pools/person_aliases.json`, `docs/name_matching.md` | person layer: cross-layer contributor/author aliases, and name-matching method | 2026-08-19 |
-| `curate/repo_contributors.py`, `curate/contributor_harvest.py`, `data/pilot/CONTRIBUTOR_PILOT.md`, `data/pilot/CONTRIBUTOR_HARVEST.md`, `data/pools/contributor_harvest.json` | contributor lane | 2026-08-18 |
+| `curate/repo_contributors.py`, `curate/contributor_harvest.py`, `curate/contributor_edges.py`, `curate/contributors.py`, `data/people/halide_contributors.json`, `data/pilot/CONTRIBUTOR_PILOT.md`, `data/pilot/CONTRIBUTOR_HARVEST.md`, `data/pilot/CONTRIBUTOR_EDGES.md`, `data/pools/contributor_harvest.json`, `data/pools/contributor_edges.json` | contributor lane | 2026-08-18 |
 | `build_site.py`, `index.html`, `assets/*`, `data/site/*`, `patch_*.py` | site and GUI | 2026-08-18 |
 | `curate/artifact_edges.py`, `curate/admit_artifact_repos.py`, `data/pilot/ARTIFACT_EDGES.md`, `data/pools/artifact_edges.json`, `data/pools/artifact_repos.json` | artifact edges: paper -> repo, and admitting the repos Lane B cannot see | 2026-08-19 |
 | `curate/fulltext_evidence.py`, `data/pools/fulltext_evidence.json` | full-text evidence: telling a Halide sentence from a reference line | 2026-08-19 |
@@ -45,6 +45,18 @@ The person layer is deliberately two rows, not one. The two halves must *run* to
 a contributor joined "to the author record" joins one of several until the author side is
 deduped — but they are separate files and can be built independently.
 
+## Cross-lane dependency, contributor lane to person layer
+
+`contributor_edges.py` imports `contributors.py`'s merge rules **unchanged** and runs them
+over both populations at once — the anchor's 227 people and the harvest's 893 emails are
+one population observed twice, and 87 core contributors turn out to appear outside the
+anchor. Anyone changing the anchor's rules changes the whole git-side person layer with it.
+
+The cross-layer join to *authors* still comes only from the hand-reviewed
+`person_aliases.json`, per his ruling that the initial-only key is never automated. That
+leaves **16 of 886 git people carrying an `author_id`**, which is the largest unjoined
+surface in the index and the next place review effort pays.
+
 ## A derived input the contributor lane rebuilds rather than commits
 
 `data/pools/lane_b_curatable.json` is `cleanup_repos.py`'s output and the contributor
@@ -52,6 +64,10 @@ runner's input, and it existed only on one disk because it is built from the git
 `repo_meta_state.json`. `contributor_harvest.py` now rebuilds both when they are missing
 instead of failing, so the lane starts from a bare clone. It also falls under the harvest
 lane's `data/pools/lane_*` claim, which is the second reason not to commit it from here.
+
+`data/people/halide_contributors.json` is the same shape of problem — it needs a clone of
+halide/Halide — and `contributor_edges.py` bootstraps it the same way (blobless bare,
+~27MB).
 
 ## Not covered by claims
 
