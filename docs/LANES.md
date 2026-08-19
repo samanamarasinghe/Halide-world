@@ -30,7 +30,7 @@ before any work starts.
 | `curate/cleanup_repos.py`, `curate/fork_diff.py`, `curate/enrich_*.py`, `data/pools/fork_verdicts.json` | repo cleanup and enrichment | 2026-08-18 |
 | `curate/tier_split.py`, `curate/rules_pass.py`, `curate/extract_pdf_text.py`, `data/pilot/TIER_SPLIT.md`, `data/pilot/RULES_PASS.md` | curation: tiers, rules, the judged pass | 2026-08-19 |
 | `curate/author_dedupe.py`, `data/pilot/AUTHOR_DEDUPE.md`, `data/pools/author_dedupe.json` | person layer: author-side dedupe | 2026-08-19 |
-| `curate/person_aliases.py`, `data/pools/person_aliases.json` | person layer: cross-layer contributor/author aliases | 2026-08-19 |
+| `curate/person_aliases.py`, `data/pools/person_aliases.json`, `docs/name_matching.md` | person layer: cross-layer contributor/author aliases, and name-matching method | 2026-08-19 |
 | `curate/repo_contributors.py`, `data/pilot/CONTRIBUTOR_PILOT.md` | contributor lane | 2026-08-18 |
 | `build_site.py`, `index.html`, `assets/*`, `data/site/*`, `patch_*.py` | site and GUI | 2026-08-18 |
 
