@@ -4,7 +4,8 @@
   "rules": {
     "evidence_required": "Every merge names the evidence that ties the two sides together: a GitHub handle, an institutional email domain, or a paper whose subject is Halide itself. A shared surname and initial is never sufficient.",
     "never_a_merge_key": "A placeholder or generic display name (unknown, empty, a bare first name) is never used to merge. Merging is transitive, so one bad key chains unrelated people together.",
-    "reversibility": "The raw git identities and the source author ids are recorded here beside the merged node, so any merge can be inspected and undone."
+    "reversibility": "The raw git identities and the source author ids are recorded here beside the merged node, so any merge can be inspected and undone.",
+    "author_names_are_not_ground_truth": "The Ankit Aggarwal case proved the metadata source can alter a given name (it stored Ankita where the paper prints Ankit). So a rejection reasoned as 'different given names' is only as good as the source spelling -- check the paper's own author list before relying on one. The rejected[] entries below were judged on the source name and would repay that check if any of them ever matters."
   },
   "id_namespaces": {
     "numeric": "Semantic Scholar author id",
@@ -99,20 +100,20 @@
       "evidence": "Tampere address matches the affiliation on Rapid customization of image processors using Halide."
     },
     {
+      "git": ["Ankit Aggarwal <aankit@codeaurora.org>", "Ankit Aggarwal <aankit@quicinc.com>", "Ankit Aggarwal <aankit-ca@codeaurora.org>", "Ankit Aggarwal <aankit@aankit-linux.ap.qualcomm.com>", "Ankit Aggarwal <aankit@aankit-linux.qualcomm.com>"],
+      "author": "2261004471",
+      "commits": 118,
+      "evidence": "RESOLVED 2026-08-19. The author record reads Ankita Aggarwal, but the paper itself does not: arXiv 2602.19762 (Hexagon-MLIR) prints Ankit Aggarwal in its own author list, as do the arXiv listing pages and a citing bibliography (A. Aggarwal). The source altered the given name. Qualcomm addresses on the git side, the Hexagon backend in the commits, and a Qualcomm Hexagon compiler paper on the author side.",
+      "source_defect": "S2 author name differs from the paper's own spelling: Ankita vs Ankit. Names from that source are not ground truth, which matters for anything keyed on them."
+    },
+    {
       "git": ["Maaz Ahmad <maaz.c10@gmail.com>"],
       "author": "7745797",
       "commits": 1,
       "evidence": "Author of Vector instruction selection for digital signal processors and of the Verified Lifting line; the author record carries the full name Maaz Bin Safeer Ahmad."
     }
   ],
-  "unresolved": [
-    {
-      "git": ["Ankit Aggarwal <aankit@codeaurora.org>", "Ankit Aggarwal <aankit@quicinc.com>", "Ankit Aggarwal <aankit-ca@codeaurora.org>", "Ankit Aggarwal <aankit@aankit-linux.ap.qualcomm.com>", "Ankit Aggarwal <aankit@aankit-linux.qualcomm.com>"],
-      "candidate_author": "Ankita Aggarwal",
-      "commits": 118,
-      "question": "The git identities are Qualcomm addresses and the commits are the Hexagon backend. The candidate author is one of 25 authors on Hexagon-MLIR, also Qualcomm. But Ankita is a distinct given name, and a large employer has many people of one surname. Not merged: nothing here ties the two sides beyond employer. The largest contributor left unmatched, so worth a human answer."
-    }
-  ],
+  "unresolved": [],
   "rejected": [
     {"git": "Sean Lee <selee@nvidia.com>", "candidates": ["Seungwon Lee", "Seyong Lee", "Sanghyeon Lee"], "why": "different given names; different institutions"},
     {"git": "Cheng Wang <wangcheng@google.com>", "candidates": ["Chi Wang", "Chao Wang"], "why": "different given names"},
