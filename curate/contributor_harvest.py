@@ -62,28 +62,35 @@ def bot_flag(email, names):
     return None, None
 
 
+def ensure_pool(pool, meta):
+    """Rebuild the curatable list rather than fail. It is built from
+    repo_meta_state.json, which is gitignored, so a fresh clone has neither --
+    the recurring trap in this project is a pipeline input that lives on one
+    disk. Rebuilding costs ~6 min against ecosyste.ms and reproduces the counts
+    exactly (anchor 1, curatable 552, drop 102, packaging 12). Same principle as
+    admit_artifact_repos.py fetching in-script: the output must regenerate from
+    the repo alone.
+
+    contributor_edges.py calls this too. One bootstrap, not two that drift."""
+    if os.path.exists(pool):
+        return
+    here = os.path.dirname(os.path.abspath(__file__))
+    if not os.path.exists(meta):
+        print(f"no {meta} -- running enrich_repos.py (~6 min)", flush=True)
+        subprocess.run([sys.executable, "-u", os.path.join(here, "enrich_repos.py"),
+                        "--out", meta], check=True)
+    print(f"no {pool} -- running cleanup_repos.py", flush=True)
+    subprocess.run([sys.executable, "-u", os.path.join(here, "cleanup_repos.py"),
+                    "--meta", meta, "--out", pool], check=True)
+
+
 def load_pool(args):
     """The repo list, plus the sampled Lane B paths each run() needs.
 
     lane_b_curatable.json is cleanup_repos.py's output and is not in the repo,
     because it depends on the gitignored repo_meta_state.json. Both are rebuilt
     here when missing, so the lane starts from a bare clone."""
-    if not os.path.exists(args.pool):
-        # Bootstrap rather than fail. The pool file is built from
-        # repo_meta_state.json, which is gitignored, so a fresh clone has
-        # neither -- the recurring trap in this project is a pipeline input
-        # that lives on one disk. Rebuilding costs ~6 min against ecosyste.ms
-        # and reproduces the counts exactly (anchor 1, curatable 552, drop 102,
-        # packaging 12). Same principle as admit_artifact_repos.py fetching
-        # in-script: the output must regenerate from the repo alone.
-        here = os.path.dirname(os.path.abspath(__file__))
-        if not os.path.exists(args.meta):
-            print(f"no {args.meta} -- running enrich_repos.py (~6 min)")
-            subprocess.run([sys.executable, "-u", os.path.join(here, "enrich_repos.py"),
-                            "--out", args.meta], check=True)
-        print(f"no {args.pool} -- running cleanup_repos.py")
-        subprocess.run([sys.executable, "-u", os.path.join(here, "cleanup_repos.py"),
-                        "--meta", args.meta, "--out", args.pool], check=True)
+    ensure_pool(args.pool, args.meta)
     doc = json.load(open(args.pool))
     rows = doc["repos"] if isinstance(doc, dict) else doc
     keep = set(args.statuses.split(","))
