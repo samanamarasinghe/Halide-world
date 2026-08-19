@@ -59,11 +59,17 @@
   var TIER_LABELS = { doi_only: 'DOI only' };
   var ARTIFACT_LABELS = { has: 'Published an artifact', none: 'No artifact found' };
   var PAPERS_LABELS = { yes: 'Is a paper artifact', no: 'No paper attached' };
-  var CONTRIB_LABELS = { commits: 'Committed to halide/Halide' };
+  var CONTRIB_LABELS = {
+    core: 'Committed to halide/Halide',
+    extends: 'Extended Halide',
+    uses: 'Committed to a project using Halide',
+    packaging: 'Packaged Halide for a distribution'
+  };
   var BAND_LABELS = { '1': '1 paper', '2-4': '2–4 papers', '5-9': '5–9 papers', '10+': '10 or more' };
   /* Committing sorts above the paper bands however few people did it: it is a different
      kind of contribution, not the smallest one. */
-  var CONTRIB_ORDER = ['commits', '10+', '5-9', '2-4', '1'];
+  var CONTRIB_ORDER = ['core', 'extends', 'uses', 'packaging',
+                      '10+', '5-9', '2-4', '1'];
 
   var IMPORTANCE_NOTE = [
     '0 — everything, rated or not',
@@ -131,19 +137,19 @@
     {
       key: 'people', label: 'People', kinds: { person: 1 },
       searchLabel: 'Search name',
-      note: 'Everyone who authored an indexed paper, keyed on their Semantic Scholar author id. ' +
-            'Affiliation at the time of the paper and per-repository contribution share need ' +
-            'authorship.json and the contributors output, which are not in the repository yet — ' +
-            'their facets appear as soon as those files are there.',
+      note: 'Everyone who authored an indexed paper, keyed on their Semantic Scholar author id, ' +
+            'plus everyone who committed Halide code. Contribution covers 564 repositories, ' +
+            'not just halide/Halide, and each edge records what kind of ' +
+            'contribution it was.',
       sorts: [
         { key: 'score', label: 'Total contributions', title: 'Commits and papers on one axis: commits divided by the largest commit count, plus papers divided by the largest paper count. Someone strong on either side scores near 1, someone strong on both scores near 2' },
         { key: 'papers_n', label: 'Papers in the index', title: 'How many indexed works the person authored' },
-        { key: 'commits', label: 'Commits to Halide', title: 'Commits to halide/Halide, with the git identities merged. People who never committed sort last' },
+        { key: 'commits', label: 'Commits to Halide', title: 'Commits to halide/Halide itself, with the git identities merged. Commits to the other 563 repositories are on the card but do not move this sort. People who never committed sort last' },
         { key: 'title', label: 'Name (A–Z)', title: 'Alphabetical' },
         { key: 'first', label: 'First appearance', title: 'Earliest indexed paper first' }
       ],
       facets: [
-        { facet: 'contributions', label: 'Contributions', defaultAll: true, hint: 'What the person contributed: how many indexed works they authored, and whether they have commits in halide/Halide. Every value starts selected, so unlighting one removes that group — unlighting "1 paper" is the quickest way to the recurring names. The commit log is resolved from 359 raw name-and-email identities into people first, so a share is a fraction of the whole tree rather than of one identity; a contributor is joined to an author only on an exact name match, and anyone unmatched appears as their own entry.' },
+        { facet: 'contributions', label: 'Contributions', defaultAll: true, hint: 'What the person contributed: how many indexed works they authored, and what kind of code they committed. Committed to halide/Halide is the compiler itself; Extended Halide means they modified it in a fork; the other two are downstream projects and distribution packaging. Every value starts selected, so unlighting one removes that group — unlighting "1 paper" is the quickest way to the recurring names. Git identities are resolved into people before anything is counted, so a share is a fraction of a repository’s Halide-touching commits rather than of one identity; a contributor is joined to an author on a reviewed alias or an exact name match, and anyone unmatched appears as their own entry.' },
         { facet: 'anchor_author', label: 'Anchor author', hint: 'People who wrote one of the anchor works themselves: the authors of the Halide papers, matched on name because the anchor records carry names rather than author ids.' },
         { facet: 'anchors', label: 'Cites anchor', hint: 'Which anchor works this person\u2019s papers cite, pooled across all of them.' },
         { facet: 'affiliations', label: 'Affiliation', searchable: true, optional: true, hint: 'The organization recorded for this person. Taken from the paper\u2019s own affiliation string rather than from an institution matcher, because the matcher\u2019s labels were wrong about one record in eight.' }
@@ -241,8 +247,11 @@
          commit record, and a contributor with no indexed paper carries only the latter --
          which is why zero papers yields no band rather than falling into "1 paper". */
       case 'contributions':
-        var out = [];
-        if (rec.contributions && rec.contributions.length) out.push('commits');
+        var out = (rec.contrib_categories || []).slice();
+        /* A payload built before the categories existed carries contributions with no
+           category. Fall back to the old single value rather than dropping the person
+           out of a facet whose values are all selected by default. */
+        if (!out.length && rec.contributions && rec.contributions.length) out.push('core');
         var n = rec.n_papers || 0;
         if (n) out.push(n >= 10 ? '10+' : n >= 5 ? '5-9' : n >= 2 ? '2-4' : '1');
         return out;
@@ -654,7 +663,7 @@
         row.appendChild(el('span', 'edge-label', 'Contributed'));
         edgeLink(row, c.repo, c.repo, githubUrl(c.repo));
         row.appendChild(el('span', 'edge-more',
-          c.commits + ' commits, ' + c.share + '% of the tree' +
+          c.commits + ' commits, ' + c.share + '% of that repository’s Halide commits' +
           (c.first ? ', ' + String(c.first).slice(0, 10) + ' to ' + String(c.last).slice(0, 10) : '')));
         edges.appendChild(row);
       });
