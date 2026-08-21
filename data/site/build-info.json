@@ -1,6 +1,6 @@
 {
  "version": "0.1",
- "built": "2026-08-19",
+ "built": "2026-08-21",
  "counts": {
   "anchors": 16,
   "papers": 1795,
@@ -11,12 +11,12 @@
   "repos_with_stars": 646,
   "repos_from_artifact_edges": 188,
   "bundles": 2828,
-  "people": 7074,
-  "people_with_affiliation": 0,
+  "people": 6630,
+  "people_with_affiliation": 2720,
   "people_with_contributions": 884,
   "people_who_extend": 24,
   "people_in_many_repos": 232,
-  "people_at_many_institutions": 0,
+  "people_at_many_institutions": 244,
   "doi_only_enriched": 157,
   "curated": 0
  }

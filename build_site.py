@@ -296,17 +296,40 @@ def build_people(papers, anchors, affiliations, contrib_edges):
     Built from the paper author lists, which is everything the pushed pools carry. When
     authorship.json and the contributors output arrive they fill affiliation-at-time-of-
     paper and per-repo contribution share, which cannot be derived from the pools here.
+
+    data/pools/person_aliases.json author_merges collapse ids the dedupe proved are one
+    person: every merged id keys onto its keep id here and the node takes the alias
+    entry's name, with the absorbed spellings kept in alt_names for the by-name join.
+    An absent alias file means no remap, like every other optional pool.
     """
+    import json as _json, os as _os
+    remap, alias_names = {}, {}
+    _ap = _os.path.join('data', 'pools', 'person_aliases.json')
+    if _os.path.exists(_ap):
+        with open(_ap) as _f:
+            for _m in (_json.load(_f).get('author_merges') or []):
+                _keep = str(_m.get('keep') or '')
+                if not _keep:
+                    continue
+                if _m.get('name'):
+                    alias_names[_keep] = _m['name']
+                for _mid in (_m.get('merge') or []):
+                    remap[str(_mid)] = _keep
     people = {}
     for paper in papers:
         ids = paper.get('author_ids') or []
         names = paper.get('authors') or []
         for i, name in enumerate(names):
             pid = ids[i] if i < len(ids) and ids[i] else 'name:' + name
+            pid = remap.get(str(pid), str(pid))
+            raw_name = name
+            name = alias_names.get(pid, name)
             person = people.setdefault(pid, {
                 'kind': 'person', 'id': pid, 'title': name, 'name': name,
                 'papers': [], 'anchors': [], 'years': [],
             })
+            if raw_name != name and raw_name not in person.setdefault('alt_names', []):
+                person['alt_names'].append(raw_name)
             person['papers'].append(paper['id'])
             if paper.get('year'):
                 person['years'].append(paper['year'])
@@ -319,6 +342,8 @@ def build_people(papers, anchors, affiliations, contrib_edges):
     by_name = {}
     for person in people.values():
         by_name.setdefault(person['name'], person)
+        for _alt in person.get('alt_names') or []:
+            by_name.setdefault(_alt, person)
     for anchor in anchors:
         for name in anchor.get('authors') or []:
             person = by_name.get(name)

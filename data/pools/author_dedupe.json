@@ -1,0 +1,6448 @@
+{
+ "schema_version": 1,
+ "note": "Author-layer dedupe. A group merges only when EVERY pair in it is linked. Unsettled groups are LEFT SPLIT and tagged, never guessed. `affiliation_known` says whether the residual is a signal problem or a coverage one.",
+ "signal_discrimination": {
+  "affiliation": "67% target vs 2% control",
+  "two_hop": "17% target vs 4% control",
+  "shared_venue": "9% vs 5% -- REJECTED",
+  "shared_field": "98% vs 97% -- REJECTED, non-discriminative"
+ },
+ "n_merged": 245,
+ "n_left_split": 117,
+ "ids_collapsed": 297,
+ "merged": [
+  {
+   "name": "Aarti Gupta",
+   "ids": [
+    "2157855942",
+    "37131028"
+   ],
+   "canonical_id": "2157855942",
+   "n_papers": {
+    "2157855942": 4,
+    "37131028": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2157855942+37131028": "coauthor"
+   }
+  },
+  {
+   "name": "Adam Paszke",
+   "ids": [
+    "2295989102",
+    "3407277"
+   ],
+   "canonical_id": "2295989102",
+   "n_papers": {
+    "2295989102": 1,
+    "3407277": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2295989102+3407277": "coauthor"
+   }
+  },
+  {
+   "name": "Adrian Sampson",
+   "ids": [
+    "145719923",
+    "2276611963"
+   ],
+   "canonical_id": "145719923",
+   "n_papers": {
+    "145719923": 10,
+    "2276611963": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145719923+2276611963": "coauthor"
+   }
+  },
+  {
+   "name": "Adriana Schulz",
+   "ids": [
+    "2273691315",
+    "2711393"
+   ],
+   "canonical_id": "2711393",
+   "n_papers": {
+    "2273691315": 1,
+    "2711393": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2273691315+2711393": "coauthor"
+   }
+  },
+  {
+   "name": "Ajay Jain",
+   "ids": [
+    "1623995772",
+    "50658699"
+   ],
+   "canonical_id": "1623995772",
+   "n_papers": {
+    "1623995772": 2,
+    "50658699": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1623995772+50658699": "coauthor"
+   }
+  },
+  {
+   "name": "Alec Jacobson",
+   "ids": [
+    "145151177",
+    "2241538537"
+   ],
+   "canonical_id": "145151177",
+   "n_papers": {
+    "145151177": 1,
+    "2241538537": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145151177+2241538537": "coauthor"
+   }
+  },
+  {
+   "name": "Alex Aiken",
+   "ids": [
+    "2262454907",
+    "2277502914"
+   ],
+   "canonical_id": "2262454907",
+   "n_papers": {
+    "2262454907": 4,
+    "2277502914": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2262454907+2277502914": "coauthor"
+   }
+  },
+  {
+   "name": "Alexander J. Root",
+   "ids": [
+    "2155665017",
+    "2303402046"
+   ],
+   "canonical_id": "2303402046",
+   "n_papers": {
+    "2155665017": 2,
+    "2303402046": 6
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2155665017+2303402046": "coauthor"
+   }
+  },
+  {
+   "name": "Ali Jannesari",
+   "ids": [
+    "1692563",
+    "2266204425"
+   ],
+   "canonical_id": "1692563",
+   "n_papers": {
+    "1692563": 1,
+    "2266204425": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "1692563+2266204425": "affiliation"
+   }
+  },
+  {
+   "name": "Aman Arora",
+   "ids": [
+    "2265753125",
+    "47766465"
+   ],
+   "canonical_id": "2265753125",
+   "n_papers": {
+    "2265753125": 3,
+    "47766465": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2265753125+47766465": "coauthor"
+   }
+  },
+  {
+   "name": "Amanda Liu",
+   "ids": [
+    "2118793571",
+    "2287861987"
+   ],
+   "canonical_id": "2287861987",
+   "n_papers": {
+    "2118793571": 1,
+    "2287861987": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2118793571+2287861987": "coauthor"
+   }
+  },
+  {
+   "name": "Amit Sabne",
+   "ids": [
+    "1736081",
+    "2339784756"
+   ],
+   "canonical_id": "1736081",
+   "n_papers": {
+    "1736081": 2,
+    "2339784756": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1736081+2339784756": "coauthor"
+   }
+  },
+  {
+   "name": "Andrew Adams",
+   "ids": [
+    "144187067",
+    "145506199",
+    "2288082294"
+   ],
+   "canonical_id": "144187067",
+   "n_papers": {
+    "144187067": 17,
+    "145506199": 2,
+    "2288082294": 4
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "144187067+145506199": "coauthor",
+    "144187067+2288082294": "coauthor",
+    "145506199+2288082294": "affiliation"
+   }
+  },
+  {
+   "name": "Andr\u00e9s Goens",
+   "ids": [
+    "2132535685",
+    "2277765912",
+    "32708115"
+   ],
+   "canonical_id": "2132535685",
+   "n_papers": {
+    "2132535685": 1,
+    "2277765912": 1,
+    "32708115": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2132535685+2277765912": "2-hop",
+    "2132535685+32708115": "coauthor",
+    "2277765912+32708115": "2-hop"
+   }
+  },
+  {
+   "name": "Ang Chen",
+   "ids": [
+    "2393081822",
+    "30894196"
+   ],
+   "canonical_id": "2393081822",
+   "n_papers": {
+    "2393081822": 1,
+    "30894196": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2393081822+30894196": "coauthor"
+   }
+  },
+  {
+   "name": "Anton Wijs",
+   "ids": [
+    "1976383",
+    "2316995958"
+   ],
+   "canonical_id": "1976383",
+   "n_papers": {
+    "1976383": 2,
+    "2316995958": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1976383+2316995958": "coauthor"
+   }
+  },
+  {
+   "name": "Ao Shen",
+   "ids": [
+    "2197960350",
+    "2313111322"
+   ],
+   "canonical_id": "2197960350",
+   "n_papers": {
+    "2197960350": 1,
+    "2313111322": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2197960350+2313111322": "coauthor"
+   }
+  },
+  {
+   "name": "Aviral Shrivastava",
+   "ids": [
+    "1726554",
+    "2263531864"
+   ],
+   "canonical_id": "1726554",
+   "n_papers": {
+    "1726554": 2,
+    "2263531864": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1726554+2263531864": "coauthor"
+   }
+  },
+  {
+   "name": "Bei Yu",
+   "ids": [
+    "143676008",
+    "2148266888",
+    "2260300198",
+    "2278380755",
+    "2330763304"
+   ],
+   "canonical_id": "2148266888",
+   "n_papers": {
+    "143676008": 1,
+    "2148266888": 3,
+    "2260300198": 1,
+    "2278380755": 1,
+    "2330763304": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "143676008+2148266888": "coauthor",
+    "143676008+2260300198": "2-hop",
+    "143676008+2278380755": "coauthor",
+    "143676008+2330763304": "2-hop",
+    "2148266888+2260300198": "coauthor",
+    "2148266888+2278380755": "coauthor",
+    "2148266888+2330763304": "coauthor",
+    "2260300198+2278380755": "coauthor",
+    "2260300198+2330763304": "coauthor",
+    "2278380755+2330763304": "coauthor"
+   }
+  },
+  {
+   "name": "Bin Dong",
+   "ids": [
+    "2169830741",
+    "39131579"
+   ],
+   "canonical_id": "2169830741",
+   "n_papers": {
+    "2169830741": 1,
+    "39131579": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2169830741+39131579": "coauthor"
+   }
+  },
+  {
+   "name": "Bin Ren",
+   "ids": [
+    "153108488",
+    "2042633100",
+    "2244768705"
+   ],
+   "canonical_id": "153108488",
+   "n_papers": {
+    "153108488": 2,
+    "2042633100": 2,
+    "2244768705": 2
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "153108488+2042633100": "coauthor",
+    "153108488+2244768705": "2-hop",
+    "2042633100+2244768705": "coauthor"
+   }
+  },
+  {
+   "name": "Bohan Hou",
+   "ids": [
+    "2166785743",
+    "2355871471"
+   ],
+   "canonical_id": "2166785743",
+   "n_papers": {
+    "2166785743": 4,
+    "2355871471": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2166785743+2355871471": "coauthor"
+   }
+  },
+  {
+   "name": "Bojie Li",
+   "ids": [
+    "2246445410",
+    "2809737"
+   ],
+   "canonical_id": "2246445410",
+   "n_papers": {
+    "2246445410": 1,
+    "2809737": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2246445410+2809737": "coauthor"
+   }
+  },
+  {
+   "name": "Carlos Guestrin",
+   "ids": [
+    "1412355294",
+    "1730156"
+   ],
+   "canonical_id": "1730156",
+   "n_papers": {
+    "1412355294": 1,
+    "1730156": 6
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1412355294+1730156": "coauthor"
+   }
+  },
+  {
+   "name": "Carole-Jean Wu",
+   "ids": [
+    "2258799225",
+    "2354511253",
+    "2797270"
+   ],
+   "canonical_id": "2258799225",
+   "n_papers": {
+    "2258799225": 2,
+    "2354511253": 1,
+    "2797270": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2258799225+2354511253": "affiliation",
+    "2258799225+2797270": "coauthor",
+    "2354511253+2797270": "2-hop"
+   }
+  },
+  {
+   "name": "Chao Yang",
+   "ids": [
+    "2146344496",
+    "2298434151"
+   ],
+   "canonical_id": "2146344496",
+   "n_papers": {
+    "2146344496": 2,
+    "2298434151": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2146344496+2298434151": "coauthor"
+   }
+  },
+  {
+   "name": "Charith Mendis",
+   "ids": [
+    "2293614338",
+    "32532671"
+   ],
+   "canonical_id": "32532671",
+   "n_papers": {
+    "2293614338": 1,
+    "32532671": 13
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2293614338+32532671": "coauthor"
+   }
+  },
+  {
+   "name": "Chen Chen",
+   "ids": [
+    "2239499276",
+    "2248149318"
+   ],
+   "canonical_id": "2239499276",
+   "n_papers": {
+    "2239499276": 2,
+    "2248149318": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2239499276+2248149318": "coauthor"
+   }
+  },
+  {
+   "name": "Chong Li",
+   "ids": [
+    "2109665066",
+    "2109665623"
+   ],
+   "canonical_id": "2109665066",
+   "n_papers": {
+    "2109665066": 1,
+    "2109665623": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2109665066+2109665623": "coauthor"
+   }
+  },
+  {
+   "name": "Chris Fallin",
+   "ids": [
+    "1829160",
+    "2319684192"
+   ],
+   "canonical_id": "1829160",
+   "n_papers": {
+    "1829160": 2,
+    "2319684192": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1829160+2319684192": "coauthor"
+   }
+  },
+  {
+   "name": "Christian Schmitt",
+   "ids": [
+    "2237437900",
+    "73464556"
+   ],
+   "canonical_id": "73464556",
+   "n_papers": {
+    "2237437900": 1,
+    "73464556": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2237437900+73464556": "coauthor"
+   }
+  },
+  {
+   "name": "Christoph W. Kessler",
+   "ids": [
+    "2259332721",
+    "2303568849"
+   ],
+   "canonical_id": "2259332721",
+   "n_papers": {
+    "2259332721": 1,
+    "2303568849": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2259332721+2303568849": "coauthor"
+   }
+  },
+  {
+   "name": "Christophe Alias",
+   "ids": [
+    "1721919",
+    "2279046444"
+   ],
+   "canonical_id": "1721919",
+   "n_papers": {
+    "1721919": 1,
+    "2279046444": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1721919+2279046444": "coauthor"
+   }
+  },
+  {
+   "name": "Christophe Dubach",
+   "ids": [
+    "2238860862",
+    "3224333"
+   ],
+   "canonical_id": "3224333",
+   "n_papers": {
+    "2238860862": 1,
+    "3224333": 17
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2238860862+3224333": "affiliation"
+   }
+  },
+  {
+   "name": "Christopher W. Fletcher",
+   "ids": [
+    "2012099",
+    "2267733812"
+   ],
+   "canonical_id": "2012099",
+   "n_papers": {
+    "2012099": 1,
+    "2267733812": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2012099+2267733812": "affiliation"
+   }
+  },
+  {
+   "name": "Chun Huang",
+   "ids": [
+    "145879959",
+    "2290345534",
+    "50419182"
+   ],
+   "canonical_id": "145879959",
+   "n_papers": {
+    "145879959": 2,
+    "2290345534": 2,
+    "50419182": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145879959+2290345534": "coauthor",
+    "145879959+50419182": "coauthor",
+    "2290345534+50419182": "coauthor"
+   }
+  },
+  {
+   "name": "Clark W. Barrett",
+   "ids": [
+    "1680661",
+    "2240596422"
+   ],
+   "canonical_id": "1680661",
+   "n_papers": {
+    "1680661": 6,
+    "2240596422": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1680661+2240596422": "coauthor"
+   }
+  },
+  {
+   "name": "Cong Guo",
+   "ids": [
+    "2109865181",
+    "2344801563"
+   ],
+   "canonical_id": "2109865181",
+   "n_papers": {
+    "2109865181": 1,
+    "2344801563": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2109865181+2344801563": "coauthor"
+   }
+  },
+  {
+   "name": "Connelly Barnes",
+   "ids": [
+    "2288098717",
+    "2496412"
+   ],
+   "canonical_id": "2496412",
+   "n_papers": {
+    "2288098717": 2,
+    "2496412": 8
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2288098717+2496412": "coauthor"
+   }
+  },
+  {
+   "name": "Dahua Lin",
+   "ids": [
+    "1807606",
+    "2258618409",
+    "2269713956"
+   ],
+   "canonical_id": "1807606",
+   "n_papers": {
+    "1807606": 3,
+    "2258618409": 1,
+    "2269713956": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1807606+2258618409": "coauthor",
+    "1807606+2269713956": "coauthor",
+    "2258618409+2269713956": "coauthor"
+   }
+  },
+  {
+   "name": "Damien Rouhling",
+   "ids": [
+    "1944760",
+    "2307438942"
+   ],
+   "canonical_id": "1944760",
+   "n_papers": {
+    "1944760": 1,
+    "2307438942": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1944760+2307438942": "coauthor"
+   }
+  },
+  {
+   "name": "Dan Olteanu",
+   "ids": [
+    "1756801",
+    "2301709571"
+   ],
+   "canonical_id": "1756801",
+   "n_papers": {
+    "1756801": 2,
+    "2301709571": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1756801+2301709571": "coauthor"
+   }
+  },
+  {
+   "name": "Dan Suciu",
+   "ids": [
+    "144823759",
+    "2274930966",
+    "2301157833"
+   ],
+   "canonical_id": "144823759",
+   "n_papers": {
+    "144823759": 1,
+    "2274930966": 1,
+    "2301157833": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "144823759+2274930966": "coauthor",
+    "144823759+2301157833": "affiliation",
+    "2274930966+2301157833": "affiliation"
+   }
+  },
+  {
+   "name": "Daniel Kroening",
+   "ids": [
+    "2298907283",
+    "2412195737"
+   ],
+   "canonical_id": "2298907283",
+   "n_papers": {
+    "2298907283": 2,
+    "2412195737": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2298907283+2412195737": "coauthor"
+   }
+  },
+  {
+   "name": "Deming Chen",
+   "ids": [
+    "1713644",
+    "2265580701"
+   ],
+   "canonical_id": "1713644",
+   "n_papers": {
+    "1713644": 2,
+    "2265580701": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "1713644+2265580701": "affiliation"
+   }
+  },
+  {
+   "name": "Elizabeth Polgreen",
+   "ids": [
+    "2256998623",
+    "3436129"
+   ],
+   "canonical_id": "2256998623",
+   "n_papers": {
+    "2256998623": 8,
+    "3436129": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2256998623+3436129": "coauthor"
+   }
+  },
+  {
+   "name": "Federico Ciccozzi",
+   "ids": [
+    "2302289",
+    "2353095082"
+   ],
+   "canonical_id": "2302289",
+   "n_papers": {
+    "2302289": 1,
+    "2353095082": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2302289+2353095082": "affiliation"
+   }
+  },
+  {
+   "name": "Felix Heide",
+   "ids": [
+    "2241891000",
+    "49857575"
+   ],
+   "canonical_id": "49857575",
+   "n_papers": {
+    "2241891000": 1,
+    "49857575": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2241891000+49857575": "coauthor"
+   }
+  },
+  {
+   "name": "Frank Hannig",
+   "ids": [
+    "1697402",
+    "2257296301"
+   ],
+   "canonical_id": "1697402",
+   "n_papers": {
+    "1697402": 18,
+    "2257296301": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1697402+2257296301": "coauthor"
+   }
+  },
+  {
+   "name": "Fraser Brown",
+   "ids": [
+    "145843772",
+    "2327244171"
+   ],
+   "canonical_id": "145843772",
+   "n_papers": {
+    "145843772": 1,
+    "2327244171": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145843772+2327244171": "coauthor"
+   }
+  },
+  {
+   "name": "Fredrik Kjolstad",
+   "ids": [
+    "2290932",
+    "2303400919"
+   ],
+   "canonical_id": "2290932",
+   "n_papers": {
+    "2290932": 25,
+    "2303400919": 11
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2290932+2303400919": "coauthor"
+   }
+  },
+  {
+   "name": "Fr\u00e9do Durand",
+   "ids": [
+    "2258047559",
+    "2268759923"
+   ],
+   "canonical_id": "2258047559",
+   "n_papers": {
+    "2258047559": 1,
+    "2268759923": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2258047559+2268759923": "2-hop"
+   }
+  },
+  {
+   "name": "G. Bernstein",
+   "ids": [
+    "2269741382",
+    "40549248"
+   ],
+   "canonical_id": "40549248",
+   "n_papers": {
+    "2269741382": 6,
+    "40549248": 10
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2269741382+40549248": "coauthor"
+   }
+  },
+  {
+   "name": "G. Gorman",
+   "ids": [
+    "145299521",
+    "2238205216"
+   ],
+   "canonical_id": "145299521",
+   "n_papers": {
+    "145299521": 2,
+    "2238205216": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145299521+2238205216": "coauthor"
+   }
+  },
+  {
+   "name": "George Teodoro",
+   "ids": [
+    "2258630439",
+    "2711977"
+   ],
+   "canonical_id": "2258630439",
+   "n_papers": {
+    "2258630439": 1,
+    "2711977": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2258630439+2711977": "coauthor"
+   }
+  },
+  {
+   "name": "Giorgis Georgakoudis",
+   "ids": [
+    "2409535715",
+    "2825891"
+   ],
+   "canonical_id": "2409535715",
+   "n_papers": {
+    "2409535715": 1,
+    "2825891": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2409535715+2825891": "coauthor"
+   }
+  },
+  {
+   "name": "Grace Dinh",
+   "ids": [
+    "2261733475",
+    "36031131"
+   ],
+   "canonical_id": "2261733475",
+   "n_papers": {
+    "2261733475": 2,
+    "36031131": 2
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2261733475+36031131": "affiliation"
+   }
+  },
+  {
+   "name": "Gu-Yeon Wei",
+   "ids": [
+    "2255803",
+    "2257305610"
+   ],
+   "canonical_id": "2255803",
+   "n_papers": {
+    "2255803": 3,
+    "2257305610": 2
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2255803+2257305610": "affiliation"
+   }
+  },
+  {
+   "name": "Guangwen Yang",
+   "ids": [
+    "145789924",
+    "2264974962"
+   ],
+   "canonical_id": "145789924",
+   "n_papers": {
+    "145789924": 2,
+    "2264974962": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145789924+2264974962": "coauthor"
+   }
+  },
+  {
+   "name": "H. Corporaal",
+   "ids": [
+    "1684335",
+    "2257232526"
+   ],
+   "canonical_id": "1684335",
+   "n_papers": {
+    "1684335": 12,
+    "2257232526": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "1684335+2257232526": "affiliation"
+   }
+  },
+  {
+   "name": "Haidong Lan",
+   "ids": [
+    "2319385728",
+    "2827531"
+   ],
+   "canonical_id": "2319385728",
+   "n_papers": {
+    "2319385728": 2,
+    "2827531": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2319385728+2827531": "coauthor"
+   }
+  },
+  {
+   "name": "Hailong Yang",
+   "ids": [
+    "2322453163",
+    "46402263"
+   ],
+   "canonical_id": "46402263",
+   "n_papers": {
+    "2322453163": 1,
+    "46402263": 18
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2322453163+46402263": "coauthor"
+   }
+  },
+  {
+   "name": "Haipeng Dai",
+   "ids": [
+    "1799298",
+    "2368699104"
+   ],
+   "canonical_id": "1799298",
+   "n_papers": {
+    "1799298": 4,
+    "2368699104": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1799298+2368699104": "coauthor"
+   }
+  },
+  {
+   "name": "Hao Yu",
+   "ids": [
+    "2115751665",
+    "2288350991"
+   ],
+   "canonical_id": "2115751665",
+   "n_papers": {
+    "2115751665": 1,
+    "2288350991": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2115751665+2288350991": "coauthor"
+   }
+  },
+  {
+   "name": "Hiroyasu Takagi",
+   "ids": [
+    "2152648896",
+    "24231051"
+   ],
+   "canonical_id": "2152648896",
+   "n_papers": {
+    "2152648896": 2,
+    "24231051": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2152648896+24231051": "coauthor"
+   }
+  },
+  {
+   "name": "Hong An",
+   "ids": [
+    "2054773963",
+    "2317323640",
+    "2336101012"
+   ],
+   "canonical_id": "2054773963",
+   "n_papers": {
+    "2054773963": 1,
+    "2317323640": 1,
+    "2336101012": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2054773963+2317323640": "coauthor",
+    "2054773963+2336101012": "coauthor",
+    "2317323640+2336101012": "coauthor"
+   }
+  },
+  {
+   "name": "Hong Jiang",
+   "ids": [
+    "2212085964",
+    "5093958"
+   ],
+   "canonical_id": "2212085964",
+   "n_papers": {
+    "2212085964": 1,
+    "5093958": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2212085964+5093958": "coauthor"
+   }
+  },
+  {
+   "name": "Hongbo Rong",
+   "ids": [
+    "2294884941",
+    "3191917"
+   ],
+   "canonical_id": "3191917",
+   "n_papers": {
+    "2294884941": 2,
+    "3191917": 7
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2294884941+3191917": "coauthor"
+   }
+  },
+  {
+   "name": "Hongxu Jiang",
+   "ids": [
+    "2292508",
+    "2302622858"
+   ],
+   "canonical_id": "2292508",
+   "n_papers": {
+    "2292508": 2,
+    "2302622858": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2292508+2302622858": "coauthor"
+   }
+  },
+  {
+   "name": "Hongzheng Chen",
+   "ids": [
+    "2108844339",
+    "2294927908"
+   ],
+   "canonical_id": "2108844339",
+   "n_papers": {
+    "2108844339": 5,
+    "2294927908": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2108844339+2294927908": "coauthor"
+   }
+  },
+  {
+   "name": "Horace He",
+   "ids": [
+    "2111909709",
+    "2298006908",
+    "46350295"
+   ],
+   "canonical_id": "2111909709",
+   "n_papers": {
+    "2111909709": 1,
+    "2298006908": 1,
+    "46350295": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2111909709+2298006908": "2-hop",
+    "2111909709+46350295": "coauthor",
+    "2298006908+46350295": "2-hop"
+   }
+  },
+  {
+   "name": "Huanqi Cao",
+   "ids": [
+    "2241090098",
+    "47709883"
+   ],
+   "canonical_id": "47709883",
+   "n_papers": {
+    "2241090098": 1,
+    "47709883": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2241090098+47709883": "coauthor"
+   }
+  },
+  {
+   "name": "Huaping Chen",
+   "ids": [
+    "2200282445",
+    "2316156453"
+   ],
+   "canonical_id": "2200282445",
+   "n_papers": {
+    "2200282445": 1,
+    "2316156453": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2200282445+2316156453": "coauthor"
+   }
+  },
+  {
+   "name": "Hugh Leather",
+   "ids": [
+    "2278432148",
+    "2476647"
+   ],
+   "canonical_id": "2476647",
+   "n_papers": {
+    "2278432148": 1,
+    "2476647": 10
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2278432148+2476647": "coauthor"
+   }
+  },
+  {
+   "name": "Huimin Cui",
+   "ids": [
+    "1734175",
+    "2152200870",
+    "2367270514"
+   ],
+   "canonical_id": "1734175",
+   "n_papers": {
+    "1734175": 3,
+    "2152200870": 3,
+    "2367270514": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1734175+2152200870": "coauthor",
+    "1734175+2367270514": "coauthor",
+    "2152200870+2367270514": "coauthor"
+   }
+  },
+  {
+   "name": "Hyojin Sung",
+   "ids": [
+    "2268956066",
+    "2298966528",
+    "2946535"
+   ],
+   "canonical_id": "2946535",
+   "n_papers": {
+    "2268956066": 1,
+    "2298966528": 1,
+    "2946535": 2
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2268956066+2298966528": "affiliation",
+    "2268956066+2946535": "affiliation",
+    "2298966528+2946535": "affiliation"
+   }
+  },
+  {
+   "name": "H\u00e9ctor Mart\u00ednez",
+   "ids": [
+    "2261734231",
+    "2266180934"
+   ],
+   "canonical_id": "2261734231",
+   "n_papers": {
+    "2261734231": 3,
+    "2266180934": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2261734231+2266180934": "coauthor"
+   }
+  },
+  {
+   "name": "J. Cong",
+   "ids": [
+    "2066032921",
+    "2259796"
+   ],
+   "canonical_id": "2259796",
+   "n_papers": {
+    "2066032921": 1,
+    "2259796": 8
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2066032921+2259796": "coauthor"
+   }
+  },
+  {
+   "name": "Jackson Woodruff",
+   "ids": [
+    "1423372001",
+    "2392265263"
+   ],
+   "canonical_id": "1423372001",
+   "n_papers": {
+    "1423372001": 4,
+    "2392265263": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1423372001+2392265263": "coauthor"
+   }
+  },
+  {
+   "name": "Jaeyeon Won",
+   "ids": [
+    "2054742739",
+    "2309247244"
+   ],
+   "canonical_id": "2054742739",
+   "n_papers": {
+    "2054742739": 3,
+    "2309247244": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2054742739+2309247244": "coauthor"
+   }
+  },
+  {
+   "name": "James J. Thomas",
+   "ids": [
+    "2110226192",
+    "2152780507"
+   ],
+   "canonical_id": "2110226192",
+   "n_papers": {
+    "2110226192": 2,
+    "2152780507": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2110226192+2152780507": "coauthor"
+   }
+  },
+  {
+   "name": "Jason Ansel",
+   "ids": [
+    "1773260",
+    "2297948666"
+   ],
+   "canonical_id": "1773260",
+   "n_papers": {
+    "1773260": 4,
+    "2297948666": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1773260+2297948666": "coauthor"
+   }
+  },
+  {
+   "name": "Jeffrey S. Vetter",
+   "ids": [
+    "2266399248",
+    "2348456687"
+   ],
+   "canonical_id": "2266399248",
+   "n_papers": {
+    "2266399248": 2,
+    "2348456687": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2266399248+2348456687": "coauthor"
+   }
+  },
+  {
+   "name": "Jens Domke",
+   "ids": [
+    "2266400526",
+    "2300557",
+    "2329188806"
+   ],
+   "canonical_id": "2266400526",
+   "n_papers": {
+    "2266400526": 1,
+    "2300557": 1,
+    "2329188806": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2266400526+2300557": "coauthor",
+    "2266400526+2329188806": "affiliation",
+    "2300557+2329188806": "affiliation"
+   }
+  },
+  {
+   "name": "Jianbin Fang",
+   "ids": [
+    "2263238253",
+    "2267903296"
+   ],
+   "canonical_id": "2267903296",
+   "n_papers": {
+    "2263238253": 1,
+    "2267903296": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2263238253+2267903296": "coauthor"
+   }
+  },
+  {
+   "name": "Jianguo Yao",
+   "ids": [
+    "2289616064",
+    "8248062"
+   ],
+   "canonical_id": "2289616064",
+   "n_papers": {
+    "2289616064": 1,
+    "8248062": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2289616064+8248062": "coauthor"
+   }
+  },
+  {
+   "name": "Jiaqi Yin",
+   "ids": [
+    "2243763633",
+    "4183573"
+   ],
+   "canonical_id": "2243763633",
+   "n_papers": {
+    "2243763633": 1,
+    "4183573": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2243763633+4183573": "coauthor"
+   }
+  },
+  {
+   "name": "Jie Wang",
+   "ids": [
+    "2146041652",
+    "2146044942"
+   ],
+   "canonical_id": "2146041652",
+   "n_papers": {
+    "2146041652": 4,
+    "2146044942": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2146041652+2146044942": "coauthor"
+   }
+  },
+  {
+   "name": "Jieming Yin",
+   "ids": [
+    "2244724231",
+    "3160909"
+   ],
+   "canonical_id": "2244724231",
+   "n_papers": {
+    "2244724231": 1,
+    "3160909": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2244724231+3160909": "coauthor"
+   }
+  },
+  {
+   "name": "Jieru Zhao",
+   "ids": [
+    "11446977",
+    "2241533728",
+    "2302350607"
+   ],
+   "canonical_id": "2241533728",
+   "n_papers": {
+    "11446977": 1,
+    "2241533728": 3,
+    "2302350607": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "11446977+2241533728": "coauthor",
+    "11446977+2302350607": "coauthor",
+    "2241533728+2302350607": "coauthor"
+   }
+  },
+  {
+   "name": "Jilong Xue",
+   "ids": [
+    "2308839615",
+    "2870618"
+   ],
+   "canonical_id": "2870618",
+   "n_papers": {
+    "2308839615": 1,
+    "2870618": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2308839615+2870618": "coauthor"
+   }
+  },
+  {
+   "name": "Jingling Xue",
+   "ids": [
+    "2269038601",
+    "2269716023"
+   ],
+   "canonical_id": "2269716023",
+   "n_papers": {
+    "2269038601": 2,
+    "2269716023": 5
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2269038601+2269716023": "coauthor"
+   }
+  },
+  {
+   "name": "Jingwei Sun",
+   "ids": [
+    "2310320661",
+    "46969142"
+   ],
+   "canonical_id": "46969142",
+   "n_papers": {
+    "2310320661": 1,
+    "46969142": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2310320661+46969142": "coauthor"
+   }
+  },
+  {
+   "name": "Jinkun Geng",
+   "ids": [
+    "2126755",
+    "2302446932"
+   ],
+   "canonical_id": "2126755",
+   "n_papers": {
+    "2126755": 1,
+    "2302446932": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2126755+2302446932": "coauthor"
+   }
+  },
+  {
+   "name": "Jintao Meng",
+   "ids": [
+    "2304288",
+    "2319957772"
+   ],
+   "canonical_id": "2304288",
+   "n_papers": {
+    "2304288": 3,
+    "2319957772": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2304288+2319957772": "coauthor"
+   }
+  },
+  {
+   "name": "Jishen Zhao",
+   "ids": [
+    "2109858015",
+    "2278568030"
+   ],
+   "canonical_id": "2109858015",
+   "n_papers": {
+    "2109858015": 2,
+    "2278568030": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2109858015+2278568030": "coauthor"
+   }
+  },
+  {
+   "name": "Josep Torrellas",
+   "ids": [
+    "2264735284",
+    "2367792786"
+   ],
+   "canonical_id": "2264735284",
+   "n_papers": {
+    "2264735284": 1,
+    "2367792786": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2264735284+2367792786": "coauthor"
+   }
+  },
+  {
+   "name": "Joseph E. Gonzalez",
+   "ids": [
+    "2254681613",
+    "2284969362",
+    "49988044"
+   ],
+   "canonical_id": "49988044",
+   "n_papers": {
+    "2254681613": 1,
+    "2284969362": 1,
+    "49988044": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2254681613+2284969362": "coauthor",
+    "2254681613+49988044": "coauthor",
+    "2284969362+49988044": "coauthor"
+   }
+  },
+  {
+   "name": "Joseph W. Cutler",
+   "ids": [
+    "2335868823",
+    "2386611918"
+   ],
+   "canonical_id": "2335868823",
+   "n_papers": {
+    "2335868823": 1,
+    "2386611918": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2335868823+2386611918": "affiliation"
+   }
+  },
+  {
+   "name": "Jos\u00e9 Cano",
+   "ids": [
+    "152303462",
+    "2260912711"
+   ],
+   "canonical_id": "152303462",
+   "n_papers": {
+    "152303462": 1,
+    "2260912711": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "152303462+2260912711": "coauthor"
+   }
+  },
+  {
+   "name": "Julian Miller",
+   "ids": [
+    "2109459814",
+    "2158002252"
+   ],
+   "canonical_id": "2109459814",
+   "n_papers": {
+    "2109459814": 2,
+    "2158002252": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2109459814+2158002252": "coauthor"
+   }
+  },
+  {
+   "name": "Julien Bigot",
+   "ids": [
+    "2298049591",
+    "2350676"
+   ],
+   "canonical_id": "2350676",
+   "n_papers": {
+    "2298049591": 1,
+    "2350676": 3
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2298049591+2350676": "affiliation"
+   }
+  },
+  {
+   "name": "Jun Kong",
+   "ids": [
+    "2072804856",
+    "2326528397"
+   ],
+   "canonical_id": "2072804856",
+   "n_papers": {
+    "2072804856": 1,
+    "2326528397": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2072804856+2326528397": "coauthor"
+   }
+  },
+  {
+   "name": "Ke Hong",
+   "ids": [
+    "2212959117",
+    "2241616962"
+   ],
+   "canonical_id": "2212959117",
+   "n_papers": {
+    "2212959117": 1,
+    "2241616962": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2212959117+2241616962": "coauthor"
+   }
+  },
+  {
+   "name": "Kenli Li",
+   "ids": [
+    "2246507900",
+    "2282094727"
+   ],
+   "canonical_id": "2246507900",
+   "n_papers": {
+    "2246507900": 1,
+    "2282094727": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2246507900+2282094727": "affiliation"
+   }
+  },
+  {
+   "name": "Kesheng Wu",
+   "ids": [
+    "145389708",
+    "2258323618"
+   ],
+   "canonical_id": "145389708",
+   "n_papers": {
+    "145389708": 1,
+    "2258323618": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145389708+2258323618": "coauthor"
+   }
+  },
+  {
+   "name": "Keyi Zhang",
+   "ids": [
+    "2119058363",
+    "2313137826"
+   ],
+   "canonical_id": "2119058363",
+   "n_papers": {
+    "2119058363": 3,
+    "2313137826": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2119058363+2313137826": "coauthor"
+   }
+  },
+  {
+   "name": "Koushik Sen",
+   "ids": [
+    "145741786",
+    "2268398121"
+   ],
+   "canonical_id": "145741786",
+   "n_papers": {
+    "145741786": 2,
+    "2268398121": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145741786+2268398121": "coauthor"
+   }
+  },
+  {
+   "name": "Kun Li",
+   "ids": [
+    "2115467492",
+    "2327910782"
+   ],
+   "canonical_id": "2115467492",
+   "n_papers": {
+    "2115467492": 3,
+    "2327910782": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2115467492+2327910782": "coauthor"
+   }
+  },
+  {
+   "name": "Kun Wang",
+   "ids": [
+    "2119044099",
+    "2295430640"
+   ],
+   "canonical_id": "2119044099",
+   "n_papers": {
+    "2119044099": 1,
+    "2295430640": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2119044099+2295430640": "coauthor"
+   }
+  },
+  {
+   "name": "Kwang-Ting Cheng",
+   "ids": [
+    "145210800",
+    "2327293204"
+   ],
+   "canonical_id": "145210800",
+   "n_papers": {
+    "145210800": 1,
+    "2327293204": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145210800+2327293204": "coauthor"
+   }
+  },
+  {
+   "name": "L. Somers",
+   "ids": [
+    "1724137",
+    "72375537"
+   ],
+   "canonical_id": "1724137",
+   "n_papers": {
+    "1724137": 3,
+    "72375537": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1724137+72375537": "coauthor"
+   }
+  },
+  {
+   "name": "Lei He",
+   "ids": [
+    "144563963",
+    "2285407816"
+   ],
+   "canonical_id": "144563963",
+   "n_papers": {
+    "144563963": 1,
+    "2285407816": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "144563963+2285407816": "coauthor"
+   }
+  },
+  {
+   "name": "Li-Wen Chang",
+   "ids": [
+    "2328081757",
+    "49830273"
+   ],
+   "canonical_id": "2328081757",
+   "n_papers": {
+    "2328081757": 4,
+    "49830273": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2328081757+49830273": "coauthor"
+   }
+  },
+  {
+   "name": "Lijuan Jiang",
+   "ids": [
+    "2112502367",
+    "2196217535"
+   ],
+   "canonical_id": "2196217535",
+   "n_papers": {
+    "2112502367": 1,
+    "2196217535": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2112502367+2196217535": "coauthor"
+   }
+  },
+  {
+   "name": "Ling Li",
+   "ids": [
+    "2319805216",
+    "2333092504",
+    "3353457"
+   ],
+   "canonical_id": "2319805216",
+   "n_papers": {
+    "2319805216": 2,
+    "2333092504": 2,
+    "3353457": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2319805216+2333092504": "coauthor",
+    "2319805216+3353457": "coauthor",
+    "2333092504+3353457": "coauthor"
+   }
+  },
+  {
+   "name": "Liqiang Lu",
+   "ids": [
+    "2212052971",
+    "4744742"
+   ],
+   "canonical_id": "4744742",
+   "n_papers": {
+    "2212052971": 1,
+    "4744742": 6
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2212052971+4744742": "coauthor"
+   }
+  },
+  {
+   "name": "Longfei Shangguan",
+   "ids": [
+    "2335535366",
+    "3015446"
+   ],
+   "canonical_id": "2335535366",
+   "n_papers": {
+    "2335535366": 1,
+    "3015446": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2335535366+3015446": "coauthor"
+   }
+  },
+  {
+   "name": "Luc Jaulmes",
+   "ids": [
+    "2127818639",
+    "2399063410"
+   ],
+   "canonical_id": "2127818639",
+   "n_papers": {
+    "2127818639": 1,
+    "2399063410": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2127818639+2399063410": "coauthor"
+   }
+  },
+  {
+   "name": "M. L\u00fccke",
+   "ids": [
+    "2048961074",
+    "2266763857"
+   ],
+   "canonical_id": "2266763857",
+   "n_papers": {
+    "2048961074": 1,
+    "2266763857": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2048961074+2266763857": "coauthor"
+   }
+  },
+  {
+   "name": "Mae Milano",
+   "ids": [
+    "2166312158",
+    "32245867"
+   ],
+   "canonical_id": "2166312158",
+   "n_papers": {
+    "2166312158": 3,
+    "32245867": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2166312158+32245867": "coauthor"
+   }
+  },
+  {
+   "name": "Mao Yang",
+   "ids": [
+    "2253823993",
+    "2269861195",
+    "2336030278"
+   ],
+   "canonical_id": "2253823993",
+   "n_papers": {
+    "2253823993": 2,
+    "2269861195": 2,
+    "2336030278": 2
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2253823993+2269861195": "coauthor",
+    "2253823993+2336030278": "coauthor",
+    "2269861195+2336030278": "2-hop"
+   }
+  },
+  {
+   "name": "Marco Canini",
+   "ids": [
+    "2268766363",
+    "2288101158"
+   ],
+   "canonical_id": "2268766363",
+   "n_papers": {
+    "2268766363": 1,
+    "2288101158": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2268766363+2288101158": "coauthor"
+   }
+  },
+  {
+   "name": "Mark Horowitz",
+   "ids": [
+    "2057898874",
+    "2239739314",
+    "2278638323"
+   ],
+   "canonical_id": "2278638323",
+   "n_papers": {
+    "2057898874": 1,
+    "2239739314": 1,
+    "2278638323": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2057898874+2239739314": "coauthor",
+    "2057898874+2278638323": "coauthor",
+    "2239739314+2278638323": "coauthor"
+   }
+  },
+  {
+   "name": "Markus P\u00fcschel",
+   "ids": [
+    "1690697",
+    "79639302"
+   ],
+   "canonical_id": "1690697",
+   "n_papers": {
+    "1690697": 3,
+    "79639302": 3
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "1690697+79639302": "affiliation"
+   }
+  },
+  {
+   "name": "Mary W. Hall",
+   "ids": [
+    "143896454",
+    "2328035399"
+   ],
+   "canonical_id": "143896454",
+   "n_papers": {
+    "143896454": 15,
+    "2328035399": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "143896454+2328035399": "coauthor"
+   }
+  },
+  {
+   "name": "Matthias S. M\u00fcller",
+   "ids": [
+    "2266421553",
+    "2322126290"
+   ],
+   "canonical_id": "2266421553",
+   "n_papers": {
+    "2266421553": 1,
+    "2322126290": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2266421553+2322126290": "coauthor"
+   }
+  },
+  {
+   "name": "Michael F. P. O'Boyle",
+   "ids": [
+    "2241521853",
+    "2243197437",
+    "2286388808"
+   ],
+   "canonical_id": "2243197437",
+   "n_papers": {
+    "2241521853": 2,
+    "2243197437": 6,
+    "2286388808": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2241521853+2243197437": "coauthor",
+    "2241521853+2286388808": "coauthor",
+    "2243197437+2286388808": "coauthor"
+   }
+  },
+  {
+   "name": "Mingyu Gao",
+   "ids": [
+    "2092402029",
+    "2276746691",
+    "2319805430",
+    "2332690182"
+   ],
+   "canonical_id": "2092402029",
+   "n_papers": {
+    "2092402029": 5,
+    "2276746691": 1,
+    "2319805430": 1,
+    "2332690182": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2092402029+2276746691": "affiliation",
+    "2092402029+2319805430": "affiliation",
+    "2092402029+2332690182": "coauthor",
+    "2276746691+2319805430": "affiliation",
+    "2276746691+2332690182": "affiliation",
+    "2319805430+2332690182": "affiliation"
+   }
+  },
+  {
+   "name": "Mingzhe Zhang",
+   "ids": [
+    "2294939834",
+    "47474071"
+   ],
+   "canonical_id": "2294939834",
+   "n_papers": {
+    "2294939834": 2,
+    "47474071": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2294939834+47474071": "coauthor"
+   }
+  },
+  {
+   "name": "Minjia Zhang",
+   "ids": [
+    "2112111675",
+    "67016465"
+   ],
+   "canonical_id": "2112111675",
+   "n_papers": {
+    "2112111675": 2,
+    "67016465": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2112111675+67016465": "coauthor"
+   }
+  },
+  {
+   "name": "Minmin Sun",
+   "ids": [
+    "2118254471",
+    "2271020405"
+   ],
+   "canonical_id": "2118254471",
+   "n_papers": {
+    "2118254471": 1,
+    "2271020405": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2118254471+2271020405": "coauthor"
+   }
+  },
+  {
+   "name": "Minyi Guo",
+   "ids": [
+    "2151671216",
+    "2276320278",
+    "2279517845",
+    "2331371608"
+   ],
+   "canonical_id": "2276320278",
+   "n_papers": {
+    "2151671216": 1,
+    "2276320278": 3,
+    "2279517845": 2,
+    "2331371608": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2151671216+2276320278": "coauthor",
+    "2151671216+2279517845": "coauthor",
+    "2151671216+2331371608": "coauthor",
+    "2276320278+2279517845": "coauthor",
+    "2276320278+2331371608": "coauthor",
+    "2279517845+2331371608": "coauthor"
+   }
+  },
+  {
+   "name": "Mu Li",
+   "ids": [
+    "1701799",
+    "2112144126"
+   ],
+   "canonical_id": "2112144126",
+   "n_papers": {
+    "1701799": 1,
+    "2112144126": 6
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1701799+2112144126": "coauthor"
+   }
+  },
+  {
+   "name": "Nathan Zhang",
+   "ids": [
+    "2387119004",
+    "39797987"
+   ],
+   "canonical_id": "39797987",
+   "n_papers": {
+    "2387119004": 1,
+    "39797987": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2387119004+39797987": "coauthor"
+   }
+  },
+  {
+   "name": "Niansong Zhang",
+   "ids": [
+    "2153011412",
+    "2242109097"
+   ],
+   "canonical_id": "2153011412",
+   "n_papers": {
+    "2153011412": 2,
+    "2242109097": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2153011412+2242109097": "coauthor"
+   }
+  },
+  {
+   "name": "Nick Brown",
+   "ids": [
+    "2237426194",
+    "2294206584"
+   ],
+   "canonical_id": "2237426194",
+   "n_papers": {
+    "2237426194": 1,
+    "2294206584": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2237426194+2294206584": "coauthor"
+   }
+  },
+  {
+   "name": "Ninghui Sun",
+   "ids": [
+    "145550877",
+    "2277055378"
+   ],
+   "canonical_id": "2277055378",
+   "n_papers": {
+    "145550877": 1,
+    "2277055378": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145550877+2277055378": "coauthor"
+   }
+  },
+  {
+   "name": "Norishige Fukushima",
+   "ids": [
+    "1730681",
+    "2268509306"
+   ],
+   "canonical_id": "1730681",
+   "n_papers": {
+    "1730681": 8,
+    "2268509306": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1730681+2268509306": "coauthor"
+   }
+  },
+  {
+   "name": "Olivia Hsu",
+   "ids": [
+    "2132937381",
+    "2317096135"
+   ],
+   "canonical_id": "2132937381",
+   "n_papers": {
+    "2132937381": 6,
+    "2317096135": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2132937381+2317096135": "coauthor"
+   }
+  },
+  {
+   "name": "P. Srinivasan",
+   "ids": [
+    "2057278984",
+    "2179732"
+   ],
+   "canonical_id": "2057278984",
+   "n_papers": {
+    "2057278984": 1,
+    "2179732": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2057278984+2179732": "2-hop"
+   }
+  },
+  {
+   "name": "Paul Petersen",
+   "ids": [
+    "34804613",
+    "4282103"
+   ],
+   "canonical_id": "4282103",
+   "n_papers": {
+    "34804613": 1,
+    "4282103": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "34804613+4282103": "coauthor"
+   }
+  },
+  {
+   "name": "Peiyuan Liao",
+   "ids": [
+    "2253656797",
+    "41022684"
+   ],
+   "canonical_id": "2253656797",
+   "n_papers": {
+    "2253656797": 1,
+    "41022684": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2253656797+41022684": "coauthor"
+   }
+  },
+  {
+   "name": "Peng Chen",
+   "ids": [
+    "2149069612",
+    "2348346004"
+   ],
+   "canonical_id": "2149069612",
+   "n_papers": {
+    "2149069612": 3,
+    "2348346004": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2149069612+2348346004": "coauthor"
+   }
+  },
+  {
+   "name": "Peng Di",
+   "ids": [
+    "2258548532",
+    "2279022730",
+    "2357838315"
+   ],
+   "canonical_id": "2258548532",
+   "n_papers": {
+    "2258548532": 1,
+    "2279022730": 1,
+    "2357838315": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2258548532+2279022730": "coauthor",
+    "2258548532+2357838315": "2-hop",
+    "2279022730+2357838315": "coauthor"
+   }
+  },
+  {
+   "name": "Peng Zhang",
+   "ids": [
+    "2151329683",
+    "2262541946"
+   ],
+   "canonical_id": "2262541946",
+   "n_papers": {
+    "2151329683": 1,
+    "2262541946": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2151329683+2262541946": "coauthor"
+   }
+  },
+  {
+   "name": "Pengyu Mu",
+   "ids": [
+    "2313914564",
+    "35392998"
+   ],
+   "canonical_id": "2313914564",
+   "n_papers": {
+    "2313914564": 2,
+    "35392998": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2313914564+35392998": "coauthor"
+   }
+  },
+  {
+   "name": "Peter Bell",
+   "ids": [
+    "2297872245",
+    "2364686644"
+   ],
+   "canonical_id": "2297872245",
+   "n_papers": {
+    "2297872245": 1,
+    "2364686644": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2297872245+2364686644": "coauthor"
+   }
+  },
+  {
+   "name": "Ping Xu",
+   "ids": [
+    "2152244314",
+    "2153915788"
+   ],
+   "canonical_id": "2152244314",
+   "n_papers": {
+    "2152244314": 1,
+    "2153915788": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2152244314+2153915788": "coauthor"
+   }
+  },
+  {
+   "name": "Po-An Tsai",
+   "ids": [
+    "2261938633",
+    "30901893"
+   ],
+   "canonical_id": "30901893",
+   "n_papers": {
+    "2261938633": 1,
+    "30901893": 2
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2261938633+30901893": "affiliation"
+   }
+  },
+  {
+   "name": "Priyanka Raina",
+   "ids": [
+    "2301018188",
+    "50501653"
+   ],
+   "canonical_id": "50501653",
+   "n_papers": {
+    "2301018188": 3,
+    "50501653": 12
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2301018188+50501653": "coauthor"
+   }
+  },
+  {
+   "name": "Qi Guo",
+   "ids": [
+    "145461472",
+    "2266139212",
+    "2314377008",
+    "2355368662"
+   ],
+   "canonical_id": "2266139212",
+   "n_papers": {
+    "145461472": 2,
+    "2266139212": 4,
+    "2314377008": 1,
+    "2355368662": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145461472+2266139212": "coauthor",
+    "145461472+2314377008": "coauthor",
+    "145461472+2355368662": "coauthor",
+    "2266139212+2314377008": "coauthor",
+    "2266139212+2355368662": "coauthor",
+    "2314377008+2355368662": "coauthor"
+   }
+  },
+  {
+   "name": "Qianchao Zhu",
+   "ids": [
+    "2152207524",
+    "2239063179"
+   ],
+   "canonical_id": "2152207524",
+   "n_papers": {
+    "2152207524": 1,
+    "2239063179": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2152207524+2239063179": "affiliation"
+   }
+  },
+  {
+   "name": "Qingxiao Sun",
+   "ids": [
+    "2338320480",
+    "67189282"
+   ],
+   "canonical_id": "67189282",
+   "n_papers": {
+    "2338320480": 3,
+    "67189282": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2338320480+67189282": "coauthor"
+   }
+  },
+  {
+   "name": "Qiufeng Li",
+   "ids": [
+    "2154487963",
+    "2313178572"
+   ],
+   "canonical_id": "2154487963",
+   "n_papers": {
+    "2154487963": 1,
+    "2313178572": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2154487963+2313178572": "coauthor"
+   }
+  },
+  {
+   "name": "Quan Chen",
+   "ids": [
+    "1596812259",
+    "2285136117"
+   ],
+   "canonical_id": "1596812259",
+   "n_papers": {
+    "1596812259": 4,
+    "2285136117": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1596812259+2285136117": "coauthor"
+   }
+  },
+  {
+   "name": "Quoc V. Le",
+   "ids": [
+    "1397917613",
+    "2151097303"
+   ],
+   "canonical_id": "1397917613",
+   "n_papers": {
+    "1397917613": 1,
+    "2151097303": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1397917613+2151097303": "coauthor"
+   }
+  },
+  {
+   "name": "R. Govindarajan",
+   "ids": [
+    "144209344",
+    "2304565452"
+   ],
+   "canonical_id": "144209344",
+   "n_papers": {
+    "144209344": 1,
+    "2304565452": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "144209344+2304565452": "coauthor"
+   }
+  },
+  {
+   "name": "Richen Liu",
+   "ids": [
+    "2240987122",
+    "28808009"
+   ],
+   "canonical_id": "2240987122",
+   "n_papers": {
+    "2240987122": 1,
+    "28808009": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2240987122+28808009": "coauthor"
+   }
+  },
+  {
+   "name": "Ritvik Sharma",
+   "ids": [
+    "2110781590",
+    "2317119184"
+   ],
+   "canonical_id": "2110781590",
+   "n_papers": {
+    "2110781590": 2,
+    "2317119184": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2110781590+2317119184": "coauthor"
+   }
+  },
+  {
+   "name": "Riyadh Baghdadi",
+   "ids": [
+    "1758245",
+    "2244380582",
+    "2406996195",
+    "2406996220"
+   ],
+   "canonical_id": "1758245",
+   "n_papers": {
+    "1758245": 13,
+    "2244380582": 6,
+    "2406996195": 2,
+    "2406996220": 10
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "1758245+2244380582": "2-hop",
+    "1758245+2406996195": "coauthor",
+    "1758245+2406996220": "coauthor",
+    "2244380582+2406996195": "affiliation",
+    "2244380582+2406996220": "coauthor",
+    "2406996195+2406996220": "coauthor"
+   }
+  },
+  {
+   "name": "Rui Zhang",
+   "ids": [
+    "2118404461",
+    "2241193971"
+   ],
+   "canonical_id": "2118404461",
+   "n_papers": {
+    "2118404461": 1,
+    "2241193971": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2118404461+2241193971": "coauthor"
+   }
+  },
+  {
+   "name": "Runsheng Wang",
+   "ids": [
+    "2290968833",
+    "92276390"
+   ],
+   "canonical_id": "2290968833",
+   "n_papers": {
+    "2290968833": 1,
+    "92276390": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2290968833+92276390": "affiliation"
+   }
+  },
+  {
+   "name": "S. Malik",
+   "ids": [
+    "144682958",
+    "2651429"
+   ],
+   "canonical_id": "144682958",
+   "n_papers": {
+    "144682958": 4,
+    "2651429": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "144682958+2651429": "coauthor"
+   }
+  },
+  {
+   "name": "S. Song",
+   "ids": [
+    "1798309",
+    "2152570058"
+   ],
+   "canonical_id": "1798309",
+   "n_papers": {
+    "1798309": 2,
+    "2152570058": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "1798309+2152570058": "affiliation"
+   }
+  },
+  {
+   "name": "Saeed Maleki",
+   "ids": [
+    "144834015",
+    "2297535104"
+   ],
+   "canonical_id": "144834015",
+   "n_papers": {
+    "144834015": 2,
+    "2297535104": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "144834015+2297535104": "coauthor"
+   }
+  },
+  {
+   "name": "Saman P. Amarasinghe",
+   "ids": [
+    "1709150",
+    "2265974062"
+   ],
+   "canonical_id": "1709150",
+   "n_papers": {
+    "1709150": 35,
+    "2265974062": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1709150+2265974062": "coauthor"
+   }
+  },
+  {
+   "name": "Shengen Yan",
+   "ids": [
+    "2330163148",
+    "2725514"
+   ],
+   "canonical_id": "2725514",
+   "n_papers": {
+    "2330163148": 1,
+    "2725514": 6
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2330163148+2725514": "coauthor"
+   }
+  },
+  {
+   "name": "Shuai Zheng",
+   "ids": [
+    "1410058013",
+    "2254011493"
+   ],
+   "canonical_id": "1410058013",
+   "n_papers": {
+    "1410058013": 1,
+    "2254011493": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1410058013+2254011493": "coauthor"
+   }
+  },
+  {
+   "name": "Simone Campanoni",
+   "ids": [
+    "1957040",
+    "2265489309"
+   ],
+   "canonical_id": "1957040",
+   "n_papers": {
+    "1957040": 1,
+    "2265489309": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "1957040+2265489309": "affiliation"
+   }
+  },
+  {
+   "name": "Size Zheng",
+   "ids": [
+    "1561195919",
+    "2329057567"
+   ],
+   "canonical_id": "1561195919",
+   "n_papers": {
+    "1561195919": 9,
+    "2329057567": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1561195919+2329057567": "coauthor"
+   }
+  },
+  {
+   "name": "Sunghyun Park",
+   "ids": [
+    "2108106092",
+    "2265554740",
+    "5481020"
+   ],
+   "canonical_id": "2108106092",
+   "n_papers": {
+    "2108106092": 2,
+    "2265554740": 1,
+    "5481020": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2108106092+2265554740": "coauthor",
+    "2108106092+5481020": "coauthor",
+    "2265554740+5481020": "2-hop"
+   }
+  },
+  {
+   "name": "Tal Ben-Nun",
+   "ids": [
+    "1402921119",
+    "2286160996"
+   ],
+   "canonical_id": "1402921119",
+   "n_papers": {
+    "1402921119": 6,
+    "2286160996": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1402921119+2286160996": "coauthor"
+   }
+  },
+  {
+   "name": "Tao Tang",
+   "ids": [
+    "2118246617",
+    "2315811678"
+   ],
+   "canonical_id": "2118246617",
+   "n_papers": {
+    "2118246617": 1,
+    "2315811678": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2118246617+2315811678": "coauthor"
+   }
+  },
+  {
+   "name": "Tian Zhao",
+   "ids": [
+    "1657530687",
+    "2397160405"
+   ],
+   "canonical_id": "1657530687",
+   "n_papers": {
+    "1657530687": 5,
+    "2397160405": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1657530687+2397160405": "coauthor"
+   }
+  },
+  {
+   "name": "Tianshi Chen",
+   "ids": [
+    "144049725",
+    "2272432444"
+   ],
+   "canonical_id": "2272432444",
+   "n_papers": {
+    "144049725": 1,
+    "2272432444": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "144049725+2272432444": "coauthor"
+   }
+  },
+  {
+   "name": "Ting Cao",
+   "ids": [
+    "2137096570",
+    "2285053216",
+    "2327865370"
+   ],
+   "canonical_id": "2137096570",
+   "n_papers": {
+    "2137096570": 2,
+    "2285053216": 2,
+    "2327865370": 2
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2137096570+2285053216": "affiliation",
+    "2137096570+2327865370": "affiliation",
+    "2285053216+2327865370": "coauthor"
+   }
+  },
+  {
+   "name": "Tobias Grosser",
+   "ids": [
+    "2253463039",
+    "2266396030"
+   ],
+   "canonical_id": "2253463039",
+   "n_papers": {
+    "2253463039": 6,
+    "2266396030": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2253463039+2266396030": "coauthor"
+   }
+  },
+  {
+   "name": "Todd M. Austin",
+   "ids": [
+    "2061642475",
+    "2237424605"
+   ],
+   "canonical_id": "2061642475",
+   "n_papers": {
+    "2061642475": 1,
+    "2237424605": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2061642475+2237424605": "affiliation"
+   }
+  },
+  {
+   "name": "Torsten Hoefler",
+   "ids": [
+    "2174028998",
+    "2215021735",
+    "2258515988",
+    "2267726340"
+   ],
+   "canonical_id": "2267726340",
+   "n_papers": {
+    "2174028998": 1,
+    "2215021735": 1,
+    "2258515988": 1,
+    "2267726340": 2
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2174028998+2215021735": "2-hop",
+    "2174028998+2258515988": "2-hop",
+    "2174028998+2267726340": "coauthor",
+    "2215021735+2258515988": "affiliation",
+    "2215021735+2267726340": "coauthor",
+    "2258515988+2267726340": "coauthor"
+   }
+  },
+  {
+   "name": "Toshio Endo",
+   "ids": [
+    "2287966645",
+    "39045319"
+   ],
+   "canonical_id": "39045319",
+   "n_papers": {
+    "2287966645": 1,
+    "39045319": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2287966645+39045319": "coauthor"
+   }
+  },
+  {
+   "name": "Tzu-Mao Li",
+   "ids": [
+    "1775024",
+    "2267267858"
+   ],
+   "canonical_id": "1775024",
+   "n_papers": {
+    "1775024": 12,
+    "2267267858": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1775024+2267267858": "coauthor"
+   }
+  },
+  {
+   "name": "V. Frolov",
+   "ids": [
+    "2127570511",
+    "2261084622"
+   ],
+   "canonical_id": "2127570511",
+   "n_papers": {
+    "2127570511": 2,
+    "2261084622": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2127570511+2261084622": "coauthor"
+   }
+  },
+  {
+   "name": "V. Galaktionov",
+   "ids": [
+    "145710131",
+    "2244111979",
+    "2859254"
+   ],
+   "canonical_id": "145710131",
+   "n_papers": {
+    "145710131": 1,
+    "2244111979": 1,
+    "2859254": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "145710131+2244111979": "coauthor",
+    "145710131+2859254": "coauthor",
+    "2244111979+2859254": "coauthor"
+   }
+  },
+  {
+   "name": "Vinod Grover",
+   "ids": [
+    "2335868902",
+    "50654241"
+   ],
+   "canonical_id": "50654241",
+   "n_papers": {
+    "2335868902": 1,
+    "50654241": 9
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2335868902+50654241": "coauthor"
+   }
+  },
+  {
+   "name": "Vivek Sarkar",
+   "ids": [
+    "1443784860",
+    "1728219"
+   ],
+   "canonical_id": "1443784860",
+   "n_papers": {
+    "1443784860": 5,
+    "1728219": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1443784860+1728219": "coauthor"
+   }
+  },
+  {
+   "name": "Vladimir G. Kim",
+   "ids": [
+    "2060239539",
+    "3082383"
+   ],
+   "canonical_id": "2060239539",
+   "n_papers": {
+    "2060239539": 1,
+    "3082383": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2060239539+3082383": "coauthor"
+   }
+  },
+  {
+   "name": "W. Vanderbauwhede",
+   "ids": [
+    "1692663",
+    "2312745093"
+   ],
+   "canonical_id": "1692663",
+   "n_papers": {
+    "1692663": 1,
+    "2312745093": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1692663+2312745093": "coauthor"
+   }
+  },
+  {
+   "name": "Wei Cui",
+   "ids": [
+    "2242930807",
+    "2272997473"
+   ],
+   "canonical_id": "2272997473",
+   "n_papers": {
+    "2242930807": 1,
+    "2272997473": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2242930807+2272997473": "coauthor"
+   }
+  },
+  {
+   "name": "Wei Gao",
+   "ids": [
+    "2153578312",
+    "2293779801"
+   ],
+   "canonical_id": "2153578312",
+   "n_papers": {
+    "2153578312": 1,
+    "2293779801": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2153578312+2293779801": "coauthor"
+   }
+  },
+  {
+   "name": "Wei Niu",
+   "ids": [
+    "2309478978",
+    "48643324"
+   ],
+   "canonical_id": "48643324",
+   "n_papers": {
+    "2309478978": 1,
+    "48643324": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2309478978+48643324": "coauthor"
+   }
+  },
+  {
+   "name": "Weihao Zhang",
+   "ids": [
+    "1997559829",
+    "2170672707"
+   ],
+   "canonical_id": "1997559829",
+   "n_papers": {
+    "1997559829": 1,
+    "2170672707": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "1997559829+2170672707": "affiliation"
+   }
+  },
+  {
+   "name": "Wenlei Bao",
+   "ids": [
+    "2305683890",
+    "39423751"
+   ],
+   "canonical_id": "2305683890",
+   "n_papers": {
+    "2305683890": 2,
+    "39423751": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2305683890+39423751": "coauthor"
+   }
+  },
+  {
+   "name": "Wenxi Zhu",
+   "ids": [
+    "2111465260",
+    "2319684165"
+   ],
+   "canonical_id": "2319684165",
+   "n_papers": {
+    "2111465260": 1,
+    "2319684165": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2111465260+2319684165": "coauthor"
+   }
+  },
+  {
+   "name": "William S. Moses",
+   "ids": [
+    "16521420",
+    "2287969643"
+   ],
+   "canonical_id": "16521420",
+   "n_papers": {
+    "16521420": 8,
+    "2287969643": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "16521420+2287969643": "coauthor"
+   }
+  },
+  {
+   "name": "Wonchan Lee",
+   "ids": [
+    "2326962275",
+    "2408735"
+   ],
+   "canonical_id": "2408735",
+   "n_papers": {
+    "2326962275": 1,
+    "2408735": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2326962275+2408735": "coauthor"
+   }
+  },
+  {
+   "name": "Xiang Chen",
+   "ids": [
+    "153773753",
+    "2143734919"
+   ],
+   "canonical_id": "153773753",
+   "n_papers": {
+    "153773753": 1,
+    "2143734919": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "153773753+2143734919": "coauthor"
+   }
+  },
+  {
+   "name": "Xiao Wang",
+   "ids": [
+    "2118449679",
+    "2304809655"
+   ],
+   "canonical_id": "2118449679",
+   "n_papers": {
+    "2118449679": 2,
+    "2304809655": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2118449679+2304809655": "coauthor"
+   }
+  },
+  {
+   "name": "Xiaobing Feng",
+   "ids": [
+    "2157040144",
+    "2220664984",
+    "2269767098",
+    "32215073"
+   ],
+   "canonical_id": "2220664984",
+   "n_papers": {
+    "2157040144": 1,
+    "2220664984": 4,
+    "2269767098": 3,
+    "32215073": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2157040144+2220664984": "coauthor",
+    "2157040144+2269767098": "coauthor",
+    "2157040144+32215073": "coauthor",
+    "2220664984+2269767098": "coauthor",
+    "2220664984+32215073": "coauthor",
+    "2269767098+32215073": "coauthor"
+   }
+  },
+  {
+   "name": "Xiaochen Hao",
+   "ids": [
+    "2184158157",
+    "6219175"
+   ],
+   "canonical_id": "2184158157",
+   "n_papers": {
+    "2184158157": 3,
+    "6219175": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2184158157+6219175": "coauthor"
+   }
+  },
+  {
+   "name": "Xiaodong Wang",
+   "ids": [
+    "2108429236",
+    "2297930724"
+   ],
+   "canonical_id": "2108429236",
+   "n_papers": {
+    "2108429236": 1,
+    "2297930724": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2108429236+2297930724": "2-hop"
+   }
+  },
+  {
+   "name": "Xiaoyan Liu",
+   "ids": [
+    "2111040303",
+    "2284933443"
+   ],
+   "canonical_id": "2111040303",
+   "n_papers": {
+    "2111040303": 3,
+    "2284933443": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2111040303+2284933443": "coauthor"
+   }
+  },
+  {
+   "name": "Xingcheng Zhang",
+   "ids": [
+    "2153649520",
+    "2283503847",
+    "2298585927"
+   ],
+   "canonical_id": "2153649520",
+   "n_papers": {
+    "2153649520": 2,
+    "2283503847": 1,
+    "2298585927": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2153649520+2283503847": "coauthor",
+    "2153649520+2298585927": "coauthor",
+    "2283503847+2298585927": "coauthor"
+   }
+  },
+  {
+   "name": "Xiuhong Li",
+   "ids": [
+    "2295286977",
+    "48569543"
+   ],
+   "canonical_id": "48569543",
+   "n_papers": {
+    "2295286977": 1,
+    "48569543": 6
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2295286977+48569543": "coauthor"
+   }
+  },
+  {
+   "name": "Xuan S. Yang",
+   "ids": [
+    "2383512318",
+    "3897285"
+   ],
+   "canonical_id": "2383512318",
+   "n_papers": {
+    "2383512318": 3,
+    "3897285": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2383512318+3897285": "coauthor"
+   }
+  },
+  {
+   "name": "Xuejiao Liu",
+   "ids": [
+    "2256344311",
+    "39806987"
+   ],
+   "canonical_id": "2256344311",
+   "n_papers": {
+    "2256344311": 1,
+    "39806987": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2256344311+39806987": "coauthor"
+   }
+  },
+  {
+   "name": "Xueying Wang",
+   "ids": [
+    "2108012544",
+    "2267632381"
+   ],
+   "canonical_id": "2267632381",
+   "n_papers": {
+    "2108012544": 2,
+    "2267632381": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2108012544+2267632381": "coauthor"
+   }
+  },
+  {
+   "name": "Xufeng Yao",
+   "ids": [
+    "2244166898",
+    "2610144"
+   ],
+   "canonical_id": "2244166898",
+   "n_papers": {
+    "2244166898": 1,
+    "2610144": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2244166898+2610144": "coauthor"
+   }
+  },
+  {
+   "name": "Yang Bai",
+   "ids": [
+    "2115297828",
+    "2153241555",
+    "2274119421"
+   ],
+   "canonical_id": "2153241555",
+   "n_papers": {
+    "2115297828": 1,
+    "2153241555": 4,
+    "2274119421": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2115297828+2153241555": "coauthor",
+    "2115297828+2274119421": "coauthor",
+    "2153241555+2274119421": "coauthor"
+   }
+  },
+  {
+   "name": "Yanjie Wei",
+   "ids": [
+    "2249951658",
+    "3164695"
+   ],
+   "canonical_id": "2249951658",
+   "n_papers": {
+    "2249951658": 1,
+    "3164695": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2249951658+3164695": "coauthor"
+   }
+  },
+  {
+   "name": "Yanming Wang",
+   "ids": [
+    "2297065847",
+    "2358413559"
+   ],
+   "canonical_id": "2297065847",
+   "n_papers": {
+    "2297065847": 1,
+    "2358413559": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2297065847+2358413559": "2-hop"
+   }
+  },
+  {
+   "name": "Yanzhi Wang",
+   "ids": [
+    "2143431718",
+    "2304627735",
+    "46393431"
+   ],
+   "canonical_id": "2143431718",
+   "n_papers": {
+    "2143431718": 2,
+    "2304627735": 1,
+    "46393431": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2143431718+2304627735": "coauthor",
+    "2143431718+46393431": "coauthor",
+    "2304627735+46393431": "coauthor"
+   }
+  },
+  {
+   "name": "Yaoyao Ding",
+   "ids": [
+    "2110668135",
+    "2271595749"
+   ],
+   "canonical_id": "2271595749",
+   "n_papers": {
+    "2110668135": 2,
+    "2271595749": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2110668135+2271595749": "coauthor"
+   }
+  },
+  {
+   "name": "Yi Liu",
+   "ids": [
+    "2153627620",
+    "2273907757",
+    "2314069051",
+    "65864835"
+   ],
+   "canonical_id": "2153627620",
+   "n_papers": {
+    "2153627620": 7,
+    "2273907757": 2,
+    "2314069051": 3,
+    "65864835": 5
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2153627620+2273907757": "coauthor",
+    "2153627620+2314069051": "coauthor",
+    "2153627620+65864835": "coauthor",
+    "2273907757+2314069051": "coauthor",
+    "2273907757+65864835": "coauthor",
+    "2314069051+65864835": "coauthor"
+   }
+  },
+  {
+   "name": "Yi-Hsiang Lai",
+   "ids": [
+    "2271801",
+    "2300425999"
+   ],
+   "canonical_id": "2271801",
+   "n_papers": {
+    "2271801": 6,
+    "2300425999": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2271801+2300425999": "affiliation"
+   }
+  },
+  {
+   "name": "Yida Wang",
+   "ids": [
+    "2108024054",
+    "2143476152",
+    "2253834098",
+    "2270249206"
+   ],
+   "canonical_id": "2108024054",
+   "n_papers": {
+    "2108024054": 3,
+    "2143476152": 2,
+    "2253834098": 1,
+    "2270249206": 3
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2108024054+2143476152": "coauthor",
+    "2108024054+2253834098": "coauthor",
+    "2108024054+2270249206": "coauthor",
+    "2143476152+2253834098": "coauthor",
+    "2143476152+2270249206": "coauthor",
+    "2253834098+2270249206": "coauthor"
+   }
+  },
+  {
+   "name": "Yinhe Han",
+   "ids": [
+    "2242002528",
+    "2310281924"
+   ],
+   "canonical_id": "2242002528",
+   "n_papers": {
+    "2242002528": 1,
+    "2310281924": 1
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2242002528+2310281924": "affiliation"
+   }
+  },
+  {
+   "name": "Yong Li",
+   "ids": [
+    "2154404214",
+    "2301614926"
+   ],
+   "canonical_id": "2154404214",
+   "n_papers": {
+    "2154404214": 1,
+    "2301614926": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2154404214+2301614926": "coauthor"
+   }
+  },
+  {
+   "name": "Yong Wu",
+   "ids": [
+    "2115859471",
+    "2265597269"
+   ],
+   "canonical_id": "2115859471",
+   "n_papers": {
+    "2115859471": 2,
+    "2265597269": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2115859471+2265597269": "coauthor"
+   }
+  },
+  {
+   "name": "Yongchao Liu",
+   "ids": [
+    "2260824567",
+    "2916386"
+   ],
+   "canonical_id": "2260824567",
+   "n_papers": {
+    "2260824567": 2,
+    "2916386": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2260824567+2916386": "coauthor"
+   }
+  },
+  {
+   "name": "Yoshihiro Maeda",
+   "ids": [
+    "2211295804",
+    "2323211421"
+   ],
+   "canonical_id": "2211295804",
+   "n_papers": {
+    "2211295804": 1,
+    "2323211421": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2211295804+2323211421": "coauthor"
+   }
+  },
+  {
+   "name": "Youngjun Lee",
+   "ids": [
+    "2145439298",
+    "2278595960"
+   ],
+   "canonical_id": "2278595960",
+   "n_papers": {
+    "2145439298": 1,
+    "2278595960": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2145439298+2278595960": "coauthor"
+   }
+  },
+  {
+   "name": "Yu Feng",
+   "ids": [
+    "2150670926",
+    "2269647435"
+   ],
+   "canonical_id": "2269647435",
+   "n_papers": {
+    "2150670926": 1,
+    "2269647435": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2150670926+2269647435": "coauthor"
+   }
+  },
+  {
+   "name": "Yuan Xie",
+   "ids": [
+    "1410066063",
+    "144825236",
+    "2154871047"
+   ],
+   "canonical_id": "1410066063",
+   "n_papers": {
+    "1410066063": 2,
+    "144825236": 1,
+    "2154871047": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1410066063+144825236": "coauthor",
+    "1410066063+2154871047": "coauthor",
+    "144825236+2154871047": "coauthor"
+   }
+  },
+  {
+   "name": "Yuan Zhou",
+   "ids": [
+    "2116567933",
+    "2145108437"
+   ],
+   "canonical_id": "2116567933",
+   "n_papers": {
+    "2116567933": 2,
+    "2145108437": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2116567933+2145108437": "coauthor"
+   }
+  },
+  {
+   "name": "Yuandong Tian",
+   "ids": [
+    "1932187449",
+    "39402399"
+   ],
+   "canonical_id": "39402399",
+   "n_papers": {
+    "1932187449": 2,
+    "39402399": 4
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1932187449+39402399": "coauthor"
+   }
+  },
+  {
+   "name": "Yue Jin",
+   "ids": [
+    "152804142",
+    "2221148040"
+   ],
+   "canonical_id": "152804142",
+   "n_papers": {
+    "152804142": 1,
+    "2221148040": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "152804142+2221148040": "coauthor"
+   }
+  },
+  {
+   "name": "Yufei Ding",
+   "ids": [
+    "119663869",
+    "2265720951",
+    "2336517195"
+   ],
+   "canonical_id": "119663869",
+   "n_papers": {
+    "119663869": 4,
+    "2265720951": 1,
+    "2336517195": 2
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "119663869+2265720951": "affiliation",
+    "119663869+2336517195": "coauthor",
+    "2265720951+2336517195": "affiliation"
+   }
+  },
+  {
+   "name": "Yuhang Ma",
+   "ids": [
+    "2130527262",
+    "2302446701"
+   ],
+   "canonical_id": "2130527262",
+   "n_papers": {
+    "2130527262": 1,
+    "2302446701": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2130527262+2302446701": "coauthor"
+   }
+  },
+  {
+   "name": "Yuka Ikarashi",
+   "ids": [
+    "2134665163",
+    "2261734095"
+   ],
+   "canonical_id": "2134665163",
+   "n_papers": {
+    "2134665163": 5,
+    "2261734095": 2
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2134665163+2261734095": "affiliation"
+   }
+  },
+  {
+   "name": "Yuke Wang",
+   "ids": [
+    "2115942346",
+    "2297340964"
+   ],
+   "canonical_id": "2115942346",
+   "n_papers": {
+    "2115942346": 1,
+    "2297340964": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2115942346+2297340964": "coauthor"
+   }
+  },
+  {
+   "name": "Yun Liang",
+   "ids": [
+    "144884036",
+    "2117875037",
+    "2117875640",
+    "2257371483",
+    "2298401284",
+    "2315522741"
+   ],
+   "canonical_id": "144884036",
+   "n_papers": {
+    "144884036": 7,
+    "2117875037": 1,
+    "2117875640": 4,
+    "2257371483": 1,
+    "2298401284": 2,
+    "2315522741": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "144884036+2117875037": "coauthor",
+    "144884036+2117875640": "coauthor",
+    "144884036+2257371483": "coauthor",
+    "144884036+2298401284": "coauthor",
+    "144884036+2315522741": "affiliation",
+    "2117875037+2117875640": "coauthor",
+    "2117875037+2257371483": "affiliation",
+    "2117875037+2298401284": "coauthor",
+    "2117875037+2315522741": "affiliation",
+    "2117875640+2257371483": "affiliation",
+    "2117875640+2298401284": "coauthor",
+    "2117875640+2315522741": "affiliation",
+    "2257371483+2298401284": "2-hop",
+    "2257371483+2315522741": "affiliation",
+    "2298401284+2315522741": "coauthor"
+   }
+  },
+  {
+   "name": "Yunji Chen",
+   "ids": [
+    "2261914661",
+    "7377735"
+   ],
+   "canonical_id": "2261914661",
+   "n_papers": {
+    "2261914661": 2,
+    "7377735": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2261914661+7377735": "coauthor"
+   }
+  },
+  {
+   "name": "Yunxin Liu",
+   "ids": [
+    "2161440197",
+    "3180228"
+   ],
+   "canonical_id": "2161440197",
+   "n_papers": {
+    "2161440197": 1,
+    "3180228": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2161440197+3180228": "coauthor"
+   }
+  },
+  {
+   "name": "Yuzhi Zhang",
+   "ids": [
+    "2108353994",
+    "2284580393"
+   ],
+   "canonical_id": "2108353994",
+   "n_papers": {
+    "2108353994": 1,
+    "2284580393": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2108353994+2284580393": "coauthor"
+   }
+  },
+  {
+   "name": "Zach DeVito",
+   "ids": [
+    "2350392470",
+    "2375710"
+   ],
+   "canonical_id": "2375710",
+   "n_papers": {
+    "2350392470": 2,
+    "2375710": 5
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2350392470+2375710": "affiliation"
+   }
+  },
+  {
+   "name": "Zaifeng Pan",
+   "ids": [
+    "2111673955",
+    "2352886827"
+   ],
+   "canonical_id": "2111673955",
+   "n_papers": {
+    "2111673955": 1,
+    "2352886827": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2111673955+2352886827": "coauthor"
+   }
+  },
+  {
+   "name": "Zhen Zheng",
+   "ids": [
+    "2115547171",
+    "2266718273"
+   ],
+   "canonical_id": "2115547171",
+   "n_papers": {
+    "2115547171": 4,
+    "2266718273": 1
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2115547171+2266718273": "2-hop"
+   }
+  },
+  {
+   "name": "Zhihao Jia",
+   "ids": [
+    "2271058444",
+    "2284727859",
+    "2286667120"
+   ],
+   "canonical_id": "2286667120",
+   "n_papers": {
+    "2271058444": 1,
+    "2284727859": 1,
+    "2286667120": 3
+   },
+   "evidence": "2-hop",
+   "pair_evidence": {
+    "2271058444+2284727859": "2-hop",
+    "2271058444+2286667120": "coauthor",
+    "2284727859+2286667120": "coauthor"
+   }
+  },
+  {
+   "name": "Zhiru Zhang",
+   "ids": [
+    "2242087633",
+    "2284031854",
+    "50316001"
+   ],
+   "canonical_id": "50316001",
+   "n_papers": {
+    "2242087633": 3,
+    "2284031854": 1,
+    "50316001": 11
+   },
+   "evidence": "affiliation",
+   "pair_evidence": {
+    "2242087633+2284031854": "affiliation",
+    "2242087633+50316001": "coauthor",
+    "2284031854+50316001": "coauthor"
+   }
+  },
+  {
+   "name": "Zhiyao Li",
+   "ids": [
+    "2004324389",
+    "2332677240"
+   ],
+   "canonical_id": "2004324389",
+   "n_papers": {
+    "2004324389": 1,
+    "2332677240": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2004324389+2332677240": "coauthor"
+   }
+  },
+  {
+   "name": "Zhonghui Jiang",
+   "ids": [
+    "12761004",
+    "2325690628"
+   ],
+   "canonical_id": "12761004",
+   "n_papers": {
+    "12761004": 1,
+    "2325690628": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "12761004+2325690628": "coauthor"
+   }
+  },
+  {
+   "name": "Zihan Liu",
+   "ids": [
+    "2117940902",
+    "2303434859"
+   ],
+   "canonical_id": "2117940902",
+   "n_papers": {
+    "2117940902": 6,
+    "2303434859": 1
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "2117940902+2303434859": "coauthor"
+   }
+  },
+  {
+   "name": "Zihao Ye",
+   "ids": [
+    "2402503197",
+    "3060913"
+   ],
+   "canonical_id": "3060913",
+   "n_papers": {
+    "2402503197": 1,
+    "3060913": 7
+   },
+   "evidence": "paper",
+   "pair_evidence": {
+    "2402503197+3060913": "paper"
+   }
+  },
+  {
+   "name": "Ziheng Jiang",
+   "ids": [
+    "1732910",
+    "2287104163"
+   ],
+   "canonical_id": "1732910",
+   "n_papers": {
+    "1732910": 13,
+    "2287104163": 2
+   },
+   "evidence": "coauthor",
+   "pair_evidence": {
+    "1732910+2287104163": "coauthor"
+   }
+  }
+ ],
+ "left_split": [
+  {
+   "name": "A. Krishnamurthy",
+   "ids": [
+    "144695691",
+    "39094442"
+   ],
+   "n_papers": {
+    "144695691": 6,
+    "39094442": 4
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "144695691": false,
+    "39094442": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Ahmed H. Mahmoud",
+   "ids": [
+    "144891355",
+    "2356711676"
+   ],
+   "n_papers": {
+    "144891355": 1,
+    "2356711676": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "144891355": true,
+    "2356711676": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Albert Cohen",
+   "ids": [
+    "145509576",
+    "2190113594",
+    "2242570064",
+    "2267338946"
+   ],
+   "n_papers": {
+    "145509576": 15,
+    "2190113594": 5,
+    "2242570064": 1,
+    "2267338946": 1
+   },
+   "linked_pairs": 5,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "145509576": true,
+    "2190113594": true,
+    "2242570064": false,
+    "2267338946": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Alvin Cheung",
+   "ids": [
+    "144385783",
+    "2172244319",
+    "2298896951"
+   ],
+   "n_papers": {
+    "144385783": 11,
+    "2172244319": 1,
+    "2298896951": 5
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "144385783": true,
+    "2172244319": false,
+    "2298896951": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Amir Shaikhha",
+   "ids": [
+    "2242632853",
+    "2366196",
+    "2366611658",
+    "2366611666"
+   ],
+   "n_papers": {
+    "2242632853": 3,
+    "2366196": 7,
+    "2366611658": 3,
+    "2366611666": 1
+   },
+   "linked_pairs": 3,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "2242632853": true,
+    "2366196": true,
+    "2366611658": true,
+    "2366611666": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Ang Li",
+   "ids": [
+    "145476833",
+    "2303334264"
+   ],
+   "n_papers": {
+    "145476833": 1,
+    "2303334264": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "145476833": false,
+    "2303334264": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Animesh Jain",
+   "ids": [
+    "101682296",
+    "2297974539"
+   ],
+   "n_papers": {
+    "101682296": 1,
+    "2297974539": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "101682296": false,
+    "2297974539": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Chen Zhang",
+   "ids": [
+    "145107889",
+    "2111574245",
+    "2271377064",
+    "2377839192"
+   ],
+   "n_papers": {
+    "145107889": 1,
+    "2111574245": 2,
+    "2271377064": 1,
+    "2377839192": 1
+   },
+   "linked_pairs": 3,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "145107889": true,
+    "2111574245": true,
+    "2271377064": false,
+    "2377839192": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Cheng Li",
+   "ids": [
+    "2133092186",
+    "2268421848"
+   ],
+   "n_papers": {
+    "2133092186": 1,
+    "2268421848": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2133092186": true,
+    "2268421848": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Cheng Liu",
+   "ids": [
+    "2155880902",
+    "2364961981"
+   ],
+   "n_papers": {
+    "2155880902": 2,
+    "2364961981": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2155880902": true,
+    "2364961981": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Cheng Tan",
+   "ids": [
+    "2330393823",
+    "47897811"
+   ],
+   "n_papers": {
+    "2330393823": 1,
+    "47897811": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2330393823": false,
+    "47897811": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Christopher Torng",
+   "ids": [
+    "2136471",
+    "2397762107"
+   ],
+   "n_papers": {
+    "2136471": 5,
+    "2397762107": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2136471": true,
+    "2397762107": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Christos Kozyrakis",
+   "ids": [
+    "117272782",
+    "2373333930"
+   ],
+   "n_papers": {
+    "117272782": 7,
+    "2373333930": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "117272782": true,
+    "2373333930": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Cunxi Yu",
+   "ids": [
+    "2089051",
+    "2110627332",
+    "2243375457",
+    "2292435742"
+   ],
+   "n_papers": {
+    "2089051": 1,
+    "2110627332": 1,
+    "2243375457": 1,
+    "2292435742": 1
+   },
+   "linked_pairs": 5,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "2089051": true,
+    "2110627332": true,
+    "2243375457": true,
+    "2292435742": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Daniel Y. Fu",
+   "ids": [
+    "2259931128",
+    "49577833"
+   ],
+   "n_papers": {
+    "2259931128": 1,
+    "49577833": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2259931128": false,
+    "49577833": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "David Broman",
+   "ids": [
+    "2303401552",
+    "47757366"
+   ],
+   "n_papers": {
+    "2303401552": 2,
+    "47757366": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2303401552": true,
+    "47757366": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Fangke Ye",
+   "ids": [
+    "2286001634",
+    "51890880"
+   ],
+   "n_papers": {
+    "2286001634": 1,
+    "51890880": 4
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2286001634": false,
+    "51890880": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Fei Wang",
+   "ids": [
+    "2148955949",
+    "2148957392"
+   ],
+   "n_papers": {
+    "2148955949": 1,
+    "2148957392": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2148955949": false,
+    "2148957392": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Feng Yu",
+   "ids": [
+    "2155385153",
+    "2155386972"
+   ],
+   "n_papers": {
+    "2155385153": 3,
+    "2155386972": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2155385153": true,
+    "2155386972": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Feng Zhang",
+   "ids": [
+    "1884418505",
+    "2158118667",
+    "2261828628",
+    "2277452199"
+   ],
+   "n_papers": {
+    "1884418505": 1,
+    "2158118667": 1,
+    "2261828628": 2,
+    "2277452199": 1
+   },
+   "linked_pairs": 5,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "1884418505": true,
+    "2158118667": true,
+    "2261828628": true,
+    "2277452199": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Gagandeep Singh",
+   "ids": [
+    "122085719",
+    "2117029302",
+    "2293677048",
+    "2355284737"
+   ],
+   "n_papers": {
+    "122085719": 1,
+    "2117029302": 1,
+    "2293677048": 1,
+    "2355284737": 1
+   },
+   "linked_pairs": 2,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "122085719": true,
+    "2117029302": true,
+    "2293677048": true,
+    "2355284737": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Genghan Zhang",
+   "ids": [
+    "2184278623",
+    "2342648907"
+   ],
+   "n_papers": {
+    "2184278623": 1,
+    "2342648907": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2184278623": false,
+    "2342648907": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Guangming Tan",
+   "ids": [
+    "1930057",
+    "2285084505",
+    "2285084507",
+    "2287238109",
+    "2372383733"
+   ],
+   "n_papers": {
+    "1930057": 2,
+    "2285084505": 2,
+    "2285084507": 1,
+    "2287238109": 1,
+    "2372383733": 1
+   },
+   "linked_pairs": 7,
+   "total_pairs": 10,
+   "affiliation_known": {
+    "1930057": true,
+    "2285084505": true,
+    "2285084507": true,
+    "2287238109": true,
+    "2372383733": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "H. Peng",
+   "ids": [
+    "12969130",
+    "2188770817"
+   ],
+   "n_papers": {
+    "12969130": 1,
+    "2188770817": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "12969130": false,
+    "2188770817": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "H. Zhang",
+   "ids": [
+    "1682058",
+    "2388823995"
+   ],
+   "n_papers": {
+    "1682058": 1,
+    "2388823995": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1682058": false,
+    "2388823995": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Haibin Lin",
+   "ids": [
+    "2257447831",
+    "2267006156"
+   ],
+   "n_papers": {
+    "2257447831": 2,
+    "2267006156": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2257447831": false,
+    "2267006156": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Haibing Guan",
+   "ids": [
+    "2237295701",
+    "2351064704",
+    "2367041064"
+   ],
+   "n_papers": {
+    "2237295701": 1,
+    "2351064704": 1,
+    "2367041064": 1
+   },
+   "linked_pairs": 2,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2237295701": true,
+    "2351064704": true,
+    "2367041064": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Haohui Mai",
+   "ids": [
+    "2294198399",
+    "2364058392",
+    "2385483126"
+   ],
+   "n_papers": {
+    "2294198399": 1,
+    "2364058392": 1,
+    "2385483126": 1
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2294198399": false,
+    "2364058392": false,
+    "2385483126": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Haojie Wang",
+   "ids": [
+    "2130322731",
+    "2302508270"
+   ],
+   "n_papers": {
+    "2130322731": 7,
+    "2302508270": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2130322731": true,
+    "2302508270": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Ion Stoica",
+   "ids": [
+    "2055174324",
+    "2316152839",
+    "2316152880",
+    "2316152888"
+   ],
+   "n_papers": {
+    "2055174324": 4,
+    "2316152839": 4,
+    "2316152880": 1,
+    "2316152888": 1
+   },
+   "linked_pairs": 3,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "2055174324": false,
+    "2316152839": false,
+    "2316152880": true,
+    "2316152888": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "J. Demmel",
+   "ids": [
+    "1700326",
+    "2248473790"
+   ],
+   "n_papers": {
+    "1700326": 1,
+    "2248473790": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1700326": true,
+    "2248473790": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jana Giceva",
+   "ids": [
+    "2377815729",
+    "2811717"
+   ],
+   "n_papers": {
+    "2377815729": 1,
+    "2811717": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2377815729": true,
+    "2811717": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jia Liu",
+   "ids": [
+    "2134800521",
+    "2266514519"
+   ],
+   "n_papers": {
+    "2134800521": 1,
+    "2266514519": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2134800521": true,
+    "2266514519": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jiajia Li",
+   "ids": [
+    "2109045442",
+    "2329363048",
+    "47786204"
+   ],
+   "n_papers": {
+    "2109045442": 1,
+    "2329363048": 1,
+    "47786204": 1
+   },
+   "linked_pairs": 2,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2109045442": true,
+    "2329363048": true,
+    "47786204": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jidong Zhai",
+   "ids": [
+    "2142251505",
+    "2285159790",
+    "2302761350",
+    "2304588877",
+    "2467444"
+   ],
+   "n_papers": {
+    "2142251505": 2,
+    "2285159790": 4,
+    "2302761350": 1,
+    "2304588877": 1,
+    "2467444": 11
+   },
+   "linked_pairs": 7,
+   "total_pairs": 10,
+   "affiliation_known": {
+    "2142251505": false,
+    "2285159790": true,
+    "2302761350": false,
+    "2304588877": false,
+    "2467444": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jie Zhao",
+   "ids": [
+    "2110117983",
+    "2110119263",
+    "2265719607",
+    "2317123993"
+   ],
+   "n_papers": {
+    "2110117983": 5,
+    "2110119263": 1,
+    "2265719607": 4,
+    "2317123993": 1
+   },
+   "linked_pairs": 2,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "2110117983": true,
+    "2110119263": false,
+    "2265719607": true,
+    "2317123993": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jin Fang",
+   "ids": [
+    "2115379722",
+    "2353710265"
+   ],
+   "n_papers": {
+    "2115379722": 1,
+    "2353710265": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2115379722": true,
+    "2353710265": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Johannes Doerfert",
+   "ids": [
+    "2267945999",
+    "2339019158"
+   ],
+   "n_papers": {
+    "2267945999": 2,
+    "2339019158": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2267945999": true,
+    "2339019158": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "John D. Owens",
+   "ids": [
+    "1399266021",
+    "2056137562",
+    "2249760131"
+   ],
+   "n_papers": {
+    "1399266021": 1,
+    "2056137562": 1,
+    "2249760131": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "1399266021": true,
+    "2056137562": false,
+    "2249760131": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Joseph Gonzalez",
+   "ids": [
+    "145505952",
+    "2119114305"
+   ],
+   "n_papers": {
+    "145505952": 1,
+    "2119114305": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "145505952": false,
+    "2119114305": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Joseph Tassarotti",
+   "ids": [
+    "1778056",
+    "2392255759"
+   ],
+   "n_papers": {
+    "1778056": 1,
+    "2392255759": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1778056": true,
+    "2392255759": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jun Huang",
+   "ids": [
+    "153099873",
+    "2320198634"
+   ],
+   "n_papers": {
+    "153099873": 2,
+    "2320198634": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "153099873": true,
+    "2320198634": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jun Liu",
+   "ids": [
+    "2157177063",
+    "2316763298"
+   ],
+   "n_papers": {
+    "2157177063": 1,
+    "2316763298": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2157177063": true,
+    "2316763298": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jun Wang",
+   "ids": [
+    "2152811764",
+    "2265365654"
+   ],
+   "n_papers": {
+    "2152811764": 1,
+    "2265365654": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2152811764": false,
+    "2265365654": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Jun Yang",
+   "ids": [
+    "2146156715",
+    "2146157692",
+    "2399751580"
+   ],
+   "n_papers": {
+    "2146156715": 2,
+    "2146157692": 1,
+    "2399751580": 1
+   },
+   "linked_pairs": 2,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2146156715": false,
+    "2146157692": true,
+    "2399751580": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Junshi Chen",
+   "ids": [
+    "2108112251",
+    "2108112339",
+    "2317924454"
+   ],
+   "n_papers": {
+    "2108112251": 1,
+    "2108112339": 1,
+    "2317924454": 2
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2108112251": false,
+    "2108112339": true,
+    "2317924454": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Kai-Ting Amy Wang",
+   "ids": [
+    "122782635",
+    "2346949653"
+   ],
+   "n_papers": {
+    "122782635": 1,
+    "2346949653": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "122782635": false,
+    "2346949653": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "L. Zhang",
+   "ids": [
+    "1720539",
+    "48571328"
+   ],
+   "n_papers": {
+    "1720539": 2,
+    "48571328": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1720539": true,
+    "48571328": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Lei Chen",
+   "ids": [
+    "2155394651",
+    "38050793"
+   ],
+   "n_papers": {
+    "2155394651": 1,
+    "38050793": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2155394651": false,
+    "38050793": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Lidong Zhou",
+   "ids": [
+    "2143359114",
+    "93317102"
+   ],
+   "n_papers": {
+    "2143359114": 3,
+    "93317102": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2143359114": false,
+    "93317102": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Luca Benini",
+   "ids": [
+    "2238205997",
+    "2241612446"
+   ],
+   "n_papers": {
+    "2238205997": 2,
+    "2241612446": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2238205997": true,
+    "2241612446": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "M. Guo",
+   "ids": [
+    "1697293",
+    "2119398828"
+   ],
+   "n_papers": {
+    "1697293": 2,
+    "2119398828": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1697293": false,
+    "2119398828": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Marian Verhelst",
+   "ids": [
+    "2242711751",
+    "2255349355"
+   ],
+   "n_papers": {
+    "2242711751": 1,
+    "2255349355": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2242711751": true,
+    "2255349355": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Meng Zhang",
+   "ids": [
+    "2153205916",
+    "2328288858"
+   ],
+   "n_papers": {
+    "2153205916": 1,
+    "2328288858": 3
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2153205916": false,
+    "2328288858": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Michael Garland",
+   "ids": [
+    "2308274514",
+    "2330216672"
+   ],
+   "n_papers": {
+    "2308274514": 2,
+    "2330216672": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2308274514": true,
+    "2330216672": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Michel Steuwer",
+   "ids": [
+    "1795890",
+    "2252300126",
+    "2266395793"
+   ],
+   "n_papers": {
+    "1795890": 26,
+    "2252300126": 2,
+    "2266395793": 6
+   },
+   "linked_pairs": 2,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "1795890": true,
+    "2252300126": true,
+    "2266395793": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Mohamed Wahib",
+   "ids": [
+    "1700692",
+    "2400424911"
+   ],
+   "n_papers": {
+    "1700692": 5,
+    "2400424911": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1700692": true,
+    "2400424911": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Mohammad Dashti",
+   "ids": [
+    "143772942",
+    "2242162958"
+   ],
+   "n_papers": {
+    "143772942": 2,
+    "2242162958": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "143772942": false,
+    "2242162958": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "N. Yoshida",
+   "ids": [
+    "143884638",
+    "93014447"
+   ],
+   "n_papers": {
+    "143884638": 1,
+    "93014447": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "143884638": true,
+    "93014447": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Ningxin Zheng",
+   "ids": [
+    "2305682698",
+    "66887984"
+   ],
+   "n_papers": {
+    "2305682698": 2,
+    "66887984": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2305682698": false,
+    "66887984": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "P. Sadayappan",
+   "ids": [
+    "145293384",
+    "2237706730",
+    "2260918523"
+   ],
+   "n_papers": {
+    "145293384": 10,
+    "2237706730": 3,
+    "2260918523": 1
+   },
+   "linked_pairs": 2,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "145293384": true,
+    "2237706730": true,
+    "2260918523": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Peng Sun",
+   "ids": [
+    "2075416290",
+    "2310403816"
+   ],
+   "n_papers": {
+    "2075416290": 1,
+    "2310403816": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2075416290": false,
+    "2310403816": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Phillip B. Gibbons",
+   "ids": [
+    "1974678",
+    "2369192660"
+   ],
+   "n_papers": {
+    "1974678": 5,
+    "2369192660": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1974678": false,
+    "2369192660": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Qi Li",
+   "ids": [
+    "2301666846",
+    "2365459652"
+   ],
+   "n_papers": {
+    "2301666846": 3,
+    "2365459652": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2301666846": true,
+    "2365459652": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Qi Sun",
+   "ids": [
+    "2109170829",
+    "2109170852",
+    "2303748971"
+   ],
+   "n_papers": {
+    "2109170829": 1,
+    "2109170852": 4,
+    "2303748971": 1
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2109170829": false,
+    "2109170852": true,
+    "2303748971": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Qijing Huang",
+   "ids": [
+    "145391991",
+    "2325463315"
+   ],
+   "n_papers": {
+    "145391991": 3,
+    "2325463315": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "145391991": true,
+    "2325463315": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "R. Barik",
+   "ids": [
+    "1721712",
+    "2137345408"
+   ],
+   "n_papers": {
+    "1721712": 1,
+    "2137345408": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1721712": true,
+    "2137345408": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Rui Chen",
+   "ids": [
+    "2118229954",
+    "2346690599"
+   ],
+   "n_papers": {
+    "2118229954": 2,
+    "2346690599": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2118229954": true,
+    "2346690599": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Rui Wang",
+   "ids": [
+    "145490536",
+    "145490537",
+    "2314191096"
+   ],
+   "n_papers": {
+    "145490536": 1,
+    "145490537": 2,
+    "2314191096": 2
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "145490536": true,
+    "145490537": true,
+    "2314191096": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Rui Zhao",
+   "ids": [
+    "2114012077",
+    "2279630185",
+    "2305487980"
+   ],
+   "n_papers": {
+    "2114012077": 1,
+    "2279630185": 1,
+    "2305487980": 1
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2114012077": false,
+    "2279630185": false,
+    "2305487980": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Ruofan Wu",
+   "ids": [
+    "2273287043",
+    "2283457340"
+   ],
+   "n_papers": {
+    "2273287043": 1,
+    "2283457340": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2273287043": false,
+    "2283457340": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Ryan Marcus",
+   "ids": [
+    "2293617456",
+    "2373350211",
+    "40412858"
+   ],
+   "n_papers": {
+    "2293617456": 1,
+    "2373350211": 1,
+    "40412858": 3
+   },
+   "linked_pairs": 0,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2293617456": true,
+    "2373350211": false,
+    "40412858": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "S. Han",
+   "ids": [
+    "2109749771",
+    "2285250308"
+   ],
+   "n_papers": {
+    "2109749771": 1,
+    "2285250308": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2109749771": true,
+    "2285250308": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "S. Sarkar",
+   "ids": [
+    "144016196",
+    "40490806"
+   ],
+   "n_papers": {
+    "144016196": 4,
+    "40490806": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "144016196": false,
+    "40490806": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Shigang Li",
+   "ids": [
+    "2298884755",
+    "2336085047"
+   ],
+   "n_papers": {
+    "2298884755": 1,
+    "2336085047": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2298884755": false,
+    "2336085047": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Shouyi Yin",
+   "ids": [
+    "145746022",
+    "2217538276"
+   ],
+   "n_papers": {
+    "145746022": 1,
+    "2217538276": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "145746022": false,
+    "2217538276": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Shuo Zhang",
+   "ids": [
+    "2257086624",
+    "2336525329",
+    "2407669009"
+   ],
+   "n_papers": {
+    "2257086624": 1,
+    "2336525329": 1,
+    "2407669009": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2257086624": false,
+    "2336525329": true,
+    "2407669009": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Siyuan Feng",
+   "ids": [
+    "134713146",
+    "2347923274",
+    "2387641765"
+   ],
+   "n_papers": {
+    "134713146": 1,
+    "2347923274": 1,
+    "2387641765": 5
+   },
+   "linked_pairs": 2,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "134713146": false,
+    "2347923274": false,
+    "2387641765": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Song Han",
+   "ids": [
+    "143840275",
+    "2115659426",
+    "2243400730"
+   ],
+   "n_papers": {
+    "143840275": 2,
+    "2115659426": 1,
+    "2243400730": 1
+   },
+   "linked_pairs": 2,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "143840275": true,
+    "2115659426": true,
+    "2243400730": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Songchen Ma",
+   "ids": [
+    "2115978987",
+    "2393457458"
+   ],
+   "n_papers": {
+    "2115978987": 1,
+    "2393457458": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2115978987": true,
+    "2393457458": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "T. Krishna",
+   "ids": [
+    "145984583",
+    "2328284951"
+   ],
+   "n_papers": {
+    "145984583": 8,
+    "2328284951": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "145984583": true,
+    "2328284951": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "T. Tang",
+   "ids": [
+    "144543522",
+    "2069746901"
+   ],
+   "n_papers": {
+    "144543522": 3,
+    "2069746901": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "144543522": false,
+    "2069746901": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Tianqi Chen",
+   "ids": [
+    "1913774",
+    "2157509862",
+    "2257252152",
+    "2296951083",
+    "2356600057"
+   ],
+   "n_papers": {
+    "1913774": 17,
+    "2157509862": 1,
+    "2257252152": 2,
+    "2296951083": 2,
+    "2356600057": 1
+   },
+   "linked_pairs": 6,
+   "total_pairs": 10,
+   "affiliation_known": {
+    "1913774": true,
+    "2157509862": false,
+    "2257252152": true,
+    "2296951083": false,
+    "2356600057": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Tyler Sorensen",
+   "ids": [
+    "2299592653",
+    "30718552"
+   ],
+   "n_papers": {
+    "2299592653": 2,
+    "30718552": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2299592653": true,
+    "30718552": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "W. T. Freeman",
+   "ids": [
+    "2053571409",
+    "2238629397"
+   ],
+   "n_papers": {
+    "2053571409": 1,
+    "2238629397": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2053571409": true,
+    "2238629397": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Wei Li",
+   "ids": [
+    "2157336953",
+    "2256598373",
+    "2383263189"
+   ],
+   "n_papers": {
+    "2157336953": 1,
+    "2256598373": 1,
+    "2383263189": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2157336953": false,
+    "2256598373": false,
+    "2383263189": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Wei Wang",
+   "ids": [
+    "2158506000",
+    "2158624285",
+    "2158624579"
+   ],
+   "n_papers": {
+    "2158506000": 2,
+    "2158624285": 2,
+    "2158624579": 1
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2158506000": true,
+    "2158624285": false,
+    "2158624579": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Wei Xue",
+   "ids": [
+    "2052308464",
+    "48122415"
+   ],
+   "n_papers": {
+    "2052308464": 1,
+    "48122415": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2052308464": false,
+    "48122415": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Weifeng Liu",
+   "ids": [
+    "2325913200",
+    "49663558"
+   ],
+   "n_papers": {
+    "2325913200": 1,
+    "49663558": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2325913200": false,
+    "49663558": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Wenguang Chen",
+   "ids": [
+    "1712168",
+    "2262468726",
+    "2276545068"
+   ],
+   "n_papers": {
+    "1712168": 5,
+    "2262468726": 1,
+    "2276545068": 1
+   },
+   "linked_pairs": 2,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "1712168": true,
+    "2262468726": true,
+    "2276545068": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Xin Chen",
+   "ids": [
+    "2199544869",
+    "2295055584"
+   ],
+   "n_papers": {
+    "2199544869": 1,
+    "2295055584": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2199544869": true,
+    "2295055584": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Xin Liu",
+   "ids": [
+    "2146075935",
+    "2328747777",
+    "89121677"
+   ],
+   "n_papers": {
+    "2146075935": 1,
+    "2328747777": 2,
+    "89121677": 1
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2146075935": false,
+    "2328747777": false,
+    "89121677": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Xipeng Shen",
+   "ids": [
+    "2111112811",
+    "2111115725",
+    "37914192"
+   ],
+   "n_papers": {
+    "2111112811": 1,
+    "2111115725": 2,
+    "37914192": 5
+   },
+   "linked_pairs": 2,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2111112811": false,
+    "2111115725": true,
+    "37914192": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Xiyu Shi",
+   "ids": [
+    "2368472748",
+    "2680861"
+   ],
+   "n_papers": {
+    "2368472748": 1,
+    "2680861": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2368472748": false,
+    "2680861": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Xu Liu",
+   "ids": [
+    "2266010461",
+    "49543466"
+   ],
+   "n_papers": {
+    "2266010461": 1,
+    "49543466": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2266010461": true,
+    "49543466": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Xueying Qin",
+   "ids": [
+    "1754175",
+    "2087116680"
+   ],
+   "n_papers": {
+    "1754175": 1,
+    "2087116680": 2
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1754175": true,
+    "2087116680": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yan Gu",
+   "ids": [
+    "144743959",
+    "2337361365"
+   ],
+   "n_papers": {
+    "144743959": 1,
+    "2337361365": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "144743959": true,
+    "2337361365": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yang Hu",
+   "ids": [
+    "2303614093",
+    "2337488819"
+   ],
+   "n_papers": {
+    "2303614093": 1,
+    "2337488819": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2303614093": false,
+    "2337488819": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yang Li",
+   "ids": [
+    "2283489148",
+    "2284442329"
+   ],
+   "n_papers": {
+    "2283489148": 1,
+    "2284442329": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2283489148": true,
+    "2284442329": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yang Zhang",
+   "ids": [
+    "2145954902",
+    "2145955692",
+    "2387457716"
+   ],
+   "n_papers": {
+    "2145954902": 1,
+    "2145955692": 1,
+    "2387457716": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2145954902": false,
+    "2145955692": false,
+    "2387457716": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yanjun Wu",
+   "ids": [
+    "2311826871",
+    "2431552237"
+   ],
+   "n_papers": {
+    "2311826871": 2,
+    "2431552237": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2311826871": true,
+    "2431552237": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yao Zhang",
+   "ids": [
+    "2118391316",
+    "2118391534",
+    "2144530520"
+   ],
+   "n_papers": {
+    "2118391316": 1,
+    "2118391534": 1,
+    "2144530520": 1
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2118391316": false,
+    "2118391534": true,
+    "2144530520": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yaohua Wang",
+   "ids": [
+    "1719893",
+    "2326544066"
+   ],
+   "n_papers": {
+    "1719893": 1,
+    "2326544066": 3
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1719893": true,
+    "2326544066": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yi Li",
+   "ids": [
+    "2153682267",
+    "2268952322",
+    "2281001736"
+   ],
+   "n_papers": {
+    "2153682267": 2,
+    "2268952322": 1,
+    "2281001736": 1
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2153682267": true,
+    "2268952322": true,
+    "2281001736": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yibo Zhu",
+   "ids": [
+    "2176234169",
+    "2274197432"
+   ],
+   "n_papers": {
+    "2176234169": 1,
+    "2274197432": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2176234169": false,
+    "2274197432": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Ying Wang",
+   "ids": [
+    "2155514103",
+    "2379590795",
+    "2446383894",
+    "49418598"
+   ],
+   "n_papers": {
+    "2155514103": 1,
+    "2379590795": 1,
+    "2446383894": 1,
+    "49418598": 3
+   },
+   "linked_pairs": 3,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "2155514103": true,
+    "2379590795": true,
+    "2446383894": true,
+    "49418598": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Youhui Zhang",
+   "ids": [
+    "2285046226",
+    "7549706"
+   ],
+   "n_papers": {
+    "2285046226": 1,
+    "7549706": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2285046226": false,
+    "7549706": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yu Liu",
+   "ids": [
+    "1715752",
+    "2146401101",
+    "2256806880",
+    "2327496942"
+   ],
+   "n_papers": {
+    "1715752": 1,
+    "2146401101": 1,
+    "2256806880": 1,
+    "2327496942": 1
+   },
+   "linked_pairs": 2,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "1715752": true,
+    "2146401101": true,
+    "2256806880": false,
+    "2327496942": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yu Wang",
+   "ids": [
+    "2153604365",
+    "2241604835",
+    "40457242"
+   ],
+   "n_papers": {
+    "2153604365": 2,
+    "2241604835": 1,
+    "40457242": 2
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2153604365": true,
+    "2241604835": true,
+    "40457242": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yu Zhang",
+   "ids": [
+    "2153632809",
+    "2153635348",
+    "2153638329",
+    "2153639188"
+   ],
+   "n_papers": {
+    "2153632809": 2,
+    "2153635348": 1,
+    "2153638329": 1,
+    "2153639188": 1
+   },
+   "linked_pairs": 1,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "2153632809": false,
+    "2153635348": false,
+    "2153638329": true,
+    "2153639188": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yue Guan",
+   "ids": [
+    "2069571364",
+    "2365463772"
+   ],
+   "n_papers": {
+    "2069571364": 1,
+    "2365463772": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2069571364": true,
+    "2365463772": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yue Wang",
+   "ids": [
+    "2118461722",
+    "2118461742"
+   ],
+   "n_papers": {
+    "2118461722": 1,
+    "2118461742": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2118461722": false,
+    "2118461742": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yuhao Zhu",
+   "ids": [
+    "2124167",
+    "2266220630",
+    "2314883254",
+    "2321398419"
+   ],
+   "n_papers": {
+    "2124167": 3,
+    "2266220630": 1,
+    "2314883254": 1,
+    "2321398419": 1
+   },
+   "linked_pairs": 5,
+   "total_pairs": 6,
+   "affiliation_known": {
+    "2124167": true,
+    "2266220630": true,
+    "2314883254": true,
+    "2321398419": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Yuting Yang",
+   "ids": [
+    "2132538418",
+    "2307503089"
+   ],
+   "n_papers": {
+    "2132538418": 4,
+    "2307503089": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "2132538418": true,
+    "2307503089": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Z. Wang",
+   "ids": [
+    "11032852",
+    "50218803",
+    "98358780"
+   ],
+   "n_papers": {
+    "11032852": 2,
+    "50218803": 1,
+    "98358780": 2
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "11032852": true,
+    "50218803": false,
+    "98358780": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Zhen Zhang",
+   "ids": [
+    "2116703582",
+    "2144352390",
+    "2283747113"
+   ],
+   "n_papers": {
+    "2116703582": 1,
+    "2144352390": 1,
+    "2283747113": 1
+   },
+   "linked_pairs": 1,
+   "total_pairs": 3,
+   "affiliation_known": {
+    "2116703582": true,
+    "2144352390": true,
+    "2283747113": false
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  },
+  {
+   "name": "Zheng Zhang",
+   "ids": [
+    "1852415",
+    "2274734490"
+   ],
+   "n_papers": {
+    "1852415": 1,
+    "2274734490": 1
+   },
+   "linked_pairs": 0,
+   "total_pairs": 1,
+   "affiliation_known": {
+    "1852415": false,
+    "2274734490": true
+   },
+   "reason": "no evidence links every pair; left split rather than guessed"
+  }
+ ]
+}
