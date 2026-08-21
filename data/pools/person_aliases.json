@@ -2902,6 +2902,1814 @@
    ],
    "name": "Saman P. Amarasinghe",
    "evidence": "hand 2026-08-21: StreamJIT (OOPSLA 2014, OpenCitations-only record, no S2 author id) is his paper"
+  },
+  {
+   "keep": "144187067",
+   "merge": [
+    "name:Andrew Adams"
+   ],
+   "name": "Andrew Adams",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthors"
+  },
+  {
+   "keep": "1867647",
+   "merge": [
+    "name:Jeffrey Bosboom"
+   ],
+   "name": "Jeffrey Bosboom",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthors"
+  },
+  {
+   "keep": "2149549973",
+   "merge": [
+    "name:Laiyuan Gong"
+   ],
+   "name": "Laiyuan Gong",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthors"
+  },
+  {
+   "keep": "2395222534",
+   "merge": [
+    "name:Leyuan Wang"
+   ],
+   "name": "Leyuan Wang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 8 shared coauthors"
+  },
+  {
+   "keep": "1979640",
+   "merge": [
+    "name:Samuel W. Hasinoff"
+   ],
+   "name": "Samuel W. Hasinoff",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthors"
+  },
+  {
+   "keep": "114581743",
+   "merge": [
+    "name:Shangling Jui"
+   ],
+   "name": "Shangling Jui",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthors"
+  },
+  {
+   "keep": "3346402",
+   "merge": [
+    "name:Tanvir Sajed"
+   ],
+   "name": "Tanvir Sajed",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthors"
+  },
+  {
+   "keep": "2257252152",
+   "merge": [
+    "name:Tianqi Chen"
+   ],
+   "name": "Tianqi Chen",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 13 shared coauthors"
+  },
+  {
+   "keep": "2066652989",
+   "merge": [
+    "name:Tong Mo"
+   ],
+   "name": "Tong Mo",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthors"
+  },
+  {
+   "keep": "2154002396",
+   "merge": [
+    "name:Wei Lu"
+   ],
+   "name": "Wei Lu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthors"
+  },
+  {
+   "keep": "2108024054",
+   "merge": [
+    "name:Yida Wang"
+   ],
+   "name": "Yida Wang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 14 shared coauthors"
+  },
+  {
+   "keep": "2286667120",
+   "merge": [
+    "name:Zhihao Jia"
+   ],
+   "name": "Zhihao Jia",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthors"
+  },
+  {
+   "keep": "144211012",
+   "merge": [
+    "name:Aart J. C. Bik"
+   ],
+   "name": "Aart J. C. Bik",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 8 shared coauthor names"
+  },
+  {
+   "keep": "35405691",
+   "merge": [
+    "name:Adri\u00e1n Castell\u00f3"
+   ],
+   "name": "Adri\u00e1n Castell\u00f3",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2215594",
+   "merge": [
+    "name:Ajitesh Srivastava"
+   ],
+   "name": "Ajitesh Srivastava",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "145509576",
+   "merge": [
+    "name:Albert Cohen"
+   ],
+   "name": "Albert Cohen",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 11 shared coauthor names"
+  },
+  {
+   "keep": "2262454907",
+   "merge": [
+    "name:Alex Aiken"
+   ],
+   "name": "Alex Aiken",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "2153472102",
+   "merge": [
+    "name:Alexander Belyaev"
+   ],
+   "name": "Alexander Belyaev",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 8 shared coauthor names"
+  },
+  {
+   "keep": "145510407",
+   "merge": [
+    "name:Alexey Kravets"
+   ],
+   "name": "Alexey Kravets",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "19170117",
+   "merge": [
+    "name:Amrita Mazumdar"
+   ],
+   "name": "Amrita Mazumdar",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1777324",
+   "merge": [
+    "name:Anton Lokhmotov"
+   ],
+   "name": "Anton Lokhmotov",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "1976383",
+   "merge": [
+    "name:Anton Wijs"
+   ],
+   "name": "Anton Wijs",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2606269",
+   "merge": [
+    "name:Antonino Tumeo"
+   ],
+   "name": "Antonino Tumeo",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "1403811034",
+   "merge": [
+    "name:Aravind Sukumaran-Rajam"
+   ],
+   "name": "Aravind Sukumaran-Rajam",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1389870240",
+   "merge": [
+    "name:Armando Solar-Lezama"
+   ],
+   "name": "Armando Solar-Lezama",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1698528",
+   "merge": [
+    "name:Armin Alaghi"
+   ],
+   "name": "Armin Alaghi",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "11422154",
+   "merge": [
+    "name:Bastian Hagedorn"
+   ],
+   "name": "Bastian Hagedorn",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "144397979",
+   "merge": [
+    "name:Bo Wu"
+   ],
+   "name": "Bo Wu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2316586876",
+   "merge": [
+    "name:Carlus Huang"
+   ],
+   "name": "Carlus Huang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2348189045",
+   "merge": [
+    "name:Changhai Zhao"
+   ],
+   "name": "Changhai Zhao",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "50521287",
+   "merge": [
+    "name:Chao-Lin Lee"
+   ],
+   "name": "Chao-Lin Lee",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "2361162739",
+   "merge": [
+    "name:Chen Zhao"
+   ],
+   "name": "Chen Zhao",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "47897811",
+   "merge": [
+    "name:Cheng Tan"
+   ],
+   "name": "Cheng Tan",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "23174062",
+   "merge": [
+    "name:Chinmayee Shah"
+   ],
+   "name": "Chinmayee Shah",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "3224333",
+   "merge": [
+    "name:Christophe Dubach"
+   ],
+   "name": "Christophe Dubach",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "117272782",
+   "merge": [
+    "name:Christos Kozyrakis"
+   ],
+   "name": "Christos Kozyrakis",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2143986008",
+   "merge": [
+    "name:Chun-Fu Chen"
+   ],
+   "name": "Chun-Fu Chen",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1742671",
+   "merge": [
+    "name:Chung-Wen Huang"
+   ],
+   "name": "Chung-Wen Huang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "3086294",
+   "merge": [
+    "name:Crystal Lemire"
+   ],
+   "name": "Crystal Lemire",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "27998850",
+   "merge": [
+    "name:Daniel Mawhirter"
+   ],
+   "name": "Daniel Mawhirter",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1896817",
+   "merge": [
+    "name:David Brooks"
+   ],
+   "name": "David Brooks",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "1713644",
+   "merge": [
+    "name:Deming Chen"
+   ],
+   "name": "Deming Chen",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "145047216",
+   "merge": [
+    "name:Depei Qian"
+   ],
+   "name": "Depei Qian",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 7 shared coauthor names"
+  },
+  {
+   "keep": "2153473281",
+   "merge": [
+    "name:Diego Caballero"
+   ],
+   "name": "Diego Caballero",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 8 shared coauthor names"
+  },
+  {
+   "keep": "2091863753",
+   "merge": [
+    "name:Dong Dong"
+   ],
+   "name": "Dong Dong",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1389874349",
+   "merge": [
+    "name:Enrique S. Quintana-Ort\u00ed"
+   ],
+   "name": "Enrique S. Quintana-Ort\u00ed",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "2518519",
+   "merge": [
+    "name:Fabio Luporini"
+   ],
+   "name": "Fabio Luporini",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "151002614",
+   "merge": [
+    "name:Federico Pizzuti"
+   ],
+   "name": "Federico Pizzuti",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2266763148",
+   "merge": [
+    "name:Francesco Conti"
+   ],
+   "name": "Francesco Conti",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1778298",
+   "merge": [
+    "name:Francisco D. Igual"
+   ],
+   "name": "Francisco D. Igual",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "2290932",
+   "merge": [
+    "name:Fredrik Kjolstad"
+   ],
+   "name": "Fredrik Kjolstad",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "145403226",
+   "merge": [
+    "name:Fr\u00e9do Durand"
+   ],
+   "name": "Fr\u00e9do Durand",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 9 shared coauthor names"
+  },
+  {
+   "keep": "144289189",
+   "merge": [
+    "name:Gabriele K. Keller"
+   ],
+   "name": "Gabriele K. Keller",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2941222",
+   "merge": [
+    "name:Gai Liu"
+   ],
+   "name": "Gai Liu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "3119977",
+   "merge": [
+    "name:Germain Haugou"
+   ],
+   "name": "Germain Haugou",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2107962",
+   "merge": [
+    "name:Giuseppe Tagliavini"
+   ],
+   "name": "Giuseppe Tagliavini",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2255803",
+   "merge": [
+    "name:Gu-Yeon Wei"
+   ],
+   "name": "Gu-Yeon Wei",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "46402263",
+   "merge": [
+    "name:Hailong Yang"
+   ],
+   "name": "Hailong Yang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 7 shared coauthor names"
+  },
+  {
+   "keep": "1741452493",
+   "merge": [
+    "name:Harisankar Sadasivan"
+   ],
+   "name": "Harisankar Sadasivan",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2213032599",
+   "merge": [
+    "name:Haruki Nogami"
+   ],
+   "name": "Haruki Nogami",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1684335",
+   "merge": [
+    "name:Henk Corporaal"
+   ],
+   "name": "Henk Corporaal",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2280811693",
+   "merge": [
+    "name:Hirokazu Kamei"
+   ],
+   "name": "Hirokazu Kamei",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2244426730",
+   "merge": [
+    "name:Hiroyuki Takizawa"
+   ],
+   "name": "Hiroyuki Takizawa",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "4590999",
+   "merge": [
+    "name:Hongfeng Yu"
+   ],
+   "name": "Hongfeng Yu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2292508",
+   "merge": [
+    "name:Hongxu Jiang"
+   ],
+   "name": "Hongxu Jiang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1961420231",
+   "merge": [
+    "name:Hui-Hsin Liao"
+   ],
+   "name": "Hui-Hsin Liao",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2946535",
+   "merge": [
+    "name:Hyojin Sung"
+   ],
+   "name": "Hyojin Sung",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2261734231",
+   "merge": [
+    "name:H\u00e9ctor Mart\u00ednez"
+   ],
+   "name": "H\u00e9ctor Mart\u00ednez",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "1406310532",
+   "merge": [
+    "name:Ivan R. Ivanov"
+   ],
+   "name": "Ivan R. Ivanov",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2305847687",
+   "merge": [
+    "name:Ivo Gabe de Wolff"
+   ],
+   "name": "Ivo Gabe de Wolff",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2003454955",
+   "merge": [
+    "name:Jeevitha Palanisamy"
+   ],
+   "name": "Jeevitha Palanisamy",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "3139570",
+   "merge": [
+    "name:Jenq-Kuen Lee"
+   ],
+   "name": "Jenq-Kuen Lee",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "2266400526",
+   "merge": [
+    "name:Jens Domke"
+   ],
+   "name": "Jens Domke",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2108496584",
+   "merge": [
+    "name:Jiafeng Liu"
+   ],
+   "name": "Jiafeng Liu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "2113341746",
+   "merge": [
+    "name:Jiamin Wen"
+   ],
+   "name": "Jiamin Wen",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2142437913",
+   "merge": [
+    "name:Jianxing Xu"
+   ],
+   "name": "Jianxing Xu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 6 shared coauthor names"
+  },
+  {
+   "keep": "2278463797",
+   "merge": [
+    "name:Johann Rudi"
+   ],
+   "name": "Johann Rudi",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2267945999",
+   "merge": [
+    "name:Johannes Doerfert"
+   ],
+   "name": "Johannes Doerfert",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "46221094",
+   "merge": [
+    "name:Johannes Seiferth"
+   ],
+   "name": "Johannes Seiferth",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "35608738",
+   "merge": [
+    "name:Johannes de Fine Licht"
+   ],
+   "name": "Johannes de Fine Licht",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "1773596",
+   "merge": [
+    "name:John A. Stratton"
+   ],
+   "name": "John A. Stratton",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2124635638",
+   "merge": [
+    "name:Joonho Song"
+   ],
+   "name": "Joonho Song",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2316763298",
+   "merge": [
+    "name:Jun Liu"
+   ],
+   "name": "Jun Liu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2118599133",
+   "merge": [
+    "name:Junghyun Lee"
+   ],
+   "name": "Junghyun Lee",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "35064289",
+   "merge": [
+    "name:Karla Saur"
+   ],
+   "name": "Karla Saur",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2797215",
+   "merge": [
+    "name:Kazem Cheshmi"
+   ],
+   "name": "Kazem Cheshmi",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2244588157",
+   "merge": [
+    "name:Keichi Takahashi"
+   ],
+   "name": "Keichi Takahashi",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "34290128",
+   "merge": [
+    "name:Klaas Boesche"
+   ],
+   "name": "Klaas Boesche",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2331903856",
+   "merge": [
+    "name:Klaus Weide"
+   ],
+   "name": "Klaus Weide",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2687553",
+   "merge": [
+    "name:Konstantinos Karanasos"
+   ],
+   "name": "Konstantinos Karanasos",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "145741786",
+   "merge": [
+    "name:Koushik Sen"
+   ],
+   "name": "Koushik Sen",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "25533190",
+   "merge": [
+    "name:Leibo Liu"
+   ],
+   "name": "Leibo Liu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2261720546",
+   "merge": [
+    "name:Liming Fang"
+   ],
+   "name": "Liming Fang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "145567132",
+   "merge": [
+    "name:Lina Yu"
+   ],
+   "name": "Lina Yu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1710649",
+   "merge": [
+    "name:Luca Benini"
+   ],
+   "name": "Luca Benini",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "1399576706",
+   "merge": [
+    "name:Luca Lavarini"
+   ],
+   "name": "Luca Lavarini",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "1717411",
+   "merge": [
+    "name:Luis Ceze"
+   ],
+   "name": "Luis Ceze",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "49165315",
+   "merge": [
+    "name:Mahesh Ravishankar"
+   ],
+   "name": "Mahesh Ravishankar",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 8 shared coauthor names"
+  },
+  {
+   "keep": "2316558914",
+   "merge": [
+    "name:Maksim Podkorytov"
+   ],
+   "name": "Maksim Podkorytov",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "3207076",
+   "merge": [
+    "name:Marco Minutoli"
+   ],
+   "name": "Marco Minutoli",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "3277060",
+   "merge": [
+    "name:Marian Verhelst"
+   ],
+   "name": "Marian Verhelst",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2267067350",
+   "merge": [
+    "name:Marieke Huisman"
+   ],
+   "name": "Marieke Huisman",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2192580",
+   "merge": [
+    "name:Matteo Interlandi"
+   ],
+   "name": "Matteo Interlandi",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "145002004",
+   "merge": [
+    "name:Matthew Fisher"
+   ],
+   "name": "Matthew Fisher",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2357270",
+   "merge": [
+    "name:Matthias Korch"
+   ],
+   "name": "Matthias Korch",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2308276107",
+   "merge": [
+    "name:Michael Bauer"
+   ],
+   "name": "Michael Bauer",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "49609182",
+   "merge": [
+    "name:Michael Lange"
+   ],
+   "name": "Michael Lange",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "3282136",
+   "merge": [
+    "name:Micha\u00ebl Gharbi"
+   ],
+   "name": "Micha\u00ebl Gharbi",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1795890",
+   "merge": [
+    "name:Michel Steuwer"
+   ],
+   "name": "Michel Steuwer",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "2279814",
+   "merge": [
+    "name:Ming-Yu Hung"
+   ],
+   "name": "Ming-Yu Hung",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "73499042",
+   "merge": [
+    "name:Minghui Li"
+   ],
+   "name": "Minghui Li",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2339688693",
+   "merge": [
+    "name:Mingjie Xing"
+   ],
+   "name": "Mingjie Xing",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1432232352",
+   "merge": [
+    "name:Mingkuan Xu"
+   ],
+   "name": "Mingkuan Xu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "47629126",
+   "merge": [
+    "name:Mingqin Li"
+   ],
+   "name": "Mingqin Li",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "67016465",
+   "merge": [
+    "name:Minjia Zhang"
+   ],
+   "name": "Minjia Zhang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "71991002",
+   "merge": [
+    "name:Minqiang Shang"
+   ],
+   "name": "Minqiang Shang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "1700692",
+   "merge": [
+    "name:Mohamed Wahib"
+   ],
+   "name": "Mohamed Wahib",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2044309936",
+   "merge": [
+    "name:Naifeng Zhang"
+   ],
+   "name": "Naifeng Zhang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "38565345",
+   "merge": [
+    "name:Navjot Kukreja"
+   ],
+   "name": "Navjot Kukreja",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1800919",
+   "merge": [
+    "name:Nicolas Vasilache"
+   ],
+   "name": "Nicolas Vasilache",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 8 shared coauthor names"
+  },
+  {
+   "keep": "144584927",
+   "merge": [
+    "name:Nimish Shah"
+   ],
+   "name": "Nimish Shah",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2897313",
+   "merge": [
+    "name:Nitish Srivastava"
+   ],
+   "name": "Nitish Srivastava",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1730681",
+   "merge": [
+    "name:Norishige Fukushima"
+   ],
+   "name": "Norishige Fukushima",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "145293384",
+   "merge": [
+    "name:P. Sadayappan"
+   ],
+   "name": "P. Sadayappan",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "143673845",
+   "merge": [
+    "name:Philipp Slusallek"
+   ],
+   "name": "Philipp Slusallek",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2266139212",
+   "merge": [
+    "name:Qi Guo"
+   ],
+   "name": "Qi Guo",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 6 shared coauthor names"
+  },
+  {
+   "keep": "2072900322",
+   "merge": [
+    "name:Qiang Dai"
+   ],
+   "name": "Qiang Dai",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "67189282",
+   "merge": [
+    "name:Qingxiao Sun"
+   ],
+   "name": "Qingxiao Sun",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 6 shared coauthor names"
+  },
+  {
+   "keep": "47368718",
+   "merge": [
+    "name:Ravi Teja Mullapudi"
+   ],
+   "name": "Ravi Teja Mullapudi",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "1758245",
+   "merge": [
+    "name:Riyadh Baghdadi"
+   ],
+   "name": "Riyadh Baghdadi",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2069635284",
+   "merge": [
+    "name:Rohan Yadav"
+   ],
+   "name": "Rohan Yadav",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2481596",
+   "merge": [
+    "name:Roland Lei\u00dfa"
+   ],
+   "name": "Roland Lei\u00dfa",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2118404461",
+   "merge": [
+    "name:Rui Zhang"
+   ],
+   "name": "Rui Zhang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "2197711025",
+   "merge": [
+    "name:Ruifan Xu"
+   ],
+   "name": "Ruifan Xu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "32661349",
+   "merge": [
+    "name:Sandra Catal\u00e1n"
+   ],
+   "name": "Sandra Catal\u00e1n",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "1699642",
+   "merge": [
+    "name:Sebastian Hack"
+   ],
+   "name": "Sebastian Hack",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2205851448",
+   "merge": [
+    "name:Seungwon Lee"
+   ],
+   "name": "Seungwon Lee",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1803672",
+   "merge": [
+    "name:Shaojun Wei"
+   ],
+   "name": "Shaojun Wei",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "40063567",
+   "merge": [
+    "name:Shih-Wei Liao"
+   ],
+   "name": "Shih-Wei Liao",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "145683292",
+   "merge": [
+    "name:Shoaib Kamil"
+   ],
+   "name": "Shoaib Kamil",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2728322",
+   "merge": [
+    "name:Sitao Huang"
+   ],
+   "name": "Sitao Huang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2543429",
+   "merge": [
+    "name:Stefan Hadjis"
+   ],
+   "name": "Stefan Hadjis",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "51923161",
+   "merge": [
+    "name:Stella Laurenzo"
+   ],
+   "name": "Stella Laurenzo",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 8 shared coauthor names"
+  },
+  {
+   "keep": "2139866",
+   "merge": [
+    "name:Stephan Herhut"
+   ],
+   "name": "Stephan Herhut",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 8 shared coauthor names"
+  },
+  {
+   "keep": "145799132",
+   "merge": [
+    "name:Sylvain Paris"
+   ],
+   "name": "Sylvain Paris",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "48469908",
+   "merge": [
+    "name:Tai-Ping Wang"
+   ],
+   "name": "Tai-Ping Wang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2057983467",
+   "merge": [
+    "name:Takuya Matsunaga"
+   ],
+   "name": "Takuya Matsunaga",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1402921119",
+   "merge": [
+    "name:Tal Ben-Nun"
+   ],
+   "name": "Tal Ben-Nun",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "2205215",
+   "merge": [
+    "name:Thomas Neele"
+   ],
+   "name": "Thomas Neele",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2259739",
+   "merge": [
+    "name:Thomas Raoux"
+   ],
+   "name": "Thomas Raoux",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 8 shared coauthor names"
+  },
+  {
+   "keep": "1657530687",
+   "merge": [
+    "name:Tian Zhao"
+   ],
+   "name": "Tian Zhao",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2272432444",
+   "merge": [
+    "name:Tianshi Chen"
+   ],
+   "name": "Tianshi Chen",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "3325511",
+   "merge": [
+    "name:Timo Schneider"
+   ],
+   "name": "Timo Schneider",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "1414074458",
+   "merge": [
+    "name:Tiziano De Matteis"
+   ],
+   "name": "Tiziano De Matteis",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "2269071704",
+   "merge": [
+    "name:Tom T. P. Franken"
+   ],
+   "name": "Tom T. P. Franken",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "35188648",
+   "merge": [
+    "name:Tomoaki Tsumura"
+   ],
+   "name": "Tomoaki Tsumura",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "1713648",
+   "merge": [
+    "name:Torsten Hoefler"
+   ],
+   "name": "Torsten Hoefler",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "39045319",
+   "merge": [
+    "name:Toshio Endo"
+   ],
+   "name": "Toshio Endo",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "1751936",
+   "merge": [
+    "name:Uday Bondhugula"
+   ],
+   "name": "Uday Bondhugula",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2978162",
+   "merge": [
+    "name:Ulysse Beaugnon"
+   ],
+   "name": "Ulysse Beaugnon",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2032633",
+   "merge": [
+    "name:Vinay Vasista"
+   ],
+   "name": "Vinay Vasista",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "50654241",
+   "merge": [
+    "name:Vinod Grover"
+   ],
+   "name": "Vinod Grover",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2019538",
+   "merge": [
+    "name:Vito Giovanni Castellana"
+   ],
+   "name": "Vito Giovanni Castellana",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "1718583",
+   "merge": [
+    "name:Wannes Meert"
+   ],
+   "name": "Wannes Meert",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2256598373",
+   "merge": [
+    "name:Wei Li"
+   ],
+   "name": "Wei Li",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "2374923312",
+   "merge": [
+    "name:Weiwei Xu"
+   ],
+   "name": "Weiwei Xu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "16521420",
+   "merge": [
+    "name:William S. Moses"
+   ],
+   "name": "William S. Moses",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2053571409",
+   "merge": [
+    "name:William T. Freeman"
+   ],
+   "name": "William T. Freeman",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 7 shared coauthor names"
+  },
+  {
+   "keep": "2204068416",
+   "merge": [
+    "name:Xiang-Yu Wang"
+   ],
+   "name": "Xiang-Yu Wang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2184158157",
+   "merge": [
+    "name:Xiaochen Hao"
+   ],
+   "name": "Xiaochen Hao",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "2348193461",
+   "merge": [
+    "name:Xiaohua Shi"
+   ],
+   "name": "Xiaohua Shi",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2111040303",
+   "merge": [
+    "name:Xiaoyan Liu"
+   ],
+   "name": "Xiaoyan Liu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "2051651926",
+   "merge": [
+    "name:Xin You"
+   ],
+   "name": "Xin You",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2128659384",
+   "merge": [
+    "name:Xuanda Yang"
+   ],
+   "name": "Xuanda Yang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 5 shared coauthor names"
+  },
+  {
+   "keep": "2275875646",
+   "merge": [
+    "name:Yamato Kanetaka"
+   ],
+   "name": "Yamato Kanetaka",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "2284442329",
+   "merge": [
+    "name:Yang Li"
+   ],
+   "name": "Yang Li",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "49889441",
+   "merge": [
+    "name:Yaqi Zhang"
+   ],
+   "name": "Yaqi Zhang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2153627620",
+   "merge": [
+    "name:Yi Liu"
+   ],
+   "name": "Yi Liu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 6 shared coauthor names"
+  },
+  {
+   "keep": "2271801",
+   "merge": [
+    "name:Yi-Hsiang Lai"
+   ],
+   "name": "Yi-Hsiang Lai",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "148411175",
+   "merge": [
+    "name:Yoichi Shimomura"
+   ],
+   "name": "Yoichi Shimomura",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "46676753",
+   "merge": [
+    "name:Yoshihiro Maeda"
+   ],
+   "name": "Yoshihiro Maeda",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "1742399798",
+   "merge": [
+    "name:Yuanbo Wen"
+   ],
+   "name": "Yuanbo Wen",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 6 shared coauthor names"
+  },
+  {
+   "keep": "10116209",
+   "merge": [
+    "name:Yuanming Hu"
+   ],
+   "name": "Yuanming Hu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 7 shared coauthor names"
+  },
+  {
+   "keep": "2278874067",
+   "merge": [
+    "name:Yufan Xu"
+   ],
+   "name": "Yufan Xu",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 1 shared coauthor names"
+  },
+  {
+   "keep": "144884036",
+   "merge": [
+    "name:Yun Liang"
+   ],
+   "name": "Yun Liang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 2 shared coauthor names"
+  },
+  {
+   "keep": "50316001",
+   "merge": [
+    "name:Zhiru Zhang"
+   ],
+   "name": "Zhiru Zhang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 3 shared coauthor names"
+  },
+  {
+   "keep": "2325690628",
+   "merge": [
+    "name:Zhonghui Jiang"
+   ],
+   "name": "Zhonghui Jiang",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 4 shared coauthor names"
+  },
+  {
+   "keep": "1698860",
+   "merge": [
+    "name:Zhongzhi Luan"
+   ],
+   "name": "Zhongzhi Luan",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 7 shared coauthor names"
+  },
+  {
+   "keep": "1678776",
+   "merge": [
+    "name:Zidong Du"
+   ],
+   "name": "Zidong Du",
+   "evidence": "batch 2026-08-21: OpenCitations-only record, exact name + 6 shared coauthor names"
+  },
+  {
+   "keep": "145719923",
+   "merge": [
+    "name:Adrian Sampson"
+   ],
+   "name": "Adrian Sampson",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "145151177",
+   "merge": [
+    "name:Alec Jacobson"
+   ],
+   "name": "Alec Jacobson",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2071741",
+   "merge": [
+    "name:Amr Suleiman"
+   ],
+   "name": "Amr Suleiman",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2781614",
+   "merge": [
+    "name:Anand Venkat"
+   ],
+   "name": "Anand Venkat",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "1979365",
+   "merge": [
+    "name:Artjoms \u0160inkarovs"
+   ],
+   "name": "Artjoms \u0160inkarovs",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "1879368",
+   "merge": [
+    "name:Bruno Bodin"
+   ],
+   "name": "Bruno Bodin",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2747057",
+   "merge": [
+    "name:Connor Imes"
+   ],
+   "name": "Connor Imes",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2292435742",
+   "merge": [
+    "name:Cunxi Yu"
+   ],
+   "name": "Cunxi Yu",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "3241132",
+   "merge": [
+    "name:Daniele Panozzo"
+   ],
+   "name": "Daniele Panozzo",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "51170776",
+   "merge": [
+    "name:Davide Conficconi"
+   ],
+   "name": "Davide Conficconi",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2732486",
+   "merge": [
+    "name:Dip Goswami"
+   ],
+   "name": "Dip Goswami",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2268419",
+   "merge": [
+    "name:Djamila Dekkiche"
+   ],
+   "name": "Djamila Dekkiche",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "40629467",
+   "merge": [
+    "name:Eddie C. Davis"
+   ],
+   "name": "Eddie C. Davis",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2353095082",
+   "merge": [
+    "name:Federico Ciccozzi"
+   ],
+   "name": "Federico Ciccozzi",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "49857575",
+   "merge": [
+    "name:Felix Heide"
+   ],
+   "name": "Felix Heide",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "1648693617",
+   "merge": [
+    "name:George Bisbas"
+   ],
+   "name": "George Bisbas",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "1731170",
+   "merge": [
+    "name:Gordon Wetzstein"
+   ],
+   "name": "Gordon Wetzstein",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "1700970",
+   "merge": [
+    "name:Guojie Luo"
+   ],
+   "name": "Guojie Luo",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2027586309",
+   "merge": [
+    "name:Jacques Pienaar"
+   ],
+   "name": "Jacques Pienaar",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "144604354",
+   "merge": [
+    "name:James Hegarty"
+   ],
+   "name": "James Hegarty",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "3009648",
+   "merge": [
+    "name:Jani Boutellier"
+   ],
+   "name": "Jani Boutellier",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2266399248",
+   "merge": [
+    "name:Jeffrey S. Vetter"
+   ],
+   "name": "Jeffrey S. Vetter",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "1401885963",
+   "merge": [
+    "name:Jonathan Ragan-Kelley"
+   ],
+   "name": "Jonathan Ragan-Kelley",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "3438690",
+   "merge": [
+    "name:Lester Kalms"
+   ],
+   "name": "Lester Kalms",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "35121696",
+   "merge": [
+    "name:Luigi Nardi"
+   ],
+   "name": "Luigi Nardi",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "143809634",
+   "merge": [
+    "name:Rajashree Y. Patil"
+   ],
+   "name": "Rajashree Y. Patil",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2329174047",
+   "merge": [
+    "name:Rihan Hai"
+   ],
+   "name": "Rihan Hai",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "35343314",
+   "merge": [
+    "name:Savvas Sioutas"
+   ],
+   "name": "Savvas Sioutas",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2402978",
+   "merge": [
+    "name:Sean Treichler"
+   ],
+   "name": "Sean Treichler",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2047818202",
+   "merge": [
+    "name:Stephanie Soldavini"
+   ],
+   "name": "Stephanie Soldavini",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "39131476",
+   "merge": [
+    "name:Suren Jayasuriya"
+   ],
+   "name": "Suren Jayasuriya",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "3198385",
+   "merge": [
+    "name:Suresh Purini"
+   ],
+   "name": "Suresh Purini",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "1774432",
+   "merge": [
+    "name:Tatiana Shpeisman"
+   ],
+   "name": "Tatiana Shpeisman",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "1775024",
+   "merge": [
+    "name:Tzu-Mao Li"
+   ],
+   "name": "Tzu-Mao Li",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "1691305",
+   "merge": [
+    "name:Vivienne Sze"
+   ],
+   "name": "Vivienne Sze",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "37914192",
+   "merge": [
+    "name:Xipeng Shen"
+   ],
+   "name": "Xipeng Shen",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
+  },
+  {
+   "keep": "2350392466",
+   "merge": [
+    "name:Zachary DeVito"
+   ],
+   "name": "Zachary DeVito",
+   "evidence": "hand 2026-08-21: OpenCitations-only record; name distinctive and unambiguous within the Halide corpus"
   }
  ],
  "contributor_aliases": [
