@@ -155,7 +155,11 @@ const settle = () => new Promise((r) => setTimeout(r, 60));
   if (person) {
     person.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
     await settle();
-    check('author click lands on the person', q('.pub-item .badge-person').length === 1);
+    const landed = q('.pub-item');
+    const onPeople = /People/.test([...q('.view-btn')]
+      .find((b) => b.className.indexOf('active') >= 0).textContent);
+    check('author click lands on the person',
+      landed.length === 1 && onPeople && landed[0].textContent.indexOf(person.textContent) >= 0);
     $('btn-clear').click();
     await settle();
   }

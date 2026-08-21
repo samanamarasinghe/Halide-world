@@ -543,7 +543,12 @@
     li.appendChild(t);
 
     var meta = el('div', 'pub-meta');
-    meta.appendChild(el('span', 'badge badge-' + rec.kind, KIND_LABELS[rec.kind] || rec.kind));
+    /* No kind badge on people. Every view is single-kind, so the badge names the
+       one thing the reader already knows from the view they are in. The other
+       three views keep theirs for now. */
+    if (rec.kind !== 'person') {
+      meta.appendChild(el('span', 'badge badge-' + rec.kind, KIND_LABELS[rec.kind] || rec.kind));
+    }
     if (rec.tier) {
       var cls = 'badge-doionly';
       meta.appendChild(el('span', 'badge ' + cls, TIER_LABELS[rec.tier] || rec.tier));
